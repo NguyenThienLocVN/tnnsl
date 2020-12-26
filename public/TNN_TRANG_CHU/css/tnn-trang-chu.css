@@ -1,0 +1,452 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+#e77_3 { 
+	overflow:hidden;
+	background-color:rgba(255, 255, 255, 1);
+	opacity:1;
+	width:100%;
+	height:888px;
+}
+#e77_5 { 
+	opacity:1;
+	width:298px;
+	height:66px;
+	position:absolute;
+	left:1359px;
+	top:763px;
+}
+#e77_7 { 
+	opacity:1;
+	width:715px;
+	height:674px;
+	position:absolute;
+	left:493px;
+	top:203px;
+}
+#e77_8 { 
+	color:rgba(0, 0, 0, 1);
+	opacity:1;
+	width:72px;
+	height:21px;
+	position:absolute;
+	left:1035px;
+	top:305px;
+	font-family:Arial;
+	text-align:center;
+	font-size:18px;
+	letter-spacing:0;
+	z-index: 999;
+}
+#e77_9 { 
+	opacity:1;
+	width:33px;
+	height:31px;
+	position:absolute;
+	left:69px;
+	top:202px;
+	background-image:url('../image/ANH_VETRANGCHU.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_10 { 
+	opacity:1;
+	width:44px;
+	height:31px;
+	position:absolute;
+	left:8px;
+	top:202px;
+	background-image:url('../image/ANH_BIEUTUONGVETRUOC.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_11 { 
+	opacity:1;
+	width:118px;
+	height:73px;
+	position:absolute;
+	left:76px;
+	top:400px;
+	background-image:url('../image/ANH_QUANLYCAPPHEP.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_12 { 
+	opacity:1;
+	width:101px;
+	height:80px;
+	position:absolute;
+	left:323px;
+	top:694px;
+	background-image:url('../image/ANH_DANGKY.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_13 { 
+	opacity:1;
+	width:97px;
+	height:62px;
+	position:absolute;
+	left:80px;
+	top:275px;
+	background-image:url('../image/ANH_THONGTINCHUNG.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_14 { 
+	opacity:1;
+	width:99px;
+	height:71px;
+	position:absolute;
+	left:325px;
+	top:258px;
+	background-image:url('../image/ANH_HETHONGGIAMSAT.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_15 { 
+	opacity:1;
+	width:101px;
+	height:67px;
+	position:absolute;
+	left:323px;
+	top:411px;
+	background-image:url('../image/ANH_QUANLYDULIEU.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_16 { 
+	opacity:1;
+	width:116px;
+	height:78px;
+	position:absolute;
+	left:315px;
+	top:545px;
+	background-image:url('../image/ANH_THONGBAO.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_17 { 
+	opacity:1;
+	width:112px;
+	height:86px;
+	position:absolute;
+	left:72px;
+	top:686px;
+	background-image:url('../image/ANH_HUONGDANQUYDINH.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_18 { 
+	opacity:1;
+	position:absolute;
+	width: 298px;
+	height: 68px;
+	left: 874px;
+	top: 747px;
+	background-image:url('../image/ANH_CANGIUPDO.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_20 { 
+	opacity:1;
+	width:101px;
+	height:91px;
+	position:absolute;
+	left:78px;
+	top:540px;
+	background-image:url('../image/ANH_BIEUMAUBAOCAO.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+#e77_19 { 
+	color:rgba(47.0000009983778, 128.0000075697899, 237.0000010728836, 1);
+	opacity:1;
+	height:40px;
+	line-height: 40px;
+	top:157px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_21 { 
+	text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(33.00000183284283, 150.0000062584877, 83.00000265240669, 1);
+	opacity:1;
+	width:189px;
+	height:28px;
+	position:absolute;
+	left:30px;
+	top:356px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_22 { 
+	text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(33.00000183284283, 150.0000062584877, 83.00000265240669, 1);
+	opacity:1;
+	width:209px;
+	height:28px;
+	position:absolute;
+	left:267px;
+	top:363px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_23 { 
+	text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(33.00000183284283, 150.0000062584877, 83.00000265240669, 1);
+	opacity:1;
+	width:201px;
+	height:28px;
+	position:absolute;
+	left:24px;
+	top:494px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_24 { 
+	text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(33.00000183284283, 150.0000062584877, 83.00000265240669, 1);
+	opacity:1;
+	width:184px;
+	height:41px;
+	position:absolute;
+	left:280px;
+	top:491px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_25 { 
+	text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(33.00000183284283, 150.0000062584877, 83.00000265240669, 1);
+	opacity:1;
+	width:123px;
+	height:28px;
+	position:absolute;
+	left:310px;
+	top:638px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_26 { 
+	text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(33.00000183284283, 150.0000062584877, 83.00000265240669, 1);
+	opacity:1;
+	width:244px;
+	height:28px;
+	position:absolute;
+	left:13px;
+	top:780px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_27 { 
+	text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(33.00000183284283, 150.0000062584877, 83.00000265240669, 1);
+	opacity:1;
+	width:206px;
+	height:28px;
+	position:absolute;
+	left:19px;
+	top:632px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_28 { 
+	text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	color:rgba(33.00000183284283, 150.0000062584877, 83.00000265240669, 1);
+	opacity:1;
+	width:224px;
+	height:28px;
+	position:absolute;
+	left:263px;
+	top:782px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_29 { 
+	color:rgba(47.0000009983778, 128.0000075697899, 237.0000010728836, 1);
+	opacity:1;
+	width:145px;
+	height:28px;
+	position:absolute;
+	left:100px;
+	top:203px;
+	font-family:Arial;
+	text-align:center;
+	font-size:22px;
+	letter-spacing:0;
+}
+#e77_30 { 
+	opacity:1;
+	width:32px;
+	height:33px;
+	position:absolute;
+	left:1000px;
+	top:303px;
+	background-image:url('../image/ANH_CHUGIAIBANDO.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_31 { 
+	opacity:1;
+	width:33px;
+	height:30px;
+	position:absolute;
+	left:1000px;
+	top:260px;
+	background-image:url('../image/ANH_LOPBANDO.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_32 { 
+	opacity:1;
+	width:28px;
+	height:26px;
+	position:absolute;
+	left:1619px;
+	top:247px;
+	background-image:url('../image/ANH_SUACONGTRINH.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_33 { 
+	opacity:1;
+	width:28px;
+	height:26px;
+	position:absolute;
+	left:1074px;
+	top:217px;
+	background-image:url('../image/ANH_THEMCONGTRINH.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_34 { 
+	opacity:1;
+	width:45px;
+	height:28px;
+	position:absolute;
+	left:1120px;
+	top:225px;
+	background-image:url('../image/ANH_DOKHOANGCACH.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_35 { 
+	opacity:1;
+	width:44px;
+	height:37px;
+	position:absolute;
+	left:1017px;
+	top:217px;
+	background-image:url('../image/ANH_XEMTHONGTIN.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_36 { 
+	opacity:1;
+	width:22px;
+	height:26px;
+	position:absolute;
+	left:989px;
+	top:224px;
+	background-image:url('../image/ANH_THUNHO.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_37 { 
+	opacity:1;
+	width:22px;
+	height:26px;
+	position:absolute;
+	left:943px;
+	top:224px;
+	background-image:url('../image/ANH_PHONGTO.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_38 { 
+	opacity:1;
+	width:24px;
+	height:26px;
+	position:absolute;
+	left:902px;
+	top:219px;
+	background-image:url('../image/ANH_THAYDOIVITRI.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_39 { 
+	opacity:1;
+	width:28px;
+	height:26px;
+	position:absolute;
+	left:860px;
+	top:224px;
+	background-image:url('../image/ANH_VITRIHIENTAI.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_40 { 
+	opacity:1;
+	width:28px;
+	height:28px;
+	position:absolute;
+	left:815px;
+	top:224px;
+	background-image:url('../image/ANH_VEGIUABANDO.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index: 999;
+}
+#e77_41 { 
+	opacity:1;
+	width:114px;
+	height:24px;
+	position:absolute;
+	left:1030px;
+	top:266px;
+	text-align:center;
+	font-size:18px;
+	letter-spacing:0;
+	z-index: 999;
+}
+#e77_42 { 
+	opacity:1;
+	width:1199px;
+	height:156px;
+	left:0px;
+	top:0px;
+	background-image:url('../image/ANHSOTNMT.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.top-title { background: #f5f3f3; }
