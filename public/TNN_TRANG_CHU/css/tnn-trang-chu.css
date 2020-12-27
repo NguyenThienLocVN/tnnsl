@@ -450,3 +450,8 @@ body {
 	background-size:cover;
 }
 .top-title { background: #f5f3f3; }
+#e77_40:hover, #e77_39:hover, #e77_37:hover, #e77_36:hover {
+	cursor: pointer;
+	transform: scale(1.3);
+	transition: 0.5s;
+}

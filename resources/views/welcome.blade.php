@@ -22,8 +22,8 @@
         <div id="e77_3" class="position-relative">
             <div id="e77_7"></div>
             <span id="e77_8" class="font-weight-bold">Chú giải</span>
-            <div id="e77_9"></div>
-            <div id="e77_10"></div>
+            <a href="{{url('/')}}"><div id="e77_9"></div></a>
+            <a href="http://tainguyenmoitruongsonla.vn/" ><div id="e77_10"></div></a>
             <div id="e77_11"></div>
             <div id="e77_12"></div>
             <div id="e77_13"></div>
@@ -43,18 +43,18 @@
             <span id="e77_26" class="font-weight-bold">Hướng dẫn, quy định</span>
             <span id="e77_27" class="font-weight-bold">Báo cáo biểu mẫu</span>
             <span id="e77_28" class="font-weight-bold">Đăng ký/ kết nối</span>
-            <span id="e77_29" class="font-weight-bold">TRANG CHỦ</span>
+            <a href="{{url('/')}}"><span id="e77_29" class="font-weight-bold">TRANG CHỦ</span></a>
             <div id="e77_30"></div>
             <div id="e77_31"></div>
             <div id="e77_32"></div>
             <div id="e77_33"></div>
             <div id="e77_34"></div>
             <div id="e77_35"></div>
-            <div id="e77_36"></div>
-            <div id="e77_37"></div>
+            <div id="e77_36" title="Thu nhỏ"></div>
+            <div id="e77_37" title="Phóng to"></div>
             <div id="e77_38"></div>
-            <div id="e77_39"></div>
-            <div id="e77_40"></div>
+            <div id="e77_39" title="Vị trí hiện tại"></div>
+            <div id="e77_40" title="Về giữa bản đồ"></div>
             <span id="e77_41" class="font-weight-bold">Lớp bản đồ</span>
            
         </div>
