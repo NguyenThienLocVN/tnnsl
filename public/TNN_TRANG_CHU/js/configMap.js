@@ -1,4 +1,4 @@
-var map = L.map('e77_7', {
+var map = L.map('map', {
     center: [21.529737201190642, 103.9581298828125], 
     zoom: 8,
     zoomControl: false
@@ -9,24 +9,25 @@ L.control.zoom({zoomControl: false});
 
 
 // Click button zoom
-document.getElementById('e77_37').addEventListener('click', function () {
+document.getElementById('zoom-in').addEventListener('click', function () {
     map.setZoom(map.getZoom() + 1);
 });
 
-document.getElementById('e77_36').addEventListener('click', function () {
+document.getElementById('zoom-out').addEventListener('click', function () {
     map.setZoom(map.getZoom() - 1);
 });
 
 // Click button center map
-document.getElementById('e77_40').addEventListener('click', function () {
+document.getElementById('center-map').addEventListener('click', function () {
     map.setView([21.529737201190642, 103.9581298828125], 8);
 });
 
 // Click current location
-document.getElementById('e77_39').addEventListener('click', function () {
+document.getElementById('current-location').addEventListener('click', function () {
     navigator.geolocation.getCurrentPosition(function(location) {
         var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
       
         var marker = L.marker(latlng).addTo(map);
-      });
+        map.setView([location.coords.latitude, location.coords.longitude], 8);
+    });
 });

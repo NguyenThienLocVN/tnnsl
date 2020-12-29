@@ -12,52 +12,93 @@
         
         <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('public/TNN_TRANG_CHU/css/tnn-trang-chu.css')}}">
-        <link rel="stylesheet" href="{{asset('public/css/fontawesome.min.css')}}">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
 
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
         <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js" integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ==" crossorigin=""></script>
     </head>
     <body class="container p-0">
-        <div id="e77_3" class="position-relative">
-            <div id="e77_7"></div>
-            <span id="e77_8" class="font-weight-bold">Chú giải</span>
-            <a href="{{url('/')}}"><div id="e77_9"></div></a>
-            <a href="http://tainguyenmoitruongsonla.vn/" ><div id="e77_10"></div></a>
-            <div id="e77_11"></div>
-            <div id="e77_12"></div>
-            <div id="e77_13"></div>
-            <div id="e77_14"></div>
-            <div id="e77_15"></div>
-            <div id="e77_16"></div>
-            <div id="e77_17"></div>
-            <div id="e77_18"></div>
-            <div id="e77_20"></div>
-            <div id="e77_42"></div>
-            <div id="e77_19" class="font-weight-bold w-100 top-title"><span>HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC</span> </div>
-            <span id="e77_21" class="font-weight-bold">Thông tin chung</span>
-            <span id="e77_22" class="font-weight-bold">Hệ thống giám sát</span>
-            <span id="e77_23" class="font-weight-bold">Quản lý cấp phép</span>
-            <span id="e77_24" class="font-weight-bold">Quản lý dữ liệu</span>
-            <span id="e77_25" class="font-weight-bold">Thông báo</span>
-            <span id="e77_26" class="font-weight-bold">Hướng dẫn, quy định</span>
-            <span id="e77_27" class="font-weight-bold">Báo cáo biểu mẫu</span>
-            <span id="e77_28" class="font-weight-bold">Đăng ký/ kết nối</span>
-            <a href="{{url('/')}}"><span id="e77_29" class="font-weight-bold">TRANG CHỦ</span></a>
-            <div id="e77_30"></div>
-            <div id="e77_31"></div>
-            <div id="e77_32"></div>
-            <div id="e77_33"></div>
-            <div id="e77_34"></div>
-            <div id="e77_35"></div>
-            <div id="e77_36" title="Thu nhỏ"></div>
-            <div id="e77_37" title="Phóng to"></div>
-            <div id="e77_38"></div>
-            <div id="e77_39" title="Vị trí hiện tại"></div>
-            <div id="e77_40" title="Về giữa bản đồ"></div>
-            <span id="e77_41" class="font-weight-bold">Lớp bản đồ</span>
-           
-        </div>
+        <header>
+            <a href="#"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
+            <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
+                <div class="col-lg-4 col-sm-12 col-md-12 pt-2 px-0 pt-md-0 pb-md-0 d-flex">
+                    <a href="http://tainguyenmoitruongsonla.vn" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+                    <a href="{{url('/')}}" class="font-weight-bold text-white d-block pl-2"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; TRANG CHỦ</a>
+                </div>
+                <div class="bg-lightgray col-lg-8 col-sm-12 col-md-12 text-center">
+                    <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
+                </div>
+            </div> 
+        </header>
+        <main class="d-flex flex-column flex-lg-row">
+            <div class="col-12 col-lg-4">
+                <div class="d-flex flex-column flex-md-row flex-lg-column">
+                    <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
+                        <div class="col-6 text-center">
+                            <img src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGTINCHUNG.png')}}" alt="thong-tin-chung">
+                            <p class="grid-item-text font-weight-bold">Thông tin chung</p>
+                        </div>
+                        <div class="col-6 text-center">
+                            <img src="{{asset('public/TNN_TRANG_CHU/image/ANH_HETHONGGIAMSAT.png')}}" alt="he-thong-giam-sat">
+                            <p class="grid-item-text font-weight-bold">Hệ thống giám sát</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
+                        <div class="col-6 text-center">
+                            <img src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYCAPPHEP.png')}}" alt="cap-phep">
+                            <p class="grid-item-text font-weight-bold">Quản lý cấp phép</p>
+                        </div>
+                        <div class="col-6 text-center">
+                            <img src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYDULIEU.png')}}" alt="quan-ly-du-lieu">
+                            <p class="grid-item-text font-weight-bold">Quản lý dữ liệu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row flex-lg-column">
+                    <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
+                        <div class="col-6 text-center">
+                            <img src="{{asset('public/TNN_TRANG_CHU/image/ANH_BIEUMAUBAOCAO.png')}}" alt="bieu-mau">
+                            <p class="grid-item-text font-weight-bold">Báo cáo biểu mẫu</p>
+                        </div>
+                        <div class="col-6 text-center">
+                            <img src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGBAO.png')}}" alt="thong-bao">
+                            <p class="grid-item-text font-weight-bold">Thông báo</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
+                        <div class="col-6 text-center">
+                            <img src="{{asset('public/TNN_TRANG_CHU/image/ANH_HUONGDANQUYDINH.png')}}" alt="huong-dan-quy-dinh">
+                            <p class="grid-item-text font-weight-bold">Hướng dẫn quy định</p>
+                        </div>
+                        <div class="col-6 text-center">
+                            <img src="{{asset('public/TNN_TRANG_CHU/image/ANH_DANGKY.png')}}" alt="dang-ky">
+                            <p class="grid-item-text font-weight-bold">Đăng ký / Kết nối</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8 pb-3 map-container px-md-0">
+                <div id="map" class="h-100 w-100 position-relative">
+                    <img title="Về trung tâm bản đồ" class="position-absolute map-tool center-map" id="center-map" src="{{'public/TNN_TRANG_CHU/image/ANH_VEGIUABANDO.png'}}" alt="trung-tam-ban-do">
+                    <img title="Vị trí hiện tại" class="position-absolute map-tool current-location" id="current-location" src="{{'public/TNN_TRANG_CHU/image/ANH_VITRIHIENTAI.png'}}" alt="vi-tri-hien-tai">
+                    <img title="Phóng to" class="position-absolute map-tool zoom-in" id="zoom-in" src="{{'public/TNN_TRANG_CHU/image/ANH_PHONGTO.png'}}" alt="phong-to">
+                    <img title="Thu nhỏ" class="position-absolute map-tool zoom-out" id="zoom-out" src="{{'public/TNN_TRANG_CHU/image/ANH_THUNHO.png'}}" alt="thu-nho">
+                    <img title="Thêm công trình" class="position-absolute map-tool add-construction" src="{{'public/TNN_TRANG_CHU/image/ANH_THEMCONGTRINH.png'}}" alt="them-cong-trinh">
+                    <img title="Sửa công trình" class="position-absolute map-tool edit-construction" src="{{'public/TNN_TRANG_CHU/image/ANH_SUACONGTRINH.png'}}" alt="sua-cong-trinh">
+                    <img title="Xem thông tin" class="position-absolute map-tool view-info" src="{{'public/TNN_TRANG_CHU/image/ANH_XEMTHONGTIN.png'}}" alt="xem-thong-tin">
+                    <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{'public/TNN_TRANG_CHU/image/ANH_DOKHOANGCACH.png'}}" alt="do-khoang-cach">
+                    <div class="position-absolute map-layers d-flex align-items-center">
+                        <img src="{{'public/TNN_TRANG_CHU/image/ANH_LOPBANDO.png'}}" alt="lop-ban-do">
+                        <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
+                    </div>
+                    <div class="position-absolute map-note d-flex align-items-center">
+                        <img src="{{'public/TNN_TRANG_CHU/image/ANH_CHUGIAIBANDO.png'}}" alt="chu-giai-ban-do">
+                        <span class="font-weight-bold">&nbsp; Chú giải</span>
+                    </div>
+                </div>
+            </div>
+        </main>
 
         <script src="{{ asset('public/TNN_TRANG_CHU/js/configMap.js') }}"></script>
     </body>
