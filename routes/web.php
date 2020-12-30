@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Trang chu
 Route::get('/', function () {
-    return view('welcome');
+    return view('page.tnn-trang-chu');
 });
+
+// Trang gioi thieu chung
+Route::get('gioi-thieu-chung', function () {
+    return view('page.tnn-gioi-thieu-chung');
+})->name('gioi-thieu-chung');
