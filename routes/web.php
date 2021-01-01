@@ -19,6 +19,11 @@ Route::get('/', function () {
 });
 
 // Trang gioi thieu chung
-Route::get('gioi-thieu-chung', function () {
-    return view('page.tnn-gioi-thieu-chung');
-})->name('gioi-thieu-chung');
+Route::get('thong-tin-chung', function () {
+    return view('page.tnn-thong-tin-chung');
+})->name('thong-tin-chung');
+
+// Trang gioi thieu chung
+Route::get('he-thong-giam-sat', function () {
+    return view('page.tnn-he-thong-giam-sat');
+})->name('he-thong-giam-sat');

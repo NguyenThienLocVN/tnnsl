@@ -14,7 +14,7 @@
             <a href="http://tainguyenmoitruongsonla.vn" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
             <a href="{{url('/')}}" class="font-weight-bold text-white d-block pl-2"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; TRANG CHỦ</a>
         </div>
-        <div class="bg-lightgray col-lg-8 col-sm-12 col-md-12 text-center py-1">
+        <div class="bg-lightgray col-lg-8 col-sm-12 col-md-12 text-center py-1 py-lg-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
@@ -23,14 +23,14 @@
     <div class="col-12 col-lg-4">
         <div class="d-flex flex-column flex-md-row flex-lg-column">
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
-                <a href="{{route('gioi-thieu-chung')}}" class="col-6 text-center">
+                <a href="{{route('thong-tin-chung')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGTINCHUNG.png')}}" alt="thong-tin-chung">
                     <p class="grid-item-text font-weight-bold">Thông tin chung</p>
                 </a>
-                <div class="col-6 text-center">
+                <a href="{{route('he-thong-giam-sat')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HETHONGGIAMSAT.png')}}" alt="he-thong-giam-sat">
                     <p class="grid-item-text font-weight-bold">Hệ thống giám sát</p>
-                </div>
+                </a>
             </div>
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
                 <div class="col-6 text-center">
