@@ -4,6 +4,8 @@
 @push('custom-style')
     <link rel="stylesheet" href="{{asset('public/TNN_TRANG_CHU/css/tnn-trang-chu.css')}}">
     <link rel="stylesheet" href="{{asset('public/css/styles.css')}}">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 @endpush
 
 @section('content')
@@ -12,7 +14,7 @@
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-4 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
             <a href="http://tainguyenmoitruongsonla.vn" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <a href="{{url('/')}}" class="font-weight-bold text-white d-block pl-2"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; TRANG CHỦ</a>
+            <div class="font-weight-bold text-white d-block pl-2"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; TRANG CHỦ</div>
         </div>
         <div class="bg-lightgray col-lg-8 col-sm-12 col-md-12 text-center py-1 py-lg-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
@@ -59,10 +61,10 @@
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HUONGDANQUYDINH.png')}}" alt="huong-dan-quy-dinh">
                     <p class="grid-item-text font-weight-bold">Hướng dẫn quy định</p>
                 </div>
-                <div class="col-6 text-center">
+                <a href="{{url('dang-ky')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_DANGKY.png')}}" alt="dang-ky">
                     <p class="grid-item-text font-weight-bold">Đăng ký / Kết nối</p>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -76,9 +78,18 @@
             <img title="Sửa công trình" class="position-absolute map-tool edit-construction" src="{{'public/TNN_TRANG_CHU/image/ANH_SUACONGTRINH.png'}}" alt="sua-cong-trinh">
             <img title="Xem thông tin" class="position-absolute map-tool view-info" src="{{'public/TNN_TRANG_CHU/image/ANH_XEMTHONGTIN.png'}}" alt="xem-thong-tin">
             <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{'public/TNN_TRANG_CHU/image/ANH_DOKHOANGCACH.png'}}" alt="do-khoang-cach">
-            <div class="position-absolute map-layers d-flex align-items-center">
+            <div class="position-absolute map-layers d-flex align-items-center" id="map-layers" title="Chọn lớp bản đồ">
                 <img src="{{'public/TNN_TRANG_CHU/image/ANH_LOPBANDO.png'}}" alt="lop-ban-do">
                 <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
+            </div>
+            <div class="position-absolute map-panel-layers align-items-center text-white" id="map-panel-layers">
+                <ul class="p-2 m-0">
+                    <li class="text-right"><i class="fa fa-window-close text-danger btn-close-layers" id="btn-close-layers" aria-hidden="true"></i></li>
+                    <li class="d-flex align-items-center"><input type="radio" onclick="setBasemap(this.value)" name="select-layer" id="select-layer" value="Topographic" checked>&nbsp; Bản đồ địa hình</li>
+                    <li class="d-flex align-items-center"><input type="radio" onclick="setBasemap(this.value)" name="select-layer" id="select-layer" value="Imagery" >&nbsp; Bản đồ vệ tinh</li>
+                    <li class="d-flex align-items-center"><input type="radio" onclick="setBasemap(this.value)" name="select-layer" id="select-layer" value="Streets">&nbsp; Bản đồ đường</li>
+                    <li class="d-flex align-items-center"><input type="radio" onclick="setBasemap(this.value)" name="select-layer" id="select-layer" value="NationalGeographic">&nbsp; Bản đồ hành chính</li>
+                </ul>
             </div>
             <div class="position-absolute map-note d-flex align-items-center">
                 <img src="{{'public/TNN_TRANG_CHU/image/ANH_CHUGIAIBANDO.png'}}" alt="chu-giai-ban-do">

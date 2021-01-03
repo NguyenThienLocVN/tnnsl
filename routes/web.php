@@ -23,7 +23,12 @@ Route::get('thong-tin-chung', function () {
     return view('page.tnn-thong-tin-chung');
 })->name('thong-tin-chung');
 
-// Trang gioi thieu chung
+// Trang he thong giam sat
 Route::get('he-thong-giam-sat', function () {
     return view('page.tnn-he-thong-giam-sat');
 })->name('he-thong-giam-sat');
+
+// Trang gioi thieu chung
+Route::get('dang-ky', function () {
+    return view('page.tnn-dang-ky');
+})->name('dang-ky');
