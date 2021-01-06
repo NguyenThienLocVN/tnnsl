@@ -9,8 +9,12 @@ body {
 a { text-decoration: none !important; }
 ul, li { list-style: none; }
 
+.font-13 { font-size: 13px !important; }
 .font-14 { font-size: 14px !important; }
 .font-15 { font-size: 15px !important; }
+.font-25 { font-size: 25px !important; }
+
+option { font-size: 14px; }
 
 /* Top bar */
 .top-bar{height: 85px;}

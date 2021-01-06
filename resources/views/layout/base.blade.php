@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title') - Giám sát tài nguyên nước Sơn La</title>
+        <title>@yield('title') | Giám sát tài nguyên nước Sơn La</title>
         
         <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('public/css/font-awesome.min.css')}}" type="text/css">

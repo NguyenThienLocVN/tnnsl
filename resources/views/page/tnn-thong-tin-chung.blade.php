@@ -8,7 +8,7 @@
 
 @section('content')
 <header>
-    <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
+    <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
             <a href="{{url('/')}}" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
@@ -22,50 +22,50 @@
 <main class="d-flex flex-column flex-lg-row">
     <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-lg-0">
         <div class="d-flex align-items-center pt-3">
-            <img class="introduce-image" src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_HETHONGGIAMSAT.png')}}" alt="ANH_HETHONGGIAMSAT">
+            <img class="introduce-image" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_HETHONGGIAMSAT.png')}}" alt="ANH_HETHONGGIAMSAT">
             <b class="pl-2 introduct-text">GIỚI THIỆU HỆ THỐNG QUẢN LÝ GIÁM SÁT</b>
         </div>
         <div class="d-flex align-items-center pt-3">
-            <img class="introduce-image" src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QUANLYCAPPHEP.png')}}" alt="ANH_QUANLYCAPPHEP">
+            <img class="introduce-image" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_QUANLYCAPPHEP.png')}}" alt="ANH_QUANLYCAPPHEP">
             <b class="pl-2 introduct-text">GIỚI THIỆU HỆ THỐNG QUẢN LÝ CẤP PHÉP</b>
         </div>
         <div class="d-flex align-items-center pt-3">
-            <img class="introduce-image" src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QUANLYDULIEU.png')}}" alt="ANH_QUANLYDULIEU">
+            <img class="introduce-image" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_QUANLYDULIEU.png')}}" alt="ANH_QUANLYDULIEU">
             <b class="pl-2 introduct-text">GIỚI THIỆU HỆ THỐNG QUẢN LÝ DỮ LIỆU</b>
         </div>
         <div class="d-flex align-items-center pt-3">
-            <img class="introduce-image" src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_BIEUMAUBAOCAO.png')}}" alt="ANH_BIEUMAUBAOCAO">
+            <img class="introduce-image" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_BIEUMAUBAOCAO.png')}}" alt="ANH_BIEUMAUBAOCAO">
             <b class="pl-2 introduct-text">GIỚI THIỆU HỆ THỐNG QUẢN LÝ BÁO CÁO</b>
         </div>
         <div class="d-flex align-items-center pt-3">
-            <img class="introduce-image" src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_THONGBAO.png')}}" alt="ANH_THONGBAO">
+            <img class="introduce-image" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_THONGBAO.png')}}" alt="ANH_THONGBAO">
             <b class="pl-2 introduct-text">GIỚI THIỆU HỆ THỐNG QUẢN LÝ THÔNG BÁO</b>
         </div>
         <div class="d-flex align-items-center pt-3">
-            <img class="introduce-image" src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_HUONGDANQUYDINH.png')}}" alt="ANH_HUONGDANQUYDINH">
+            <img class="introduce-image" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_HUONGDANQUYDINH.png')}}" alt="ANH_HUONGDANQUYDINH">
             <b class="pl-2 introduct-text">GIỚI THIỆU CÁC HƯỚNG DẪN QUY ĐỊNH CHUNG</b>
         </div>
         <div class="d-flex align-items-center pt-3">
-            <img class="introduce-image" src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QUANLYCAPPHEP.png')}}" alt="ANH_QUANLYCAPPHEP">
+            <img class="introduce-image" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_QUANLYCAPPHEP.png')}}" alt="ANH_QUANLYCAPPHEP">
             <b class="pl-2 introduct-text">GIỚI THIỆU CÁCH ĐĂNG KÝ/ KẾT NỐI</b>
         </div>
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
         <div id="map" class="h-100 w-100 position-relative">
-            <img title="Về trung tâm bản đồ" class="position-absolute map-tool center-map" id="center-map" src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_VEGIUABANDO.png'}}" alt="trung-tam-ban-do">
-            <img title="Vị trí hiện tại" class="position-absolute map-tool current-location" id="current-location" src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_VITRIHIENTAI.png'}}" alt="vi-tri-hien-tai">
-            <img title="Phóng to" class="position-absolute map-tool zoom-in" id="zoom-in" src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_PHONGTO.png'}}" alt="phong-to">
-            <img title="Thu nhỏ" class="position-absolute map-tool zoom-out" id="zoom-out" src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_THUNHO.png'}}" alt="thu-nho">
-            <img title="Thêm công trình" class="position-absolute map-tool add-construction" src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_THEMCONGTRINH.png'}}" alt="them-cong-trinh">
-            <img title="Sửa công trình" class="position-absolute map-tool edit-construction" src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_SUACONGTRINH.png'}}" alt="sua-cong-trinh">
-            <img title="Xem thông tin" class="position-absolute map-tool view-info" src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_XEMTHONGTIN.png'}}" alt="xem-thong-tin">
-            <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_DOKHOANGCACH.png'}}" alt="do-khoang-cach">
+            <img title="Về trung tâm bản đồ" class="position-absolute map-tool center-map" id="center-map" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_VEGIUABANDO.png'}}" alt="trung-tam-ban-do">
+            <img title="Vị trí hiện tại" class="position-absolute map-tool current-location" id="current-location" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_VITRIHIENTAI.png'}}" alt="vi-tri-hien-tai">
+            <img title="Phóng to" class="position-absolute map-tool zoom-in" id="zoom-in" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_PHONGTO.png'}}" alt="phong-to">
+            <img title="Thu nhỏ" class="position-absolute map-tool zoom-out" id="zoom-out" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_THUNHO.png'}}" alt="thu-nho">
+            <img title="Thêm công trình" class="position-absolute map-tool add-construction" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_THEMCONGTRINH.png'}}" alt="them-cong-trinh">
+            <img title="Sửa công trình" class="position-absolute map-tool edit-construction" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_SUACONGTRINH.png'}}" alt="sua-cong-trinh">
+            <img title="Xem thông tin" class="position-absolute map-tool view-info" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_XEMTHONGTIN.png'}}" alt="xem-thong-tin">
+            <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_DOKHOANGCACH.png'}}" alt="do-khoang-cach">
             <div class="position-absolute map-layers d-flex align-items-center">
-                <img src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_LOPBANDO.png'}}" alt="lop-ban-do">
+                <img src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_LOPBANDO.png'}}" alt="lop-ban-do">
                 <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
             </div>
             <div class="position-absolute map-note d-flex align-items-center">
-                <img src="{{'public/TNN_HE_THONG_GIAM_SAT/image/ANH_CHUGIAIBANDO.png'}}" alt="chu-giai-ban-do">
+                <img src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_CHUGIAIBANDO.png'}}" alt="chu-giai-ban-do">
                 <span class="font-weight-bold">&nbsp; Chú giải</span>
             </div>
         </div>
