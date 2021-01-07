@@ -305,7 +305,7 @@
 			<div class="col-6 p-0 ">
 				<p class="col-12 py-1 px-1 text-center observed-for-electric-title font-weight-bold mb-1 font-14">Giám sát hồ chứa để SXNN</p>
 				<div class="observed-for-electric-content font-13">
-					<div class="d-flex col-12 pl-0 pr-1 observed-for-electric-content-row mb-1">
+					<div class="d-flex col-12 pl-0 pr-2 observed-for-electric-content-row mb-1">
 						<div class="col-6 grid-item d-flex flex-column px-1">
 							<p class="text-center mb-1">Mực nước</p>
 							<div class="d-flex align-items-center">
@@ -331,7 +331,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="d-flex col-12 pl-0 pr-1 observed-for-electric-content-row mb-1">
+					<div class="d-flex col-12 pl-0 pr-2 observed-for-electric-content-row mb-1">
 						<div class="col-6 grid-item d-flex flex-column px-1">
 							<p class="text-center mb-1">Q<sub>khai thác</sub> </p>
 							<div class="d-flex align-items-center">
@@ -476,5 +476,6 @@
         </div>
       </div>
     </div>
+	<textarea id="rainLocationJson" class="d-none">{!! $rainLocationJson !!}</textarea>
 </main>
 @endsection
