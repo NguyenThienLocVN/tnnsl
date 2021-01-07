@@ -24,7 +24,7 @@ Route::get('thong-tin-chung', function () {
 })->name('thong-tin-chung');
 
 // Trang he thong giam sat
-Route::get('he-thong-giam-sat', 'App\Http\Controllers\MonitoringSystemController@index');
+Route::get('he-thong-giam-sat', 'App\Http\Controllers\MonitoringSystemController@index')->name('he-thong-giam-sat');
 
 // Trang gioi thieu chung
 Route::get('dang-ky', function () {
