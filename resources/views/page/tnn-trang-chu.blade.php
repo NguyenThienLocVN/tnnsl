@@ -13,8 +13,8 @@
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-4 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="http://tainguyenmoitruongsonla.vn" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <div class="font-weight-bold text-white d-block pl-2"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; TRANG CHỦ</div>
+            <a href="http://tainguyenmoitruongsonla.vn" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <div class="font-weight-bold text-white d-block pl-2"> TÀI NGUYÊN NƯỚC</div>
         </div>
         <div class="bg-lightgray col-lg-8 col-sm-12 col-md-12 text-center py-1 py-lg-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
