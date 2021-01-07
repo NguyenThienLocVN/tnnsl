@@ -41,6 +41,7 @@ option { font-size: 14px; }
 .map-note { right: 30px; top: 75px; z-index: 9998; }
 .map-panel-layers { z-index: 9999; background: #2F2F2F; right: 0; top: 75px; display: none; }
 .btn-close-layers { cursor: pointer; }
+.leaflet-popup-content { margin: 1em !important; }
 
 /* Ipad */
 @media screen and (min-width: 768px) {

@@ -71,9 +71,17 @@ function setBasemap (basemap) {
     }
 }
 
+// Click to show popup on the map
+function onEachFeature(feature, layer) {
+  if (feature.properties && feature.properties.hoverContent) {
+      layer.on('click', function() { layer.bindPopup(feature.properties.detailContent, {closeOnClick: true, autoClose: false}).openPopup()});
+      layer.on('mouseover', function() { layer.bindPopup(feature.properties.hoverContent).openPopup()});
+  }
+}
+
 // Get all rain location and display as icon on map
-var locations = JSON.parse(document.getElementById('rainLocationJson').value);
-var smallIcon = new L.Icon({
+var rainLocations = JSON.parse(document.getElementById('rainLocationJson').value);
+var rainIcon = new L.Icon({
   iconUrl: window.location.origin+'/tnnsl/public/TNN_HE_THONG_GIAM_SAT/image/arrow-blue.png',
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
   iconSize:    [15, 15],
@@ -83,20 +91,33 @@ var smallIcon = new L.Icon({
   shadowSize:  [30, 15]
 });
 
-// Click to show popup on the map
-function onEachFeature(feature, layer) {
-  if (feature.properties && feature.properties.hoverContent) {
-      layer.on('click', function() { layer.bindPopup(feature.properties.detailContent, {closeOnClick: true, autoClose: false}).openPopup()});
-      layer.on('mouseover', function() { layer.bindPopup(feature.properties.hoverContent).openPopup()});
-  }
-}
-
-var myLayer = L.geoJson(locations, {
+var myLayer = L.geoJson(rainLocations, {
   onEachFeature: onEachFeature,
   pointToLayer: function(feature, latlng) {
     return L.marker(latlng, {
-      icon: smallIcon
+      icon: rainIcon
     });
   }
 }).addTo(map);
 
+
+// Get all meteorology location and display as icon on map
+var meteorologyLocations = JSON.parse(document.getElementById('meteorologyLocationJson').value);
+var meteorologyIcon = new L.Icon({
+  iconUrl: window.location.origin+'/tnnsl/public/TNN_HE_THONG_GIAM_SAT/image/arrow-orange.png',
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
+  iconSize:    [15, 15],
+  iconAnchor:  [12, 41],
+  popupAnchor: [1, -34],
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  shadowSize:  [30, 15]
+});
+
+var myLayer = L.geoJson(meteorologyLocations, {
+  onEachFeature: onEachFeature,
+  pointToLayer: function(feature, latlng) {
+    return L.marker(latlng, {
+      icon: meteorologyIcon
+    });
+  }
+}).addTo(map);
