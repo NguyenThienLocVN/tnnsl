@@ -29,8 +29,8 @@
         <div class="monitoring-object pb-2">
           	<p class="col-12 py-1 monitoring-object-title font-weight-bold mb-2">Đối tượng giám sát</p>
           	<div class="monitoring-object-content">
-				<div class="d-flex mb-1">
-					<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_NUOCMAT.png')}}" alt="ANH_NUOCMAT" class="col-1 py-0 pl-0 pr-2">
+				<div class="d-flex mb-1 align-items-center">
+					<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_NUOCMAT.png')}}" alt="ANH_NUOCMAT" class="col-1 py-0 pl-0 pr-2 h-100">
 					<span class="font-weight-bold col-3 p-0 font-13 mr-1">NƯỚC MẶT</span>
 					<div class="text-center w-100">
 						<span>Loại công trình</span>
@@ -49,8 +49,8 @@
 						</select>
 					</div>
 				</div>
-				<div class="d-flex">
-					<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_NUOCDUOIDAT.png')}}" alt="ANH_NUOCDUOIDAT" class="col-1 py-0 pl-0 pr-2">
+				<div class="d-flex align-items-center">
+					<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_NUOCDUOIDAT.png')}}" alt="ANH_NUOCDUOIDAT" class="col-1 py-0 pl-0 pr-2 h-100">
 					<span class="font-weight-bold col-3 p-0 font-13 mr-1">NƯỚC DƯỚI ĐẤT</span>
 					<div class="text-center w-100">
 						<span>Loại công trình</span>
