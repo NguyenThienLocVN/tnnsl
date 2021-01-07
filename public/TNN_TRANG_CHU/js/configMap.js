@@ -82,7 +82,7 @@ function onEachFeature(feature, layer) {
 // Get all rain location and display as icon on map
 var rainLocations = JSON.parse(document.getElementById('rainLocationJson').value);
 var rainIcon = new L.Icon({
-  iconUrl: window.location.origin+'/tnnsl/public/TNN_HE_THONG_GIAM_SAT/image/arrow-blue.png',
+  iconUrl: window.location.origin+'/public/TNN_HE_THONG_GIAM_SAT/image/arrow-blue.png',
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
   iconSize:    [15, 15],
   iconAnchor:  [12, 41],
@@ -104,7 +104,7 @@ var myLayer = L.geoJson(rainLocations, {
 // Get all meteorology location and display as icon on map
 var meteorologyLocations = JSON.parse(document.getElementById('meteorologyLocationJson').value);
 var meteorologyIcon = new L.Icon({
-  iconUrl: window.location.origin+'/tnnsl/public/TNN_HE_THONG_GIAM_SAT/image/arrow-orange.png',
+  iconUrl: window.location.origin+'/public/TNN_HE_THONG_GIAM_SAT/image/arrow-orange.png',
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
   iconSize:    [15, 15],
   iconAnchor:  [12, 41],
