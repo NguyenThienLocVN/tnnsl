@@ -32,3 +32,8 @@ Route::get('he-thong-giam-sat', function () {
 Route::get('dang-ky', function () {
     return view('page.tnn-dang-ky');
 })->name('dang-ky');
+
+// Trang he thong giam sat thuy dien, mua
+Route::get('he-thong-giam-sat-thuy-dien-mua', function () {
+    return view('page.tnn-he-thong-giam-sat-thuy-dien-mua');
+})->name('he-thong-giam-sat-thuy-dien-mua');

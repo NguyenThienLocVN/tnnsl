@@ -4,6 +4,8 @@
 @push('custom-style')
     <link rel="stylesheet" href="{{asset('public/TNN_HE_THONG_GIAM_SAT/css/tnn-he-thong-giam-sat.css')}}">
     <link rel="stylesheet" href="{{asset('public/css/styles.css')}}">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 @endpush
 
 @section('content')
@@ -12,7 +14,10 @@
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
             <a href="{{url('/')}}" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <a href="{{route('thong-tin-chung')}}" class="font-weight-bold text-white d-block pl-2"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; HỆ THỐNG GIÁM SÁT</a>
+			<div class="d-flex">
+				<a href="{{route('thong-tin-chung')}}" class="font-weight-bold text-white btn-home-top d-block pl-2"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;</a>
+				<a href="{{route('he-thong-giam-sat')}}" class="font-weight-bold text-white d-block pl-2">HỆ THỐNG GIÁM SÁT</a>
+			</div>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-lg-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
@@ -20,7 +25,7 @@
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-lg-0 monitoring-system">
+    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-lg-0 monitoring-system" id="monitoring-system">
 		<!-- Doi tuong giam sat -->
         <div class="monitoring-object pb-2">
           	<p class="col-12 py-1 monitoring-object-title font-weight-bold mb-2">Đối tượng giám sát</p>
@@ -74,11 +79,11 @@
 			<p class="col-12 py-1 observed-data-title font-weight-bold mb-1">Số liệu quan trắc, vận hành</p>
 			<div class="observed-data-content font-13">
 				<div class="d-flex col-12 pl-0 observed-data-content-row mb-1">
-					<div class="col-3 grid-item d-flex flex-column px-1">
+					<div class="col-3 grid-item d-flex flex-column px-1" id="mua">
 						<p class="text-center mb-1">MƯA</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Trạm</p>
 							</div>
 							<div class="col-6 p-0">
@@ -90,7 +95,7 @@
 						<p class="text-center mb-1">MỰC NƯỚC</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -102,7 +107,7 @@
 						<p class="text-center mb-1">Q<sub>đến</sub> (m<sup>3</sup>/s)</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -114,7 +119,7 @@
 						<p class="text-center mb-1">Q<sub>xả</sub> (m<sup>3</sup>/s)</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -128,7 +133,7 @@
 						<p class="text-center mb-1">Q<sub>tối thiểu</sub> (m<sup>3</sup>/s)</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Trạm</p>
 							</div>
 							<div class="col-6 p-0">
@@ -140,7 +145,7 @@
 						<p class="text-center mb-1">Chất lượng nước</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -152,7 +157,7 @@
 						<p class="text-center mb-1">Mực nước trong giếng quan trắc</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -164,7 +169,7 @@
 						<p class="text-center mb-1">Lưu lượng khai thác NDD</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -186,7 +191,7 @@
 						<p class="text-center mb-1">Camera</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -198,7 +203,7 @@
 						<p class="text-center mb-1">Trực tuyến</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -210,7 +215,7 @@
 						<p class="text-center mb-1">Định kỳ</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -222,7 +227,7 @@
 						<p class="text-center mb-1">Hình ảnh</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+								<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
@@ -246,7 +251,7 @@
 							<p class="text-center mb-1">Mực nước</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
@@ -258,7 +263,7 @@
 							<p class="text-center mb-1">Q<sub>xả</sub> tối thiểu</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
@@ -272,7 +277,7 @@
 							<p class="text-center mb-1">Q<sub>xả</sub> qua nhà máy</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
@@ -284,7 +289,7 @@
 							<p class="text-center mb-1">Q<sub>xả</sub> tràn</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
@@ -305,7 +310,7 @@
 							<p class="text-center mb-1">Mực nước</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
@@ -317,7 +322,7 @@
 							<p class="text-center mb-1">Q<sub>xả</sub> tối thiểu</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
@@ -331,7 +336,7 @@
 							<p class="text-center mb-1">Q<sub>khai thác</sub> </p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
@@ -343,7 +348,7 @@
 							<p class="text-center mb-1">CLN khai thác</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
@@ -366,7 +371,7 @@
 							<p class="text-center mb-1">Q<sub>khai thác</sub></p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
@@ -378,7 +383,7 @@
 							<p class="text-center mb-1">CLN khai thác</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
@@ -399,7 +404,7 @@
 							<p class="text-center mb-1">Q<sub>khai thác</sub></p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
@@ -411,7 +416,7 @@
 							<p class="text-center mb-1">Mực nước</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
@@ -423,7 +428,7 @@
 							<p class="text-center mb-1">CLN k/thác</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-25 font-weight-bold m-0 text-success">10</p>
+									<p class="text-center font-13 font-weight-bold m-0 text-success">10/60</p>
 									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
@@ -435,6 +440,20 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			$(document).ready(function(){
+                $("#mua").click(function(){
+                        $.ajax(
+                            {
+                                url:"http://localhost/tnnsl/he-thong-giam-sat-thuy-dien-mua", 
+                                success: function(rs){
+                                    $("#monitoring-system").html(rs);
+                                }
+                            }
+                        )
+                })
+			})
+		</script>
 		
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
