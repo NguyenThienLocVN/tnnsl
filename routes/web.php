@@ -35,3 +35,8 @@ Route::get('dang-ky', function () {
 Route::get('he-thong-giam-sat-thuy-dien-mua', function () {
     return view('page.tnn-he-thong-giam-sat-thuy-dien-mua');
 })->name('he-thong-giam-sat-thuy-dien-mua');
+
+// Trang gioi thieu chung
+Route::get('bao-cao-bieu-mau', function () {
+    return view('page.tnn-bao-cao-bieu-mau');
+})->name('bao-cao-bieu-mau');

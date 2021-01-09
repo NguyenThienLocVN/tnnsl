@@ -1,0 +1,13 @@
+.report-block-one { background: #F2F2F2; }
+.report-block-two { background: #d5eef7; }
+.report-block-three { background: #f4d7ff; }
+.report-item:hover { cursor: pointer; transition: 0.5s; }
+.report-item-one:hover { background: #dadada;}
+.report-item-two:hover { background: #a7e1f5; }
+.report-item-three:hover { background: #ebbdfd; }
+.report-item-four:hover { background: #e0dede; }
+
+@media screen and (min-width: 1024px) {
+    .report-item-three { flex: unset; height: 94px; }
+    .report-item-four { flex: unset; height: 180px; }
+}

@@ -47,10 +47,10 @@
         </div>
         <div class="d-flex flex-column flex-md-row flex-lg-column">
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
-                <div class="col-6 text-center">
+                <a href="{{route('bao-cao-bieu-mau')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_BIEUMAUBAOCAO.png')}}" alt="bieu-mau">
                     <p class="grid-item-text font-weight-bold">Báo cáo biểu mẫu</p>
-                </div>
+                </a>
                 <div class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGBAO.png')}}" alt="thong-bao">
                     <p class="grid-item-text font-weight-bold">Thông báo</p>
