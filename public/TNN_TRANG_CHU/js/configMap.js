@@ -99,25 +99,3 @@ var myLayer = L.geoJson(rainLocations, {
     });
   }
 }).addTo(map);
-
-
-// Get all meteorology location and display as icon on map
-var meteorologyLocations = JSON.parse(document.getElementById('meteorologyLocationJson').value);
-var meteorologyIcon = new L.Icon({
-  iconUrl: window.location.origin+'/public/TNN_HE_THONG_GIAM_SAT/image/arrow-orange.png',
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
-  iconSize:    [15, 15],
-  iconAnchor:  [12, 41],
-  popupAnchor: [1, -34],
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  shadowSize:  [30, 15]
-});
-
-var myLayer = L.geoJson(meteorologyLocations, {
-  onEachFeature: onEachFeature,
-  pointToLayer: function(feature, latlng) {
-    return L.marker(latlng, {
-      icon: meteorologyIcon
-    });
-  }
-}).addTo(map);

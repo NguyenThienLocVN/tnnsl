@@ -1661,3 +1661,7 @@ option { font-size: 14px; }
 .slqtm_thead{background-color: lightblue;}
 .slqtm_tbody{background-color: #ececec;}
 .cursor-pointer{cursor: pointer;}
+
+@media screen and (min-width: 1024px) {
+	.leaflet-popup-content { width: 300px !important; margin: 13px !important; }
+}
