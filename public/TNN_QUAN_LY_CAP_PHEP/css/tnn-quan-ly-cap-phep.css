@@ -4,6 +4,9 @@
 #total-dams { top: 12px; left: 32px; }
 .surfacewater-usage, .discharge-water { border: 1px solid #d5e6fb; }
 #surfacewater-usage { overflow-y: auto; height: calc(100vh - 156px); }
+
+.surfacewater-usage-content, .discharge-water-content { height: 75px; }
+.surfacewater-usage-item p, .discharge-water-item p { height: 40px; }
 /* Custom scroll bar */
 #surfacewater-usage::-webkit-scrollbar-track
 {
@@ -27,4 +30,19 @@
 									   color-stop(0.44, rgb(122,153,217)),
 									   color-stop(0.72, rgb(73,125,189)),
 									   color-stop(0.86, rgb(28,58,148)));
+}
+
+@media screen and (min-width: 768px) {
+	.surfacewater-usage-content, .discharge-water-content { height: unset; }
+	.surfacewater-usage-item p, .discharge-water-item p { height: unset; }
+
+	#dams-num { left: 46px; top: 17px; }
+	#slash { top: 21px;	left: 65px;	}
+	#total-dams { top: 25px; left: 70px; }
+}
+
+@media screen and (min-width: 1024px) {
+	#dams-num {	left: 11px;	top: 3px; }
+	#slash { top: 8px; left: 29px; }
+	#total-dams { top: 14px; left: 33px; }
 }

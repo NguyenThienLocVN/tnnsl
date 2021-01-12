@@ -19,13 +19,13 @@
 				<div class="font-weight-bold text-white d-block pl-2 border-left">HỆ THỐNG GIÁM SÁT</div>
 			</div>
         </div>
-        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-lg-0">
+        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-lg-0 monitoring-system" id="monitoring-system">
+    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-md-0 monitoring-system" id="monitoring-system">
 		<!-- Doi tuong giam sat -->
         <div class="monitoring-object pb-2">
           	<p class="col-12 py-1 monitoring-object-title font-weight-bold mb-2">Đối tượng giám sát</p>

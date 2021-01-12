@@ -14,7 +14,7 @@
             <a href="{{url('/')}}" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
             <span class="font-weight-bold text-white d-block pl-2">BÁO CÁO BIỂU MẪU</span>
         </div>
-        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-lg-0">
+        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 

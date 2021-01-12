@@ -12,7 +12,7 @@
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
             <a href="{{url('/')}}" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <a href="{{route('thong-tin-chung')}}" class="font-weight-bold text-white d-block pl-2"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; GIỚI THIỆU CHUNG</a>
+            <a href="{{route('thong-tin-chung')}}" class="font-weight-bold text-white d-block pl-2">&nbsp; GIỚI THIỆU CHUNG</a>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-lg-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>

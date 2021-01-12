@@ -16,13 +16,13 @@
             <a href="{{url('/')}}" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
             <span class="font-weight-bold text-white d-block pl-2">QUẢN LÝ CẤP PHÉP</span>
         </div>
-        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-lg-0">
+        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-lg-0" id="surfacewater-usage">
+    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-md-0" id="surfacewater-usage">
         <!-- Khai thac su dung nuoc mat -->
         <div class="surfacewater-usage pb-2 mb-1">
           	<p class="col-12 py-1 surfacewater-usage-title font-weight-bold mb-2">Khai thác sử dụng nước mặt</p>
@@ -35,7 +35,7 @@
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
                             <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
                         </div>
-                        <img class="col-6 p-0" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_HETHONGGIAMSAT.png')}}" alt="ANH_HETHONGGIAMSAT">
+                        <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_HETHONGGIAMSAT.png')}}" alt="ANH_HETHONGGIAMSAT">
                     </div>
                 </div>
                 <div class="col-4 surfacewater-usage-item pl-0 text-center">
@@ -46,7 +46,7 @@
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
                             <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
                         </div>
-                        <img class="col-6 p-0" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_THUYLOI.png')}}" alt="ANH_THUYLOI">
+                        <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_THUYLOI.png')}}" alt="ANH_THUYLOI">
                     </div>
                 </div>
                 <div class="col-4 surfacewater-usage-item pl-0 text-center">
@@ -57,7 +57,7 @@
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
                             <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
                         </div>
-                        <img class="col-6 p-0" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_THUYLOI.png')}}" alt="ANH_THUYLOI">
+                        <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_THUYLOI.png')}}" alt="ANH_THUYLOI">
                     </div>
                 </div>
             </div>
@@ -71,18 +71,18 @@
                             <option value="">Công trình B</option>
                         </select>
                     </div>
-                    <button class="col-2 mr-2 btn-primary" >Xem</button>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary" >Xem</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
-                        <input type="text" class="col-7 p-0 font-13" placeholder="Nhập số giấy phép..">
+                        <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
-                        <input type="text" class="col-7 p-0 font-13" placeholder="Nhập cơ quan cấp phép..">
+                        <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
                             <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
                         </div>
-                        <img class="col-6 p-0" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_HOGIADINH.png')}}" alt="ANH_HOGIADINH">
+                        <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_HOGIADINH.png')}}" alt="ANH_HOGIADINH">
                     </div>
                 </div>
                 <div class="col-4 discharge-water-item pl-0 text-center">
@@ -112,7 +112,7 @@
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
                             <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
                         </div>
-                        <img class="col-6 p-0" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_HOKINHDOANH.png')}}" alt="ANH_HOKINHDOANH">
+                        <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_HOKINHDOANH.png')}}" alt="ANH_HOKINHDOANH">
                     </div>
                 </div>
                 <div class="col-4 discharge-water-item pl-0 text-center">
@@ -123,7 +123,7 @@
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
                             <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
                         </div>
-                        <img class="col-6 p-0" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_YTE.png')}}" alt="ANH_YTE">
+                        <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_YTE.png')}}" alt="ANH_YTE">
                     </div>
                 </div>
             </div>
@@ -131,24 +131,24 @@
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Tên công trình:</span>
-                        <select name="construction-name" id="construction-name" class="col-7 p-0 font-13">
+                        <select name="construction-name" id="construction-name" class="col-7 px-1 font-13">
                             <option value="">Chọn công trình</option>
                             <option value="">Công trình A</option>
                             <option value="">Công trình B</option>
                         </select>
                     </div>
-                    <button class="col-2 mr-2 btn-primary" >Xem</button>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary" >Xem</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
-                        <input type="text" class="col-7 p-0 font-13" placeholder="Nhập số giấy phép..">
+                        <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
-                        <input type="text" class="col-7 p-0 font-13" placeholder="Nhập cơ quan cấp phép..">
+                        <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
                             <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
                         </div>
-                        <img class="col-6 p-0" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_GIENGKHOAN.png')}}" alt="ANH_GIENGKHOAN">
+                        <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_GIENGKHOAN.png')}}" alt="ANH_GIENGKHOAN">
                     </div>
                 </div>
                 <div class="col-4 discharge-water-item pl-0 text-center">
@@ -178,7 +178,7 @@
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
                             <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
                         </div>
-                        <img class="col-6 p-0" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_NUOCMOHUOI.png')}}" alt="ANH_NUOCMOHUOI">
+                        <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_NUOCMOHUOI.png')}}" alt="ANH_NUOCMOHUOI">
                     </div>
                 </div>
                 <div class="col-4 discharge-water-item pl-0 text-center">
@@ -189,7 +189,7 @@
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
                             <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
                         </div>
-                        <img class="col-6 p-0" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_NUOCTAPTRUNG.png')}}" alt="ANH_NUOCTAPTRUNG">
+                        <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_NUOCTAPTRUNG.png')}}" alt="ANH_NUOCTAPTRUNG">
                     </div>
                 </div>
             </div>
@@ -197,24 +197,24 @@
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Tên công trình:</span>
-                        <select name="construction-name" id="construction-name" class="col-7 p-0 font-13">
+                        <select name="construction-name" id="construction-name" class="col-7 px-1 font-13">
                             <option value="">Chọn công trình</option>
                             <option value="">Công trình A</option>
                             <option value="">Công trình B</option>
                         </select>
                     </div>
-                    <button class="col-2 mr-2 btn-primary" >Xem</button>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary" >Xem</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
-                        <input type="text" class="col-7 p-0 font-13" placeholder="Nhập số giấy phép..">
+                        <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
-                        <input type="text" class="col-7 p-0 font-13" placeholder="Nhập cơ quan cấp phép..">
+                        <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
                 </div>
             </div>
