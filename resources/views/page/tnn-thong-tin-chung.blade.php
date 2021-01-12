@@ -22,6 +22,10 @@
 <main class="d-flex flex-column flex-lg-row">
     <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-lg-0">
         <div class="d-flex align-items-center pt-3">
+            <img class="introduce-image" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_HETHONGQUANTRAC.png')}}" alt="ANH_HETHONGQUANTRAC">
+            <b class="pl-2 introduct-text">GIỚI THIỆU HỆ THỐNG QUẢN LÝ QUAN TRẮC</b>
+        </div>
+        <div class="d-flex align-items-center pt-3">
             <img class="introduce-image" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_HETHONGGIAMSAT.png')}}" alt="ANH_HETHONGGIAMSAT">
             <b class="pl-2 introduct-text">GIỚI THIỆU HỆ THỐNG QUẢN LÝ GIÁM SÁT</b>
         </div>

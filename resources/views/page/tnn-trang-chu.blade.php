@@ -27,11 +27,33 @@
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
                 <a href="{{url('thong-tin-chung')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGTINCHUNG.png')}}" alt="thong-tin-chung">
-                    <p class="grid-item-text font-weight-bold">Thông tin chung</p>
+                    <p class="grid-item-text font-weight-bold">Giới thiệu chung</p>
                 </a>
+                <div class="col-6 text-center">
+                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYDULIEU.png')}}" alt="quan-ly-du-lieu">
+                    <p class="grid-item-text font-weight-bold">Thông tin dữ liệu</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
+                <div class="col-6 text-center">
+                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HETHONGQUANTRAC.png')}}" alt="he-thong-quan-trac">
+                    <p class="grid-item-text font-weight-bold">Hệ thống quan trắc</p>
+                </div>
+                <div class="col-6 text-center">
+                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGBAO.png')}}" alt="thong-bao">
+                    <p class="grid-item-text font-weight-bold">Thông báo</p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-md-row flex-lg-column">
+            <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
                 <a href="{{url('he-thong-giam-sat')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HETHONGGIAMSAT.png')}}" alt="he-thong-giam-sat">
                     <p class="grid-item-text font-weight-bold">Hệ thống giám sát</p>
+                </a>
+                <a href="{{route('bao-cao-bieu-mau')}}" class="col-6 text-center">
+                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_BIEUMAUBAOCAO.png')}}" alt="bieu-mau">
+                    <p class="grid-item-text font-weight-bold">Báo cáo biểu mẫu</p>
                 </a>
             </div>
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
@@ -39,32 +61,18 @@
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYCAPPHEP.png')}}" alt="cap-phep">
                     <p class="grid-item-text font-weight-bold">Quản lý cấp phép</p>
                 </a>
-                <div class="col-6 text-center">
-                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYDULIEU.png')}}" alt="quan-ly-du-lieu">
-                    <p class="grid-item-text font-weight-bold">Quản lý dữ liệu</p>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row flex-lg-column">
-            <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
-                <a href="{{route('bao-cao-bieu-mau')}}" class="col-6 text-center">
-                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_BIEUMAUBAOCAO.png')}}" alt="bieu-mau">
-                    <p class="grid-item-text font-weight-bold">Báo cáo biểu mẫu</p>
-                </a>
-                <div class="col-6 text-center">
-                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGBAO.png')}}" alt="thong-bao">
-                    <p class="grid-item-text font-weight-bold">Thông báo</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
-                <div class="col-6 text-center">
-                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HUONGDANQUYDINH.png')}}" alt="huong-dan-quy-dinh">
-                    <p class="grid-item-text font-weight-bold">Hướng dẫn quy định</p>
-                </div>
                 <a href="{{url('dang-ky')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_DANGKY.png')}}" alt="dang-ky">
                     <p class="grid-item-text font-weight-bold">Đăng ký / Kết nối</p>
                 </a>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-md-row flex-lg-column">
+            <div class="col-12 px-0 pt-3 pb-0 d-flex justify-content-center">
+                <div class="col-6 text-center">
+                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HUONGDANQUYDINH.png')}}" alt="huong-dan-quy-dinh">
+                    <p class="grid-item-text font-weight-bold">Hướng dẫn quy định</p>
+                </div>
             </div>
         </div>
     </div>
