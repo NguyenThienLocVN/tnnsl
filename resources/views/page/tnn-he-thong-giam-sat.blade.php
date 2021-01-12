@@ -485,7 +485,7 @@
 				}
 			)
 			// set atr href back page
-			$("#btn_back_page").attr("href","{{route('he-thong-giam-sat')}}");
+			$("#btn_back_page").attr("href","{{url('he-thong-giam-sat')}}");
 			$("#btn_back_page").attr("title","Về trang hệ thống giám sát");
 		})
 		// count_rain_stations 

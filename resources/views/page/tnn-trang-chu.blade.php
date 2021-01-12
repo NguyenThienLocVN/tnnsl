@@ -25,20 +25,20 @@
     <div class="col-12 col-lg-4">
         <div class="d-flex flex-column flex-md-row flex-lg-column">
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
-                <a href="{{route('thong-tin-chung')}}" class="col-6 text-center">
+                <a href="{{url('thong-tin-chung')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGTINCHUNG.png')}}" alt="thong-tin-chung">
                     <p class="grid-item-text font-weight-bold">Thông tin chung</p>
                 </a>
-                <a href="{{route('he-thong-giam-sat')}}" class="col-6 text-center">
+                <a href="{{url('he-thong-giam-sat')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HETHONGGIAMSAT.png')}}" alt="he-thong-giam-sat">
                     <p class="grid-item-text font-weight-bold">Hệ thống giám sát</p>
                 </a>
             </div>
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
-                <div class="col-6 text-center">
+                <a href="{{url('quan-ly-cap-phep')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYCAPPHEP.png')}}" alt="cap-phep">
                     <p class="grid-item-text font-weight-bold">Quản lý cấp phép</p>
-                </div>
+                </a>
                 <div class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYDULIEU.png')}}" alt="quan-ly-du-lieu">
                     <p class="grid-item-text font-weight-bold">Quản lý dữ liệu</p>

@@ -36,7 +36,12 @@ Route::get('he-thong-giam-sat-thuy-dien-mua', function () {
     return view('page.tnn-he-thong-giam-sat-thuy-dien-mua');
 })->name('he-thong-giam-sat-thuy-dien-mua');
 
-// Trang gioi thieu chung
+// Trang bao cao bieu mau
 Route::get('bao-cao-bieu-mau', function () {
     return view('page.tnn-bao-cao-bieu-mau');
 })->name('bao-cao-bieu-mau');
+
+// Trang quan ly cap phep
+Route::get('quan-ly-cap-phep', function () {
+    return view('page.tnn-quan-ly-cap-phep');
+})->name('quan-ly-cap-phep');
