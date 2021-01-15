@@ -71,13 +71,14 @@
                             <option value="">Công trình B</option>
                         </select>
                     </div>
-                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary" >Xem</button>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Xem</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Y/c kết nối</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
@@ -144,6 +145,7 @@
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Y/c kết nối</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
@@ -210,6 +212,7 @@
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Y/c kết nối</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
