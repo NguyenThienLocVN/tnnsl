@@ -58,4 +58,8 @@ Route::group([
     Route::get('nuoc-mat', function () {
         return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-nuoc-mat');
     })->name('quan-ly-cap-phep-nuoc-mat');
+
+    Route::get('nuoc-duoi-dat', function () {
+        return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-nuoc-duoi-dat');
+    })->name('quan-ly-cap-phep-nuoc-duoi-dat');
 });

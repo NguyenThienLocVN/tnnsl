@@ -205,7 +205,7 @@
                             <option value="">Công trình B</option>
                         </select>
                     </div>
-                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary" >Xem</button>
+                    <a href="{{route('quan-ly-cap-phep-nuoc-duoi-dat')}}" class="col-2 p-0 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Xem</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
