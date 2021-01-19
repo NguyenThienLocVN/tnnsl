@@ -39,6 +39,6 @@ class MonitoringSystemController extends Controller
         $count_all_rain_stations = RainStations::select("rain_station.*")->count();
         $count_rain_stations_over_2MW = RainStations::where("station_type","TREN2MW")->count();
         $count_rain_stations_below_2MW = RainStations::where("station_type","DUOI2MW")->count();
-        return view('page.tnn-he-thong-giam-sat', ['rainLocationJson' => $rainLocationJson, "count_all_rain_stations" => $count_all_rain_stations,"count_rain_stations_over_2MW"=>$count_rain_stations_over_2MW,"count_rain_stations_below_2MW"=>$count_rain_stations_below_2MW]);
+        return view('page.he-thong-giam-sat.tnn-he-thong-giam-sat', ['rainLocationJson' => $rainLocationJson, "count_all_rain_stations" => $count_all_rain_stations,"count_rain_stations_over_2MW"=>$count_rain_stations_over_2MW,"count_rain_stations_below_2MW"=>$count_rain_stations_below_2MW]);
     }
 }

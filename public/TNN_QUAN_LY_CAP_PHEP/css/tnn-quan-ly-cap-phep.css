@@ -1,12 +1,14 @@
-.surfacewater-usage-title, .discharge-water-title { background: #2f80ed33; }
+.exploit-surfacewater-heading { font-size: 12px; }
+.surfacewater-usage-title, .discharge-water-title, .construction-info-title, .exploit-surfacewater-title { background: #2f80ed33; }
 #dams-num { left: 8px; top: 5px; }
 #slash { top: 8px; left: 27px; }
 #total-dams { top: 12px; left: 32px; }
-.surfacewater-usage, .discharge-water { border: 1px solid #d5e6fb; }
+.surfacewater-usage, .discharge-water, .construction-info, .exploit-surfacewater { border: 1px solid #d5e6fb; }
 #surfacewater-usage { overflow-y: auto; height: calc(100vh - 156px); }
-
 .surfacewater-usage-content, .discharge-water-content { height: 75px; }
 .surfacewater-usage-item p, .discharge-water-item p { height: 40px; }
+.btn-license { background: #3883e6; box-shadow: 3px 3px 20px #ded7d7; transition: 0.5s; color: white;}
+.btn-license:hover { background: #a5c8f7; box-shadow: unset;background: #2f80ed33; color: black;  }
 /* Custom scroll bar */
 #surfacewater-usage::-webkit-scrollbar-track
 {
@@ -33,6 +35,7 @@
 }
 
 @media screen and (min-width: 768px) {
+	.exploit-surfacewater-heading { font-size: unset; }
 	.surfacewater-usage-content, .discharge-water-content { height: unset; }
 	.surfacewater-usage-item p, .discharge-water-item p { height: unset; }
 
