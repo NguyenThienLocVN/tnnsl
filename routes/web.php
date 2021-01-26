@@ -59,7 +59,15 @@ Route::group([
         return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-nuoc-mat');
     })->name('quan-ly-cap-phep-nuoc-mat');
 
+    Route::get('nuoc-mat/cong-trinh-dau-moi', function () {
+        return view('page.quan-ly-cap-phep.tnn-nuoc-mat-cong-trinh-dau-moi');
+    })->name('nuoc-mat-cong-trinh-dau-moi');
+
     Route::get('nuoc-duoi-dat', function () {
         return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-nuoc-duoi-dat');
     })->name('quan-ly-cap-phep-nuoc-duoi-dat');
+    
+    Route::get('nuoc-duoi-dat/ky-thuat-cong-trinh', function () {
+        return view('page.quan-ly-cap-phep.tnn-nuoc-duoi-dat-ky-thuat-cong-trinh');
+    })->name('nuoc-duoi-dat-ky-thuat-cong-trinh');
 });

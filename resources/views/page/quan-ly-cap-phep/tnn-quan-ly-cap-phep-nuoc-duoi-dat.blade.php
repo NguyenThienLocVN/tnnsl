@@ -53,7 +53,7 @@
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                     <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0">Đơn vị CP</span>
+                        <span class="col-5 font-13 px-0">Cơ quan CP</span>
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                 </div>
@@ -69,10 +69,6 @@
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-2">
                     <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-5 font-13 px-0">Thời hạn GP</span>
-                        <input type="text" class="col-md-4 col-2 px-1 font-13">&nbsp; <span class="font-13">(năm)</span>
-                    </div>
-                    <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                         <span class="col-5 font-13 px-0">Chế độ KT</span>
                         <input type="text" class="col-md-7 col-7 px-1 font-13">
                     </div>
@@ -110,7 +106,7 @@
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                         <span class="col-5 font-13 px-0">Huyện</span>
                         <input type="text" class="col-7 px-1 font-13">
@@ -120,7 +116,7 @@
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                         <span class="col-5 font-13 px-0">Vị trí &nbsp; X</span>
                         <input type="text" class="col-7 px-1 font-13">
@@ -130,7 +126,7 @@
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                         <span class="col-5 font-13 px-0">Vị trí &nbsp; Y</span>
                         <input type="text" class="col-7 px-1 font-13">
@@ -139,7 +135,7 @@
                         
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                         <span class="col-5 font-13 px-0">Q<sub>KT</sub></span>
                         <input type="text" class="col-3 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/ngđ)</span>
@@ -149,22 +145,22 @@
                         <input type="text" class="col-3 px-1 font-13">&nbsp;<span class="font-13">(giờ/ngnđ)</span>
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                         <span class="col-12 font-13 px-0">Chiều sâu đoạn thu nước : &nbsp; Từ <input type="text" class="col-2 px-1"> đến <input type="text" class="col-2 px-1"> &nbsp; (m) </span>
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                         <span class="col-12 font-13 px-0">Chiều sâu mực nước động lớn nhất : <input type="text" class="col-3 px-1"> (m) &nbsp; </span>
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                         <span class="col-12 font-13 px-0">Chiều sâu mực nước tĩnh : <input type="text" class="col-3 px-1"> (m) &nbsp; </span>
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                         <span class="col-12 font-13 px-0">Tầng chứa nước khai thác : &nbsp; <input type="text" class="col-3 px-1"> </span>
                     </div>
@@ -226,6 +222,13 @@
 		</div>
         <!-- Ket thuc quan trac tai nguyen nuoc mat -->
 
+        <!-- Thong tin ky thuat cong trinh -->
+        <div class="col-12 d-flex flex-column flex-md-row mb-1 p-0 surfacewater-usage">
+            <div class="col-md-12 col-12 d-flex pl-0 pr-0 mb-md-0 align-items-center">
+                <span class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình &nbsp; <a href="{{route('nuoc-duoi-dat-ky-thuat-cong-trinh')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
+            </div>
+        </div>
+        <!-- Ket thuc thong tin ky thuat cong trinh -->
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
         <div id="map" class="h-100 w-100 position-relative">

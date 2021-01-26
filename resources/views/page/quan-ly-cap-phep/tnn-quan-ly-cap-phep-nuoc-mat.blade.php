@@ -53,11 +53,11 @@
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                     <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0">Đơn vị CP</span>
+                        <span class="col-5 font-13 px-0">Cơ quan CP</span>
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                <div class="col-12 d-flex flex-column flex-md-row mb-2">
                     <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                         <span class="col-5 font-13 px-0">Năm XD</span>
                         <input type="text" class="col-md-4 col-2 px-1 font-13">
@@ -65,12 +65,6 @@
                     <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                         <span class="col-5 font-13 px-0">Năm VH</span>
                         <input type="text" class="col-md-4 col-2 px-1 font-13">
-                    </div>
-                </div>
-                <div class="col-12 d-flex mb-2">
-                    <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-5 font-13 px-0">Thời hạn GP</span>
-                        <input type="text" class="col-md-4 col-2 px-1 font-13">&nbsp; <span class="font-13">(năm)</span>
                     </div>
                 </div>
                 <div class="col-12 d-flex mb-1">
@@ -148,12 +142,27 @@
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-5 font-13 px-0">Q<sub>max<sub></span>
+                        <span class="col-5 font-13 px-0">Q<sub>KT max<sub></span>
                         <input type="text" class="col-4 px-1 font-13"> &nbsp; <span class="font-13">(m<sup>3</sup>/s)</span>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                         <span class="col-5 font-13 px-0">Q<sub>xả<sub> TT</span>
                         <input type="text" class="col-4 px-1 font-13"> &nbsp; <span class="font-13">(m<sup>3</sup>/s)</span>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                    <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                        <span class="col-12 font-13 px-0">DT tưới/tiêu tk : <input type="text" class="col-3 px-1"> (ha) &nbsp; </span>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                    <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                        <span class="col-12 font-13 px-0">Q<sub>tưới/tiêu</sub> tk : <input type="text" class="col-3 px-1"> (m<sup>3</sup>/s) &nbsp; </span>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                    <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                        <span class="col-12 font-13 px-0">Q<sub>cấp nước</sub> SH, SX : <input type="text" class="col-3 px-1"> (m<sup>3</sup>/ngđ) &nbsp; </span>
                     </div>
                 </div>
             </div>
@@ -212,6 +221,14 @@
             </div>
 		</div>
         <!-- Ket thuc quan trac tai nguyen nuoc mat -->
+
+        <!-- Thong tin ky thuat cong trinh -->
+        <div class="col-12 d-flex flex-column flex-md-row mb-1 p-0 surfacewater-usage">
+            <div class="col-md-12 col-12 d-flex pl-0 pr-0 mb-md-0 align-items-center">
+                <span class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="{{route('nuoc-mat-cong-trinh-dau-moi')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
+            </div>
+        </div>
+        <!-- Ket thuc thong tin ky thuat cong trinh -->
 
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">

@@ -22,7 +22,7 @@
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-4">
+    <div class="col-12 col-lg-4 menu-home">
         <div class="d-flex flex-column flex-md-row flex-lg-column">
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
                 <a href="{{url('thong-tin-chung')}}" class="col-6 text-center">
