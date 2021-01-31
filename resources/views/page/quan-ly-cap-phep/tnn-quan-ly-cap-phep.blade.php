@@ -13,7 +13,7 @@
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="{{url('/')}}" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+            <a href="{{url('/')}}" title="Về trang chủ" id="btn_back_page" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
             <span class="font-weight-bold text-white d-block pl-2">QUẢN LÝ CẤP PHÉP</span>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
@@ -23,6 +23,8 @@
 </header>
 <main class="d-flex flex-column flex-lg-row">
     <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-md-0" id="surfacewater-usage">
+        <div id="overlay"></div>
+        <img src="{{asset('public/TNN_TRANG_CHU/image/loading.gif')}}" id="loading-gif-image" class="loading-gif position-absolute" alt="loading" style="display: none;">
         <!-- Khai thac su dung nuoc mat -->
         <div class="surfacewater-usage pb-2 mb-1">
           	<p class="col-12 py-1 surfacewater-usage-title font-weight-bold mb-2">Khai thác sử dụng nước mặt</p>
@@ -65,25 +67,27 @@
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Tên công trình:</span>
-                        <select name="construction-name" id="construction-name" class="col-7 p-0 font-13">
+                        <select name="construction-name" id="construction-id" class="col-7 p-0 font-13">
                             <option value="">Chọn công trình</option>
-                            <option value="">Công trình A</option>
-                            <option value="">Công trình B</option>
+                            <option value="view-all">Xem tất cả</option>
+                            @foreach($constructions as $cons)
+                                <option value="{{$cons->id}}">{{ $cons->construction_name }}</option>
+                            @endforeach
                         </select>
                     </div>
-                    <a href="{{route('quan-ly-cap-phep-nuoc-mat')}}" class="col-2 p-0 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Xem</a>
+                    <button title="Chọn tên công trình để xem thông tin" disabled="true" class="col-2 p-0 px-lg2 mr-2 btn-primary font-13 text-center rounded" id="view-surfacewater">Xem</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
-                        <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
+                        <input type="text" class="col-7 px-1 font-13" id="license_num" placeholder="Nhập số giấy phép..">
                     </div>
                     <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Y/c kết nối</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
-                        <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
+                        <input type="text" class="col-7 px-1 font-13" id="organization_authorities" placeholder="Nhập cơ quan cấp phép..">
                     </div>
                 </div>
             </div>
@@ -138,7 +142,7 @@
                             <option value="">Công trình B</option>
                         </select>
                     </div>
-                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary" >Xem</button>
+                    <a href="{{route('quan-ly-cap-phep-xa-thai-nguon-nuoc')}}" class="col-2 p-0 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Xem</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
@@ -254,4 +258,92 @@
         </div>
     </div>
 </main>
+
+<script>
+    $(document).ready(function () {
+        // Hien thi thong tin cong trinh: So giay phep & Co quan cap phep
+        $("#construction-id").on('change', function(){
+            var id = $("#construction-id").val();
+            
+            // Disabled button
+            $('#view-surfacewater').prop('disabled', id != "" ? false:true);
+
+            $.ajax({
+                method: "GET",
+                url: window.location.href+"/nuoc-mat/"+id,
+                beforeSend: function(){
+                    $("#loading-gif-image").show();
+                    $("#overlay").show();
+                }, 
+                success: function(data){
+                    $("#loading-gif-image").hide();
+                    $("#overlay").hide();
+
+                    $("#license_num").val(data.license_num);
+                    $("#organization_authorities").val(data.organization_authorities);
+                }
+            });
+        })
+
+        // Khi bam nut "Xem" - Khai thac su dung nuoc mat
+        $("#view-surfacewater").on('click',function(){
+            var id = $("#construction-id").val();
+
+            $.ajax({
+                url: window.location.href+"/nuoc-mat", 
+                beforeSend: function(){
+                    $("#loading-gif-image").show();
+                    $("#overlay").show();
+                },
+                success: function(view){
+                    $("#loading-gif-image").hide();
+                    $("#overlay").hide();
+
+                    $("#surfacewater-usage").html(view);
+                    $.ajax({
+                        method: "GET",
+                        url: window.location.href+"/nuoc-mat/"+id,
+                        beforeSend: function(){
+                            $("#loading-gif-image").show();
+                            $("#overlay").show();
+                        }, 
+                        success: function(data){
+                            $("#loading-gif-image").hide();
+                            $("#overlay").hide();
+
+                            $("#license_num").val(data.license_num);
+                            $("#license_date").val(data.license_date);
+                            $("#license_duration").val(data.license_duration);
+                            $("#license_role").val(data.license_role);
+                            $("#organization_request").val(data.organization_request);
+                            $("#organization_authorities").val(data.organization_authorities);
+                            $("#year_built").val(data.year_built);
+                            $("#year_operation").val(data.year_operation);
+                            $("#construction_code").val(data.construction_code);
+                            $("#purpose_using_water").val(data.purpose_using_water);
+                            $("#water_source").val(data.water_source);
+                            $("#district").val(data.district);
+                            $("#commune").val(data.commune);
+                            $("#lat_dams").val(data.lat_dams);
+                            $("#long_dams").val(data.long_dams);
+                            $("#lat_factory").val(data.lat_factory);
+                            $("#long_factory").val(data.long_factory);
+                            $("#exploit_mode").val(data.exploit_mode);
+                            $("#wattage").val(data.wattage);
+                            $("#q_kt_max").val(data.q_kt_max);
+                            $("#q_xa_tt").val(data.q_xa_tt);
+                            $("#watering_area").val(data.watering_area);
+                            $("#q_tuoi_tieu").val(data.q_tuoi_tieu);
+                            $("#q_cap_nuoc").val(data.q_cap_nuoc);
+                        }
+                    });
+                }
+			})
+            
+            // set atr href back page
+			$("#btn_back_page").attr("href","{{url('quan-ly-cap-phep')}}");
+			$("#btn_back_page").attr("title","Về trang quản lý cấp phép");
+        })
+    });
+</script>
 @endsection

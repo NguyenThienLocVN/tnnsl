@@ -51,17 +51,22 @@ Route::group([
     'prefix' => 'quan-ly-cap-phep',
 ], function () {
     // Trang quan ly cap phep
-    Route::get('/', function () {
-        return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep');
-    })->name('quan-ly-cap-phep');
+    Route::get('/', 'App\Http\Controllers\SurfaceWaterConstructionsController@index')->name('quan-ly-cap-phep');
 
     Route::get('nuoc-mat', function () {
         return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-nuoc-mat');
     })->name('quan-ly-cap-phep-nuoc-mat');
 
+    // Tom tat thong tin nuoc mat
+    Route::get('nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@summaryInfo')->name('thong-tin-tom-tat-quan-ly-cap-phep-nuoc-mat');
+
     Route::get('nuoc-mat/cong-trinh-dau-moi', function () {
         return view('page.quan-ly-cap-phep.tnn-nuoc-mat-cong-trinh-dau-moi');
     })->name('nuoc-mat-cong-trinh-dau-moi');
+
+    Route::get('xa-thai-nguon-nuoc', function () {
+        return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-xa-thai-nguon-nuoc');
+    })->name('quan-ly-cap-phep-xa-thai-nguon-nuoc');
 
     Route::get('nuoc-duoi-dat', function () {
         return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-nuoc-duoi-dat');
