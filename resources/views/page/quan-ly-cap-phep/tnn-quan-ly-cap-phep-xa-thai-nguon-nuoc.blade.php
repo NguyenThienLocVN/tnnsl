@@ -124,61 +124,115 @@
           	<div class="surfacewater-usage-content col-12 pb-3 ">
 				<div class="col-12 d-flex mb-1 p-0">
                     <div class="col-md-9 col-12 d-flex align-items-center p-0">
-                        <span class="col-5 font-13 px-0">Cắm mốc HLBVHC</span>
+                        <span class="col-5 font-13 px-0">Nguồn tiếp nhận</span>
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                 </div>
                 <div class="col-12 d-flex p-0">
                     <div class="col-md-9 col-12 d-flex align-items-center p-0">
-                        <span class="col-5 font-13 px-0">Tiền cấp quyền</span>
+                        <span class="col-5 font-13 px-0">Mục đích sử dụng</span>
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                 </div>
             </div>
-		</div>
-        <!-- Ket thuc thong tin khac -->
-
-        <!-- Quan trac tai nguyen nuoc mat -->
-        <div class="surfacewater-usage mb-2">
-          	<p class="col-12 py-1 surfacewater-usage-title font-weight-bold mb-2">Quan trắc tài nguyên nước mặt</p>
-          	<div class="surfacewater-usage-content col-12 p-0 px-0 mb-3">
-				<div class="col-12 d-flex mb-1">
-                    <div class="col-10 col-md-8 d-flex pl-0 align-items-center">
-                        <span class="col-5 font-13 px-0">Trạm quan trắc</span>
-                        <select name="" id="" class="col-md-7 font-13 p-0 form-control-sm cursor-pointer">
-                            <option value="" selected>Chọn trạm</option>
-                            <option value="">Trạm 1</option>
-                            <option value="">Trạm 2</option>
-                            <option value="">Trạm 3</option>
-                            <option value="">Trạm 4</option>
-                        </select>
-                    </div>
-                    <button class="col-2 px-2 py-1 btn-license border-0 font-13 mr-2 rounded">Xem</button>
+            <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                    <span class="col-7 font-13 px-0">Quy chuẩn áp dụng </span>
+                    <input type="text" class="col-6 px-1 font-13">
                 </div>
-                <div class="col-12 d-flex">
-                    <div class="col-10 col-md-8 d-flex pl-0 align-items-center">
-                        <span class="col-5 font-13 px-0">Camera</span>
-                        <select name="" id="" class="col-md-7 font-13 p-0 form-control-sm cursor-pointer">
-                            <option value="" selected>Chọn trạm</option>
-                            <option value="">Trạm 1</option>
-                            <option value="">Trạm 2</option>
-                            <option value="">Trạm 3</option>
-                            <option value="">Trạm 4</option>
-                        </select>
-                    </div>
-                    <button class="col-2 px-2 py-1 btn-license border-0 font-13 mr-2 rounded">Xem</button>
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                    <span class="col-5 font-13 px-0 text-center">pH</span>
+                    <input type="text" class="col-md-7 col-3 px-1 font-13">
+                </div>
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                    <span class="col-5 font-13 px-0 text-center">DO</span>
+                    <input type="text" class="col-md-7 col-3 px-1 font-13">
                 </div>
             </div>
-		</div>
-        <!-- Ket thuc quan trac tai nguyen nuoc mat -->
-
-        <!-- Thong tin ky thuat cong trinh -->
-        <div class="col-12 d-flex flex-column flex-md-row mb-1 p-0 surfacewater-usage">
-            <div class="col-md-12 col-12 d-flex pl-0 pr-0 mb-md-0 align-items-center">
-                <span class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="{{route('nuoc-mat-cong-trinh-dau-moi')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
+            <div class="col-12 d-flex flex-column flex-md-row">
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 align-items-center">
+                    <span class="col-5 font-13 px-0">TSS</span>
+                    <input type="text" class="col-md-6 col-3 px-1 font-13">
+                </div>
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-2 align-items-center">
+                    <span class="col-5 font-12 px-0 text-center">N-NO2-</span>
+                    <input type="text" class="col-md-7 col-3 px-1 font-13">
+                </div>
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                    <span class="col-6 font-12 px-0 text-center">P-P043-</span>
+                    <input type="text" class="col-md-7 col-3 px-1 font-13">
+                </div>
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                    <span class="col-5 font-13 px-0 text-center">Sắt</span>
+                    <input type="text" class="col-md-7 col-3 px-1 font-13">
+                </div>
+            </div>
+            <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 align-items-center">
+                    <span class="col-5 font-13 px-0">N-NO3-</span>
+                    <input type="text" class="col-md-6 col-3 px-1 font-13">
+                </div>
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-2 align-items-center">
+                    <span class="col-5 font-12 px-0 text-center">N-NH4+</span>
+                    <input type="text" class="col-md-7 col-3 px-1 font-13">
+                </div>
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                    <span class="col-6 font-12 px-0 text-center">Coliforms</span>
+                    <input type="text" class="col-md-7 col-3 px-1 font-13">
+                </div>
+                <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                    <span class="col-5 font-13 px-0 text-center">BOD5</span>
+                    <input type="text" class="col-md-7 col-3 px-1 font-13">
+                </div>
             </div>
         </div>
-        <!-- Ket thuc thong tin ky thuat cong trinh -->
+
+        <div class="surfacewater-usage pb-2 mb-1">
+            <p class="col-12 py-1 surfacewater-usage-title font-weight-bold mb-2">Thông tin về chất lượng nguồn nước xả thải</p>
+            <div class="surfacewater-usage-filter">
+                <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
+                    <div class="col-8 d-flex pl-0">
+                        <span class="col-5 font-13 px-0">Nguồn tiếp nhận</span>
+                        <input type="text" class="col-7 px-1 font-13">
+                    </div>
+                    <button title="Chọn tên công trình để xem thông tin" disabled="true" class="col-2 p-0 px-lg-1 mr-2 btn-primary font-13 text-center rounded" id="view-surfacewater">Xem</button>
+                </div>
+                <div class="col-12 d-flex pr-0 justify-content-between align-items-center">
+                    <div class="col-8 d-flex pl-0">
+                        <span class="col-6 font-13 px-0">Lưu lượng NT lớn nhất</span>
+                        <input type="text" class="col-7 px-1 font-13">
+                    </div>
+                </div>
+                <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
+                    <div class="col-8 d-flex pl-0">
+                        <span class="col-5 font-13 px-0">Quy chuẩn áp dụng</span>
+                        <input type="text" class="col-7 px-1 font-13">
+                    </div>
+                </div>
+                <div class="col-8 d-flex pr-0 justify-content-between align-items-center my-1">
+                    <div class="col-6 d-flex pl-0 align-items-center">
+                        <span class="col-5 font-13 px-0 text-center">pH</span>
+                        <input type="text" class="col-7 px-1 font-13">
+                    </div>
+                    <div class="col-6 d-flex pl-0 align-items-center">
+                        <span class="col-5 font-13 px-0 text-center">TDS</span>
+                        <input type="text" class="col-7 px-1 font-13">
+                    </div>
+                </div>
+                <div class="col-8 d-flex pr-0 justify-content-between align-items-center my-1">
+                    <div class="col-6 d-flex pl-0 align-items-center">
+                        <span class="col-5 font-13 px-0">Nhiệt độ</span>
+                        <input type="text" class="col-7 px-1 font-13">
+                    </div>
+                    <div class="col-6 d-flex pl-0 align-items-center">
+                        <span class="col-5 font-13 px-0 text-center">Amoni</span>
+                        <input type="text" class="col-7 px-1 font-13">
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <!-- Ket thuc thong tin khac -->
 
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">

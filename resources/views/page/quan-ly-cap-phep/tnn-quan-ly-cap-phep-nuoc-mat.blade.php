@@ -45,7 +45,8 @@
         <div class="col-12 d-flex mb-1">
             <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded">Xem GP</button>
             <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded">In GP</button>
-            <button class="px-2 py-1 btn-license border-0 font-13 rounded">Cập nhật GP</button>
+            <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded">Cập nhật GP</button>
+            <button class="px-2 py-1 btn-license border-0 font-13 rounded">Gia hạn/Điều chỉnh GP</button>
         </div>
     </div>
 </div>
@@ -121,8 +122,18 @@
                 <input type="text" id="q_kt_max" class="col-4 px-1 font-13"> &nbsp; <span class="font-13">(m<sup>3</sup>/s)</span>
             </div>
             <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                <span class="col-5 font-13 px-0">Q<sub>KT max mk<sub></span>
+                <input type="text" class="col-4 px-1 font-13"> &nbsp; <span class="font-13">(m<sup>3</sup>/s)</span>
+            </div>
+        </div>
+        <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+            <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                 <span class="col-5 font-13 px-0">Q<sub>xả<sub> TT</span>
                 <input type="text" id="q_xa_tt" class="col-4 px-1 font-13"> &nbsp; <span class="font-13">(m<sup>3</sup>/s)</span>
+            </div>
+            <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                <span class="col-5 font-13 px-0">DT tưới/tiêu tk</span>
+                <input type="text" class="col-4 px-1 font-13"> &nbsp; <span class="font-13">(ha)</span>
             </div>
         </div>
         <div class="col-12 d-flex flex-column flex-md-row mb-1">

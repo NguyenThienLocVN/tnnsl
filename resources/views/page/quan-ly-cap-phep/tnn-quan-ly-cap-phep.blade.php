@@ -33,9 +33,9 @@
                     <p class="text-primary font-weight-bold mb-1">Thủy điện</p>
                     <div class="col-12 d-flex">
                         <div class="col-6 p-0">
-                            <span id="dams-num" class="text-danger font-weight-bold position-absolute">10</span>
+                            <span id="dams-num" class="text-danger font-weight-bold position-absolute">{{ ($numHydroConstruction > 10) ? $numHydroConstruction : "0".$numHydroConstruction }}</span>
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
-                            <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
+                            <span id="total-dams" class="text-danger font-weight-bold position-absolute">{{ ($numConstruction > 10) ? $numConstruction : "0".$numConstruction }}</span>
                         </div>
                         <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_HETHONGGIAMSAT.png')}}" alt="ANH_HETHONGGIAMSAT">
                     </div>
@@ -44,20 +44,20 @@
                     <p class="text-primary font-weight-bold mb-1">Thủy lợi</p>
                     <div class="col-12 d-flex">
                         <div class="col-6 p-0">
-                            <span id="dams-num" class="text-danger font-weight-bold position-absolute">10</span>
+                            <span id="dams-num" class="text-danger font-weight-bold position-absolute">{{ ($numIrrigationConstruction > 10) ? $numIrrigationConstruction : "0".$numIrrigationConstruction }}</span>
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
-                            <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
+                            <span id="total-dams" class="text-danger font-weight-bold position-absolute">{{ ($numConstruction > 10) ? $numConstruction : "0".$numConstruction }}</span>
                         </div>
                         <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_THUYLOI.png')}}" alt="ANH_THUYLOI">
                     </div>
                 </div>
                 <div class="col-4 surfacewater-usage-item pl-0 text-center">
-                    <p class="text-primary font-weight-bold mb-1">Cống / Trạm bơm</p>
+                    <p class="text-primary font-weight-bold mb-1">Trạm bơm</p>
                     <div class="col-12 d-flex">
                         <div class="col-6 p-0">
-                            <span id="dams-num" class="text-danger font-weight-bold position-absolute">10</span>
+                            <span id="dams-num" class="text-danger font-weight-bold position-absolute">{{ ($numPumpConstruction > 10) ? $numPumpConstruction : "0".$numPumpConstruction }}</span>
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
-                            <span id="total-dams" class="text-danger font-weight-bold position-absolute">30</span>
+                            <span id="total-dams" class="text-danger font-weight-bold position-absolute">{{ ($numConstruction > 10) ? $numConstruction : "0".$numConstruction }}</span>
                         </div>
                         <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_THUYLOI.png')}}" alt="ANH_THUYLOI">
                     </div>
@@ -335,6 +335,8 @@
                             $("#watering_area").val(data.watering_area);
                             $("#q_tuoi_tieu").val(data.q_tuoi_tieu);
                             $("#q_cap_nuoc").val(data.q_cap_nuoc);
+
+                            map.setView([23.12440, 58.9820], 8);
                         }
                     });
                 }
