@@ -24,17 +24,18 @@
             </div>
         </div>
         <p>Hoàn tất biểu mẫu để đăng ký tài khoản</p>
-        <form action="">
+        <form method="POST" action="{{ route('register') }}">
+        @csrf
             <div class="d-flex align-items-center">
                 <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Chọn đối tượng <span class="text-danger">*</span></p>
                 <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                     <div class="col-6">
                         <label class="m-0 font-14" for="">Tổ chức </label>
-                        <input type="radio" name="object" class="">
+                        <input type="radio" name="object" value="0" class="">
                     </div>
                     <div class="col-6">
                         <label class="m-0 font-14" for="">Cá nhân </label>
-                        <input type="radio" name="object" class="">
+                        <input type="radio" name="object" value="1" class="">
                     </div>
                 </div>
             </div>
@@ -45,7 +46,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user" aria-hidden="true"></i></span>
                     </div>
-                    <input name="" class="form-control font-14" placeholder="Tên đăng nhập" type="text">
+                    <input name="name" class="form-control font-14" placeholder="Tên đăng nhập" type="text">
                 </div>
             </div>
 
@@ -55,7 +56,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock" aria-hidden="true"></i></span>
                     </div>
-                    <input name="" class="form-control font-14" placeholder="Mật khẩu" type="text">
+                    <input name="password" class="form-control font-14" placeholder="Mật khẩu" type="password">
                 </div>
             </div>
 
@@ -65,7 +66,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock" aria-hidden="true"></i></span>
                     </div>
-                    <input name="" class="form-control font-14" placeholder="Xác nhận mật khẩu" type="text">
+                    <input name="confirm-password" class="form-control font-14" placeholder="Xác nhận mật khẩu" type="password">
                 </div>
             </div>
 
@@ -75,7 +76,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
                     </div>
-                    <input name="" class="form-control font-14" placeholder="Tên doanh nghiệp" type="text">
+                    <input name="organization_name" class="form-control font-14" placeholder="Tên doanh nghiệp" type="text">
                 </div>
             </div>
 
@@ -85,7 +86,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-university" aria-hidden="true"></i></span>
                     </div>
-                    <input name="" class="form-control font-14" placeholder="Mã doanh nghiệp" type="text">
+                    <input name="organization_code" class="form-control font-14" placeholder="Mã doanh nghiệp" type="text">
                 </div>
             </div>
 
@@ -95,7 +96,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-map-marker" aria-hidden="true"></i></span>
                     </div>
-                    <input name="" class="form-control font-14" placeholder="Địa chỉ" type="text">
+                    <input name="address" class="form-control font-14" placeholder="Địa chỉ" type="text">
                 </div>
             </div>
 
@@ -105,7 +106,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-building" aria-hidden="true"></i></span>
                     </div>
-                    <input name="" class="form-control font-14" placeholder="Trụ sở chính" type="text">
+                    <input name="organization_address" class="form-control font-14" placeholder="Trụ sở chính" type="text">
                 </div>
             </div>
 
@@ -115,7 +116,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-phone" aria-hidden="true"></i></span>
                     </div>
-                    <input name="" class="form-control font-14" placeholder="Số điện thoại" type="text">
+                    <input name="phone" class="form-control font-14" placeholder="Số điện thoại" type="text">
                 </div>
             </div>
 
@@ -125,14 +126,14 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-envelope" aria-hidden="true"></i></span>
                     </div>
-                    <input name="" class="form-control font-14" placeholder="Email" type="text">
+                    <input name="email" class="form-control font-14" placeholder="Email" type="text">
                 </div>
             </div>
 
             <div class="d-flex justify-content-center py-2">
                 <a href="{{url('/')}}" class="col-3 btn btn-danger">Quay lại</a>
                 <div class="col-7 d-flex align-items-center">
-                    <button class="col-5 btn btn-success">Đăng ký</button>
+                    <button type="submit" class="col-5 btn btn-success">Đăng ký</button>
                     <span>&nbsp; hoặc <a href="#">Đăng nhập</a></span>
                 </div>
             </div>

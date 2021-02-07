@@ -22,7 +22,20 @@
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-4 menu-home">
+    <div class="col-12 col-lg-4 px-md-0 menu-home">
+        @if(Auth::user())
+            <div class="d-flex auth-bar pl-2 justify-content-between align-items-center">
+                <span class="font-weight-bold p-0">Xin chào, {{ Auth::user()->name }}</span>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <x-jet-dropdown-link href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                    this.closest('form').submit();" class="px-md-2 p-2 d-block text-white btn-logout" title="Đăng xuất">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </x-jet-dropdown-link>
+                </form>
+            </div>
+        @endif
         <div class="d-flex flex-column flex-md-row flex-lg-column">
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
                 <a href="{{url('thong-tin-chung')}}" class="col-6 text-center">
@@ -61,7 +74,7 @@
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYCAPPHEP.png')}}" alt="cap-phep">
                     <p class="grid-item-text font-weight-bold">Quản lý cấp phép</p>
                 </a>
-                <a href="{{url('dang-ky')}}" class="col-6 text-center">
+                <a href="{{route('register')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_DANGKY.png')}}" alt="dang-ky">
                     <p class="grid-item-text font-weight-bold">Đăng ký / Kết nối</p>
                 </a>

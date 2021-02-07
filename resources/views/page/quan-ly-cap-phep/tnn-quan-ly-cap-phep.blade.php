@@ -336,7 +336,7 @@
                             $("#q_tuoi_tieu").val(data.q_tuoi_tieu);
                             $("#q_cap_nuoc").val(data.q_cap_nuoc);
 
-                            map.setView([23.12440, 58.9820], 8);
+                            map.setView([data.long_dams, data.lat_dams], 9);
                         }
                     });
                 }
