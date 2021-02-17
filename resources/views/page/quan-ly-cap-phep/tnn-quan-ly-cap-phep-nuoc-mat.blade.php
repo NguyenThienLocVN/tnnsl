@@ -15,7 +15,7 @@
         <div class="col-12 d-flex flex-column flex-md-row my-1">
             <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                 <span class="col-5 font-13 px-0">Thời hạn CP</span>
-                <input type="text" id="license_duration" class="col-7 px-1 font-13">
+                <input type="text" id="license_duration" class="col-md-4 col-2 px-1 font-13">&nbsp; <span class="font-13">(năm)</span>
             </div>
             <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                 <span class="col-5 font-13 px-0">Thẩm quyền</span>
@@ -129,7 +129,7 @@
         <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
             <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                 <span class="col-5 font-13 px-0">Q<sub>xả<sub> TT</span>
-                <input type="text" id="q_xa_tt" class="col-4 px-1 font-13"> &nbsp; <span class="font-13">(m<sup>3</sup>/s)</span>
+                <input type="text" id="q_tt" class="col-4 px-1 font-13"> &nbsp; <span class="font-13">(m<sup>3</sup>/s)</span>
             </div>
             <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                 <span class="col-5 font-13 px-0">DT tưới/tiêu tk</span>

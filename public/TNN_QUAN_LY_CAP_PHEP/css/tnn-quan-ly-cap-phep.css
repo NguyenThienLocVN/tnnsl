@@ -34,6 +34,13 @@
 									   color-stop(0.86, rgb(28,58,148)));
 }
 
+.table-license-manage, .table-license-manage th, .table-license-manage td {
+	border: 1px solid #8d9398;
+}
+
+.table-license-manage thead th { border-bottom: 1px solid #8d9398 !important; }
+.tab-content { overflow-x: scroll; }
+
 @media screen and (min-width: 768px) {
 	.exploit-surfacewater-heading { font-size: unset; }
 	.surfacewater-usage-content, .discharge-water-content { height: unset; }
