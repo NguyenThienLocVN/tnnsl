@@ -35,7 +35,7 @@
                         <div class="col-6 p-0">
                             <span id="dams-num" class="text-danger font-weight-bold position-absolute">{{ ($numHydroConstruction > 10) ? $numHydroConstruction : "0".$numHydroConstruction }}</span>
                             <span id="slash" class="text-danger font-weight-bold position-absolute">/</span>
-                            <span id="total-dams" class="text-danger font-weight-bold position-absolute">{{ ($numConstruction > 10) ? $numConstruction : "0".$numConstruction }}</span>
+                            <span id="total-dams" class="text-danger font-weight-bold position-absolute">{{ ($allHydroConstruction > 10) ? $allHydroConstruction : "0".$allHydroConstruction }}</span>
                         </div>
                         <img class="col-6 p-0 d-none d-md-block" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/ANH_HETHONGGIAMSAT.png')}}" alt="ANH_HETHONGGIAMSAT">
                     </div>
@@ -89,6 +89,7 @@
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" id="organization_authorities" placeholder="Nhập cơ quan cấp phép..">
                     </div>
+                    <a href="#" title="Tạo mới giấy phép" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Tạo mới</a>
                 </div>
             </div>
 		</div>
@@ -289,7 +290,13 @@
         $("#view-surfacewater").on('click',function(){
             var id = $("#construction-id").val();
 
-            $.ajax({
+            if(id == "view-all")
+            {
+                window.location.replace(window.location.href+"/nuoc-mat/xem-tat-ca");
+            }
+            else
+            {
+                $.ajax({
                 url: window.location.href+"/nuoc-mat", 
                 beforeSend: function(){
                     $("#loading-gif-image").show();
@@ -319,32 +326,34 @@
                             $("#organization_authorities").val(data.organization_authorities);
                             $("#year_built").val(data.year_built);
                             $("#year_operation").val(data.year_operation);
+                            $("#construction_name").val(data.construction_name);
                             $("#construction_code").val(data.construction_code);
                             $("#purpose_using_water").val(data.purpose_using_water);
                             $("#water_source").val(data.water_source);
                             $("#district").val(data.district);
                             $("#commune").val(data.commune);
-                            $("#lat_dams").val(data.lat_dams);
-                            $("#long_dams").val(data.long_dams);
-                            $("#lat_factory").val(data.lat_factory);
-                            $("#long_factory").val(data.long_factory);
+                            $("#lat_dams").val(data.vi_do_dap);
+                            $("#long_dams").val(data.kinh_do_dap);
+                            $("#lat_factory").val(data.vi_do_nha_may);
+                            $("#long_factory").val(data.kinh_do_nha_may);
                             $("#exploit_mode").val(data.exploit_mode);
                             $("#wattage").val(data.wattage);
                             $("#q_kt_max").val(data.q_kt_max);
-                            $("#q_xa_tt").val(data.q_xa_tt);
+                            $("#q_tt").val(data.q_tt);
                             $("#watering_area").val(data.watering_area);
                             $("#q_tuoi_tieu").val(data.q_tuoi_tieu);
                             $("#q_cap_nuoc").val(data.q_cap_nuoc);
 
-                            map.setView([data.long_dams, data.lat_dams], 9);
+                            map.setView([data.lat_dams, data.long_dams], 9);
                         }
                     });
                 }
-			})
+			    })
             
-            // set atr href back page
-			$("#btn_back_page").attr("href","{{url('quan-ly-cap-phep')}}");
-			$("#btn_back_page").attr("title","Về trang quản lý cấp phép");
+                // set atr href back page
+                $("#btn_back_page").attr("href","{{url('quan-ly-cap-phep')}}");
+                $("#btn_back_page").attr("title","Về trang quản lý cấp phép");
+            }
         })
     });
 </script>
