@@ -74,9 +74,11 @@ Route::group(['middleware' => 'auth'], function () {
             return view('page.quan-ly-cap-phep.tnn-nuoc-duoi-dat-ky-thuat-cong-trinh');
         })->name('nuoc-duoi-dat-ky-thuat-cong-trinh');
 
-        Route::get('tao-moi-giay-phep', function () {
-            return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep');
-        })->name('tao-moi-giay-phep');
+        Route::get('tao-moi-giay-phep-nuoc-mat', function () {
+            return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat');
+        })->name('tao-moi-giay-phep-nuoc-mat');
+
+        Route::post('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@createLicense')->name('xu-ly-tao-moi-giay-phep-nuoc-mat');
     });
 });
 

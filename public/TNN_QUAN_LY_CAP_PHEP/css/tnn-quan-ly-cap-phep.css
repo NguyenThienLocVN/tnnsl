@@ -10,20 +10,20 @@
 .btn-license { background: #3883e6; box-shadow: 3px 3px 20px #ded7d7; transition: 0.5s; color: white;}
 .btn-license:hover { background: #a5c8f7; box-shadow: unset;background: #2f80ed33; color: black;  }
 /* Custom scroll bar */
-#surfacewater-usage::-webkit-scrollbar-track
+::-webkit-scrollbar-track
 {
 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 	border-radius: 10px;
 }
 
-#surfacewater-usage::-webkit-scrollbar
+::-webkit-scrollbar
 {
     width: 6px;
     background-color: #F5F5F5; 
 }
 
-#surfacewater-usage::-webkit-scrollbar-thumb
+::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
 	background-image: -webkit-gradient(linear,
@@ -40,6 +40,18 @@
 
 .table-license-manage thead th { border-bottom: 1px solid #8d9398 !important; }
 .tab-content { overflow-x: scroll; }
+
+.list-construction {    
+	z-index: 9;
+    width: 211px;
+    background: #efefef;
+    box-shadow: 1px 5px 5px grey;
+	height: 220px;
+    overflow-y: scroll;
+	display: none;
+}
+
+.list-construction li:hover { cursor: pointer; background: #b1d7ff; }
 
 @media screen and (min-width: 768px) {
 	.exploit-surfacewater-heading { font-size: unset; }

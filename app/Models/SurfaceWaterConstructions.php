@@ -10,4 +10,6 @@ class SurfaceWaterConstructions extends Model
     use HasFactory;
 
     public $table = 'surface_water_constructions';
+    protected $guarded = [];
+    public $timestamps = true;
 }
