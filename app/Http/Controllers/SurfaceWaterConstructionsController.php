@@ -41,10 +41,14 @@ class SurfaceWaterConstructionsController extends Controller
     }
 
     public function createLicense(Request $request){
-        // $request->validate([
-        //     'name' => 'required',
-        //     'detail' => 'required',
-        // ]);
+        $request->validate([
+            'file_license' => 'required|max:2048',
+        ]);
+
+        $licenseFileName = $request->file('file_license')->getClientOriginalName();
+        $destinationPath = public_path('TNN_QUAN_LY_CAP_PHEP\file\giay-phep');
+        $upload_success = $request->file('file_license')->move($destinationPath, $licenseFileName);
+
     
         SurfaceWaterConstructions::create([
             'license_num' => $request->license_num,
@@ -73,7 +77,8 @@ class SurfaceWaterConstructionsController extends Controller
             'watering_area' => $request->watering_area,
             'q_tuoi_tieu' => $request->q_tuoi_tieu,
             'q_cap_nuoc' => $request->q_cap_nuoc,
-            'construction_type' => $request->construction_type
+            'construction_type' => $request->construction_type,
+            'file_license' =>  $licenseFileName,
         ]);
      
         return redirect()->route('quan-ly-cap-phep')->withSuccess('Tạo giấy phép công trình thành công!');

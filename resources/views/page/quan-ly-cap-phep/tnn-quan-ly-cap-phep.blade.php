@@ -31,7 +31,7 @@
         <div class="surfacewater-usage pb-2 mb-1">
           	<p class="col-12 py-1 surfacewater-usage-title font-weight-bold mb-2">Khai thác sử dụng nước mặt</p>
             @if(Session::has('success'))
-                <div class="alert alert-success">
+                <div class="alert alert-success mx-3">
                     {{Session::get('success')}}
                 </div>
             @endif
