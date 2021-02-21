@@ -69,6 +69,34 @@ option { font-size: 14px; }
 .auth-bar { background: #d4edf5; }
 .btn-logout { background: #ff5722; }
 
+.background-login {
+    width: 100%;
+    filter: blur(7px);
+    height: 100vh;
+}
+
+.form-login {
+    position: absolute;
+    top: calc(50% - 155px);
+    left: calc(50% - 225px);
+    padding: 15px 25px;
+    background: linear-gradient(228deg, #9bc4e4, #c3c2c282);
+    box-shadow: 1px 4px 10px grey;
+    width: 450px;
+}
+
+.form-login .form-control { border-radius: 0 .25rem .25rem 0 !important; border: 0 !important; }
+
+.input-group-text {
+    background: #c0392b !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.button-login { background: #c0392b !important; }
+.button-login:hover { background: #ce7168 !important; transition: 0.5s; }
+
 /* Ipad */
 @media screen and (min-width: 768px) {
     .top-bar{

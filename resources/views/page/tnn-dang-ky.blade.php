@@ -134,7 +134,7 @@
                 <a href="{{url('/')}}" class="col-3 btn btn-danger">Quay lại</a>
                 <div class="col-7 d-flex align-items-center">
                     <button type="submit" class="col-5 btn btn-success">Đăng ký</button>
-                    <span>&nbsp; hoặc <a href="#">Đăng nhập</a></span>
+                    <span>&nbsp; hoặc <a href="{{route('login')}}">Đăng nhập</a></span>
                 </div>
             </div>
         </form>

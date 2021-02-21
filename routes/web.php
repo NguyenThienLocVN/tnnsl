@@ -13,17 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Trang chu
-Route::get('/', function () {
-    return view('page.tnn-trang-chu');
-});
 
 // Trang gioi thieu chung
 Route::get('thong-tin-chung', function () {
     return view('page.tnn-thong-tin-chung');
 })->name('thong-tin-chung');
 
+Route::get('/dang-ky', function () {
+    return view('page.tnn-dang-ky');
+})->name('dang-ky');
+
 Route::group(['middleware' => 'auth'], function () {
+    // Trang chu
+    Route::get('/', function () {
+        return view('page.tnn-trang-chu');
+    });
+
     Route::group([
         'name' => 'he-thong-giam-sat',
         'prefix' => 'he-thong-giam-sat',

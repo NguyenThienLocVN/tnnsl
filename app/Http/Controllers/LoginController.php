@@ -13,7 +13,7 @@ class LoginController extends Controller
         
         if (Auth::attempt($credentials)) {
             // if success login
-            return redirect()->intended();
+            return redirect('/');
         }
         // if failed login
         return redirect('login')->withInput()->withErrors('Đăng nhập thất bại');
