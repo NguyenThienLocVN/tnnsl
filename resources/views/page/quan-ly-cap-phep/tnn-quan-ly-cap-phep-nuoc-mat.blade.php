@@ -43,8 +43,8 @@
             </div>
         </div>
         <div class="col-12 d-flex mb-1">
-            <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded">Xem GP</button>
-            <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded">In GP</button>
+            <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded" id="btn-view-license" data-toggle="modal" data-target="#licenseFileModal">Xem GP</button>
+            <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded" id="btn-print-license">In GP</button>
             <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded">Cập nhật GP</button>
             <button class="px-2 py-1 btn-license border-0 font-13 rounded">Gia hạn/Điều chỉnh GP</button>
         </div>
@@ -210,3 +210,20 @@
     </div>
 </div>
 <!-- Ket thuc thong tin ky thuat cong trinh -->
+
+<!-- Modal -->
+<div class="modal fade" id="licenseFileModal" tabindex="-1" role="dialog" aria-labelledby="licenseFileLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title font-15 font-weight-bold" id="licenseFileLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe id="licenseFile" src="#" style="width:100%;height:500px;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
