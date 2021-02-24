@@ -80,22 +80,25 @@ function onEachFeature(feature, layer) {
 }
 
 // Get all rain location and display as icon on map
-var rainLocations = JSON.parse(document.getElementById('rainLocationJson').value);
-var rainIcon = new L.Icon({
-  iconUrl: window.location.origin+'/public/TNN_HE_THONG_GIAM_SAT/image/arrow-blue.png',
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
-  iconSize:    [15, 15],
-  iconAnchor:  [12, 41],
-  popupAnchor: [1, -34],
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  shadowSize:  [30, 15]
-});
-
-var myLayer = L.geoJson(rainLocations, {
-  onEachFeature: onEachFeature,
-  pointToLayer: function(feature, latlng) {
-    return L.marker(latlng, {
-      icon: rainIcon
-    });
-  }
-}).addTo(map);
+if(document.getElementById('rainLocationJson') !== null)
+{
+  var rainLocations = JSON.parse(document.getElementById('rainLocationJson').value);
+  var rainIcon = new L.Icon({
+    iconUrl: window.location.origin+'/public/TNN_HE_THONG_GIAM_SAT/image/arrow-blue.png',
+    iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
+    iconSize:    [15, 15],
+    iconAnchor:  [12, 41],
+    popupAnchor: [1, -34],
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    shadowSize:  [30, 15]
+  });
+  
+  var myLayer = L.geoJson(rainLocations, {
+    onEachFeature: onEachFeature,
+    pointToLayer: function(feature, latlng) {
+      return L.marker(latlng, {
+        icon: rainIcon
+      });
+    }
+  }).addTo(map);
+}

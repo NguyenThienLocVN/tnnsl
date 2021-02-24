@@ -39,7 +39,7 @@
 }
 
 .table-license-manage thead th { border-bottom: 1px solid #8d9398 !important; }
-.tab-content { overflow-x: scroll; }
+/* .tab-content { overflow-x: scroll; } */
 
 .list-construction {    
 	z-index: 9;
@@ -67,4 +67,5 @@
 	#dams-num {	left: 11px;	top: 3px; }
 	#slash { top: 8px; left: 29px; }
 	#total-dams { top: 14px; left: 33px; }
+	.leaflet-popup-content { width: 300px !important; margin: 13px !important; }
 }

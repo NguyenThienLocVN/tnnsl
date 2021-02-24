@@ -267,6 +267,7 @@
             </div>
         </div>
     </div>
+    <textarea id="surfaceWaterJson" class="d-none">{!! $surfaceWaterJson !!}</textarea>
 </main>
 
 <script>
@@ -360,7 +361,7 @@
                                     map.setView([data.lat_dams, data.long_dams], 9);
 
                                     $("#licenseFileLabel").text('GIẤY PHÉP CÔNG TRÌNH - '+ data.construction_name);
-                                    $("#licenseFile").attr('src', window.location.origin+"/tnnsl/public/TNN_QUAN_LY_CAP_PHEP/file/giay-phep/"+data.file_license);
+                                    $("#licenseFile").attr('src', window.location.origin+"/public/TNN_QUAN_LY_CAP_PHEP/file/giay-phep/"+data.file_license);
                                     $("#btn-print-license").on('click', function(){
                                         document.getElementById('licenseFile').contentWindow.print();
                                     })
@@ -376,6 +377,35 @@
                 })
             });
         });
+
+        // Click to show popup on the map
+        function onEachFeature(feature, layer) {
+        if (feature.properties && feature.properties.hoverContent) {
+            layer.on('click', function() { layer.bindPopup(feature.properties.detailContent, {closeOnClick: true, autoClose: false}).openPopup()});
+            layer.on('mouseover', function() { layer.bindPopup(feature.properties.hoverContent).openPopup()});
+        }
+        }
+
+        // Get all surfaceWater location and display as icon on map
+        var surfaceWaterLocations = JSON.parse(document.getElementById('surfaceWaterJson').value);
+        var surfaceWaterIcon = new L.Icon({
+        iconUrl: window.location.origin+'/public/TNN_QUAN_LY_CAP_PHEP/image/dams-icon.jpg',
+        iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
+        iconSize:    [30, 30],
+        iconAnchor:  [12, 41],
+        popupAnchor: [1, -34],
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        shadowSize:  [30, 15]
+        });
+
+        var myLayer = L.geoJson(surfaceWaterLocations, {
+        onEachFeature: onEachFeature,
+        pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+            icon: surfaceWaterIcon
+            });
+        }
+        }).addTo(map);
     });
 </script>
 @endsection
