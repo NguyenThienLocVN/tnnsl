@@ -358,7 +358,7 @@
                                     $("#q_tuoi_tieu").val(data.q_tuoi_tieu);
                                     $("#q_cap_nuoc").val(data.q_cap_nuoc);
 
-                                    map.setView([data.lat_dams, data.long_dams], 9);
+                                    map.setView([data.lat_dams, data.long_dams], 12);
 
                                     $("#licenseFileLabel").text('GIẤY PHÉP CÔNG TRÌNH - '+ data.construction_name);
                                     $("#licenseFile").attr('src', window.location.origin+"/public/TNN_QUAN_LY_CAP_PHEP/file/giay-phep/"+data.file_license);
