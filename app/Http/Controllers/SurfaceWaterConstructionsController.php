@@ -65,7 +65,8 @@ class SurfaceWaterConstructionsController extends Controller
         return view('page.quan-ly-cap-phep.tnn-nuoc-mat-xem-tat-ca', ['constructions' => $constructions, 'hydroConstruction' => $hydroConstruction, 'irrigationConstruction' => $irrigationConstruction, 'pumpConstruction' => $pumpConstruction]);
     }
 
-    public function createLicense(Request $request){
+    public function doCreateLicense(Request $request)
+    {
         $request->validate([
             'file_license' => 'required|max:2048',
         ]);
@@ -107,5 +108,56 @@ class SurfaceWaterConstructionsController extends Controller
         ]);
      
         return redirect()->route('quan-ly-cap-phep')->withSuccess('Tạo giấy phép công trình thành công!');
+    }
+
+    public function showEditLicense($id)
+    {
+        $construction = SurfaceWaterConstructions::find($id);
+        return view('page.quan-ly-cap-phep.tnn-sua-giay-phep-nuoc-mat', ['construction'=>$construction]);
+    }
+
+    public function doEditLicense($id, Request $request)
+    {
+        $request->validate([
+            'file_license' => 'required|max:2048',
+        ]);
+
+        $licenseFileName = $request->file('file_license')->getClientOriginalName();
+        $destinationPath = public_path('TNN_QUAN_LY_CAP_PHEP\file\giay-phep');
+        $upload_success = $request->file('file_license')->move($destinationPath, $licenseFileName);
+
+        $construction = SurfaceWaterConstructions::find($id);
+
+        $construction->license_num = $request->license_num;
+        $construction->license_date = $request->license_date;
+        $construction->license_duration = $request->license_duration;
+        $construction->license_role = $request->license_role;
+        $construction->organization_request = $request->organization_request;
+        $construction->organization_authorities = $request->organization_authorities;
+        $construction->year_built = $request->year_built;
+        $construction->year_operation = $request->year_operation;
+        $construction->construction_code = $request->construction_code;
+        $construction->construction_name = $request->construction_name;
+        $construction->purpose_using_water = $request->purpose_using_water;
+        $construction->water_source = $request->water_source;
+        $construction->district = $request->district;
+        $construction->commune = $request->commune;
+        $construction->vi_do_dap = $request->lat_dams;
+        $construction->kinh_do_dap = $request->long_dams;
+        $construction->vi_do_nha_may = $request->lat_factory;
+        $construction->kinh_do_nha_may = $request->long_factory;
+        $construction->exploit_mode = $request->exploit_mode;
+        $construction->wattage = $request->wattage;
+        $construction->q_kt_max = $request->q_kt_max;
+        $construction->q_kt_max_mk = $request->q_kt_max_mk;
+        $construction->q_tt = $request->q_tt;
+        $construction->watering_area = $request->watering_area;
+        $construction->q_tuoi_tieu = $request->q_tuoi_tieu;
+        $construction->q_cap_nuoc = $request->q_cap_nuoc;
+        $construction->construction_type = $request->construction_type;
+        $construction->file_license =  $licenseFileName;
+        $construction->save();
+     
+        return redirect()->route('quan-ly-cap-phep')->withSuccess('Sửa giấy phép công trình thành công!');
     }
 }

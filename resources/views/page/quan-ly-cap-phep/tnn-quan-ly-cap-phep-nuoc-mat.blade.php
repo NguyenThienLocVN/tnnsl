@@ -45,7 +45,7 @@
         <div class="col-12 d-flex mb-1">
             <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded" id="btn-view-license" data-toggle="modal" data-target="#licenseFileModal">Xem GP</button>
             <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded" id="btn-print-license">In GP</button>
-            <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded">Cập nhật GP</button>
+            <button class="px-2 py-1 btn-license border-0 font-13 mr-2 rounded" id="btn-edit-license">Cập nhật GP</button>
             <button class="px-2 py-1 btn-license border-0 font-13 rounded">Gia hạn/Điều chỉnh GP</button>
         </div>
     </div>

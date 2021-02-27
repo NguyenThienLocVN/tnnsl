@@ -365,6 +365,10 @@
                                     $("#btn-print-license").on('click', function(){
                                         document.getElementById('licenseFile').contentWindow.print();
                                     })
+
+                                    $("#btn-edit-license").on('click', function(){
+                                        window.location.href = window.location.href+'/sua-giay-phep-nuoc-mat/'+data.id;
+                                    })
                                 }
                             });
                         }
