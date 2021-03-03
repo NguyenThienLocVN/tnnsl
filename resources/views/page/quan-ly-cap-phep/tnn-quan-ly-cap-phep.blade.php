@@ -166,6 +166,7 @@
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
+                    <a href="{{route('tao-moi-giay-phep-xa-thai')}}" title="Tạo mới giấy phép" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Tạo mới</a>
                 </div>
             </div>
 		</div>
@@ -361,7 +362,7 @@
                                     map.setView([data.lat_dams, data.long_dams], 12);
 
                                     $("#licenseFileLabel").text('GIẤY PHÉP CÔNG TRÌNH - '+ data.construction_name);
-                                    $("#licenseFile").attr('src', window.location.origin+"/public/TNN_QUAN_LY_CAP_PHEP/file/giay-phep/"+data.file_license);
+                                    $("#licenseFile").attr('src', window.location.origin+"/public/TNN_QUAN_LY_CAP_PHEP/file/giay-phep/nuoc-mat/"+data.file_license);
                                     $("#btn-print-license").on('click', function(){
                                         document.getElementById('licenseFile').contentWindow.print();
                                     })

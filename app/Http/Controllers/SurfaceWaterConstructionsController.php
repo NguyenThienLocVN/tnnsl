@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\SurfaceWaterConstructions;
+use App\Models\WastewaterConstructions;
 
 class SurfaceWaterConstructionsController extends Controller
 {
@@ -65,7 +66,7 @@ class SurfaceWaterConstructionsController extends Controller
         return view('page.quan-ly-cap-phep.tnn-nuoc-mat-xem-tat-ca', ['constructions' => $constructions, 'hydroConstruction' => $hydroConstruction, 'irrigationConstruction' => $irrigationConstruction, 'pumpConstruction' => $pumpConstruction]);
     }
 
-    public function doCreateLicense(Request $request)
+    public function doCreateSurfacewaterLicense(Request $request)
     {
         $request->validate([
             'file_license' => 'required|max:2048',
@@ -110,20 +111,20 @@ class SurfaceWaterConstructionsController extends Controller
         return redirect()->route('quan-ly-cap-phep')->withSuccess('Tạo giấy phép công trình thành công!');
     }
 
-    public function showEditLicense($id)
+    public function showEditSurfacewaterLicense($id)
     {
         $construction = SurfaceWaterConstructions::find($id);
         return view('page.quan-ly-cap-phep.tnn-sua-giay-phep-nuoc-mat', ['construction'=>$construction]);
     }
 
-    public function doEditLicense($id, Request $request)
+    public function doEditSurfacewaterLicense($id, Request $request)
     {
         $request->validate([
             'file_license' => 'required|max:2048',
         ]);
 
         $licenseFileName = $request->file('file_license')->getClientOriginalName();
-        $destinationPath = public_path('TNN_QUAN_LY_CAP_PHEP\file\giay-phep');
+        $destinationPath = public_path('TNN_QUAN_LY_CAP_PHEP\file\giay-phep\nuoc-mat');
         $upload_success = $request->file('file_license')->move($destinationPath, $licenseFileName);
 
         $construction = SurfaceWaterConstructions::find($id);
@@ -159,5 +160,22 @@ class SurfaceWaterConstructionsController extends Controller
         $construction->save();
      
         return redirect()->route('quan-ly-cap-phep')->withSuccess('Sửa giấy phép công trình thành công!');
+    }
+
+    public function doCreateWastewaterLicense(Request $request)
+    {
+        $request->validate([
+            'file_license' => 'required|max:2048',
+        ]);
+
+        $licenseFileName = $request->file('file_license')->getClientOriginalName();
+        $destinationPath = public_path('TNN_QUAN_LY_CAP_PHEP\file\giay-phep\xa-thai');
+        $upload_success = $request->file('file_license')->move($destinationPath, $licenseFileName);
+
+    
+        WastewaterConstructions::create($request->all());
+        WastewaterConstructions::where('license_num', $request->license_num)->update(['file_license' => $request->file('file_license')->getClientOriginalName()]);
+     
+        return redirect()->route('quan-ly-cap-phep')->withSuccess('Tạo giấy phép công trình thành công!');
     }
 }

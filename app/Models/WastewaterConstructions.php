@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SurfaceWaterConstructions extends Model
+class WastewaterConstructions extends Model
 {
     use HasFactory;
-
-    public $table = 'surfacewater_constructions';
+    public $table = 'wastewater_constructions';
     protected $guarded = [];
     public $timestamps = true;
 }

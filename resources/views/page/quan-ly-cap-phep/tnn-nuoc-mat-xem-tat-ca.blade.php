@@ -79,7 +79,7 @@
                             <td>{{$cons->license_date}}</td>
                             <td>{{$cons->organization_authorities}}</td>
                             <td>{{$cons->organization_request}}</td>
-                            <td><a href="#">{{$cons->construction_name}}</a></td>
+                            <td><span class="construction-link text-primary"><img src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/earth.png')}}" class="earth-icon" alt="earth" />&nbsp;{{$cons->construction_name}}</span></td>
                             <td>{{(!empty($cons->commune)) ? $cons->commune.', '.$cons->district : ""}}</td>
                             <td>{{$cons->license_duration}}</td>
                             <td>{{$cons->vi_do_nha_may}}</td>

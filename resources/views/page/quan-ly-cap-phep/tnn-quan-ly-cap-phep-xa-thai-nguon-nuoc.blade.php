@@ -14,7 +14,7 @@
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
             <a href="{{url('quan-ly-cap-phep')}}" title="Về trang quản lý cấp phép" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <span class="font-weight-bold text-white d-block pl-2 exploit-surfacewater-heading">QUẢN LÝ CẤP PHÉP / KHAI THÁC SỬ DỤNG NƯỚC MẶT</span>
+            <span class="font-weight-bold text-white d-block pl-2 exploit-surfacewater-heading">QUẢN LÝ CẤP PHÉP XẢ THẢI VÀO NGUỒN NƯỚC</span>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
@@ -192,7 +192,7 @@
             <div class="surfacewater-usage-filter">
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
-                        <span class="col-5 font-13 px-0">Nguồn tiếp nhận</span>
+                        <span class="col-6 font-13 px-0">Loại hình nước thải</span>
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                     <button title="Chọn tên công trình để xem thông tin" disabled="true" class="col-2 p-0 px-lg-1 mr-2 btn-primary font-13 text-center rounded" id="view-surfacewater">Xem</button>
@@ -205,7 +205,7 @@
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
-                        <span class="col-5 font-13 px-0">Quy chuẩn áp dụng</span>
+                        <span class="col-6 font-13 px-0">Quy chuẩn áp dụng</span>
                         <input type="text" class="col-7 px-1 font-13">
                     </div>
                 </div>

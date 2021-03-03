@@ -3,7 +3,7 @@
 #dams-num { left: 8px; top: 5px; }
 #slash { top: 8px; left: 27px; }
 #total-dams { top: 12px; left: 32px; }
-.surfacewater-usage, .discharge-water, .construction-info, .exploit-surfacewater { border: 1px solid #d5e6fb; }
+.surfacewater-usage, .discharge-water, .construction-info, .exploit-surfacewater, #wastewater-wrap { border: 1px solid #d5e6fb; }
 #surfacewater-usage { overflow-y: auto; height: calc(100vh - 156px); }
 .surfacewater-usage-content, .discharge-water-content { height: 75px; }
 .surfacewater-usage-item p, .discharge-water-item p { height: 40px; }
@@ -52,6 +52,9 @@
 }
 
 .list-construction li:hover { cursor: pointer; background: #b1d7ff; }
+.container-table { overflow-x: scroll; }
+.earth-icon { width: 20px; height: 20px; }
+.construction-link { cursor: pointer; }
 
 @media screen and (min-width: 768px) {
 	.exploit-surfacewater-heading { font-size: unset; }

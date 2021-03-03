@@ -83,10 +83,15 @@ Route::group(['middleware' => 'auth'], function () {
             return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat');
         })->name('tao-moi-giay-phep-nuoc-mat');
 
-        Route::post('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@doCreateLicense')->name('xu-ly-tao-moi-giay-phep-nuoc-mat');
+        Route::get('tao-moi-giay-phep-xa-thai', function () {
+            return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-xa-thai');
+        })->name('tao-moi-giay-phep-xa-thai');
+
+        Route::post('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@doCreateSurfacewaterLicense')->name('xu-ly-tao-moi-giay-phep-nuoc-mat');
+        Route::post('tao-moi-giay-phep-xa-thai', 'App\Http\Controllers\SurfaceWaterConstructionsController@doCreateWastewaterLicense')->name('xu-ly-tao-moi-giay-phep-xa-thai');
         
-        Route::get('sua-giay-phep-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@showEditLicense');
-        Route::post('sua-giay-phep-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@doEditLicense')->name('xu-ly-sua-giay-phep-nuoc-mat');;
+        Route::get('sua-giay-phep-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@showEditSurfacewaterLicense');
+        Route::post('sua-giay-phep-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@doEditSurfacewaterLicense')->name('xu-ly-sua-giay-phep-nuoc-mat');;
     });
 });
 
