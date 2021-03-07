@@ -74,7 +74,7 @@
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYCAPPHEP.png')}}" alt="cap-phep">
                     <p class="grid-item-text font-weight-bold">Quản lý cấp phép</p>
                 </a>
-                <a href="{{route('register')}}" class="col-6 text-center">
+                <a href="{{route('dang-ky')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_DANGKY.png')}}" alt="dang-ky">
                     <p class="grid-item-text font-weight-bold">Đăng ký / Kết nối</p>
                 </a>

@@ -54,18 +54,14 @@ Route::group(['middleware' => 'auth'], function () {
         // Trang quan ly cap phep
         Route::get('/', 'App\Http\Controllers\SurfaceWaterConstructionsController@index')->name('quan-ly-cap-phep');
 
-        Route::get('nuoc-mat', function () {
-            return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-nuoc-mat');
-        })->name('quan-ly-cap-phep-nuoc-mat');
-
         Route::get('nuoc-mat/xem-tat-ca', 'App\Http\Controllers\SurfaceWaterConstructionsController@viewAll')->name('nuoc-mat-xem-tat-ca');
 
         Route::get('nuoc-mat/cong-trinh-dau-moi', function () {
             return view('page.quan-ly-cap-phep.tnn-nuoc-mat-cong-trinh-dau-moi');
         })->name('nuoc-mat-cong-trinh-dau-moi');
 
-        // Tom tat thong tin nuoc mat
-        Route::get('nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@summaryInfo')->name('thong-tin-tom-tat-quan-ly-cap-phep-nuoc-mat');
+        Route::get('nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@surfacewaterConstructionInfo')->name('quan-ly-cap-phep-nuoc-mat');
+        Route::get('thong-tin-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@surfacewaterInfoForLoading');
 
         Route::get('xa-thai-nguon-nuoc', function () {
             return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-xa-thai-nguon-nuoc');

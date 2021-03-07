@@ -84,21 +84,25 @@
                             </ul>
                         </div>
                     </div>
-                    <button title="Chọn tên công trình để xem thông tin" disabled="true" class="col-2 p-0 px-lg2 mr-2 btn-primary font-13 text-center rounded" id="view-surfacewater">Xem</button>
+                    <button title="Chọn tên công trình để xem thông tin" disabled="true" class="col-2 p-0 px-lg2 mr-2 btn-primary font-13 text-center rounded" id="view-surfacewater">Xem GP</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
                         <input type="text" class="col-7 px-1 font-13" id="license_num" placeholder="Nhập số giấy phép.." readonly>
                     </div>
-                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Y/c kết nối</button>
+                    <a href="{{route('tao-moi-giay-phep-nuoc-mat')}}" title="Tạo mới giấy phép" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Cấp mới</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" id="organization_authorities" placeholder="Nhập cơ quan cấp phép.." readonly>
                     </div>
-                    <a href="{{route('tao-moi-giay-phep-nuoc-mat')}}" title="Tạo mới giấy phép" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Tạo mới</a>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Điều chỉnh</button>
+                </div>
+                <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
+                    <div class="col-8 d-flex pl-0"></div>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Cấp lại GP</button>
                 </div>
             </div>
 		</div>
@@ -152,21 +156,25 @@
                             <option value="">Công trình B</option>
                         </select>
                     </div>
-                    <a href="{{route('quan-ly-cap-phep-xa-thai-nguon-nuoc')}}" class="col-2 p-0 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Xem</a>
+                    <a href="{{route('quan-ly-cap-phep-xa-thai-nguon-nuoc')}}" class="col-2 p-0 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Xem GP</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
-                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Y/c kết nối</button>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Cấp mới</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
-                    <a href="{{route('tao-moi-giay-phep-xa-thai')}}" title="Tạo mới giấy phép" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Tạo mới</a>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Điều chỉnh</button>
+                </div>
+                <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
+                    <div class="col-8 d-flex pl-0"></div>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Cấp lại GP</button>
                 </div>
             </div>
 		</div>
@@ -227,13 +235,18 @@
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
-                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Y/c kết nối</button>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Cấp mới</button>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Điều chỉnh</button>
+                </div>
+                <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
+                    <div class="col-8 d-flex pl-0"></div>
+                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Cấp lại GP</button>
                 </div>
             </div>
 		</div>
@@ -241,16 +254,16 @@
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
         <div id="map" class="h-100 w-100 position-relative">
-            <img title="Về trung tâm bản đồ" class="position-absolute map-tool center-map" id="center-map" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_VEGIUABANDO.png'}}" alt="trung-tam-ban-do">
-            <img title="Vị trí hiện tại" class="position-absolute map-tool current-location" id="current-location" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_VITRIHIENTAI.png'}}" alt="vi-tri-hien-tai">
-            <img title="Phóng to" class="position-absolute map-tool zoom-in" id="zoom-in" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_PHONGTO.png'}}" alt="phong-to">
-            <img title="Thu nhỏ" class="position-absolute map-tool zoom-out" id="zoom-out" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_THUNHO.png'}}" alt="thu-nho">
-            <img title="Thêm công trình" class="position-absolute map-tool add-construction" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_THEMCONGTRINH.png'}}" alt="them-cong-trinh">
-            <img title="Sửa công trình" class="position-absolute map-tool edit-construction" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_SUACONGTRINH.png'}}" alt="sua-cong-trinh">
-            <img title="Xem thông tin" class="position-absolute map-tool view-info" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_XEMTHONGTIN.png'}}" alt="xem-thong-tin">
-            <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_DOKHOANGCACH.png'}}" alt="do-khoang-cach">
+            <img title="Về trung tâm bản đồ" class="position-absolute map-tool center-map" id="center-map" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_VEGIUABANDO.png')}}" alt="trung-tam-ban-do">
+            <img title="Vị trí hiện tại" class="position-absolute map-tool current-location" id="current-location" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_VITRIHIENTAI.png')}}" alt="vi-tri-hien-tai">
+            <img title="Phóng to" class="position-absolute map-tool zoom-in" id="zoom-in" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_PHONGTO.png')}}" alt="phong-to">
+            <img title="Thu nhỏ" class="position-absolute map-tool zoom-out" id="zoom-out" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_THUNHO.png')}}" alt="thu-nho">
+            <img title="Thêm công trình" class="position-absolute map-tool add-construction" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_THEMCONGTRINH.png')}}" alt="them-cong-trinh">
+            <img title="Sửa công trình" class="position-absolute map-tool edit-construction" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_SUACONGTRINH.png')}}" alt="sua-cong-trinh">
+            <img title="Xem thông tin" class="position-absolute map-tool view-info" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_XEMTHONGTIN.png')}}" alt="xem-thong-tin">
+            <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_DOKHOANGCACH.png')}}" alt="do-khoang-cach">
             <div class="position-absolute map-layers d-flex align-items-center" id="map-layers" title="Chọn lớp bản đồ">
-                <img src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_LOPBANDO.png'}}" alt="lop-ban-do">
+                <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_LOPBANDO.png')}}" alt="lop-ban-do">
                 <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
             </div>
             <div class="position-absolute map-panel-layers align-items-center text-white" id="map-panel-layers">
@@ -263,7 +276,7 @@
                 </ul>
             </div>
             <div class="position-absolute map-note d-flex align-items-center">
-                <img src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_CHUGIAIBANDO.png'}}" alt="chu-giai-ban-do">
+                <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_CHUGIAIBANDO.png')}}" alt="chu-giai-ban-do">
                 <span class="font-weight-bold">&nbsp; Chú giải</span>
             </div>
         </div>
@@ -288,7 +301,7 @@
                 $('#view-surfacewater').prop('disabled', id != "" ? false:true);
                 $.ajax({
                     method: "GET",
-                    url: window.location.href+"/nuoc-mat/"+id,
+                    url: window.location.href+"/thong-tin-nuoc-mat/"+id,
                     beforeSend: function(){
                         $("#loading-gif-image").show();
                         $("#overlay").show();
@@ -306,78 +319,11 @@
                 $("#view-surfacewater").on('click',function(){
                     if(id == "view-all")
                     {
-                        window.location.replace(window.location.href+"/nuoc-mat/xem-tat-ca");
+                        window.location.href = window.location.href+"/nuoc-mat/xem-tat-ca";
                     }
                     else
                     {
-                        $.ajax({
-                        url: window.location.href+"/nuoc-mat", 
-                        beforeSend: function(){
-                            $("#loading-gif-image").show();
-                            $("#overlay").show();
-                        },
-                        success: function(view){
-                            $("#loading-gif-image").hide();
-                            $("#overlay").hide();
-
-                            $("#surfacewater-usage").html(view);
-                            $.ajax({
-                                method: "GET",
-                                url: window.location.href+"/nuoc-mat/"+id,
-                                beforeSend: function(){
-                                    $("#loading-gif-image").show();
-                                    $("#overlay").show();
-                                }, 
-                                success: function(data){
-                                    $("#loading-gif-image").hide();
-                                    $("#overlay").hide();
-
-                                    $("#license_num").val(data.license_num);
-                                    $("#license_date").val(data.license_date);
-                                    $("#license_duration").val(data.license_duration);
-                                    $("#license_role").val(data.license_role);
-                                    $("#organization_request").val(data.organization_request);
-                                    $("#organization_authorities").val(data.organization_authorities);
-                                    $("#year_built").val(data.year_built);
-                                    $("#year_operation").val(data.year_operation);
-                                    $("#construction_name").val(data.construction_name);
-                                    $("#construction_code").val(data.construction_code);
-                                    $("#purpose_using_water").val(data.purpose_using_water);
-                                    $("#water_source").val(data.water_source);
-                                    $("#district").val(data.district);
-                                    $("#commune").val(data.commune);
-                                    $("#lat_dams").val(data.vi_do_dap);
-                                    $("#long_dams").val(data.kinh_do_dap);
-                                    $("#lat_factory").val(data.vi_do_nha_may);
-                                    $("#long_factory").val(data.kinh_do_nha_may);
-                                    $("#exploit_mode").val(data.exploit_mode);
-                                    $("#wattage").val(data.wattage);
-                                    $("#q_kt_max").val(data.q_kt_max);
-                                    $("#q_kt_max_mk").val(data.q_kt_max_mk);
-                                    $("#q_tt").val(data.q_tt);
-                                    $("#watering_area").val(data.watering_area);
-                                    $("#q_tuoi_tieu").val(data.q_tuoi_tieu);
-                                    $("#q_cap_nuoc").val(data.q_cap_nuoc);
-
-                                    map.setView([data.lat_dams, data.long_dams], 12);
-
-                                    $("#licenseFileLabel").text('GIẤY PHÉP CÔNG TRÌNH - '+ data.construction_name);
-                                    $("#licenseFile").attr('src', window.location.origin+"/public/TNN_QUAN_LY_CAP_PHEP/file/giay-phep/nuoc-mat/"+data.file_license);
-                                    $("#btn-print-license").on('click', function(){
-                                        document.getElementById('licenseFile').contentWindow.print();
-                                    })
-
-                                    $("#btn-edit-license").on('click', function(){
-                                        window.location.href = window.location.href+'/sua-giay-phep-nuoc-mat/'+data.id;
-                                    })
-                                }
-                            });
-                        }
-                        })
-                    
-                        // set atr href back page
-                        $("#btn_back_page").attr("href","{{url('quan-ly-cap-phep')}}");
-                        $("#btn_back_page").attr("title","Về trang quản lý cấp phép");
+                        window.location.href = window.location.href+"/nuoc-mat/"+id;
                     }
                 })
             });

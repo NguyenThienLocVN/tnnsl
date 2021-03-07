@@ -55,6 +55,7 @@
 .container-table { overflow-x: scroll; }
 .earth-icon { width: 20px; height: 20px; }
 .construction-link { cursor: pointer; }
+.construction-info textarea { resize: none; }
 
 @media screen and (min-width: 768px) {
 	.exploit-surfacewater-heading { font-size: unset; }

@@ -52,10 +52,16 @@ class SurfaceWaterConstructionsController extends Controller
                                                                     'surfaceWaterJson' => $surfaceWaterJson]);
     }
 
-    public function summaryInfo($id)
+    public function surfacewaterConstructionInfo($id)
     {
-        $constructions = SurfaceWaterConstructions::find($id);
-        return response()->json($constructions);
+        $construction = SurfaceWaterConstructions::find($id);
+        return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-nuoc-mat', ['construction' => $construction]);
+    }
+
+    public function surfacewaterInfoForLoading($id)
+    {
+        $construction = SurfaceWaterConstructions::find($id);
+        return response()->json($construction);
     }
 
     public function viewAll(){
