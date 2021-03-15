@@ -4,6 +4,7 @@
 #slash { top: 8px; left: 27px; }
 #total-dams { top: 12px; left: 32px; }
 .surfacewater-usage, .discharge-water, .construction-info, .exploit-surfacewater, #wastewater-wrap { border: 1px solid #d5e6fb; }
+.exploit-surfacewater span { line-height: initial; }
 #surfacewater-usage { overflow-y: auto; height: calc(100vh - 156px); }
 .surfacewater-usage-content, .discharge-water-content { height: 75px; }
 .surfacewater-usage-item p, .discharge-water-item p { height: 40px; }
@@ -38,8 +39,8 @@
 	border: 1px solid #8d9398;
 }
 
-.table-license-manage thead th { border-bottom: 1px solid #8d9398 !important; }
-/* .tab-content { overflow-x: scroll; } */
+.table-license-manage thead th { border-bottom: 1px solid #8d9398 !important; background: #dadafb; }
+.table-license-manage td { background: #f9f7f7; }
 
 .list-construction {    
 	z-index: 9;
@@ -52,10 +53,11 @@
 }
 
 .list-construction li:hover { cursor: pointer; background: #b1d7ff; }
-.container-table { overflow-x: scroll; }
+.container-table { overflow-x: auto; }
 .earth-icon { width: 20px; height: 20px; }
 .construction-link { cursor: pointer; }
 .construction-info textarea { resize: none; }
+.table thead th { vertical-align: middle !important; }
 
 @media screen and (min-width: 768px) {
 	.exploit-surfacewater-heading { font-size: unset; }
