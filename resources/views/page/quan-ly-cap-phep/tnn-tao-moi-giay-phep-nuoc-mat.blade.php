@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('title', 'Quản lý cấp phép')
+@section('title', 'Quản lý cấp phép | Tạo mới giấy phép nước mặt')
 
 @push('custom-style')
     <link rel="stylesheet" href="{{asset('public/TNN_QUAN_LY_CAP_PHEP/css/tnn-quan-ly-cap-phep.css')}}">
@@ -9,7 +9,7 @@
 @endpush
 
 @section('content')
-<header class="mb-3 mb-md-0">
+<header class="mb-3 mb-md-0 ">
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
@@ -43,67 +43,67 @@
                     <div class="col-12 d-flex flex-column flex-md-row">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Tên tổ chức </span>
-                            <input type="text" name="license_num" id="license_num" value="{{old('license_num')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="organization_name" id="organization_name" value="{{old('organization_name')}}" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Số ĐKKD</span>
-                            <input type="text" name="license_date" id="license_date" value="{{old('license_date')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="business_reg_num" id="business_reg_num" value="{{old('business_reg_num')}}" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-12 px-0">Nơi cấp ĐKKD</span>
-                            <input type="text" name="license_duration" id="license_duration" value="{{old('license_duration')}}" class="col-7 px-1 font-13" required></span>
+                            <input type="text" name="business_reg_place" id="business_reg_place" value="{{old('business_reg_place')}}" class="col-7 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-12 px-0">Ngày cấp ĐKKD</span>
-                            <input type="text" name="license_role" id="license_role" value="{{old('license_role')}}" class="col-7 px-1 font-13">
+                            <input type="text" name="business_reg_date" id="business_reg_date" value="{{old('business_reg_date')}}" class="col-7 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-12 px-0">Quyết định TL</span>
-                            <input type="text" name="organization_request" id="organization_request" value="{{old('organization_request')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="tl_decision" id="tl_decision" value="{{old('tl_decision')}}" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Cơ quan ký </span>
-                            <input type="text" name="organization_authorities" id="organization_authorities" value="{{old('organization_authorities')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="agency_signed" id="agency_signed" value="{{old('agency_signed')}}" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-2">
                         <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Số CMND </span>
-                            <input type="text" name="year_built" id="year_built" value="{{old('year_built')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="id_card_num" id="id_card_num" value="{{old('id_card_num')}}" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-12 px-0">Nơi cấp CNMD</span>
-                            <input type="text" name="year_operation" id="year_operation" value="{{old('year_operation')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="id_card_place" id="id_card_place" value="{{old('id_card_place')}}" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-12 px-0">Ngày cấp CMND </span>
-                            <input type="text" name="construction_name" id="construction_name" value="{{old('construction_name')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="id_card_date" id="id_card_date" value="{{old('id_card_date')}}" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Fax</span>
-                            <input type="text" name="construction_code" id="construction_code" value="{{old('construction_code')}}" class="col-md-7 col-3 px-1 font-13">
+                            <input type="text" name="fax" id="fax" value="{{old('fax')}}" class="col-md-7 col-3 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-2 font-13 px-0">Địa chỉ</span>&nbsp;&nbsp;&nbsp;
-                            <input type="text" name="purpose_using_water" id="purpose_using_water" value="{{old('purpose_using_water')}}" class="col-10 px-1 font-13" required>
+                            <input type="text" name="address" id="address" value="{{old('address')}}" class="col-10 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">SĐT </span>
-                            <input type="text" name="district" id="district" value="{{old('district')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="phone" id="phone" value="{{old('phone')}}" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Email </span>
-                            <input type="text" name="commune" id="commune" value="{{old('commune')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="email" id="email" value="{{old('email')}}" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                 </div>
@@ -115,33 +115,49 @@
                     <div class="col-12 d-flex flex-column flex-md-row">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Tên CT </span>
-                            <input type="text" name="license_num" id="license_num" value="{{old('license_num')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="construction_name" id="construction_name" value="{{old('construction_name')}}" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Loại CT </span>
-                            <input type="text" name="license_date" id="license_date" value="{{old('license_date')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="construction_type" id="construction_type" value="{{old('construction_type')}}" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-2 font-12 px-0">Phương thức KT</span>&nbsp;&nbsp;&nbsp;
-                            <input type="text" name="purpose_using_water" id="purpose_using_water" value="{{old('purpose_using_water')}}" class="col-10 px-1 font-13" required>
+                            <input type="text" name="exploit_mode" id="exploit_mode" value="{{old('exploit_mode')}}" class="col-10 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-2 font-13 px-0">Vị trí CT</span>&nbsp;&nbsp;&nbsp;
-                            <input type="text" name="purpose_using_water" id="purpose_using_water" value="{{old('purpose_using_water')}}" class="col-10 px-1 font-13" required>
+                            <input type="text" name="construction_location" id="construction_location" value="{{old('construction_location')}}" class="col-10 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                        <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-5 font-13 px-0">Huyện </span>
+                            <select name="district" id="district" class="col-7 px-1 font-13">
+                                <option value="Yên Châu">Yên Châu</option>
+                                <option value="Mộc Châu">Mộc Châu</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <span class="col-5 font-13 px-0">Xã </span>
+                            <select name="commune" id="commune" class="col-7 px-1 font-13">
+                                <option value="Xã 1">Yên Châu</option>
+                                <option value="Xã 2">Mộc Châu</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Hiện trạng CT </span>
-                            <input type="text" name="license_num" id="license_num" value="{{old('license_num')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="" id="" value="" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Thời gian VH </span>
-                            <input type="text" name="license_date" id="license_date" value="{{old('license_date')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="license_duration" id="license_duration" value="{{old('license_duration')}}" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                 </div>
@@ -153,46 +169,46 @@
                     <div class="col-12 d-flex flex-column flex-md-row">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-12 px-0">Nguồn nước</span>
-                            <input type="text" name="license_num" id="license_num" value="{{old('license_num')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="water_source" id="water_source" value="{{old('water_source')}}" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Vị trí lấy nước </span>
-                            <input type="text" name="license_date" id="license_date" value="{{old('license_date')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="" id="" value="" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Mục đích KT </span>
-                            <input type="text" name="license_num" id="license_num" value="{{old('license_num')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="purpose_using_water" id="purpose_using_water" value="" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Q <span class="font-11">KTSD_SXNN</span> </span>
-                            <input type="text" name="license_date" id="license_date" value="{{old('license_date')}}" class="col-6 px-1 font-13" required>
+                            <input type="text" name="" id="" value="{{old('')}}" class="col-6 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Q turbin </span>
-                            <input type="text" name="license_num" id="license_num" value="{{old('license_num')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="" id="" value="" class="col-7 px-1 font-13" required>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Công suất </span>
-                            <input type="text" name="license_date" id="license_date" value="{{old('license_date')}}" class="col-7 px-1 font-13" required>
+                            <input type="text" name="wattage" id="wattage" value="{{old('wattage')}}" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Q_khai thác khác <input type="text" id="q_tuoi_tieu" class="col-3 px-1" value="0" readonly=""> (m<sup>3</sup>/ngđêm) &nbsp; </span>
+                            <span class="col-12 font-13 px-0">Q_khai thác khác <input type="text" name="" id="" class="col-3 px-1" value="" readonly=""> (m<sup>3</sup>/ngđêm) &nbsp; </span>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Chế độ khai thác sử dụng <input type="text" id="q_tuoi_tieu" class="col-3 px-1" value="0" readonly=""> (m<sup>3</sup>/ngđêm) &nbsp; </span>
+                            <span class="col-12 font-13 px-0">Chế độ khai thác sử dụng <input type="text" name="" id="" class="col-3 px-1" value="" readonly=""> </span>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Thời gian đề nghị cấp phép <input type="text" id="q_tuoi_tieu" class="col-3 px-1" value="0" readonly=""> (m<sup>3</sup>/ngđêm) &nbsp; </span>
+                            <span class="col-12 font-13 px-0">Thời gian đề nghị cấp phép <input type="text" name="" id="" class="col-3 px-1" value="" readonly=""> </span>
                         </div>
                     </div>
                 </div>

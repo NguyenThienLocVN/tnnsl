@@ -284,7 +284,4 @@
     </div>
     <textarea id="surfaceWaterJson" class="d-none"></textarea>
 </main>
-<script>
-
-</script>
 @endsection

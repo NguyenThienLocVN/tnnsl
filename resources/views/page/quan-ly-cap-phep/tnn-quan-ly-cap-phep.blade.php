@@ -104,6 +104,10 @@
                     <div class="col-8 d-flex pl-0"></div>
                     <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Cấp lại GP</button>
                 </div>
+                <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
+                    <div class="col-8 d-flex pl-0"></div>
+                    <a href="{{route('danh-sach-giay-phep-nuoc-mat')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white" >Xét duyệt</a href="">
+                </div>
             </div>
 		</div>
         <!-- Ket thuc khai thac su dung nuoc mat -->

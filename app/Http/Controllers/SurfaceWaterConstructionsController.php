@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SurfaceWaterConstructions;
 use App\Models\WastewaterConstructions;
+use App\Models\SurfacewaterLicenseFiles;
 
 class SurfaceWaterConstructionsController extends Controller
 {
@@ -65,7 +66,7 @@ class SurfaceWaterConstructionsController extends Controller
     }
 
     public function viewAll(){
-        $constructions = SurfaceWaterConstructions::all();
+        $constructions = SurfaceWaterConstructions::paginate(10);
         $hydroConstruction = SurfaceWaterConstructions::where('construction_type',1)->get();
         $irrigationConstruction = SurfaceWaterConstructions::where('construction_type',2)->get();
         $pumpConstruction = SurfaceWaterConstructions::where('construction_type',3)->get();
@@ -183,5 +184,11 @@ class SurfaceWaterConstructionsController extends Controller
         WastewaterConstructions::where('license_num', $request->license_num)->update(['file_license' => $request->file('file_license')->getClientOriginalName()]);
      
         return redirect()->route('quan-ly-cap-phep')->withSuccess('Tạo giấy phép công trình thành công!');
+    }
+
+    public function listApprovalSurfacewaterLicense()
+    {
+        $files = SurfacewaterLicenseFiles::all();
+        return view('page.quan-ly-cap-phep.tnn-xet-duyet-giay-phep-nuoc-mat', ['files' => $files]);
     }
 }
