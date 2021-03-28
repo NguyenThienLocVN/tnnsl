@@ -6,8 +6,8 @@
 
     <title>Xét duyệt giấy phép nước mặt | Quản lý cấp phép nước mặt | Giám sát tài nguyên nước Sơn La</title>
 
-    <link rel="stylesheet" href="http://localhost/tnnsl/public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/tnnsl/public/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/css/font-awesome.min.css')}}" type="text/css">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -18,19 +18,19 @@
     <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js"
         integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ=="
         crossorigin=""></script>
-    <link rel="stylesheet" href="http://localhost/tnnsl/public/TNN_QUAN_LY_CAP_PHEP/css/tnn-quan-ly-cap-phep.css">
-    <link rel="stylesheet" href="http://localhost/tnnsl/public/css/styles.css">
+    <link rel="stylesheet" href="{{asset('public/TNN_QUAN_LY_CAP_PHEP/css/tnn-quan-ly-cap-phep.css')}}">
+    <link rel="stylesheet" href="{{asset('public/css/styles.css')}}">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
         integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-    <script src="http://localhost/tnnsl/public/js/bootstrap.min.js"></script>
+    <script src="{{asset('public/js/bootstrap.min.js')}}"></script>
 </head>
 
 <body class=" p-0" data-new-gr-c-s-check-loaded="14.998.0" data-gr-ext-installed="" cz-shortcut-listen="true">
     <header>
-        <a href="http://localhost/tnnsl"><img class="w-100 banner-tnmt"
-                src="http://localhost/tnnsl/public/TNN_TRANG_CHU/image/ANHSOTNMT.png" alt="banner-tnmt"></a>
+        <a href="{{url('/')}}"><img class="w-100 banner-tnmt"
+                src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     </header>
     <main>
         <div class="col-12 d-flex align-items-center p-2 surfacewater-usage-title">
@@ -50,25 +50,30 @@
                         <thead>
                             <tr>
                                 <th>STT</th>
+                                <th>Cơ quan / Tổ chức</th>
                                 <th>Tên công trình</th>
-                                <th>Đơn xin cấp phép</th>
-                                <th>Kết quả phân tích CLN</th>
-                                <th>Đề án KTSDN</th>
-                                <th>Báo cáo KTSDN</th>
-                                <th>Sơ đồ vị trí công trình KTN</th>
-                                <th>Văn bản ý kiến cộng đồng</th>
-                                <th>Giấy tờ khác</th>
+                                <th>Loại công trình</th>
+                                <th>Công suất</th>
+                                <th>Vị trí CT</th>
+                                <th class="text-center">Thời gian VH</th>
+                                <th class="text-center">Nguồn nước</th>
+                                <th>Thời gian gửi</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($files as $fi)
-                                <tr>
-                                    <td class="text-center">{{$fi->id}}</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            @endforeach
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>Công ty A</td>
+                                <td>Thuỷ điện A</td>
+                                <td>Thủy điện</td>
+                                <td>12 MW</td>
+                                <td>Mộc Châu, Sơn La</td>
+                                <td class="text-center">10 năm</td>
+                                <td>Thượng lưu suối A</td>
+                                <td class="text-center"> 26/03/2021 </td>
+                                <td><a href="#" class="btn btn-sm btn-success mr-1"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a href="#" class="btn btn-sm btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
