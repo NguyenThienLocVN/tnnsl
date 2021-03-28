@@ -29,8 +29,8 @@
 
 <body class=" p-0" data-new-gr-c-s-check-loaded="14.998.0" data-gr-ext-installed="" cz-shortcut-listen="true">
     <header>
-        <a href="http://localhost/tnnsl"><img class="w-100 banner-tnmt"
-                src="http://localhost/tnnsl/public/TNN_TRANG_CHU/image/ANHSOTNMT.png" alt="banner-tnmt"></a>
+        <a href="{{url('/')}}"><img class="w-100 banner-tnmt"
+                src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     </header>
     <main>
         <div class="col-12 d-flex align-items-center p-2 surfacewater-usage-title">
