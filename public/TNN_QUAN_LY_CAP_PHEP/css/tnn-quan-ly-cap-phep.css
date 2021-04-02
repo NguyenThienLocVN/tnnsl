@@ -1,9 +1,9 @@
 .exploit-surfacewater-heading { font-size: 12px; }
-.surfacewater-usage-title, .discharge-water-title, .construction-info-title, .exploit-surfacewater-title { background: #2f80ed33; }
+.surfacewater-usage-title, .discharge-water-title, .construction-info-title, .exploit-surfacewater-title,.information-about-license-owner-title { background: #2f80ed33; }
 #dams-num { left: 8px; top: 5px; }
 #slash { top: 8px; left: 27px; }
 #total-dams { top: 12px; left: 32px; }
-.surfacewater-usage, .discharge-water, .construction-info, .exploit-surfacewater, #wastewater-wrap { border: 1px solid #d5e6fb; }
+.surfacewater-usage, .discharge-water, .construction-info, .exploit-surfacewater, .information-about-license-owner-title, #wastewater-wrap { border: 1px solid #d5e6fb; }
 .exploit-surfacewater span { line-height: initial; }
 #surfacewater-usage { overflow-y: auto; height: calc(100vh - 156px); }
 .surfacewater-usage-content, .discharge-water-content { height: 75px; }

@@ -78,6 +78,21 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('tao-moi-giay-phep-nuoc-mat', function () {
             return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat');
         })->name('tao-moi-giay-phep-nuoc-mat');
+        Route::get('cap-lai-giay-phep', function () {
+            return view('page.quan-ly-cap-phep.tnn-cap-lai-giay-phep');
+        })->name('cap-lai-giay-phep');
+
+        Route::get('de-nghi-gia-han-dieu-chinh-giay-phep-khai-thac-su-dung-nuoc-mat', function () {
+            return view('page.quan-ly-cap-phep.tnn-de-nghi-gia-han-dieu-chinh-giay-phep-khai-thac-su-dung-nuoc-mat');
+        })->name('de-nghi-gia-han-dieu-chinh-giay-phep-khai-thac-su-dung-nuoc-mat');
+        
+        Route::get('de-nghi-cap-phep-xa-nuoc-thai-vao-nguon-nuoc', function () {
+            return view('page.quan-ly-cap-phep.tnn-de-nghi-cap-phep-xa-nuoc-thai-vao-nguon-nuoc');
+        })->name('de-nghi-cap-phep-xa-nuoc-thai-vao-nguon-nuoc');
+
+        Route::get('tao-moi-giay-phep-nuoc-mat', function () {
+            return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat');
+        })->name('tao-moi-giay-phep-nuoc-mat');
 
         Route::get('tao-moi-giay-phep-xa-thai', function () {
             return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-xa-thai');
