@@ -24,7 +24,7 @@
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-5 pb-3 map-container px-md-0">
+    <div class="col-12 col-lg-5 pb-3 map-container px-md-0" id="surfacewater-usage">
         <div class="information-about-license-owner">
             <div class="d-flex">
                 <p class="col-8 py-1 information-about-license-owner-title font-weight-bold mb-2">Tổ chức cá nhân đề nghị cấp phép</p>
@@ -205,8 +205,8 @@
             </div>
         </div>
         <div class="d-flex">
-            <button class="btn py-1 px-3 btn-success mx-2">LƯU</button>
-            <button class="btn py-1 px-3 btn-success mx-2" type="reset">NHẬP LẠI</button>
+            <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
+            <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2" type="reset">NHẬP LẠI</button>
         </div>
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">

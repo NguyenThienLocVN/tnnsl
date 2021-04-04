@@ -24,47 +24,47 @@
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-5 pb-3 map-container px-md-0">
+    <div class="col-12 col-lg-5 pb-3 map-container px-md-0" id="surfacewater-usage">
         <div class="information-about-license-owner">
             <div class="d-flex">
                 <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">1. THÔNG TIN VỀ CHỦ GIẤY PHÉP</p>
             </div>
             <div class="information-about-license-owner-content col-12 p-0 mb-3 pr-3">
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-3 font-13 px-0 font-weight-bold">Tên chủ giấy phép </span>
-                    <input type="text" class="w-100 border-0 bg-light" name="" id="">
+                    <span class="col-4 font-13 px-0 font-weight-bold">Tên chủ giấy phép </span>
+                    <input type="text" class="w-100 px-1 font-13" name="" id="">
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-3 font-13 px-0 font-weight-bold">Địa chỉ </span>
-                    <input type="text" class="w-100 border-0 bg-light" name="" id="">
+                    <span class="col-4 font-13 px-0 font-weight-bold">Địa chỉ </span>
+                    <input type="text" class="w-100 px-1 font-13" name="" id="">
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
                     <div class="col-4 d-flex p-0 mb-1 align-items-center">
                         <span class="col-3 font-13 px-0 font-weight-bold">ĐT </span>
-                        <input type="text" class="w-100 border-0 bg-light" name="" id="">
+                        <input type="text" class="w-100 px-1 font-13" name="" id="">
                     </div>
                     <div class="col-4 d-flex p-0 mb-1 align-items-center">
-                        <span class="col-3 font-13 px-0 font-weight-bold">Fax </span>
-                        <input type="text" class="w-100 border-0 bg-light" name="" id="">
+                        <span class="col-3 font-13 px-0 text-center font-weight-bold">Fax </span>
+                        <input type="text" class="w-100 px-1 font-13" name="" id="">
                     </div>
                     <div class="col-4 d-flex p-0 mb-1 align-items-center">
-                        <span class="col-3 font-13 px-0 font-weight-bold">Email </span>
-                        <input type="text" class="w-100 border-0 bg-light" name="" id="">
+                        <span class="col-3 font-13 px-0 text-center font-weight-bold">Email </span>
+                        <input type="text" class="w-100 px-1 font-13" name="" id="">
                     </div>
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
                     <div class="col-6 d-flex p-0 mb-1 align-items-center">
                         <span class="col-5 font-13 px-0 font-weight-bold">Giấy phép số </span>
-                        <input type="text" class="w-100 border-0 bg-light" name="" id="">
+                        <input type="text" class="w-100 px-1 font-13" name="" id="">
                     </div>
                     <div class="col-6 d-flex p-0 mb-1 align-items-center">
-                        <span class="col-5 font-13 px-0 font-weight-bold">Ngày cấp </span>
-                        <input type="text" class="w-100 border-0 bg-light" name="" id="">
+                        <span class="col-5 font-13 px-0 text-center font-weight-bold">Ngày cấp </span>
+                        <input type="text" class="w-100 px-1 font-13" name="" id="">
                     </div>
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
                     <span class="col-4 font-13 px-0 font-weight-bold">Thời hạn của giấy phép </span>
-                    <input type="text" class="w-100 border-0 bg-light" name="" id="">
+                    <input type="text" class="w-100 px-1 font-13" name="" id="">
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
                 <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">2. LÝ DO ĐỀ NGHỊ GIA HẠN/ĐIỀU CHỈNH GIẤY PHÉP</p>
             </div>
             <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                <textarea name="" id="" cols="30" rows="5" class="w-100 border-0 bg-light"></textarea>
+                <textarea name="" id="" cols="30" rows="5" class="w-100 px-1 font-13"></textarea>
             </div>
         </div>
         <div class="records-and-documents-attached">
@@ -83,11 +83,11 @@
             <div class="Information-about-license-owner-content col-12 p-0 mb-3 pr-3">
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
                     <span class="col-6 font-13 px-0 font-weight-bold">Thời gian đề nghị gia hạn</span>
-                    <input type="text" name="" id="" class="border-0 bg-light">
+                    <input type="date" name="" id="" class="px-1 font-13">
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
                     <span class="col-6 font-13 px-0 font-weight-bold">Nội dung để nghị điều chỉnh </span>
-                    <input type="text" name="" id="" class="border-0 bg-light">
+                    <input type="file" name="" id="" class="px-1 font-13">
                 </div>
             </div>
         </div>
@@ -97,24 +97,24 @@
             </div>
             <div class="Information-about-license-owner-content col-12 p-0 mb-3 pr-3">
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-9 font-13 px-0 font-weight-bold">Báo cáo hiện trạng KTSDNM</span>
-                    <input type="file" name="" id="" class="border-0 bg-light">
+                    <span class="col-6 font-13 px-0 font-weight-bold">Báo cáo hiện trạng KTSDNM</span>
+                    <input type="file" name="" id="" class="px-1 font-13">
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-9 font-13 px-0 font-weight-bold">B/c tình hình thực hiện GP </span>
-                    <input type="file" name="" id="" class="border-0 bg-light">
+                    <span class="col-6 font-13 px-0 font-weight-bold">B/c tình hình thực hiện GP </span>
+                    <input type="file" name="" id="" class="px-1 font-13">
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-9 font-13 px-0 font-weight-bold">Kết quả phân tích CNL </span>
-                    <input type="file" name="" id="" class="border-0 bg-light">
+                    <span class="col-6 font-13 px-0 font-weight-bold">Kết quả phân tích CNL </span>
+                    <input type="file" name="" id="" class="px-1 font-13">
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-9 font-13 px-0 font-weight-bold">Bản sao GP đã được cấp </span>
-                    <input type="file" name="" id="" class="border-0 bg-light">
+                    <span class="col-6 font-13 px-0 font-weight-bold">Bản sao GP đã được cấp </span>
+                    <input type="file" name="" id="" class="px-1 font-13">
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-9 font-13 px-0 font-weight-bold">Giấy tờ khác</span>
-                    <input type="file" name="" id="" class="border-0 bg-light">
+                    <span class="col-6 font-13 px-0 font-weight-bold">Giấy tờ khác</span>
+                    <input type="file" name="" id="" class="px-1 font-13">
                 </div>
             </div>
         </div>
@@ -125,21 +125,24 @@
             <div class="Information-about-license-owner-content col-12 p-0 mb-3 pr-3">
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
                     <span class="col-9 font-13 px-0 font-weight-bold">Thông tin và hồ sơ đúng sự thật và hoàn toàn chịu TN</span>
-                    <input type="checkbox" name="" id="" class="border-0 bg-light">
+                    <input type="checkbox" name="" id="" class="px-1 font-13">
+                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
                     <span class="col-9 font-13 px-0 font-weight-bold">Chấp hành đúng quy định của GP </span>
-                    <input type="checkbox" name="" id="" class="border-0 bg-light">
+                    <input type="checkbox" name="" id="" class="px-1 font-13">
+                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
                     <span class="col-9 font-13 px-0 font-weight-bold">Đã gửi một bộ tới STNMT </span>
-                    <input type="checkbox" name="" id="" class="border-0 bg-light">
+                    <input type="checkbox" name="" id="" class="px-1 font-13">
+                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
             </div>
         </div>
         <div class="d-flex">
-            <button class="btn py-1 px-3 btn-success mx-2">LƯU</button>
-            <button class="btn py-1 px-3 btn-success mx-2" type="reset">NHẬP LẠI</button>
+            <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
+            <button class="btn py-1 font-13 font-weigh-bold px-3 btn-danger mx-2" type="reset">NHẬP LẠI</button>
         </div>
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
