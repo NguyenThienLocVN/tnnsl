@@ -89,14 +89,14 @@
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
-                        <input type="text" class="col-7 px-1 font-13" id="license_num" placeholder="Nhập số giấy phép..">
+                        <input type="text" class="col-7 px-1 font-13" id="license_num" placeholder="Nhập số giấy phép.." readonly>
                     </div>
                     <a href="{{route('tao-moi-giay-phep-nuoc-mat')}}" title="Tạo mới giấy phép" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Cấp mới</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
-                        <input type="text" class="col-7 px-1 font-13" id="organization_authorities" placeholder="Nhập cơ quan cấp phép..">
+                        <input type="text" class="col-7 px-1 font-13" id="organization_authorities" placeholder="Nhập cơ quan cấp phép.." readonly>
                     </div>
                     <a href="{{route('de-nghi-gia-han-dieu-chinh-giay-phep-khai-thac-su-dung-nuoc-mat')}}" title="Điều chỉnh GP" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Điều chỉnh</a>
                 </div>
@@ -293,7 +293,17 @@
         // Hien thi thong tin cong trinh: So giay phep & Co quan cap phep
         $("#construction-name").on('click', function(){
             $("#list-construction").toggle();
-
+            $("#construction-name").keyup(function() {
+                if (this.value.length) {
+                    var that = this;
+                    $("#list-construction li").hide().filter(function() {
+                        return $(this).html().toLowerCase().indexOf(that.value.toLowerCase()) !== -1;
+                    }).show();
+                    $("##list-construction").show();
+                } else {
+                    $("##list-construction").hide();
+                }
+            });
             $("#list-construction li").on('click', function(){
                 var text = $(this).text();
                 var id = $(this).attr('data-id'); 
