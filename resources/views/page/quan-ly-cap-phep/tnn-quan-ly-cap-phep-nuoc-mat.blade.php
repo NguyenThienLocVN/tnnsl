@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="{{asset('public/css/styles.css')}}">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="{{asset('public/js/bootstrap.min.js')}}"></script>
 @endpush
 
 @section('content')
@@ -240,13 +242,13 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title font-15 font-weight-bold" id="licenseFileLabel"></h5>
+                    <h5 class="modal-title font-15 font-weight-bold" id="licenseFileLabel">{{$construction->construction_name}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <iframe id="licenseFile" src="#" style="width:100%;height:500px;"></iframe>
+                    <iframe id="licenseFile" src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/file/giay-phep/nuoc-mat/'.$construction->file_license)}}" style="width:100%;height:500px;"></iframe>
                 </div>
                 </div>
             </div>
@@ -284,4 +286,11 @@
     </div>
     <textarea id="surfaceWaterJson" class="d-none"></textarea>
 </main>
+
+<script>
+    document.getElementById('btn-print-license').addEventListener('click', function(){
+        document.getElementById("licenseFile").contentWindow.print();
+    })
+
+</script>
 @endsection
