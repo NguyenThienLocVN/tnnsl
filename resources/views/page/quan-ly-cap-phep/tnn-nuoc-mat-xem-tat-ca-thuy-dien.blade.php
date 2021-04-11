@@ -46,10 +46,10 @@
         <div class="container-table p-2">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                <a class="nav-link font-weight-bold active" href="{{route('nuoc-mat-xem-tat-ca')}}">TẤT CẢ</a>
+                    <a class="nav-link font-weight-bold" href="{{route('nuoc-mat-xem-tat-ca')}}">TẤT CẢ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="{{route('nuoc-mat-xem-tat-ca-thuy-dien')}}">THỦY ĐIỆN</a>
+                    <a class="nav-link font-weight-bold active" href="{{route('nuoc-mat-xem-tat-ca-thuy-dien')}}">THỦY ĐIỆN</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link font-weight-bold" href="{{route('nuoc-mat-xem-tat-ca-thuy-loi')}}">THỦY LỢI</a>
@@ -60,7 +60,7 @@
             </ul>
             <!-- Tab panes -->
             <div class="tab-content">
-                <div class="tab-pane py-3 active" id="all">
+                <div class="tab-pane py-3 active" id="hydroConstruction">
                     <table class="table-license-manage table font-13" cellspacing="0" width="100%">
                         <thead>
                             <tr>
@@ -72,7 +72,7 @@
                                 <th>Tên công trình</th>
                                 <th>Địa chỉ CT</th>
                                 <th>Thời gian KT (năm)</th>
-                                <th colspan="2" style="text-align: center;">Tọa độ</th>
+                                <th>Tọa độ</th>
                                 <th>Mục đích KT</th>
                                 <th>Q<sub>KT max</sub></th>
                                 <th>Q<sub>KT max mùa kiệt</sub></th>
@@ -83,37 +83,37 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($constructions as $con)
+                            @foreach($hydroConstruction as $hydroCon)
                                 <tr>
-                                    <td class="text-center">{{$con->id}}</td>
-                                    <td>{{$con->license_num}}</td>
-                                    <td class="font-12">{{$con->license_date}}</td>
-                                    <td>{{$con->organization_authorities}}</td>
-                                    <td>{{$con->organization_request}}</td>
-                                    <td><a href="{{route('quan-ly-cap-phep-nuoc-mat', $con->id)}}"
+                                    <td class="text-center">{{$hydroCon->id}}</td>
+                                    <td>{{$hydroCon->license_num}}</td>
+                                    <td class="font-12">{{$hydroCon->license_date}}</td>
+                                    <td>{{$hydroCon->organization_authorities}}</td>
+                                    <td>{{$hydroCon->organization_request}}</td>
+                                    <td><a href="{{route('quan-ly-cap-phep-nuoc-mat', $hydroCon->id)}}"
                                             class="construction-link text-primary"><img
                                                 src="{{asset('public/TNN_QUAN_LY_CAP_PHEP/image/earth.png')}}"
-                                                class="earth-icon" alt="earth">&nbsp;{{$con->construction_name}}</a></td>
-                                    <td>{{$con->commune}}, {{$con->district}}</td>
-                                    <td>{{$con->license_duration}}</td>
-                                    <td>{{$con->vi_do_dap}}</td>
-                                    <td>{{$con->kinh_do_dap}}</td>
-                                    <td>{{$con->purpose_using_water}}</td>
-                                    <td>{{$con->q_kt_max}}</td>
-                                    <td>{{$con->q_kt_max_mk}}</td>
-                                    <td>{{$con->q_tt}}</td>
+                                                class="earth-icon" alt="earth">&nbsp;{{$hydroCon->construction_name}}</a></td>
+                                    <td>{{$hydroCon->commune}}, {{$hydroCon->district}}</td>
+                                    <td>{{$hydroCon->license_duration}}</td>
+                                    <td>{{$hydroCon->vi_do_dap}}</td>
+                                    <td>{{$hydroCon->kinh_do_dap}}</td>
+                                    <td>{{$hydroCon->purpose_using_water}}</td>
+                                    <td>{{$hydroCon->q_kt_max}}</td>
+                                    <td>{{$hydroCon->q_kt_max_mk}}</td>
+                                    <td>{{$hydroCon->q_tt}}</td>
                                     <td>0</td>
                                     <td>0</td>
-                                    <td></td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-center">
-                        {{ $constructions->links() }}
+                        {{ $hydroConstruction->links() }}
                     </div>
                 </div>
             </div>
+            
         </div>
     </main>
 </body>

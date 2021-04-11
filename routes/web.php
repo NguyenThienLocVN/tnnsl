@@ -54,7 +54,10 @@ Route::group(['middleware' => 'auth'], function () {
         // Trang quan ly cap phep
         Route::get('/', 'App\Http\Controllers\SurfaceWaterConstructionsController@index')->name('quan-ly-cap-phep');
 
-        Route::get('nuoc-mat/xem-tat-ca', 'App\Http\Controllers\SurfaceWaterConstructionsController@viewAll')->name('nuoc-mat-xem-tat-ca');
+        Route::get('nuoc-mat/xem-tat-ca-cong-trinh', 'App\Http\Controllers\SurfaceWaterConstructionsController@viewAll')->name('nuoc-mat-xem-tat-ca');
+        Route::get('nuoc-mat/xem-tat-ca/thuy-dien', 'App\Http\Controllers\SurfaceWaterConstructionsController@viewAllHydroConstruction')->name('nuoc-mat-xem-tat-ca-thuy-dien');
+        Route::get('nuoc-mat/xem-tat-ca/thuy-loi', 'App\Http\Controllers\SurfaceWaterConstructionsController@viewAllIrrigationConstruction')->name('nuoc-mat-xem-tat-ca-thuy-loi');
+        Route::get('nuoc-mat/xem-tat-ca/cong-trinh-khac', 'App\Http\Controllers\SurfaceWaterConstructionsController@viewAllPumpConstruction')->name('nuoc-mat-xem-tat-ca-cong-trinh-khac');
 
         Route::get('nuoc-mat/cong-trinh-dau-moi', function () {
             return view('page.quan-ly-cap-phep.tnn-nuoc-mat-cong-trinh-dau-moi');
