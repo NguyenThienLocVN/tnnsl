@@ -275,6 +275,15 @@
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-12 font-13 px-0">Kê khai tính tiền cấp quyền khai thác</span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
+                            <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-12 font-13 px-0">Giấy tờ khác</span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
