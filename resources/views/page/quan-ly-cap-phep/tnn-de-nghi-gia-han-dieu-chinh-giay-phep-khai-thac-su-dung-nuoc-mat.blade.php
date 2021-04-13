@@ -14,129 +14,131 @@
 <header>
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
-        <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="{{route('quan-ly-cap-phep')}}" title="Về trang chủ" id="btn_back_page" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <span class="font-weight-bold text-white d-block pl-2">ĐIỀU CHỈNH GIẤY PHÉP KHAI THÁC, SD NƯỚC MẶT </span>
+        <div class="col-lg-7 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
+            <a href="{{route('quan-ly-cap-phep')}}" title="Về trang chủ" id="btn_back_page" class= text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+            <span class= "text-white d-block pl-2">ĐỀ NGHỊ GIA HẠN/ĐIỀU CHỈNH GIẤY PHÉP KHAI THÁC, SỬ DỤNG NƯỚC MẶT </span>
         </div>
-        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
-            <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
+        <div class="bg-lightgray col-lg-5 col-sm-12 col-md-12 text-center py-1 py-md-0">
+            <span class="text-primary">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
     <div class="col-12 col-lg-5 pb-3 map-container px-md-0" id="surfacewater-usage">
-        <div class="information-about-license-owner">
-            <div class="d-flex">
-                <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">1. THÔNG TIN VỀ CHỦ GIẤY PHÉP</p>
-            </div>
-            <div class="information-about-license-owner-content col-12 p-0 mb-3 pr-3">
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-4 font-13 px-0 font-weight-bold">Tên chủ giấy phép </span>
+        <div class="exploit-surfacewater mb-2">
+            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">1. THÔNG TIN VỀ CHỦ GIẤY PHÉP</p>
+            <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-4 font-13 px-0">Tên chủ giấy phép </span>
                     <input type="text" class="w-100 px-1 font-13" name="" id="">
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-4 font-13 px-0 font-weight-bold">Địa chỉ </span>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-4 font-13 px-0">Địa chỉ </span>
                     <input type="text" class="w-100 px-1 font-13" name="" id="">
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <div class="col-4 d-flex p-0 mb-1 align-items-center">
-                        <span class="col-3 font-13 px-0 font-weight-bold">ĐT </span>
+                <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
+                    <div class="col-md-4 col-12 d-flex p-0 mb-1 align-items-center">
+                        <span class="col-md-3 col-4 font-13 px-0">ĐT </span>
                         <input type="text" class="w-100 px-1 font-13" name="" id="">
                     </div>
-                    <div class="col-4 d-flex p-0 mb-1 align-items-center">
-                        <span class="col-3 font-13 px-0 text-center font-weight-bold">Fax </span>
+                    <div class="col-md-4 col-12 d-flex p-0 mb-1 align-items-center">
+                        <span class="col-md-3 col-4 font-13 px-0">Fax </span>
                         <input type="text" class="w-100 px-1 font-13" name="" id="">
                     </div>
-                    <div class="col-4 d-flex p-0 mb-1 align-items-center">
-                        <span class="col-3 font-13 px-0 text-center font-weight-bold">Email </span>
-                        <input type="text" class="w-100 px-1 font-13" name="" id="">
-                    </div>
-                </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <div class="col-6 d-flex p-0 mb-1 align-items-center">
-                        <span class="col-5 font-13 px-0 font-weight-bold">Giấy phép số </span>
-                        <input type="text" class="w-100 px-1 font-13" name="" id="">
-                    </div>
-                    <div class="col-6 d-flex p-0 mb-1 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center font-weight-bold">Ngày cấp </span>
+                    <div class="col-md-4 col-12 d-flex p-0 mb-1 align-items-center">
+                        <span class="col-md-3 col-4 font-13 px-0">Email </span>
                         <input type="text" class="w-100 px-1 font-13" name="" id="">
                     </div>
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-4 font-13 px-0 font-weight-bold">Thời hạn của giấy phép </span>
+                <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
+                    <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                        <span class="col-md-3 col-4 font-13 px-0">Giấy phép số </span>
+                        <input type="text" class="w-100 px-1 font-13" name="" id="">
+                    </div>
+                    <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                        <span class="col-md-3 col-4 font-13 px-0">Ngày cấp </span>
+                        <input type="text" class="w-100 px-1 font-13" name="" id="">
+                    </div>
+                </div>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-4 font-13 px-0">Thời hạn của giấy phép </span>
                     <input type="text" class="w-100 px-1 font-13" name="" id="">
                 </div>
             </div>
         </div>
-        <div class="the-reason-for-the-re_issuance-of-the-license">
-            <div class="d-flex">
-                <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">2. LÝ DO ĐỀ NGHỊ GIA HẠN/ĐIỀU CHỈNH GIẤY PHÉP</p>
-            </div>
-            <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
+        <div class="the-reason-for-the-re_issuance-of-the-license exploit-surfacewater mb-2">
+            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">2. LÝ DO ĐỀ NGHỊ GIA HẠN/ĐIỀU CHỈNH GIẤY PHÉP</p>
+            <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
                 <textarea name="" id="" cols="30" rows="5" class="w-100 px-1 font-13"></textarea>
             </div>
         </div>
-        <div class="records-and-documents-attached">
-            <div class="d-flex">
-                <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">3. THỜI GIAN ĐỀ NGHỊ GIA HẠN/NỘI DUNG ĐỀ NGHỊ ĐIỀU CHỈNH GIẤY PHÉP</p>
-            </div>
-            <div class="Information-about-license-owner-content col-12 p-0 mb-3 pr-3">
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-6 font-13 px-0 font-weight-bold">Thời gian đề nghị gia hạn</span>
+        <div class="records-and-documents-attached exploit-surfacewater mb-2">
+            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">3. THỜI GIAN ĐỀ NGHỊ GIA HẠN/NỘI DUNG ĐỀ NGHỊ ĐIỀU CHỈNH GIẤY PHÉP</p>
+            <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Thời gian đề nghị gia hạn</span>
                     <input type="date" name="" id="" class="px-1 font-13">
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-6 font-13 px-0 font-weight-bold">Nội dung để nghị điều chỉnh </span>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Nội dung để nghị điều chỉnh </span>
                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
             </div>
         </div>
-        <div class="undertaking-of-the-licensee">
-            <div class="d-flex">
-                <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">4. GIẤY TỜ TÀI LIỆU NỘP KÈM THEO</p>
-            </div>
-            <div class="Information-about-license-owner-content col-12 p-0 mb-3 pr-3">
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-6 font-13 px-0 font-weight-bold">Báo cáo hiện trạng KTSDNM</span>
+        <div class="exploit-surfacewater mb-2">
+            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">4. GIẤY TỜ TÀI LIỆU NỘP KÈM THEO</p>
+            <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Báo cáo hiện trạng KTSDNM</span>
                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-6 font-13 px-0 font-weight-bold">B/c tình hình thực hiện GP </span>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">B/c tình hình thực hiện GP </span>
                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-6 font-13 px-0 font-weight-bold">Kết quả phân tích CNL </span>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Kết quả phân tích CNL </span>
                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-6 font-13 px-0 font-weight-bold">Bản sao GP đã được cấp </span>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Bản sao GP đã được cấp </span>
                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-6 font-13 px-0 font-weight-bold">Giấy tờ khác</span>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Giấy tờ khác</span>
                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
             </div>
         </div>
-        <div class="undertaking-of-the-licensee">
-            <div class="d-flex">
-                <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">5. CAM KẾT CỦA CHỦ GIẤY PHÉP</p>
-            </div>
-            <div class="Information-about-license-owner-content col-12 p-0 mb-3 pr-3">
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-9 font-13 px-0 font-weight-bold">Thông tin và hồ sơ đúng sự thật và hoàn toàn chịu TN</span>
-                    <input type="checkbox" name="" id="" class="px-1 font-13">
-                     <input type="file" name="" id="" class="px-1 font-13">
+        <div class="exploit-surfacewater mb-2">
+            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">5. CAM KẾT CỦA CHỦ GIẤY PHÉP</p>
+            <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                <div class="col-12 d-flex flex-column flex-md-row my-1">
+                    <div class="col-sm-5 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                        <span class="col-8 col-md-12 font-13 px-0">Thông tin và hồ sơ đúng sự thật và hoàn toàn chịu TN</span>
+                        <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
+                    </div>
+                    <div class="col-sm-5 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                        <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
+                    </div>
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-9 font-13 px-0 font-weight-bold">Chấp hành đúng quy định của GP </span>
-                    <input type="checkbox" name="" id="" class="px-1 font-13">
-                     <input type="file" name="" id="" class="px-1 font-13">
+                <div class="col-12 d-flex flex-column flex-md-row my-1">
+                    <div class="col-sm-5 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                        <span class="col-8 col-md-12 font-13 px-0">Chấp hành đúng quy định của GP</span>
+                        <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
+                    </div>
+                    <div class="col-sm-5 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                        <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
+                    </div>
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">
-                    <span class="col-9 font-13 px-0 font-weight-bold">Đã gửi một bộ tới STNMT </span>
-                    <input type="checkbox" name="" id="" class="px-1 font-13">
-                     <input type="file" name="" id="" class="px-1 font-13">
+                <div class="col-12 d-flex flex-column flex-md-row my-1">
+                    <div class="col-sm-5 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                        <span class="col-8 col-md-12 font-13 px-0">Đã gửi một bộ tới STNMT</span>
+                        <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
+                    </div>
+                    <div class="col-sm-5 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                        <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,7 +159,7 @@
             <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_DOKHOANGCACH.png')}}" alt="do-khoang-cach">
             <div class="position-absolute map-layers d-flex align-items-center" id="map-layers" title="Chọn lớp bản đồ">
                 <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_LOPBANDO.png')}}" alt="lop-ban-do">
-                <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
+                <span class=">&nbsp; Lớp bản đồ</span>
             </div>
             <div class="position-absolute map-panel-layers align-items-center text-white" id="map-panel-layers">
                 <ul class="p-2 m-0">
@@ -170,7 +172,7 @@
             </div>
             <div class="position-absolute map-note d-flex align-items-center">
                 <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_CHUGIAIBANDO.png')}}" alt="chu-giai-ban-do">
-                <span class="font-weight-bold">&nbsp; Chú giải</span>
+                <span class=">&nbsp; Chú giải</span>
             </div>
         </div>
     </div>

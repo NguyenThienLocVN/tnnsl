@@ -87,13 +87,13 @@
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Fax</span>
-                            <input type="text" name="fax" id="fax" value="{{old('fax')}}" class="col-md-7 col-3 px-1 font-13">
+                            <input type="text" name="fax" id="fax" value="{{old('fax')}}" class="col-7 col-3 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
-                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-2 font-13 px-0">Địa chỉ</span>&nbsp;&nbsp;&nbsp;
-                            <input type="text" name="address" id="address" value="{{old('address')}}" class="col-10 px-1 font-13" required>
+                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center justify-content-end justify-content-md-start">
+                            <span class="col-md-2 col-5 font-13 px-0">Địa chỉ</span>
+                            <input type="text" name="address" id="address" value="{{old('address')}}" class="col-md-10 col-7 px-1 font-13 ml-md-3" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
@@ -123,15 +123,15 @@
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
-                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-2 font-12 px-0">Phương thức KT</span>&nbsp;&nbsp;&nbsp;
-                            <input type="text" name="exploit_mode" id="exploit_mode" value="{{old('exploit_mode')}}" class="col-10 px-1 font-13" required>
+                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center justify-content-end justify-content-md-start">
+                            <span class="col-md-2 col-5 font-13 px-0">Phương thức KT</span>
+                            <input type="text" name="exploit_mode" id="exploit_mode" value="{{old('exploit_mode')}}" class="col-md-10 col-7 px-1 font-13 ml-md-3" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
-                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-2 font-13 px-0">Vị trí CT</span>&nbsp;&nbsp;&nbsp;
-                            <input type="text" name="construction_location" id="construction_location" value="{{old('construction_location')}}" class="col-10 px-1 font-13" required>
+                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center justify-content-end justify-content-md-start">
+                            <span class="col-md-2 col-5 font-13 px-0">Vị trí CT</span>
+                            <input type="text" name="construction_location" id="construction_location" value="{{old('construction_location')}}" class="col-md-10 col-7 px-1 font-13 ml-md-3" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
@@ -183,7 +183,7 @@
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Q <span class="font-11">KTSD_SXNN</span> </span>
-                            <input type="text" name="" id="" value="{{old('')}}" class="col-6 px-1 font-13" required>
+                            <input type="text" name="" id="" value="{{old('')}}" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
@@ -198,17 +198,20 @@
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Q_khai thác khác <input type="text" name="" id="" class="col-3 px-1" value="" readonly=""> (m<sup>3</sup>/ngđêm) &nbsp; </span>
+                            <span class="col-5 font-13 px-0">Q_khai thác khác </span>
+                            <input type="text" name="" id="" class="  col-4 px-1" value="" readonly=""> (m<sup>3</sup>/ngđêm)
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Chế độ khai thác sử dụng <input type="text" name="" id="" class="col-3 px-1" value="" readonly=""> </span>
+                            <span class="col-5 font-13 px-0">Chế độ khai thác sử dụng </span>
+                            <input type="text" name="" id="" class="  col-7 px-1" value="" readonly=""> 
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Thời gian đề nghị cấp phép <input type="text" name="" id="" class="col-3 px-1" value="" readonly=""> </span>
+                            <span class="col-5 font-13 px-0">Thời gian đề nghị cấp phép </span>
+                            <input type="text" name="" id="" class="  col-7 px-1" value="" readonly=""> 
                         </div>
                     </div>
                 </div>
@@ -219,75 +222,73 @@
                 <div class="exploit-surfacewater-content col-12 p-0 mb-3">
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Đơn xin cấp phép</span>
-                            
+                            <span class="col-8 col-md-12 font-13 px-0">Đơn xin cấp phép</span>
+                             <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                             <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Kết quả phân tích CLN</span>
+                            <span class="col-8 col-md-12 font-13 px-0">Kết quả phân tích CLN</span>
+                             <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                             <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Đề án KTSDN </span>
-                            
+                            <span class="col-8 col-md-12 font-13 px-0">Đề án KTSDN </span>
+                             <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                             <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Báo cáo KTSDN </span>
+                            <span class="col-8 col-md-12 font-13 px-0">Báo cáo KTSDN </span>
+                             <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                             <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Sơ đồ vị trí công trình KTN</span>
+                            <span class="col-8 col-md-12 font-13 px-0">Sơ đồ vị trí công trình KTN</span>
+                             <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                             <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Văn bản ý kiến cộng đồng</span>
+                            <span class="col-8 col-md-12 font-13 px-0">Văn bản ý kiến cộng đồng</span>
+                             <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                             <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Kê khai tính tiền cấp quyền khai thác</span>
+                            <span class="col-8 col-md-12 font-13 px-0">Kê khai tính tiền cấp quyền khai thác</span>
+                             <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                             <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-12 font-13 px-0">Giấy tờ khác</span>
+                            <span class="col-8 col-md-12 font-13 px-0">Giấy tờ khác</span>
+                             <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="checkbox" name="license_duration" id="license_duration" class="col-4 px-1 font-13" required></span>
                             <input type="file" name="license_role" id="license_role" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
