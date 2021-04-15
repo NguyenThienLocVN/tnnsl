@@ -55,7 +55,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user" aria-hidden="true"></i></span>
                     </div>
-                    <input name="name" class="form-control font-14" value="{{old('license_date')}}" placeholder="Tên đăng nhập" type="text" required />
+                    <input name="name" class="form-control font-14" value="{{old('name')}}" placeholder="Tên đăng nhập" type="text" required />
                 </div>
             </div>
 
@@ -65,17 +65,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock" aria-hidden="true"></i></span>
                     </div>
-                    <input name="password" class="form-control font-14" value="{{old('license_date')}}" placeholder="Mật khẩu" type="password" required />
-                </div>
-            </div>
-
-            <div class="d-flex align-items-center">
-                <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Xác nhận mật khẩu <span class="text-danger">*</span></p>
-                <div class="col-8 d-flex pr-0 form-group input-group mb-1">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-lock" aria-hidden="true"></i></span>
-                    </div>
-                    <input name="confirm-password" class="form-control font-14" value="{{old('license_date')}}" placeholder="Xác nhận mật khẩu" type="password" required />
+                    <input name="password" class="form-control font-14" value="{{old('password')}}" placeholder="Mật khẩu" type="password" required />
                 </div>
             </div>
 
@@ -85,7 +75,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
                     </div>
-                    <input name="organization_name" class="form-control font-14" value="{{old('license_date')}}" placeholder="Tên doanh nghiệp" type="text" required />
+                    <input name="organization_name" class="form-control font-14" value="{{old('organization_name')}}" placeholder="Tên doanh nghiệp" type="text" required />
                 </div>
             </div>
 
@@ -95,7 +85,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-university" aria-hidden="true"></i></span>
                     </div>
-                    <input name="organization_code" class="form-control font-14" value="{{old('license_date')}}" placeholder="Mã doanh nghiệp" type="text" />
+                    <input name="organization_code" class="form-control font-14" value="{{old('organization_code')}}" placeholder="Mã doanh nghiệp" type="text" />
                 </div>
             </div>
 
@@ -105,7 +95,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-map-marker" aria-hidden="true"></i></span>
                     </div>
-                    <input name="address" class="form-control font-14" value="{{old('license_date')}}" placeholder="Địa chỉ" type="text" required/>
+                    <input name="address" class="form-control font-14" value="{{old('address')}}" placeholder="Địa chỉ" type="text" required/>
                 </div>
             </div>
 
@@ -115,7 +105,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-building" aria-hidden="true"></i></span>
                     </div>
-                    <input name="organization_address" class="form-control font-14" value="{{old('license_date')}}" placeholder="Trụ sở chính" type="text">
+                    <input name="organization_address" class="form-control font-14" value="{{old('organization_address')}}" placeholder="Trụ sở chính" type="text">
                 </div>
             </div>
 
@@ -125,7 +115,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-phone" aria-hidden="true"></i></span>
                     </div>
-                    <input name="phone" class="form-control font-14" value="{{old('license_date')}}" placeholder="Số điện thoại" type="text" required />
+                    <input name="phone" class="form-control font-14" value="{{old('phone')}}" placeholder="Số điện thoại" type="text" required />
                 </div>
             </div>
 
@@ -135,7 +125,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-envelope" aria-hidden="true"></i></span>
                     </div>
-                    <input name="email" class="form-control font-14" value="{{old('license_date')}}" placeholder="Email" type="text" required/>
+                    <input name="email" class="form-control font-14" value="{{old('email')}}" placeholder="Email" type="text" required/>
                 </div>
             </div>
 

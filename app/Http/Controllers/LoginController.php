@@ -16,6 +16,6 @@ class LoginController extends Controller
             return redirect('/');
         }
         // if failed login
-        return redirect('login')->withInput()->withErrors('Đăng nhập thất bại');
+        return redirect('login')->withInput()->withErrors('Đăng nhập thất bại. Hãy đảm bảo nhập đúng thông tin và tài khoản đã được quản trị viên xác thực');
     }
 }

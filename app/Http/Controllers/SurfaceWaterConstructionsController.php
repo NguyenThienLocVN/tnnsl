@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SurfaceWaterConstructions;
 use App\Models\WastewaterConstructions;
-use App\Models\SurfacewaterLicenseFiles;
+use App\Models\SurfacewaterRequest;
+use Carbon\Carbon;
 
 class SurfaceWaterConstructionsController extends Controller
 {
@@ -110,46 +111,74 @@ class SurfaceWaterConstructionsController extends Controller
     public function doCreateSurfacewaterLicense(Request $request)
     {
         $request->validate([
-            'file_license' => 'required|max:2048',
+            'don_xin_cp' => 'required|max:2048',
         ]);
 
-        $licenseFileName = $request->file('file_license')->getClientOriginalName();
-        $destinationPath = public_path('TNN_QUAN_LY_CAP_PHEP\file\giay-phep');
-        $upload_success = $request->file('file_license')->move($destinationPath, $licenseFileName);
+        $generateTime = Carbon::now()->timestamp;
+        $destinationPath = public_path('TNN_QUAN_LY_CAP_PHEP\file\yeu-cau\nuoc-mat');
 
-    
-        SurfaceWaterConstructions::create([
-            'license_num' => $request->license_num,
-            'license_date' => $request->license_date,
-            'license_duration' => $request->license_duration,
-            'license_role' => $request->license_role,
-            'organization_request' => $request->organization_request,
-            'organization_authorities' => $request->organization_authorities,
-            'year_built' => $request->year_built,
-            'year_operation' => $request->year_operation,
-            'construction_code' => $request->construction_code,
-            'construction_name' => $request->construction_name,
-            'purpose_using_water' => $request->purpose_using_water,
-            'water_source' => $request->water_source,
-            'district' => $request->district,
-            'commune' => $request->commune,
-            'vi_do_dap' => $request->lat_dams,
-            'kinh_do_dap' => $request->long_dams,
-            'vi_do_nha_may' => $request->lat_factory,
-            'kinh_do_nha_may' => $request->long_factory,
-            'exploit_mode' => $request->exploit_mode,
-            'wattage' => $request->wattage,
-            'q_kt_max' => $request->q_kt_max,
-            'q_kt_max_mk' => $request->q_kt_max_mk,
-            'q_tt' => $request->q_tt,
-            'watering_area' => $request->watering_area,
-            'q_tuoi_tieu' => $request->q_tuoi_tieu,
-            'q_cap_nuoc' => $request->q_cap_nuoc,
-            'construction_type' => $request->construction_type,
-            'file_license' =>  $licenseFileName,
-        ]);
+        if(!empty($request->file('don_xin_cp')))
+        {
+            $file_don_xin_cp = $generateTime.'-'.$request->file('don_xin_cp')->getClientOriginalName();
+            $upload_don_xin_cp = $request->file('don_xin_cp')->move($destinationPath, $file_don_xin_cp);
+        }
+
+        if(!empty($request->file('ket_qua_ptcln')))
+        {
+            $file_ket_qua_ptcln = $generateTime.'-'.$request->file('ket_qua_ptcln')->getClientOriginalName();
+            $upload_ket_qua_ptcln = $request->file('ket_qua_ptcln')->move($destinationPath, $file_ket_qua_ptcln);
+        }
+
+        if(!empty($request->file('de_an_ktsdn')))
+        {
+            $file_de_an_ktsdn = $generateTime.'-'.$request->file('de_an_ktsdn')->getClientOriginalName();
+            $upload_de_an_ktsdn = $request->file('de_an_ktsdn')->move($destinationPath, $file_de_an_ktsdn);
+        }
+
+        if(!empty($request->file('bao_cao_ktsdn')))
+        {
+            $file_bao_cao_ktsdn = $generateTime.'-'.$request->file('bao_cao_ktsdn')->getClientOriginalName();
+            $upload_bao_cao_ktsdn = $request->file('bao_cao_ktsdn')->move($destinationPath, $file_bao_cao_ktsdn);
+        }
+
+        if(!empty($request->file('bao_cao_ktsdn')))
+        {
+            $file_so_do_vtct = $generateTime.'-'.$request->file('so_do_vtct')->getClientOriginalName();
+            $upload_so_do_vtct = $request->file('so_do_vtct')->move($destinationPath, $file_so_do_vtct);
+        }
+
+        if(!empty($request->file('bao_cao_ktsdn')))
+        {
+            $file_van_ban_ykcd = $generateTime.'-'.$request->file('van_ban_ykcd')->getClientOriginalName();
+            $upload_van_ban_ykcd = $request->file('van_ban_ykcd')->move($destinationPath, $file_van_ban_ykcd);
+        }
+
+        if(!empty($request->file('bao_cao_ktsdn')))
+        {
+            $file_ke_khai_ttcqkt = $generateTime.'-'.$request->file('ke_khai_ttcqkt')->getClientOriginalName();
+            $upload_ke_khai_ttcqkt = $request->file('ke_khai_ttcqkt')->move($destinationPath, $file_ke_khai_ttcqkt);
+        }
+
+        if(!empty($request->file('bao_cao_ktsdn')))
+        {
+            $file_giay_to_khac = $generateTime.'-'.$request->file('giay_to_khac')->getClientOriginalName();
+            $upload_giay_to_khac = $request->file('giay_to_khac')->move($destinationPath, $file_giay_to_khac);
+        }
+
+        $lastId = SurfacewaterRequest::create($request->all())->id;
+
+        $lastItem = SurfacewaterRequest::find($lastId);
+        $lastItem->don_xin_cp = $file_don_xin_cp;
+        $lastItem->ket_qua_ptcln = $file_ket_qua_ptcln;
+        $lastItem->de_an_ktsdn = $file_de_an_ktsdn;
+        $lastItem->bao_cao_ktsdn = $file_bao_cao_ktsdn;
+        $lastItem->so_do_vtct = $file_so_do_vtct;
+        $lastItem->van_ban_ykcd = $file_van_ban_ykcd;
+        $lastItem->ke_khai_ttcqkt = $file_ke_khai_ttcqkt;
+        $lastItem->giay_to_khac = $file_giay_to_khac;
+        $lastItem->save();
      
-        return redirect()->route('quan-ly-cap-phep')->withSuccess('Tạo giấy phép công trình thành công!');
+        return redirect()->route('quan-ly-cap-phep')->withSuccess('Tạo giấy phép thành công, vui lòng chờ xét duyệt ');
     }
 
     public function showEditSurfacewaterLicense($id)
@@ -222,7 +251,13 @@ class SurfaceWaterConstructionsController extends Controller
 
     public function listApprovalSurfacewaterLicense()
     {
-        $files = SurfacewaterLicenseFiles::all();
-        return view('page.quan-ly-cap-phep.tnn-xet-duyet-giay-phep-nuoc-mat', ['files' => $files]);
+        $requests = SurfacewaterRequest::all();
+        return view('page.quan-ly-cap-phep.tnn-xet-duyet-giay-phep-nuoc-mat', ['requests' => $requests]);
+    }
+
+    public function showApprovalSurfacewaterLicense($id)
+    {
+        $construction = SurfacewaterRequest::find($id);
+        return view('page.quan-ly-cap-phep.tnn-xem-xet-duyet-giay-phep-nuoc-mat', ['construction' => $construction]);
     }
 }

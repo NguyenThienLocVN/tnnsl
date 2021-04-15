@@ -107,7 +107,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('sua-giay-phep-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@showEditSurfacewaterLicense');
         Route::post('sua-giay-phep-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@doEditSurfacewaterLicense')->name('xu-ly-sua-giay-phep-nuoc-mat');
 
-        Route::get('danh-sach-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@listApprovalSurfacewaterLicense')->name('danh-sach-giay-phep-nuoc-mat');
+        Route::get('xet-duyet-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@listApprovalSurfacewaterLicense')->name('danh-sach-giay-phep-nuoc-mat');
         Route::get('xet-duyet-giay-phep-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@showApprovalSurfacewaterLicense')->name('xet-duyet-giay-phep-nuoc-mat');
     });
 });

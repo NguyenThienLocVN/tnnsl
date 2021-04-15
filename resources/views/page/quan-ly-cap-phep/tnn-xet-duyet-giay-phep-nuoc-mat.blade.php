@@ -33,13 +33,10 @@
                 src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     </header>
     <main>
-        <div class="col-12 d-flex align-items-center p-2 surfacewater-usage-title">
-            <div class="col-6 px-0">
-                <span class="font-weight-bold"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp; XÉT DUYỆT CẤP PHÉP NƯỚC MẶT</span>
-            </div>
-            <div class="col-6 px-0 text-right">
-                <button class="btn btn-sm btn-primary font-13"><i class="fa fa-download" aria-hidden="true"></i> XLSX</button>
-                <button class="btn btn-sm btn-primary font-13"><i class="fa fa-download" aria-hidden="true"></i> PDF</button>
+        <div class="col-12 d-flex p-0 bg-primary">
+            <div class="col-6 px-0 d-flex align-items-center">
+                <a href="{{route('quan-ly-cap-phep')}}" title="Về trang quản lý cấp phép" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0 mr-2"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+                <span class="font-weight-bold text-white"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp; XEM / XÉT DUYỆT CẤP PHÉP NƯỚC MẶT</span>
             </div>
         </div>
         <div class="container-table p-2">
@@ -49,31 +46,33 @@
                     <table class="table-license-manage table font-13" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>STT</th>
+                                <th class="text-center">STT</th>
                                 <th>Cơ quan / Tổ chức</th>
                                 <th>Tên công trình</th>
                                 <th>Loại công trình</th>
                                 <th>Công suất</th>
                                 <th>Vị trí CT</th>
-                                <th class="text-center">Thời gian VH</th>
                                 <th class="text-center">Nguồn nước</th>
                                 <th>Thời gian gửi</th>
+                                <th>Trạng thái</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="text-center">1</td>
-                                <td>Công ty A</td>
-                                <td>Thuỷ điện A</td>
-                                <td>Thủy điện</td>
-                                <td>12 MW</td>
-                                <td>Mộc Châu, Sơn La</td>
-                                <td class="text-center">10 năm</td>
-                                <td>Thượng lưu suối A</td>
-                                <td class="text-center"> 26/03/2021 </td>
-                                <td><a href="#" class="btn btn-sm btn-success mr-1"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a href="#" class="btn btn-sm btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></a></td>
-                            </tr>
+                            @foreach($requests as $rq)
+                                <tr>
+                                    <td class="text-center">{{$rq->id}}</td>
+                                    <td>{{$rq->organization_name}}</td>
+                                    <td>{{$rq->construction_name}}</td>
+                                    <td>{{$rq->construction_type}}</td>
+                                    <td>{{$rq->wattage}}</td>
+                                    <td>{{$rq->district, $rq->commune}}</td>
+                                    <td>{{$rq->water_source}}</td>
+                                    <td>{{$rq->created_at}}</td>
+                                    <td>{{$rq->status}}</td>
+                                    <td><a href="{{route('xet-duyet-giay-phep-nuoc-mat', $rq->id)}}" class="btn btn-sm btn-success mr-1"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a href="#" class="btn btn-sm btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></a></td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

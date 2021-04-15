@@ -333,7 +333,7 @@
                 $("#view-surfacewater").on('click',function(){
                     if(id == "view-all")
                     {
-                        window.location.href = window.location.href+"/nuoc-mat/xem-tat-ca";
+                        window.location.href = window.location.href+"/nuoc-mat/xem-tat-ca-cong-trinh";
                     }
                     else
                     {
