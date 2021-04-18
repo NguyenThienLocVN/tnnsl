@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\SurfaceWaterConstructions;
 use App\Models\WastewaterConstructions;
 use App\Models\SurfacewaterRequest;
+use App\Models\Places;
 use Carbon\Carbon;
 
 class SurfaceWaterConstructionsController extends Controller
@@ -52,6 +53,15 @@ class SurfaceWaterConstructionsController extends Controller
                                                                     'numConstruction' => $numConstruction, 'numHydroConstruction' => $numHydroConstruction, 
                                                                     'numIrrigationConstruction' => $numIrrigationConstruction, 'numPumpConstruction' => $numPumpConstruction,
                                                                     'surfaceWaterJson' => $surfaceWaterJson]);
+    }
+    public function createNewCoolWaterPermit()
+    {
+        $getDistrict = Places::where("parrent_id",NULL)->get();
+        return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat',["getDistrict"=>$getDistrict]);
+    }
+    function loadCommuneByDistrict($district_id){
+        $places = Places::all();
+        $commune = $district_id == $places->parent_id;
     }
 
     public function surfacewaterConstructionInfo($id)

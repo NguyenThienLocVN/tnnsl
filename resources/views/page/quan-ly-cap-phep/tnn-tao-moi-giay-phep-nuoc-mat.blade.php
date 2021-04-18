@@ -142,15 +142,14 @@
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Huyện </span>
                             <select name="district" id="district" class="col-7 px-1 font-13" required>
-                                <option value="Yên Châu">Yên Châu</option>
-                                <option value="Mộc Châu">Mộc Châu</option>
+                                @foreach($getDistrict as $district)
+                                    <option value="{{$district->ms_district_commune}}">{{$district->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Xã </span>
                             <select name="commune" id="commune" class="col-7 px-1 font-13" required>
-                                <option value="Xã 1">Yên Châu</option>
-                                <option value="Xã 2">Mộc Châu</option>
                             </select>
                         </div>
                     </div>
@@ -227,7 +226,6 @@
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-12 font-13 px-0">Đơn xin cấp phép</span>
-                            
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <input type="checkbox" name="checkbox_don_xin_cp" id="checkbox_don_xin_cp" class="col-4 px-1 font-13" required></span>
