@@ -28,7 +28,6 @@
         <div class="information-about-license-owner">
             <div class="d-flex">
                 <p class="col-8 py-1 information-about-license-owner-title font-weight-bold mb-2">Tổ chức cá nhân đề nghị cấp phép</p>
-                <p class="w-100 py-1 information-about-license-owner-title font-weight-bold mb-2"><a href="#" class="text-secondary">Xem tất cả</a></p>
             </div>
             <div class="information-about-license-owner-content col-12 p-0 mb-3 pr-3">
                 <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center">

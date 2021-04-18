@@ -60,8 +60,8 @@ class SurfaceWaterConstructionsController extends Controller
         return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat',["getDistrict"=>$getDistrict]);
     }
     function loadCommuneByDistrict($district_id){
-        $places = Places::all();
-        $commune = $district_id == $places->parent_id;
+        $communes = Places::where('parent_id', $district_id)->get();
+        return response()->json($communes);
     }
 
     public function surfacewaterConstructionInfo($id)
