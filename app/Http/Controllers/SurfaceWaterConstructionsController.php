@@ -56,12 +56,9 @@ class SurfaceWaterConstructionsController extends Controller
     }
     public function createNewCoolWaterPermit()
     {
-        $getDistrict = Places::where("parrent_id",NULL)->get();
-        return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat',["getDistrict"=>$getDistrict]);
-    }
-    function loadCommuneByDistrict($district_id){
-        $communes = Places::where('parent_id', $district_id)->get();
-        return response()->json($communes);
+        $getDistrict = Places::where("parent_id",NULL)->get();
+        $communes = Places::all();
+        return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat',["getDistrict"=>$getDistrict, "communes"=>$communes]);
     }
 
     public function surfacewaterConstructionInfo($id)

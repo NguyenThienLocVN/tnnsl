@@ -79,7 +79,6 @@ Route::group(['middleware' => 'auth'], function () {
         })->name('nuoc-duoi-dat-ky-thuat-cong-trinh');
 
         Route::get('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@createNewCoolWaterPermit')->name('tao-moi-giay-phep-nuoc-mat');
-        Route::get('tao-moi-giay-phep-nuoc-mat/{district_id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@loadCommuneByDistrict')->name('tao-moi-giay-phep-nuoc-mat-district');
 
         Route::get('cap-lai-giay-phep', function () {
             return view('page.quan-ly-cap-phep.tnn-cap-lai-giay-phep');

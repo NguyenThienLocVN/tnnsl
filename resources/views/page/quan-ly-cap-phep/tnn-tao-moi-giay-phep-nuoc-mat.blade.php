@@ -142,15 +142,20 @@
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Huyện </span>
                             <select name="district" id="district" class="col-7 px-1 font-13" required>
+                                <option id="" value="" selected></option>
                                 @foreach($getDistrict as $district)
-                                    <option value="{{$district->ms_district_commune}}">{{$district->name}}</option>
+                                    <option value="{{$district->code}}">{{$district->name}}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Xã </span>
-                            <select name="commune" id="commune" class="col-7 px-1 font-13" required>
-                            </select>
+                                <select name="commune" id="commune" class="col-7 px-1 font-13" required>
+                                    <option id="commune_begin" value="" selected></option>
+                                    @foreach($communes as $commune)
+                                        <option class="{{$commune->parent_id}}" value="{{$commune->code}}">{{$commune->name}}</option>
+                                    @endforeach
+                                </select>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row">
@@ -335,5 +340,15 @@
             </div>
         </div>
     </div>
+    <script>
+        $( document ).ready(function() {
+            $("#commune>option").hide();
+            $("#district").on('change',function(){
+                $("#commune>option").hide();
+                $('.'+$(this).val()).show();
+                $('select[name="commune"]').val('#commune_begin');
+            })
+        });
+    </script>
 </main>
 @endsection
