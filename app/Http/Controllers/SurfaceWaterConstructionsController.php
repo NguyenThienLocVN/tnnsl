@@ -60,6 +60,10 @@ class SurfaceWaterConstructionsController extends Controller
         $communes = Places::all();
         return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat',["getDistrict"=>$getDistrict, "communes"=>$communes]);
     }
+    function loadCommuneByDistrict($district_id){
+        $communes = Places::where('parent_id', $district_id)->get();
+        return response()->json($communes);
+    }
 
     public function surfacewaterConstructionInfo($id)
     {
