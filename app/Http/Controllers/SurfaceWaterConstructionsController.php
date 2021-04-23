@@ -54,11 +54,11 @@ class SurfaceWaterConstructionsController extends Controller
                                                                     'numIrrigationConstruction' => $numIrrigationConstruction, 'numPumpConstruction' => $numPumpConstruction,
                                                                     'surfaceWaterJson' => $surfaceWaterJson]);
     }
-    public function createNewCoolWaterPermit()
+    public function showCreateSurfacewaterLicense()
     {
         $getDistrict = Places::where("parent_id",NULL)->get();
-        $communes = Places::all();
-        return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat',["getDistrict"=>$getDistrict, "communes"=>$communes]);
+        $places = Places::all();
+        return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat',["getDistrict"=>$getDistrict, "places"=>$places]);
     }
     function loadCommuneByDistrict($district_id){
         $communes = Places::where('parent_id', $district_id)->get();
@@ -243,6 +243,15 @@ class SurfaceWaterConstructionsController extends Controller
         return redirect()->route('quan-ly-cap-phep')->withSuccess('Sửa giấy phép công trình thành công!');
     }
 
+    // Tao moi giay phep nuoc thai
+    public function showCreateWastewaterLicense(Request $request)
+    {
+        $getDistrict = Places::where("parent_id",NULL)->get();
+        $communes = Places::all();
+        return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-xa-thai');
+    }
+
+    // Thuc hien tao moi giay phep nuoc mat
     public function doCreateWastewaterLicense(Request $request)
     {
         $request->validate([
@@ -270,5 +279,13 @@ class SurfaceWaterConstructionsController extends Controller
     {
         $construction = SurfacewaterRequest::find($id);
         return view('page.quan-ly-cap-phep.tnn-xem-xet-duyet-giay-phep-nuoc-mat', ['construction' => $construction]);
+    }
+
+
+    // Tao moi giay phep nuoc duoi dat
+    public function showCreateGroundwaterLicense(){
+        $getDistrict = Places::where("parent_id",NULL)->get();
+        $places = Places::all();
+        return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-duoi-dat',["getDistrict"=>$getDistrict, "places"=>$places]);
     }
 }

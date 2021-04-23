@@ -77,9 +77,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('nuoc-duoi-dat/ky-thuat-cong-trinh', function () {
             return view('page.quan-ly-cap-phep.tnn-nuoc-duoi-dat-ky-thuat-cong-trinh');
         })->name('nuoc-duoi-dat-ky-thuat-cong-trinh');
-
-        Route::get('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@createNewCoolWaterPermit')->name('tao-moi-giay-phep-nuoc-mat');
-
+        
         Route::get('cap-lai-giay-phep', function () {
             return view('page.quan-ly-cap-phep.tnn-cap-lai-giay-phep');
         })->name('cap-lai-giay-phep');
@@ -92,12 +90,14 @@ Route::group(['middleware' => 'auth'], function () {
             return view('page.quan-ly-cap-phep.tnn-de-nghi-cap-phep-xa-nuoc-thai-vao-nguon-nuoc');
         })->name('de-nghi-cap-phep-xa-nuoc-thai-vao-nguon-nuoc');
         
-        Route::get('tao-moi-giay-phep-xa-thai', function () {
-            return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-xa-thai');
-        })->name('tao-moi-giay-phep-xa-thai');
-
+        
+        Route::get('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@showCreateSurfacewaterLicense')->name('tao-moi-giay-phep-nuoc-mat');
         Route::post('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@doCreateSurfacewaterLicense')->name('xu-ly-tao-moi-giay-phep-nuoc-mat');
+
+        Route::get('tao-moi-giay-phep-xa-thai', 'App\Http\Controllers\SurfaceWaterConstructionsController@showCreateWastewaterLicense')->name('tao-moi-giay-phep-xa-thai');
         Route::post('tao-moi-giay-phep-xa-thai', 'App\Http\Controllers\SurfaceWaterConstructionsController@doCreateWastewaterLicense')->name('xu-ly-tao-moi-giay-phep-xa-thai');
+
+        Route::get('tao-moi-giay-phep-nuoc-duoi-dat', 'App\Http\Controllers\SurfaceWaterConstructionsController@showCreateGroundwaterLicense')->name('tao-moi-giay-phep-nuoc-duoi-dat');
         
         Route::get('sua-giay-phep-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@showEditSurfacewaterLicense');
         Route::post('sua-giay-phep-nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@doEditSurfacewaterLicense')->name('xu-ly-sua-giay-phep-nuoc-mat');
