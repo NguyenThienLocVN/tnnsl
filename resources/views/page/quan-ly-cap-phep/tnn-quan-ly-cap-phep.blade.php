@@ -174,7 +174,7 @@
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
-                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Điều chỉnh</button>
+                    <a href="{{route('de-nghi-gia-han-dieu-chinh-giay-phep-xa-nuoc-thai-vao-nguon-nuoc')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Điều chỉnh</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0"></div>
@@ -246,7 +246,7 @@
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
-                    <button class="col-2 p-0 px-lg2 mr-2 btn-primary font-13" >Điều chỉnh</button>
+                    <a href="{{route('de-nghi-gia-han-dieu-chinh-giay-phep-tham-do-nuoc-duoi-dat')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Điều chỉnh</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
                     <div class="col-8 d-flex pl-0"></div>

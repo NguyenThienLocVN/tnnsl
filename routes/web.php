@@ -89,6 +89,14 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('de-nghi-cap-phep-xa-nuoc-thai-vao-nguon-nuoc', function () {
             return view('page.quan-ly-cap-phep.tnn-de-nghi-cap-phep-xa-nuoc-thai-vao-nguon-nuoc');
         })->name('de-nghi-cap-phep-xa-nuoc-thai-vao-nguon-nuoc');
+
+        Route::get('de-nghi-gia-han-dieu-chinh-giay-phep-tham-do-nuoc-duoi-dat', function () {
+            return view('page.quan-ly-cap-phep.tnn-de-nghi-gia-han-dieu-chinh-giay-phep-tham-do-nuoc-duoi-dat');
+        })->name('de-nghi-gia-han-dieu-chinh-giay-phep-tham-do-nuoc-duoi-dat');
+
+        Route::get('de-nghi-gia-han-dieu-chinh-giay-phep-xa-nuoc-thai-vao-nguon-nuoc', function () {
+            return view('page.quan-ly-cap-phep.tnn-de-nghi-gia-han-dieu-chinh-giay-phep-xa-nuoc-thai-vao-nguon-nuoc');
+        })->name('de-nghi-gia-han-dieu-chinh-giay-phep-xa-nuoc-thai-vao-nguon-nuoc');
         
         
         Route::get('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@showCreateSurfacewaterLicense')->name('tao-moi-giay-phep-nuoc-mat');

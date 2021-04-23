@@ -11,21 +11,21 @@
 @endpush
 
 @section('content')
-<header>
+<header class="mb-3 mb-md-0 ">
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
             <a href="{{route('quan-ly-cap-phep')}}" title="Về trang chủ" id="btn_back_page" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <span class="font-weight-bold text-white d-block pl-2">ĐỀ NGHỊ CẤP LẠI PHÉP TÀI NGUYÊN NƯỚC</span>
+            <span class="font-weight-bold text-white d-block pl-2">GIA HẠN/ĐIỀU CHỈNH GP THĂM DÒ NƯỚC DƯỚI ĐẤT</span>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
-            <span class="text-primary">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
+            <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
     <div class="col-12 col-lg-5 pb-3 map-container px-md-0" id="surfacewater-usage">
-    <div class="exploit-surfacewater mb-2">
+        <div class="exploit-surfacewater mb-2">
             <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">1. THÔNG TIN VỀ CHỦ GIẤY PHÉP</p>
             <div class="exploit-surfacewater-content col-12 p-0 mb-3">
                 <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
@@ -60,33 +60,46 @@
                         <input type="text" class="w-100 px-1 font-13" name="" id="">
                     </div>
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
-                    <span class="col-4 font-13 px-0">Thời hạn của giấy phép </span>
-                    <input type="text" class="w-100 px-1 font-13" name="" id="">
-                </div>
             </div>
         </div>
         <div class="the-reason-for-the-re_issuance-of-the-license exploit-surfacewater mb-2">
-            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">2. LÝ DO ĐỀ NGHỊ CẤP LẠI GIẤY PHÉP</p>
-            <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center px-3">
+            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">2. LÝ DO ĐỀ NGHỊ GIA HẠN/ĐIỀU CHỈNH GIẤY PHÉP</p>
+            <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
                 <textarea name="" id="" cols="30" rows="5" class="w-100 px-1 font-13"></textarea>
             </div>
         </div>
         <div class="records-and-documents-attached exploit-surfacewater mb-2">
-            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">3. GIẤY TỜ TÀI LIỆU NỘP KÈM THEO</p>
-            <div class="Information-about-license-owner-content col-12 p-0 mb-3 pr-3">
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center px-3">
-                    <span class="col-6 font-13 px-0">T/l c/m lý do đề nghị cấp lại GP</span>
-                    <input type="file" name="" id="" class="px-1 font-13">
+            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">3. THỜI GIAN ĐỀ NGHỊ GIA HẠN/NỘI DUNG ĐỀ NGHỊ ĐIỀU CHỈNH GIẤY PHÉP</p>
+            <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Thời gian đề nghị gia hạn</span>
+                    <input type="date" name="" id="" class="px-1 font-13">
                 </div>
-                <div class="col-md-12 col-12 d-flex p-0 mb-1 align-items-center px-3">
-                    <span class="col-6 font-13 px-0">Giấy tờ khác </span>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Nội dung để nghị điều chỉnh </span>
                     <input type="file" name="" id="" class="px-1 font-13">
                 </div>
             </div>
         </div>
         <div class="exploit-surfacewater mb-2">
-            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">4. CAM KẾT CỦA CHỦ GIẤY PHÉP</p>
+            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">4. GIẤY TỜ TÀI LIỆU NỘP KÈM THEO</p>
+            <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">B/c tình hình thực hiện GP </span>
+                    <input type="file" name="" id="" class="px-1 font-13">
+                </div>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Bản sao GP đã được cấp </span>
+                    <input type="file" name="" id="" class="px-1 font-13">
+                </div>
+                <div class="col-md-12 col-12 d-flex p-0 px-3 mb-1 align-items-center">
+                    <span class="col-6 font-13 px-0">Giấy tờ khác</span>
+                    <input type="file" name="" id="" class="px-1 font-13">
+                </div>
+            </div>
+        </div>
+        <div class="exploit-surfacewater mb-2">
+            <p class="col-12 py-1 information-about-license-owner-title font-weight-bold mb-2">5. CAM KẾT CỦA CHỦ GIẤY PHÉP</p>
             <div class="exploit-surfacewater-content col-12 p-0 mb-3">
                 <div class="col-12 d-flex flex-column flex-md-row my-1">
                     <div class="col-sm-5 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
