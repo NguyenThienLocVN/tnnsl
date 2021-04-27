@@ -151,50 +151,50 @@
         </div>
         <div class="col-12 d-flex align-items-center report-item report-item-three py-3 py-lg-0">
             <div class="col-8 p-0">
-                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 10</p>
+                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 18</p>
                 <p class="text-success font-weight-bold">Dòng chảy tối thiểu</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU10.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU10">
         </div>
         <div class="col-12 d-flex align-items-center report-item report-item-three py-3 py-lg-0">
             <div class="col-8 p-0">
-                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 11</p>
-                <p class="text-success font-weight-bold">Số lượng CTKT phân theo loại hình</p>
+                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 19</p>
+                <p class="text-success font-weight-bold">Kết quả thanh tra trong lĩnh vực TNN</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU11.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU11">
         </div>
         <div class="col-12 d-flex align-items-center report-item report-item-three py-3 py-lg-0">
             <div class="col-8 p-0">
-                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 12</p>
-                <p class="text-success font-weight-bold">Lượng nước khai thác sử dụng</p>
+                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 20</p>
+                <p class="text-success font-weight-bold">Danh mục các CTKT, SD tài nguyên nước</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU12.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU12">
         </div>
         <div class="col-12 d-flex align-items-center report-item report-item-three py-3 py-lg-0">
             <div class="col-8 p-0">
-                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 13</p>
-                <p class="text-success font-weight-bold">Chỉ tiêu chất lượng nước mặt</p>
+                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 21</p>
+                <p class="text-success font-weight-bold">KT, SD nước mặt đối với loại hình hồ chứa</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU13.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU13">
         </div>
         <div class="col-12 d-flex align-items-center report-item report-item-three py-3 py-lg-0">
             <div class="col-8 p-0">
-                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 14</p>
-                <p class="text-success font-weight-bold">Chỉ tiêu chất lượng nước dưới đất</p>
+                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu22</p>
+                <p class="text-success font-weight-bold">KT, SD nước mặt đối với loại hình khác hồ chứa</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU14.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU14">
         </div>
         <div class="col-12 d-flex align-items-center report-item report-item-three py-3 py-lg-0">
             <div class="col-8 p-0">
-                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 15</p>
-                <p class="text-success font-weight-bold">Văn bản PLTNN đã ban hành</p>
+                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 23</p>
+                <p class="text-success font-weight-bold">KT, SD nước nước dưới đất</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU15.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU15">
         </div>
         <div class="col-12 d-flex align-items-center report-item report-item-three py-3 py-lg-0">
             <div class="col-8 p-0">
-                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 16</p>
-                <p class="text-success font-weight-bold">Số lượng giấy phép TNN đã cấp</p>
+                <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 24</p>
+                <p class="text-success font-weight-bold">Tổng hợp tình hình xả nước thải </p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU16.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU16">
         </div>
