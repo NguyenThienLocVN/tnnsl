@@ -131,8 +131,8 @@
             </div>
         </div>
         <div class="d-flex">
-            <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
-            <button class="btn py-1 font-13 font-weigh-bold px-3 btn-danger mx-2" type="reset">NHẬP LẠI</button>
+        <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
+            <a href="{{route('quan-ly-cap-phep')}}" class="btn py-1 font-13 font-weigh-bold  px-5 btn-danger mx-2" type="reset">HỦY</a>
         </div>
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">

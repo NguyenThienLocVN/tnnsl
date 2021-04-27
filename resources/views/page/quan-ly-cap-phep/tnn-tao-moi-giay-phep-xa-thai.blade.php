@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('title', 'Xả thải vào nguồn nước | Quản lý cấp phép')
+@section('title', 'Quản lý cấp phép | Tạo mới giấy phép xả thải')
 
 @push('custom-style')
     <link rel="stylesheet" href="{{asset('public/TNN_QUAN_LY_CAP_PHEP/css/tnn-quan-ly-cap-phep.css')}}">
@@ -9,12 +9,12 @@
 @endpush
 
 @section('content')
-<header>
+<header class="mb-3 mb-md-0 ">
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="{{url('quan-ly-cap-phep')}}" title="Về trang quản lý cấp phép" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <span class="font-weight-bold text-white d-block pl-2 exploit-surfacewater-heading">QUẢN LÝ CẤP PHÉP XẢ THẢI VÀO NGUỒN NƯỚC</span>
+            <a href="{{route('quan-ly-cap-phep')}}" title="Về trang chủ" id="btn_back_page" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+            <span class="font-weight-bold text-white d-block pl-2">ĐỀ NGHỊ CẤP PHÉP XẢ THẢI VÀO NGUỒN NƯỚC</span>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
@@ -22,7 +22,10 @@
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-5 pb-3 px-md-0" id="wastewater-wrap">
+    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-md-0" id="surfacewater-usage">
+        <div id="overlay"></div>
+        <img src="{{asset('public/TNN_TRANG_CHU/image/loading.gif')}}" id="loading-gif-image" class="loading-gif position-absolute" alt="loading" style="display: none;">
+        <!-- Khai thac su dung nuoc mat -->
         @if ($errors->any())
             <div class="col-sm-12 p-0">
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -32,226 +35,272 @@
                 </div>
             </div>
         @endif
-        <!-- Khai thac su dung nuoc mat -->
-        <form action="{{route('xu-ly-tao-moi-giay-phep-xa-thai')}}" method="POST"  enctype="multipart/form-data">
+        <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
-            <div class="mb-2">
-                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">Tạo mới giấy phép xả nước thải vào nguồn nước</p>
+            <div class="exploit-surfacewater mb-2">
+                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">1. Tên tổ chức cá nhân đề nghị cấp phép</p>
                 <div class="exploit-surfacewater-content col-12 p-0 mb-3">
-                    <div class="col-12 d-flex flex-column flex-md-row">
-                        <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-5 font-13 px-0">Số giấy phép</span>
-                            <input type="text" class="col-7 px-1 font-13" name="license_num" value="{{old('license_num')}}" required>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Tên tổ chức </span>
+                            <input type="text" name="organization_name" id="organization_name" value="{{old('organization_name')}}" class="w-100 px-1 font-13" required>
                         </div>
-                        <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <span class="col-5 font-13 px-0">Ngày cấp</span>
-                            <input type="text" class="col-7 px-1 font-13" name="license_date" value="{{old('license_date')}}" required>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Số giấy ĐKKD </span>
+                            <input type="text" name="dkkd" id="dkkd" value="{{old('dkkd')}}" class="w-100 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-3 col-4 font-13 px-0">Nơi cấp</span>
+                            <input type="text" class="w-100 px-1 font-13" name="" id="">
+                        </div>
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-3 col-4 font-13 px-0">Ngày cấp </span>
+                            <input type="text" class="w-100 px-1 font-13" name="" id="">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Địa chỉ </span>
+                            <input type="text" name="address" id="address" value="{{old('address')}}" class="w-100 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
+                        <div class="col-md-4 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-3 col-4 font-13 px-0">ĐT </span>
+                            <input type="text" class="col-md-9 col-8 px-1 font-13" name="" id="">
+                        </div>
+                        <div class="col-md-4 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-3 col-4 font-13 px-0">Fax </span>
+                            <input type="text" class="col-md-9 col-8 px-1 font-13" name="" id="">
+                        </div>
+                        <div class="col-md-4 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-3 col-4 font-13 px-0">Email </span>
+                            <input type="text" class="col-md-9 col-8 px-1 font-13" name="" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exploit-surfacewater mb-2">
+                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">2. Thông tin về cơ sở nước thải</p>
+                <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                    <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-3 col-4 font-13 px-0">Tên CT </span>
+                            <input type="text" class="col-md-9 col-8 px-1 font-13" name="" id="">
+                        </div>
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-3 col-4 font-13 px-0">Ký hiệu CT </span>
+                            <input type="text" class="col-md-9 col-8 px-1 font-13" name="" id="">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Vị trí CT xả NT </span>
+                            <input type="text" name="" id="" value="" class="w-100 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Công suất xử lý NT(m3/ ngày đêm) </span>
+                            <input type="text" name="" id="" value="" class="w-100 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Vị trí điểm xả NT </span>
+                            <input type="text" name="" id="" value="" class="w-100 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Năm bắt đầu vận hành </span>
+                            <input type="text" name="" id="" value="" class="w-100 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <!-- <span class="col-4 font-13 px-0">Năm bắt đầu vận hành </span> -->
+                            <input type="file" name="" id="" value="" class="col-12 px-1 font-13" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exploit-surfacewater mb-2">
+                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">3. Nội dung đề nghị cấp phép</p>
+                <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                    <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-3 col-4 font-13 px-0">Nơi tiếp nhận</span>
+                            <input type="text" class="col-md-9 col-8 px-1 font-13" name="" id="">
+                        </div>
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-3 col-4 font-13 px-0">Tọa độ vị trí XNT </span>
+                            <input type="text" class="col-md-9 col-8 px-1 font-13" name="" id="">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Vị trí XNT </span>
+                            <input type="text" name="" id="" value="" class="w-100 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Phương thức XNT </span>
+                            <input type="text" name="" id="" value="" class="w-100 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
+                        <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
+                            <span class="col-4 font-13 px-0">Chế độ XNT </span>
+                            <input type="text" name="" id="" value="" class="w-100 px-1 font-13" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-6 col-4 font-13 px-0">Qx TB(m3/ngày đêm)</span>
+                            <input type="text" class="col-md-6 col-8 px-1 font-13" name="" id="">
+                        </div>
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-6 col-4 font-13 px-0">Qx max(m3/ngày đêm) </span>
+                            <input type="text" class="col-md-6 col-8 px-1 font-13" name="" id="">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-6 col-4 font-13 px-0">Chất lượng NT</span>
+                            <input type="text" class="col-md-6 col-8 px-1 font-13" name="" id="">
+                        </div>
+                        <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
+                            <span class="col-md-6 col-4 font-13 px-0">Thời gian CP(năm)</span>
+                            <input type="text" class="col-md-6 col-8 px-1 font-13" name="" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exploit-surfacewater mb-2">
+                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">4. Giấy tờ tài liệu kèm theo</p>
+                <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Đơn xin cấp phép</span>
+                            <input type="checkbox" name="checkbox_don_xin_cp" id="checkbox_don_xin_cp" class="col-4 px-1 font-13" required></span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="file" name="don_xin_cp" id="don_xin_cp" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
-                        <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-5 font-13 px-0">Thời hạn CP</span>
-                            <input type="text" class="col-7 px-1 font-13" name="license_duration" value="{{old('license_duration')}}" required>
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Kết quả phân tích CLN</span>
+                            <input type="checkbox" name="checkbox_ket_qua_ptcln" id="checkbox_ket_qua_ptcln" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <span class="col-5 font-13 px-0">Thẩm quyền</span>
-                            <input type="text" class="col-7 px-1 font-13" name="license_role" value="{{old('license_role')}}" required>
+                            <input type="file" name="ket_qua_ptcln" id="ket_qua_ptcln" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
-                    <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                        <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-5 font-13 px-0">Đơn vị XCP</span>
-                            <input type="text" class="col-7 px-1 font-13" name="organization_request" value="{{old('organization_request')}}" required>
-                        </div>
-                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <span class="col-5 font-13 px-0">Cơ quan CP</span>
-                            <input type="text" class="col-7 px-1 font-13" name="organization_authorities" value="{{old('organization_authorities')}}" required>
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex flex-column flex-md-row mb-2">
-                        <div class="col-sm-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-5 font-13 px-0">Loại hình</span>
-                            <input type="text" class="col-md-4 col-2 px-1 font-13" name="construction_type" value="{{old('construction_type')}}" required>
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Đề án KTSDN </span>
+                            
+                            <input type="checkbox" name="checkbox_de_an_ktsdn" id="checkbox_de_an_ktsdn" class="col-4 px-1 font-13" required></span>
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <span class="col-5 font-13 px-0">Năm VH</span>
-                            <input type="text" class="col-md-4 col-2 px-1 font-13" name="year_operation" value="{{old('year_operation')}}" required>
+                            <input type="file" name="de_an_ktsdn" id="de_an_ktsdn" class="col-8 col-md-12 px-1 font-13">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Báo cáo KTSDN </span>
+                            <input type="checkbox" name="checkbox_bao_cao_ktsdn" id="checkbox_bao_cao_ktsdn" class="col-4 px-1 font-13" required></span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="file" name="bao_cao_ktsdn" id="bao_cao_ktsdn" class="col-8 col-md-12 px-1 font-13">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Sơ đồ vị trí công trình KTN</span>
+                            <input type="checkbox" name="checkbox_so_do_vtct" id="checkbox_so_do_vtct" class="col-4 px-1 font-13" required></span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="file" name="so_do_vtct" id="so_do_vtct" class="col-8 col-md-12 px-1 font-13">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Văn bản ý kiến cộng đồng</span>
+                            <input type="checkbox" name="checkbox_van_ban_ykcd" id="checkbox_van_ban_ykcd" class="col-4 px-1 font-13" required></span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="file" name="van_ban_ykcd" id="van_ban_ykcd" class="col-8 col-md-12 px-1 font-13">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Kê khai tính tiền cấp quyền khai thác</span>
+                            <input type="checkbox" name="checkbox_ke_khai_ttcqkt" id="checkbox_ke_khai_ttcqkt" class="col-4 px-1 font-13" required></span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="file" name="ke_khai_ttcqkt" id="ke_khai_ttcqkt" class="col-8 col-md-12 px-1 font-13">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Giấy tờ khác</span>
+                            <input type="checkbox" name="checkbox_giay_to_khac" id="checkbox_giay_to_khac" class="col-4 px-1 font-13"></span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="file" name="giay_to_khac" id="giay_to_khac" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Ket thuc khai thac su dung nuoc mat -->
-
-            <!-- Thong tin cong trinh -->
-            <div class="mb-2">
-                <div class="construction-info-content col-12 p-0 mb-3">
-                    <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                        <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-5 font-13 px-0">Tên công trình</span>
-                            <input type="text" class="col-7 px-1 font-13" name="construction_name" value="{{old('construction_name')}}" required>
+            <div class="exploit-surfacewater mb-2">
+                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">5. Cam kết của tổ chức/cá nhân đề nghị CP</p>
+                <div class="exploit-surfacewater-content col-12 p-0 mb-3">
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Cam đoan thông tin đúng sự thật</span>
+                            <input type="checkbox" name="checkbox_don_xin_cp" id="checkbox_don_xin_cp" class="col-4 px-1 font-13" required></span>
                         </div>
-                        <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <span class="col-5 font-13 px-0">Ký hiệu CT</span>
-                            <input type="text" class="col-md-7 col-3 px-1 font-13" name="construction_code" value="{{old('construction_code')}}" required>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="file" name="don_xin_cp" id="don_xin_cp" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
-                    <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
-                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-4 font-13 px-0">Vị trí công trình xả NT</span>
-                            <input type="text" class="col-6 px-1 font-13" name="construction_location" value="{{old('construction_location')}}" required>
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Chấp hành đúng nội quy Luật tài nguyên nước</span>
+                            <input type="checkbox" name="checkbox_ket_qua_ptcln" id="checkbox_ket_qua_ptcln" class="col-4 px-1 font-13" required></span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="file" name="ket_qua_ptcln" id="ket_qua_ptcln" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
-                    <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
-                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-4 font-13 px-0">Công suất xử lý NT</span>
-                            <input type="text" class="col-3 px-1 font-13" name="wattage" value="{{old('wattage')}}" required>&nbsp; <span class="font-13">(m<sup>3</sup>/ng đêm)</span>
+                    <div class="col-12 d-flex flex-column flex-md-row my-1">
+                        <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                            <span class="col-8 col-md-12 font-13 px-0">Đã gửi hồ sơ tới Sở TNMT</span>
+                            <input type="checkbox" name="checkbox_de_an_ktsdn" id="checkbox_de_an_ktsdn" class="col-4 px-1 font-13" required></span>
+                        </div>
+                        <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                            <input type="file" name="de_an_ktsdn" id="de_an_ktsdn" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
-                    <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
-                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-4 font-13 px-0">Vị trí điểm xả NT</span>
-                            <input type="text" class="col-6 px-1 font-13" name="point_location" value="{{old('point_location')}}" required>
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
-                        <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-5 font-13 px-0">Vị trí đập &nbsp; X </span>
-                            <input type="text" class="col-7 px-1 font-13" name="longitude" value="{{old('longitude')}}" required>
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
-                        <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-5 font-13 px-0">Vị trí đập &nbsp; Y</span>
-                            <input type="text" class="col-7 px-1 font-13" name="latitude" value="{{old('latitude')}}" required>
-                        </div>
+                    <input type="text" name="status" value="Chưa duyệt" class="d-none" />
+                    <div class="col-12 d-flex my-3">
+                    <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
+            <a href="{{route('quan-ly-cap-phep')}}" class="btn py-1 font-13 font-weigh-bold  px-5 btn-danger mx-2" type="reset">HỦY</a>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Thong tin khac -->
-            <div class="mb-2">
-                <div class="surfacewater-usage-content col-12 pb-3 ">
-                    <div class="col-12 d-flex mb-1 p-0">
-                        <div class="col-md-9 col-12 d-flex align-items-center p-0">
-                            <span class="col-5 font-13 px-0">Nguồn tiếp nhận</span>
-                            <input type="text" class="col-7 px-1 font-13" name="water_resource" value="{{old('water_resource')}}" required>
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex p-0">
-                        <div class="col-md-9 col-12 d-flex align-items-center p-0">
-                            <span class="col-5 font-13 px-0">Mục đích sử dụng</span>
-                            <input type="text" class="col-7 px-1 font-13" name="purpose_using" value="{{old('purpose_using')}}" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                    <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-7 font-13 px-0">Quy chuẩn áp dụng </span>
-                        <input type="text" class="col-6 px-1 font-13" name="receive_water_standard" value="{{old('receive_water_standard')}}" required>
-                    </div>
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">pH</span>
-                        <input type="text" class="col-md-7 col-3 px-1 font-13" name="ph_receive" value="{{old('ph_receive')}}" required>
-                    </div>
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">DO</span>
-                        <input type="text" class="col-md-7 col-3 px-1 font-13" name="DO" value="{{old('DO')}}" required>
-                    </div>
-                </div>
-                <div class="col-12 d-flex flex-column flex-md-row">
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 align-items-center">
-                        <span class="col-5 font-13 px-0">TSS</span>
-                        <input type="text" class="col-md-6 col-3 px-1 font-13" name="TSS" value="{{old('TSS')}}" required>
-                    </div>
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-2 align-items-center">
-                        <span class="col-5 font-12 px-0 text-center">N-NO2-</span>
-                        <input type="text" class="col-md-7 col-3 px-1 font-13" name="NNO2" value="{{old('NNO2')}}" required>
-                    </div>
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-6 font-12 px-0 text-center">P-P043-</span>
-                        <input type="text" class="col-md-7 col-3 px-1 font-13" name="PPO43" value="{{old('PPO43')}}" required>
-                    </div>
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">Sắt</span>
-                        <input type="text" class="col-md-7 col-3 px-1 font-13" name="iron" value="{{old('iron')}}" required>
-                    </div>
-                </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 align-items-center">
-                        <span class="col-5 font-13 px-0">N-NO3-</span>
-                        <input type="text" class="col-md-6 col-3 px-1 font-13" name="NNO3" value="{{old('NNO3')}}" required>
-                    </div>
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-2 align-items-center">
-                        <span class="col-5 font-12 px-0 text-center">N-NH4+</span>
-                        <input type="text" class="col-md-7 col-3 px-1 font-13" name="NNH4" value="{{old('NNH4')}}" required>
-                    </div>
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-6 font-12 px-0 text-center">Coliforms</span>
-                        <input type="text" class="col-md-7 col-3 px-1 font-13" name="coliforms" value="{{old('coliforms')}}" required>
-                    </div>
-                    <div class="col-md-3 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">BOD5</span>
-                        <input type="text" class="col-md-7 col-3 px-1 font-13" name="BOD5" value="{{old('BOD5')}}" required>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pb-2 mb-1">
-                <div class="surfacewater-usage-filter">
-                    <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                        <div class="col-8 d-flex pl-0">
-                            <span class="col-6 font-13 px-0">Loại hình nước thải</span>
-                            <input type="text" class="col-7 px-1 font-13" name="wastewater_type" value="{{old('wastewater_type')}}" required>
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex pr-0 justify-content-between align-items-center">
-                        <div class="col-8 d-flex pl-0">
-                            <span class="col-6 font-13 px-0">Lưu lượng NT lớn nhất</span>
-                            <input type="text" class="col-7 px-1 font-13" name="wastewater_max_flow" value="{{old('wastewater_max_flow')}}" required>
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                        <div class="col-8 d-flex pl-0">
-                            <span class="col-6 font-13 px-0">Quy chuẩn áp dụng</span>
-                            <input type="text" class="col-7 px-1 font-13" name="wastewater_standard" value="{{old('wastewater_standard')}}" required>
-                        </div>
-                    </div>
-                    <div class="col-8 d-flex pr-0 justify-content-between align-items-center my-1">
-                        <div class="col-6 d-flex pl-0 align-items-center">
-                            <span class="col-5 font-13 px-0 text-center">pH</span>
-                            <input type="text" class="col-7 px-1 font-13" name="ph_wastewater" value="{{old('ph_wastewater')}}" required>
-                        </div>
-                        <div class="col-6 d-flex pl-0 align-items-center">
-                            <span class="col-5 font-13 px-0 text-center">TDS</span>
-                            <input type="text" class="col-7 px-1 font-13" name="TDS" value="{{old('TDS')}}" required>
-                        </div>
-                    </div>
-                    <div class="col-8 d-flex pr-0 justify-content-between align-items-center my-1">
-                        <div class="col-6 d-flex pl-0 align-items-center">
-                            <span class="col-5 font-13 px-0">Nhiệt độ</span>
-                            <input type="text" class="col-7 px-1 font-13" name="temperature" value="{{old('temperature')}}" required>
-                        </div>
-                        <div class="col-6 d-flex pl-0 align-items-center">
-                            <span class="col-5 font-13 px-0 text-center">Amoni</span>
-                            <input type="text" class="col-7 px-1 font-13" name="amoni" value="{{old('amoni')}}" required>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-12 font-13 px-0">File giấy phép (.pdf) <input type="file" name="file_license" id="file_license" class="px-1" /> </span>
-                </div>
-            </div>
-
-            <div class="col-12 d-flex my-3">
-                <button type="submit" class="col-3 px-2 py-2 font-weight-bold btn-success border-0 font-13 mr-2 rounded">Lưu<!-- type="submit"-->
-                </button><button type="reset" class="col-3 px-2 py-2 font-weight-bold btn-danger border-0 font-13 mr-2 rounded">Nhập lại</button>
             </div>
         </form>
-	</div>
-    <!-- Ket thuc thong tin khac -->
-
+        <!-- Ket thuc khai thac su dung nuoc mat -->
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
         <div id="map" class="h-100 w-100 position-relative">
@@ -282,5 +331,15 @@
             </div>
         </div>
     </div>
+    <script>
+        $( document ).ready(function() {
+            $("#commune>option").hide();
+            $("#district").on('change',function(){
+                $("#commune>option").hide();
+                $('.'+$(this).val()).show();
+                $('select[name="commune"]').val('#commune_begin');
+            })
+        });
+    </script>
 </main>
 @endsection
