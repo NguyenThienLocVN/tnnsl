@@ -22,48 +22,48 @@
 <main class="d-flex flex-column flex-lg-row">
     <!-- Cot bao cao 1 -->
     <div class="col-12 col-lg-3 pb-3 pb-lg-0 px-0 mb-lg-3 d-flex flex-column report-block-one">
-        <div class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
+        <a href="{{route('mau-1-bao-cao-bieu-mau')}}" class="nav-link col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
             <div class="col-8 p-0">
                 <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 01</p>
                 <p class="text-success font-weight-bold">Số lượng trạm quan trắc</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU1.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU1">
-        </div>
-        <div class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
+        </a>
+        <a href="{{route('mau-2-bao-cao-bieu-mau')}}" class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
             <div class="col-8 p-0">
                 <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 02</p>
                 <p class="text-success font-weight-bold">Tổng lượng mưa, phân phối mưa</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU2.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU2">
-        </div>
-        <div class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
+        </a>
+        <a href="{{route('mau-3-bao-cao-bieu-mau')}}" class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
             <div class="col-8 p-0">
                 <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 03</p>
                 <p class="text-success font-weight-bold">Lượng mưa tháng, năm kỳ báo cáo</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU3.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU3">
-        </div>
-        <div class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
+        </a>
+        <a href="{{route('mau-4-bao-cao-bieu-mau')}}" class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
             <div class="col-8 p-0">
                 <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 04</p>
                 <p class="text-success font-weight-bold">Tổng lượng nước mặt trên các LVS</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU4.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU4">
-        </div>
-        <div class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
+        </a>
+        <a href="{{route('mau-5-bao-cao-bieu-mau')}}" class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
             <div class="col-8 p-0">
                 <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 05</p>
                 <p class="text-success font-weight-bold">Dòng chảy TB tháng, năm kỳ báo cáo</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU5.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU5">
-        </div>
-        <div class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
+        </a>
+        <a href="{{route('mau-6-bao-cao-bieu-mau')}}" class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
             <div class="col-8 p-0">
                 <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 06</p>
                 <p class="text-success font-weight-bold">Tổng dung tích các hồ chứa lớn</p>
             </div>
             <img src="{{asset('public/TNN_BAO_CAO_BIEU_MAU/image/ANHBIEUMAU6.webp')}}" class="col-4 p-0 d-block" alt="ANHBIEUMAU6">
-        </div>
+        </a>
         <div class="col-12 d-flex align-items-center report-item report-item-one py-3 py-lg-0">
             <div class="col-8 p-0">
                 <p class="text-danger font-weight-bold pt-2 mb-1">Biểu mẫu 07</p>
