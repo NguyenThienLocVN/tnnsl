@@ -46,6 +46,22 @@ Route::group(['middleware' => 'auth'], function () {
         return view('page.tnn-bao-cao-bieu-mau');
     })->name('bao-cao-bieu-mau');
 
+    Route::group([
+        'name' => 'bao-cao-bieu-mau',
+        'prefix' => 'bao-cao-bieu-mau',
+    ], function() {
+        Route::get('/mau-1', 'App\Http\Controllers\ReportFormController@form1')->name('mau-1-bao-cao-bieu-mau');
+
+        Route::get('/mau-2', 'App\Http\Controllers\ReportFormController@form2')->name('mau-2-bao-cao-bieu-mau');
+
+        Route::get('/mau-3', 'App\Http\Controllers\ReportFormController@form3')->name('mau-3-bao-cao-bieu-mau');
+
+        Route::get('/mau-4', 'App\Http\Controllers\ReportFormController@form4')->name('mau-4-bao-cao-bieu-mau');
+
+        Route::get('/mau-5', 'App\Http\Controllers\ReportFormController@form5')->name('mau-5-bao-cao-bieu-mau');
+
+        Route::get('/mau-6', 'App\Http\Controllers\ReportFormController@form6')->name('mau-6-bao-cao-bieu-mau');
+    });
 
     Route::group([
         'name' => 'quan-ly-cap-phep',
