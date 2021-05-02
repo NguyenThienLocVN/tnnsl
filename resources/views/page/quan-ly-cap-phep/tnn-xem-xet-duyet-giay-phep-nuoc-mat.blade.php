@@ -43,7 +43,7 @@
             <!-- Tab panes -->
             <div class="tab-content">
                 <div class="tab-pane active" id="home">
-                <h2 class="font-20 font-weight-bold pl-5 py-2">Công trình: {{$construction->construction_name}} - {{$construction->status}}</h2>
+                <h2 class="font-20 font-weight-bold pl-5 py-2">Công trình: {{$construction->construction_name}} - {{($construction->status == 1) ? "Đã duyệt" : "Chưa duyệt"}}</h2>
                     <div class="col-12 d-flex">
                         <div class="col-6">
                             <div class="exploit-surfacewater mb-2">
@@ -129,7 +129,7 @@
                                         </div>
                                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                                             <span class="col-5 font-13 px-0">Loại CT </span>
-                                            <input type="text" name="construction_type" id="construction_type" value="{{old('construction_type', $construction->construction_type)}}" class="col-7 px-1 font-13" readonly>
+                                            <input type="text" name="construction_type" id="construction_type" value="@if($construction->construction_type == 0) Thủy điện @elseif($construction->construction_type == 1) Thủy lợi @else Công trình khác @endif" class="col-7 px-1 font-13" readonly>
                                         </div>
                                     </div>
                                     <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">

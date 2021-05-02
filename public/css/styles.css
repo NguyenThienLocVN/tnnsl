@@ -98,6 +98,16 @@ option { font-size: 14px; }
 .button-login { background: #c0392b !important; }
 .button-login:hover { background: #ce7168 !important; transition: 0.5s; }
 
+.form-register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(228deg, #92e0a6, #c3c2c282);
+    box-shadow: 1px 4px 10px grey;
+    width: 95%;
+}
+
 /* Ipad */
 @media screen and (min-width: 768px) {
     .top-bar{
@@ -106,10 +116,12 @@ option { font-size: 14px; }
 	}
 	.banner-tnmt { height: 90px; }
 	header { height: 160px; }
+    .form-register { width: 85%; }
 }
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
 	header { height: unset; }
     .banner-tnmt { height: 110px; }
+    .form-register { width: 65%; }
 }

@@ -41,6 +41,20 @@
         </div>
         <div class="container-table p-2">
             <!-- Tab panes -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                <a class="nav-link font-weight-bold active" href="#">TẤT CẢ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold" href="#">THỦY ĐIỆN</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="#">THỦY LỢI</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="#">CÔNG TRÌNH KHÁC</a>
+                </li>
+            </ul>
             <div class="tab-content">
                 <div class="tab-pane active py-3" id="home">
                     <table class="table-license-manage table font-13" cellspacing="0" width="100%">
@@ -53,25 +67,29 @@
                                 <th>Công suất</th>
                                 <th>Vị trí CT</th>
                                 <th class="text-center">Nguồn nước</th>
-                                <th>Thời gian gửi</th>
                                 <th>Trạng thái</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $i = 1; ?>
                             @foreach($requests as $rq)
                                 <tr>
-                                    <td class="text-center">{{$rq->id}}</td>
+                                    <td class="text-center">{{$i}}</td>
                                     <td>{{$rq->organization_name}}</td>
                                     <td>{{$rq->construction_name}}</td>
-                                    <td>{{$rq->construction_type}}</td>
+                                    <td>@if($rq->construction_type == 0)
+                                        Thủy điện
+                                        @elseif($rq->construction_type == 1)
+                                        Thủy lợi
+                                        @else Công trình khác @endif</td>
                                     <td>{{$rq->wattage}}</td>
                                     <td>{{$rq->district, $rq->commune}}</td>
                                     <td>{{$rq->water_source}}</td>
-                                    <td>{{$rq->created_at}}</td>
-                                    <td>{{$rq->status}}</td>
+                                    <td>{{($rq->status == 0) ? "Chưa duyệt" : "Đã duyệt"}}</td>
                                     <td><a href="{{route('xet-duyet-giay-phep-nuoc-mat', $rq->id)}}" class="btn btn-sm btn-success mr-1"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a href="#" class="btn btn-sm btn-danger"><i class="fa fa-ban" aria-hidden="true"></i></a></td>
                                 </tr>
+                                <?php $i++; ?>
                             @endforeach
                         </tbody>
                     </table>
