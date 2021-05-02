@@ -157,21 +157,35 @@
                         <span class="col-5 font-13 px-0">Q<sub>xả<sub> TT</span>
                         <input type="text" id="q_tt" class="col-4 px-1 font-13" value="{{$construction->q_tt}}" readonly> &nbsp; <span class="font-13">(m<sup>3</sup>/s)</span readonly>
                     </div>
+                    @if($construction->construction_type != 1)
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                         <span class="col-5 font-13 px-0">DT tưới/tiêu tk</span>
                         <input type="text" id="watering_area" class="col-4 px-1 font-13" value="{{$construction->watering_area}}" readonly> &nbsp; <span class="font-13">(ha)</span readonly>
                     </div>
+                    @endif
                 </div>
-                <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                    <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                        <span class="col-12 font-13 px-0">Q<sub>tưới/tiêu</sub> tk : <input type="text" id="q_tuoi_tieu" class="col-3 px-1" value="{{$construction->q_tuoi_tieu}}" readonly> (m<sup>3</sup>/s) &nbsp; </span readonly>
+                @if($construction->construction_type != 1)
+                <div class="col-12 d-flex flex-column flex-md-row mb-1 mb-1">
+                    <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                        <span class="col-5 font-13 px-0">Q<sub>tưới/tiêu</sub> tk </span>
+                        <input type="text" id="q_tt" class="col-4 px-1 font-13" value="{{$construction->q_tt}}" readonly> &nbsp; <span class="font-13">(m<sup>3</sup>/s)</span readonly>
+                    </div>
+                    <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
+                        <span class="col-5 font-13 px-0">Q<sub>cấp nước</sub> SH, SX </span>
+                        <input type="text" id="watering_area" class="col-4 px-1 font-13" value="{{$construction->watering_area}}" readonly> &nbsp; <span class="font-13">(m<sup>3</sup>/ngđ) &nbsp;</span readonly>
                     </div>
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                        <span class="col-12 font-13 px-0">Q<sub>cấp nước</sub> SH, SX : <input type="text" id="q_cap_nuoc" class="col-3 px-1" value="{{$construction->q_cap_nuoc}}" readonly> (m<sup>3</sup>/ngđ) &nbsp; </span readonly>
+                        <span class="col-12 font-13 px-0">Q<sub>cấp nước</sub> CN : <input type="text" id="q_cap_nuoc" class="col-3 px-1" value="{{$construction->q_cap_nuoc}}" readonly> (m<sup>3</sup>/ngđ) &nbsp; </span readonly>
                     </div>
                 </div>
+                <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                    <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                        <span class="col-12 font-13 px-0">Q<sub>cấp nước</sub> KDDV : <input type="text" id="q_cap_nuoc" class="col-3 px-1" value="{{$construction->q_cap_nuoc}}" readonly> (m<sup>3</sup>/ngđ) &nbsp; </span readonly>
+                    </div>
+                </div>
+                @endif
             </div>
         </div>
 

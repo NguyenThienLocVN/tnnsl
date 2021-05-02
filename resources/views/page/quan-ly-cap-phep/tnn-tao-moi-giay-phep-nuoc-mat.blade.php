@@ -35,6 +35,16 @@
                 </div>
             </div>
         @endif
+        <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
+            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 my-md-2 align-items-center justify-content-end justify-content-md-start">
+                <span class="col-md-4 font-13 px-0">Chọn cách nhập</span>
+                <select name="entry-method" id="entry-method" class="col-5 font-13 py-1 px-2">
+                    <option value="">Chọn cách nhập dữ liệu</option>
+                    <option value="">Nhập file excel</option>
+                    <option value="">Nhập thủ công</option>
+                </select>
+            </div>
+        </div>
         <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
             <div class="exploit-surfacewater mb-2">
@@ -302,11 +312,36 @@
                         </div>
                     </div>
                     <input type="text" name="status" value="Chưa duyệt" class="d-none" />
-                    <div class="col-12 d-flex my-3">
-                    <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
-            <a href="{{route('quan-ly-cap-phep')}}" class="btn py-1 font-13 font-weigh-bold  px-5 btn-danger mx-2" type="reset">HỦY</a>
+                </div>
+            </div>
+
+            <div class="surfacewater-usage mb-2">
+                <p class="col-12 py-1 surfacewater-usage-title font-weight-bold mb-2">Thông tin khác</p>
+                <div class="surfacewater-usage-content col-12 pb-3 ">
+                    <div class="col-12 d-flex mb-1 p-0">
+                        <div class="col-md-9 col-12 d-flex align-items-center p-0">
+                            <span class="col-5 font-13 px-0">Cắm mốc HLBVHC</span>
+                            <input type="text" id="landmark" class="col-7 px-1 font-13" readonly="">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex p-0">
+                        <div class="col-md-9 col-12 d-flex align-items-center p-0">
+                            <span class="col-5 font-13 px-0">Tiền cấp quyền</span>
+                            <input type="text" id="authorization_money" class="col-7 px-1 font-13" readonly="">
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="col-12 d-flex flex-column flex-md-row mb-1 p-0 surfacewater-usage">
+                <div class="col-md-12 col-12 d-flex pl-0 pr-0 mb-md-0 align-items-center">
+                    <span class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="http://localhost/tnnsl/quan-ly-cap-phep/nuoc-mat/cong-trinh-dau-moi" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
+                </div>
+            </div>
+
+            <div class="col-12 d-flex my-3">
+                <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
+                <a href="{{route('quan-ly-cap-phep')}}" class="btn py-1 font-13 font-weigh-bold  px-5 btn-danger mx-2" type="reset">HỦY</a>
             </div>
         </form>
         <!-- Ket thuc khai thac su dung nuoc mat -->
