@@ -130,7 +130,7 @@
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Loại CT </span>
                             <select name="construction_type" id="construction_type" class="col-7 px-1 font-13" required>
-                                <option value="1">Thủy điện</option>
+                                <option selected value="1">Thủy điện</option>
                                 <option value="2">Thủy lợi</option>
                                 <option value="3">Công trình khác</option>
                             </select>
@@ -230,6 +230,46 @@
                         <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Thời gian đề nghị cấp phép </span>
                             <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
+                        </div>
+                    </div>
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Diện tích tưới tiêu </span>
+                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Q tưới tiêu </span>
+                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Q cấp nước SH, SX </span>
+                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Q cấp nước CN </span>
+                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Q cấp nước KDDV </span>
+                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -335,7 +375,7 @@
 
             <div class="col-12 d-flex flex-column flex-md-row mb-1 p-0 surfacewater-usage">
                 <div class="col-md-12 col-12 d-flex pl-0 pr-0 mb-md-0 align-items-center">
-                    <span class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="http://localhost/tnnsl/quan-ly-cap-phep/nuoc-mat/cong-trinh-dau-moi" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
+                    <span class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="{{route('nuoc-mat-cong-trinh-dau-moi')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
                 </div>
             </div>
 
@@ -383,6 +423,11 @@
                 $('.'+$(this).val()).show();
                 $('select[name="commune"]').val('#commune_begin');
             })
+            $(".construction_add_data").hide();
+            $("#construction_type").change(function(){
+                $(this).val() == "2" || $(this).val() == "3" ? $(".construction_add_data").show(): $(".construction_add_data").hide();               
+            });
+            
         });
     </script>
 </main>

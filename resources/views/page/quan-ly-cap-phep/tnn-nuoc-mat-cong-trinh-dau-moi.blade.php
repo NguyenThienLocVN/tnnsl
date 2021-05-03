@@ -13,10 +13,10 @@
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="{{url('quan-ly-cap-phep')}}" title="Về trang quản lý cấp phép" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+            <a href="{{route('tao-moi-giay-phep-nuoc-mat')}}" title="Về trang quản lý cấp phép" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
             <span class="font-weight-bold text-white d-block pl-2 exploit-surfacewater-heading">QUẢN LÝ CẤP PHÉP / KHAI THÁC SỬ DỤNG NƯỚC MẶT</span>
         </div>
-        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
+        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12  py-1 py-md-0">
             <span class="text-primary font-weight-bold">THÔNG TIN KỸ THUẬT CÔNG TRÌNH ĐẦU MỐI</span>
         </div>
     </div> 
@@ -28,7 +28,7 @@
           	<div class="exploit-surfacewater-content col-12 p-0 my-2">
 				<div class="col-12 d-flex flex-column flex-md-row">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-5 font-13 px-0">Tên công trình</span>
+                        <span class="col-5 col-md-4 font-13 px-0">Tên công trình</span>
                         <select name="" id="" class="col-7 font-13 form-control-sm cursor-pointer">
                             <option value="" selected>Chọn trạm</option>
                             <option value="">Trạm 1</option>
@@ -38,7 +38,7 @@
                         </select>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0">Ký hiệu CT</span>
+                        <span class="col-5 col-md-4 font-13 px-0">Ký hiệu CT</span>
                         <select name="" id="" class="col-7 font-13 form-control-sm cursor-pointer">
                             <option value="" selected>Chọn trạm</option>
                             <option value="">Trạm 1</option>
@@ -58,22 +58,22 @@
           	<div class="construction-info-content col-12 p-0 mb-3">
 				<div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-13 px-0">Diện tích</span>
-                        <input type="text" class="col-7 px-1 font-13">
+                        <span class="col-5 col-md-4 font-13 px-0">Diện tích</span>
+                        <input type="text" required class="col-5 col-md-7 px-1 font-13">
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">Q<sub>TK</sub></span>
-                        <input type="text" class="col-md-5 col-3 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                        <span class="col-5 col-md-4 font-13 px-0 ">Q<sub>TK</sub></span>
+                        <input type="text" required class="col-5 col-md-5 col-3 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
                     </div>
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-13 px-0">Q bq năm</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                        <span class="col-5 col-md-4 font-13 px-0">Q bq năm</span>
+                        <input type="text" required class="col-5 col-md-7 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">Q<sub>KT</sub></span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                        <span class="col-5 col-md-4 font-13 px-0 ">Q<sub>KT</sub></span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
                     </div>
                 </div>
             </div>
@@ -85,42 +85,42 @@
           	<div class="construction-info-content col-12 p-0 mb-3">
 				<div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-13 px-0">MNLKT</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                        <span class="col-5 col-md-4 font-13 px-0">MNLKT</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">MNLTK</span>
-                        <input type="text" class="col-md-5 col-3 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                        <span class="col-5 col-md-4 font-13 px-0 ">MNLTK</span>
+                        <input type="text" required class="col-5 col-md-5 col-3 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                     </div>
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-13 px-0">MNDBT</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                        <span class="col-5 col-md-4 font-13 px-0">MNDBT</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">MNC</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                        <span class="col-5 col-md-4 font-13 px-0 ">MNC</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                     </div>
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-13 px-0">V<sub>tb</sub></span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(tr m<sup>3</sup>)</span>
+                        <span class="col-5 col-md-4 font-13 px-0">V<sub>tb</sub></span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(tr m<sup>3</sup>)</span>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">V<sub>c</sub></span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                        <span class="col-5 col-md-4 font-13 px-0 ">V<sub>c</sub></span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                     </div>
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-13 px-0">V<sub>hi</sub></span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(tr m<sup>3</sup>)</span>
+                        <span class="col-5 col-md-4 font-13 px-0">V<sub>hi</sub></span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(tr m<sup>3</sup>)</span>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-12 px-0 text-center">DT hồ-MNDBT</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(ha)</span>
+                        <span class="col-5 col-md-4 font-12 px-0 ">DT hồ-MNDBT</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(ha)</span>
                     </div>
                 </div>
             </div>
@@ -132,47 +132,48 @@
           	<div class="construction-info-content col-12 p-0 mb-3">
 				<div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-12 px-0">CT đỉnh đập</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                        <span class="col-5 col-md-4 font-12 px-0">CT đỉnh đập</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-12 px-0 text-center">CD đỉnh đập</span>
-                        <input type="text" class="col-md-5 col-3 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                        <span class="col-5 col-md-4 font-12 px-0 ">CD đỉnh đập</span>
+                        <input type="text" required class="col-5 col-md-5 col-3 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                     </div>
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-13 px-0">Q<sub>x</sub> lũ tk</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                        <span class="col-5 col-md-4 font-13 px-0">Q<sub>x</sub> lũ tk</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">Q<sub>x</sub> lũ tk</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                        <span class="col-5 col-md-4 font-13 px-0 ">Q<sub>x</sub> lũ tk</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
                     </div>
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-13 px-0">Chế độ KT</span>
-                        <input type="text" class="col-5 px-1 font-13">
+                        <span class="col-5 col-md-4 font-13 px-0">Chế độ KT</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-13 px-0 text-center">Công suất</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(MW)</span>
+                        <span class="col-5 col-md-4 font-13 px-0 ">Công suất</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(MW)</span>
                     </div>
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                     <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-4 font-13 px-0">Q<sub>KT max</sub></span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                        <span class="col-5 col-md-4 font-13 px-0">Q<sub>KT max</sub></span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
                     </div>
                     <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                        <span class="col-5 font-12 px-0 text-center">Q<sub>xả</sub> TT</span>
-                        <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                        <span class="col-5 font-12 px-0 ">Q<sub>xả</sub> TT</span>
+                        <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
                     </div>
                 </div>
                 <div class="col-12 d-flex flex-column flex-md-row mb-1">
                     <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                        <span class="col-12 font-13 px-0">Cao độ ngưỡng/chiều rộng 1k_tràn/số k_tràn : <input type="text" class="col-2 px-1"> (m<sup>3</sup>/ngđ) &nbsp; </span>
+                        <span class="col-7 col-md-8 font-13 px-0">Cao độ ngưỡng/chiều rộng 1k_tràn/số k_tràn : </span>
+                        <input type="text" required class="col-3 col-md-2 px-1"> (m<sup>3</sup>/ngđ) &nbsp; 
                     </div>
                 </div>
             </div>
@@ -182,52 +183,52 @@
         <div class="col-12 mb-2 p-0 surfacewater-usage py-1">
             <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                 <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-5 font-13 px-0 text-purple">Loại trạm</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 col-md-4 font-13 px-0 text-purple">Loại trạm</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
                 <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                    <span class="col-5 font-12 px-0 text-center text-purple">KT kênh dẫn</span>
-                    <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                    <span class="col-5 font-12 px-0  text-purple">KT kênh dẫn</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                 </div>
             </div>
             <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                 <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-5 font-13 px-0 text-purple">KT kênh tháo</span>
-                    <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                    <span class="col-5 col-md-4 font-13 px-0 text-purple">KT kênh tháo</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                 </div>
                 <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                    <span class="col-5 font-12 px-0 text-center text-purple">Quy mô bể hút</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 font-12 px-0  text-purple">Quy mô bể hút</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
             </div>
             <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                 <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-5 font-13 px-0 text-purple">Quy mô bể xả</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 col-md-4 font-13 px-0 text-purple">Quy mô bể xả</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
                 <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                    <span class="col-5 font-12 px-0 text-center text-purple">Số máy bơm</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 font-12 px-0  text-purple">Số máy bơm</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
             </div>
             <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                 <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-5 font-13 px-0 text-purple">Loại máy bơm</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 col-md-4 font-13 px-0 text-purple">Loại máy bơm</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
                 <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                    <span class="col-5 font-12 px-0 text-center text-purple">CS t_bơm</span>
-                    <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/h)</span>
+                    <span class="col-5 font-12 px-0  text-purple">CS t_bơm</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/h)</span>
                 </div>
             </div>
             <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                 <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-5 font-13 px-0 text-purple">Số giờ bơm</span>
-                    <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(h)</span>
+                    <span class="col-5 col-md-4 font-13 px-0 text-purple">Số giờ bơm</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(h)</span>
                 </div>
                 <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                    <span class="col-5 font-12 px-0 text-center text-purple">Số tổ bơm</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 font-12 px-0  text-purple">Số tổ bơm</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
             </div>
         </div>
@@ -237,47 +238,52 @@
         <div class="col-12 mb-2 p-0 surfacewater-usage py-1">
             <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                 <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-5 font-13 px-0 text-primary">Q<sub>nguồn</sub> KT</span>
-                    <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                    <span class="col-5 col-md-4 font-13 px-0 text-primary">Q<sub>nguồn</sub> KT</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
                 </div>
                 <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                    <span class="col-5 font-12 px-0 text-center text-primary">H<sub>nguồn</sub> KT</span>
-                    <input type="text" class="col-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
+                    <span class="col-5 font-12 px-0  text-primary">H<sub>nguồn</sub> KT</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m)</span>
                 </div>
             </div>
             <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                 <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-5 font-13 px-0 text-primary">QC áp dụng</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 col-md-4 font-13 px-0 text-primary">QC áp dụng</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
                 <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                    <span class="col-5 font-12 px-0 text-center text-primary">Nhiệt độ</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 font-12 px-0  text-primary">Nhiệt độ</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
             </div>
             <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                 <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-5 font-13 px-0 text-primary">PH</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 col-md-4 font-13 px-0 text-primary">PH</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
                 <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                    <span class="col-5 font-12 px-0 text-center text-primary">COD</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 font-12 px-0  text-primary">COD</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
             </div>
             <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
                 <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                    <span class="col-5 font-13 px-0 text-primary">Amoni</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 col-md-4 font-13 px-0 text-primary">Amoni</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
                 <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                    <span class="col-5 font-12 px-0 text-center text-primary">TSS</span>
-                    <input type="text" class="col-5 px-1 font-13">
+                    <span class="col-5 font-12 px-0  text-primary">TSS</span>
+                    <input type="text" required class="col-5 col-md-5 px-1 font-13">
                 </div>
             </div>
         </div>
         <!-- Ket thuc Q nguon KT -->
+        <div class="col-12 d-flex my-3">
+            <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">XÁC NHẬN</button>
+            <a href="{{route('quan-ly-cap-phep')}}" class="btn py-1 font-13 font-weigh-bold  px-5 btn-danger mx-2" type="reset">HỦY</a>
+        </div>
     </div>
+    
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
         <div id="map" class="h-100 w-100 position-relative">
             <img title="Về trung tâm bản đồ" class="position-absolute map-tool center-map" id="center-map" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_VEGIUABANDO.png')}}" alt="trung-tam-ban-do">
