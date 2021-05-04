@@ -392,6 +392,11 @@
             localStorage.removeItem("ct_dau_moi");
         })
 
+        $("#view_ct_dau_moi").click(function(){
+            var construction_name = $("#construction_name").val();
+            localStorage.setItem("construction_name", construction_name);
+        })
+
         $("form#form-upload-excel-surfacewater-license").submit(function(e) {
             e.preventDefault();    
             var formData = new FormData(this);
