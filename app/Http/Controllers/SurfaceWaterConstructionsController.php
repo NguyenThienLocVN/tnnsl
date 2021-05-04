@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\SurfaceWaterConstructions;
 use App\Models\WastewaterConstructions;
 use App\Models\SurfacewaterRequest;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Places;
 use Carbon\Carbon;
 
@@ -287,5 +288,11 @@ class SurfaceWaterConstructionsController extends Controller
         $getDistrict = Places::where("parent_id",NULL)->get();
         $places = Places::all();
         return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-duoi-dat',["getDistrict"=>$getDistrict, "places"=>$places]);
+    }
+
+    public function uploadExcelSurfacewaterLicense(Request $request){
+        $rows = Excel::toArray(new SurfaceWaterConstructions, $request->file('upload-excel-surfacewater-license'));
+        
+        return response()->json(["data"=>$rows]);
     }
 }

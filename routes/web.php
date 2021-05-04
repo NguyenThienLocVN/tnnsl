@@ -126,6 +126,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@showCreateSurfacewaterLicense')->name('tao-moi-giay-phep-nuoc-mat');
         Route::post('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@doCreateSurfacewaterLicense')->name('xu-ly-tao-moi-giay-phep-nuoc-mat');
 
+        Route::post('xu-ly-upload-excel-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@uploadExcelSurfacewaterLicense')->name('xu-ly-upload-excel-giay-phep-nuoc-mat');
+
         Route::get('tao-moi-giay-phep-xa-thai', 'App\Http\Controllers\SurfaceWaterConstructionsController@showCreateWastewaterLicense')->name('tao-moi-giay-phep-xa-thai');
         Route::post('tao-moi-giay-phep-xa-thai', 'App\Http\Controllers\SurfaceWaterConstructionsController@doCreateWastewaterLicense')->name('xu-ly-tao-moi-giay-phep-xa-thai');
 

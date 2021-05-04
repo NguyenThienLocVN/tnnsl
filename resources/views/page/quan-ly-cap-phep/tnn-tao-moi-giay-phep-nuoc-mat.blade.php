@@ -35,38 +35,12 @@
                 </div>
             </div>
         @endif
-        <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
-            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 my-md-2 align-items-center justify-content-end justify-content-md-start">
-                <span class="col-md-4 font-13 px-0">Chọn cách nhập</span>
-                <select name="entry-method" id="entry-method" class="col-5 font-13 py-1 px-2">
-                    <option value="">Chọn cách nhập dữ liệu</option>
-                    <option value="form-upload-surfacewater-license">Nhập file excel</option>
-                    <option value="form-create-surfacewater-license">Nhập trường dữ liệu</option>
-                </select>
-            </div>
-        </div>
-        <div class="exploit-surfacewater col-12 mb-1 my-1" id="form-upload-surfacewater-license">
-            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 my-md-2 align-items-center justify-content-end justify-content-md-start">
-                <span class="col-md-4 font-13 px-0">Loại công trình</span>
-                <select name="entry-method" id="entry-method" class="col-5 font-13 py-1 px-2 mr-2">
-                    <option value="">Chọn loại công trình</option>
-                    <option value="1">Thủy điện</option>
-                    <option value="2">Thủy lợi</option>
-                    <option value="3">Công trình khác</option>
-                </select>
-                <button class="btn btn-info font-13">File mẫu</button>
-            </div>
-            <span><i>Người dùng chọn loại công trình để lấy file mẫu, điền dữ liệu theo đúng định dạng và tải lên ở dưới đây</i></span>
-            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 my-md-2 align-items-center justify-content-end justify-content-md-start">
-                <span class="col-md-4 font-13 px-0">File excel (.xls, .xlsx)</span>
-                <input type="file" class="col-6 font-13 py-1 px-2 mr-2" name="file-upload-surfacewater">
-            </div>
-            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 my-md-2 align-items-center justify-content-end justify-content-md-start">
-                <span class="col-md-4 font-13 px-0"></span>
-                <input type="submit" class="col-3 font-13 py-1 btn btn-success" name="submit-file-upload-surfacewater" value="Xác nhận">
-            </div>
-        </div>
-        <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data" id="form-create-surfacewater-license">
+        <form id="form-upload-excel-surfacewater-license" enctype="multipart/form-data">
+        {{ csrf_field() }}
+            <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license">
+            <input type="submit" value="Gui">
+        </form>
+        <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
             <div class="exploit-surfacewater mb-2">
                 <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">Tên tổ chức cá nhân đề nghị cấp phép</p>
@@ -151,7 +125,7 @@
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Loại CT </span>
                             <select name="construction_type" id="construction_type" class="col-7 px-1 font-13" required>
-                                <option selected value="1">Thủy điện</option>
+                                <option value="1">Thủy điện</option>
                                 <option value="2">Thủy lợi</option>
                                 <option value="3">Công trình khác</option>
                             </select>
@@ -253,46 +227,6 @@
                             <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
                         </div>
                     </div>
-                    <div class="construction_add_data">
-                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                                <span class="col-5 font-13 px-0">Diện tích tưới tiêu </span>
-                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="construction_add_data">
-                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                                <span class="col-5 font-13 px-0">Q tưới tiêu </span>
-                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="construction_add_data">
-                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                                <span class="col-5 font-13 px-0">Q cấp nước SH, SX </span>
-                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="construction_add_data">
-                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                                <span class="col-5 font-13 px-0">Q cấp nước CN </span>
-                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="construction_add_data">
-                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
-                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
-                                <span class="col-5 font-13 px-0">Q cấp nước KDDV </span>
-                                <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -372,10 +306,11 @@
                             <input type="file" name="giay_to_khac" id="giay_to_khac" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
-                    <input type="text" name="status" value="Chưa duyệt" class="d-none" />
+                    
+                    
                 </div>
+                
             </div>
-
             <div class="surfacewater-usage mb-2">
                 <p class="col-12 py-1 surfacewater-usage-title font-weight-bold mb-2">Thông tin khác</p>
                 <div class="surfacewater-usage-content col-12 pb-3 ">
@@ -393,7 +328,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-12 d-flex flex-column flex-md-row mb-1 p-0 surfacewater-usage">
                 <div class="col-md-12 col-12 d-flex pl-0 pr-0 mb-md-0 align-items-center">
                     <span class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="{{route('nuoc-mat-cong-trinh-dau-moi')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
@@ -458,22 +392,69 @@
             localStorage.removeItem("ct_dau_moi");
         })
 
-        $("#entry-method").on('change',function(){
-            if($(this).val() == 'form-upload-surfacewater-license')
-            {
-                $("#form-upload-surfacewater-license").show();
-                $("#form-create-surfacewater-license").hide();
-            }
-            else if($(this).val() == 'form-create-surfacewater-license')
-            {
-                $("#form-upload-surfacewater-license").hide();
-                $("#form-create-surfacewater-license").show();
-            }
-            else
-            {
-                $("#form-upload-surfacewater-license").hide();
-                $("#form-create-surfacewater-license").hide();
-            }
+        $("form#form-upload-excel-surfacewater-license").submit(function(e) {
+            e.preventDefault();    
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: window.location.origin+'/tnnsl/quan-ly-cap-phep/xu-ly-upload-excel-giay-phep-nuoc-mat',
+                type: 'POST',
+                data: formData,
+                success: function (data) {
+                    var excelData = data.data[0][1];
+                    														
+                    $("#organization_name").val(excelData[1]);
+                    $("#business_reg_num").val(excelData[2]);
+                    $("#business_reg_place").val(excelData[3]);
+                    $("#business_reg_date").val(excelData[4]);
+                    $("#tl_decision").val(excelData[5]);
+                    $("#agency_signed").val(excelData[6]);
+                    $("#id_card_num").val(excelData[7]);
+                    $("#id_card_place").val(excelData[8]);
+                    $("#id_card_date").val(excelData[9]);
+                    $("#fax").val(excelData[10]);
+                    $("#address").val(excelData[11]);
+                    $("#phone").val(excelData[12]);
+                    $("#email").val(excelData[13]);
+                    $("#construction_name").val(excelData[14]);
+                    $("#construction_code").val(excelData[15]);
+                    $("#construction_type").val(excelData[16]);
+                    $("#year_built").val(excelData[17]);
+                    $("#year_operation").val(excelData[18]);
+                    $("#exploit_method").val(excelData[19]);
+                    $("#construction_location").val(excelData[20]);
+                    $("#district").val(excelData[21]);
+                    $("#commune").val(excelData[22]);
+                    $("#lat_dams").val(excelData[23]);
+                    $("#long_dams").val(excelData[24]);
+                    $("#lat_factory").val(excelData[25]);
+                    $("#long_factory").val(excelData[26]);
+                    $("#construction_status").val(excelData[27]);
+                    $("#operating_time").val(excelData[28]);
+                    $("#water_source").val(excelData[29]);
+                    $("#water_location").val(excelData[30]);
+                    $("#purpose_using_water").val(excelData[31]);
+                    $("#q_ktsd_sxnn").val(excelData[32]);
+                    $("#q_turbin").val(excelData[33]);
+                    $("#wattage").val(excelData[34]);
+                    $("#q_kt_khac").val(excelData[35]);
+                    $("#exploit_mode").val(excelData[36]);
+                    $("#license_duration").val(excelData[37]);
+                    $("#q_kt_max").val(excelData[38]);
+                    $("#q_kt_max_mk").val(excelData[39]);
+                    $("#q_xa_tt").val(excelData[40]);
+                    $("#dt_tuoi_tieu").val(excelData[41]);
+                    $("#q_tuoi_tieu").val(excelData[42]);
+                    $("#q_cap_nuoc_shsx").val(excelData[43]);
+                    $("#q_cap_nuoc_cn").val(excelData[44]);
+                    $("#q_cap_nuoc_kddv").val(excelData[45]);
+                    $("#landmark").val(excelData[46]);
+                    $("#authorization_money").val(excelData[47]);
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
         });
     </script>
 </main>
