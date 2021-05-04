@@ -378,9 +378,10 @@
                     <span class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="{{route('nuoc-mat-cong-trinh-dau-moi')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
                 </div>
             </div>
+            <input type="hidden" id="ct_dau_moi" name="ct_dau_moi">
 
             <div class="col-12 d-flex my-3">
-                <button class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
+                <button id="btn_submit" class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
                 <a href="{{route('quan-ly-cap-phep')}}" class="btn py-1 font-13 font-weigh-bold  px-5 btn-danger mx-2" type="reset">HỦY</a>
             </div>
         </form>
@@ -427,8 +428,14 @@
             $("#construction_type").change(function(){
                 $(this).val() == "2" || $(this).val() == "3" ? $(".construction_add_data").show(): $(".construction_add_data").hide();               
             });
-            
         });
+        $(window).on('load', function() {
+            var ct_dau_moi = localStorage.getItem("ct_dau_moi");
+            document.getElementById('ct_dau_moi').value = ct_dau_moi;
+        })
+        $("#btn_submit").click(function(){
+            localStorage.removeItem("ct_dau_moi");
+        })
     </script>
 </main>
 @endsection
