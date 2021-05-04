@@ -330,7 +330,7 @@
             </div>
             <div class="col-12 d-flex flex-column flex-md-row mb-1 p-0 surfacewater-usage">
                 <div class="col-md-12 col-12 d-flex pl-0 pr-0 mb-md-0 align-items-center">
-                    <span class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="{{route('nuoc-mat-cong-trinh-dau-moi')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
+                    <span id="view_ct_dau_moi" class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="{{route('nuoc-mat-cong-trinh-dau-moi')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
                 </div>
             </div>
             <input type="hidden" id="ct_dau_moi" name="ct_dau_moi">
