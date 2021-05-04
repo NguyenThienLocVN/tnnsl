@@ -236,7 +236,7 @@
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-8 col-md-12 font-13 px-0">Đơn xin cấp phép</span>
-                            <input type="checkbox" name="checkbox_don_xin_cp" id="checkbox_don_xin_cp" class="col-4 px-1 font-13" required></span>
+                            <!-- <input type="checkbox" name="checkbox_don_xin_cp" id="checkbox_don_xin_cp" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <input type="file" name="don_xin_cp" id="don_xin_cp" class="col-8 col-md-12 px-1 font-13">
@@ -245,7 +245,7 @@
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-8 col-md-12 font-13 px-0">Kết quả phân tích CLN</span>
-                            <input type="checkbox" name="checkbox_ket_qua_ptcln" id="checkbox_ket_qua_ptcln" class="col-4 px-1 font-13" required></span>
+                            <!-- <input type="checkbox" name="checkbox_ket_qua_ptcln" id="checkbox_ket_qua_ptcln" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <input type="file" name="ket_qua_ptcln" id="ket_qua_ptcln" class="col-8 col-md-12 px-1 font-13">
@@ -255,7 +255,7 @@
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-8 col-md-12 font-13 px-0">Đề án KTSDN </span>
                             
-                            <input type="checkbox" name="checkbox_de_an_ktsdn" id="checkbox_de_an_ktsdn" class="col-4 px-1 font-13" required></span>
+                            <!-- <input type="checkbox" name="checkbox_de_an_ktsdn" id="checkbox_de_an_ktsdn" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <input type="file" name="de_an_ktsdn" id="de_an_ktsdn" class="col-8 col-md-12 px-1 font-13">
@@ -264,7 +264,7 @@
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-8 col-md-12 font-13 px-0">Báo cáo KTSDN </span>
-                            <input type="checkbox" name="checkbox_bao_cao_ktsdn" id="checkbox_bao_cao_ktsdn" class="col-4 px-1 font-13" required></span>
+                            <!-- <input type="checkbox" name="checkbox_bao_cao_ktsdn" id="checkbox_bao_cao_ktsdn" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <input type="file" name="bao_cao_ktsdn" id="bao_cao_ktsdn" class="col-8 col-md-12 px-1 font-13">
@@ -273,7 +273,7 @@
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-8 col-md-12 font-13 px-0">Sơ đồ vị trí công trình KTN</span>
-                            <input type="checkbox" name="checkbox_so_do_vtct" id="checkbox_so_do_vtct" class="col-4 px-1 font-13" required></span>
+                            <!-- <input type="checkbox" name="checkbox_so_do_vtct" id="checkbox_so_do_vtct" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <input type="file" name="so_do_vtct" id="so_do_vtct" class="col-8 col-md-12 px-1 font-13">
@@ -282,7 +282,7 @@
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-8 col-md-12 font-13 px-0">Văn bản ý kiến cộng đồng</span>
-                            <input type="checkbox" name="checkbox_van_ban_ykcd" id="checkbox_van_ban_ykcd" class="col-4 px-1 font-13" required></span>
+                            <!-- <input type="checkbox" name="checkbox_van_ban_ykcd" id="checkbox_van_ban_ykcd" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <input type="file" name="van_ban_ykcd" id="van_ban_ykcd" class="col-8 col-md-12 px-1 font-13">
@@ -291,7 +291,7 @@
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-8 col-md-12 font-13 px-0">Kê khai tính tiền cấp quyền khai thác</span>
-                            <input type="checkbox" name="checkbox_ke_khai_ttcqkt" id="checkbox_ke_khai_ttcqkt" class="col-4 px-1 font-13" required></span>
+                            <!-- <input type="checkbox" name="checkbox_ke_khai_ttcqkt" id="checkbox_ke_khai_ttcqkt" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <input type="file" name="ke_khai_ttcqkt" id="ke_khai_ttcqkt" class="col-8 col-md-12 px-1 font-13">
@@ -300,16 +300,13 @@
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-8 col-md-12 font-13 px-0">Giấy tờ khác</span>
-                            <input type="checkbox" name="checkbox_giay_to_khac" id="checkbox_giay_to_khac" class="col-4 px-1 font-13"></span>
+                            <!-- <input type="checkbox" name="checkbox_giay_to_khac" id="checkbox_giay_to_khac" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <input type="file" name="giay_to_khac" id="giay_to_khac" class="col-8 col-md-12 px-1 font-13">
                         </div>
                     </div>
-                    
-                    
                 </div>
-                
             </div>
             <div class="surfacewater-usage mb-2">
                 <p class="col-12 py-1 surfacewater-usage-title font-weight-bold mb-2">Thông tin khác</p>
@@ -317,29 +314,32 @@
                     <div class="col-12 d-flex mb-1 p-0">
                         <div class="col-md-9 col-12 d-flex align-items-center p-0">
                             <span class="col-5 font-13 px-0">Cắm mốc HLBVHC</span>
-                            <input type="text" id="landmark" class="col-7 px-1 font-13" readonly="">
+                            <input type="text" id="landmark" class="col-7 px-1 font-13">
                         </div>
                     </div>
                     <div class="col-12 d-flex p-0">
                         <div class="col-md-9 col-12 d-flex align-items-center p-0">
                             <span class="col-5 font-13 px-0">Tiền cấp quyền</span>
-                            <input type="text" id="authorization_money" class="col-7 px-1 font-13" readonly="">
+                            <input type="text" id="authorization_money" class="col-7 px-1 font-13">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 d-flex flex-column flex-md-row mb-1 p-0 surfacewater-usage">
                 <div class="col-md-12 col-12 d-flex pl-0 pr-0 mb-md-0 align-items-center">
-                    <span id="view_ct_dau_moi" class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; <a href="{{route('nuoc-mat-cong-trinh-dau-moi')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> </span>
+                    <span id="view_ct_dau_moi" class="col-12 py-2 font-weight-bold">Thông tin kỹ thuật công trình đầu mối &nbsp; 
+                        <a href="#" data-href="{{route('nuoc-mat-cong-trinh-dau-moi')}}" class="col-2 px-2 py-1 btn btn-license border-0 font-13 mr-2 rounded text-center">Xem</a> 
+                    </span>
                 </div>
             </div>
-            <input type="hidden" id="ct_dau_moi" name="ct_dau_moi">
-
+            <div id="ct___dau___moi"></div>
+            <input type="hidden" name="ct_dau_moi_data" id="ct_dau_moi_data">
             <div class="col-12 d-flex my-3">
                 <button id="btn_submit" class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
                 <a href="{{route('quan-ly-cap-phep')}}" class="btn py-1 font-13 font-weigh-bold  px-5 btn-danger mx-2" type="reset">HỦY</a>
             </div>
         </form>
+        
         <!-- Ket thuc khai thac su dung nuoc mat -->
     </div>
     <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
@@ -379,24 +379,25 @@
                 $('.'+$(this).val()).show();
                 $('select[name="commune"]').val('#commune_begin');
             })
-            $(".construction_add_data").hide();
-            $("#construction_type").change(function(){
-                $(this).val() == "2" || $(this).val() == "3" ? $(".construction_add_data").show(): $(".construction_add_data").hide();               
-            });
         });
-        $(window).on('load', function() {
-            var ct_dau_moi = localStorage.getItem("ct_dau_moi");
-            document.getElementById('ct_dau_moi').value = ct_dau_moi;
-        })
-        $("#btn_submit").click(function(){
-            localStorage.removeItem("ct_dau_moi");
-        })
 
+        // xu ly khi chon loại cong trinh
+        $(".construction_add_data").hide();
+        $("#construction_type").change(function(){
+            $(this).val() == "2" || $(this).val() == "3" ? $(".construction_add_data").show(): $(".construction_add_data").hide();               
+        });
+
+        // xu ly cong trinh dau moi
+        $.get( $("#view_ct_dau_moi>a").attr("data-href"), function( data ) {
+            $( "#ct___dau___moi" ).html( data );
+        });
+
+        $("#ct___dau___moi").hide();
         $("#view_ct_dau_moi").click(function(){
-            var construction_name = $("#construction_name").val();
-            localStorage.setItem("construction_name", construction_name);
+            $("#ct___dau___moi").show();
+            $("#construction_clue_name").val($("#construction_cname").val());
         })
-
+        // ket thuc xu ly cong trinh dau moi
         $("form#form-upload-excel-surfacewater-license").submit(function(e) {
             e.preventDefault();    
             var formData = new FormData(this);

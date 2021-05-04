@@ -9,45 +9,18 @@
 @endpush
 
 @section('content')
-<header>
-    <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
-    <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
-        <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="{{route('tao-moi-giay-phep-nuoc-mat')}}" title="Về trang quản lý cấp phép" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <span class="font-weight-bold text-white d-block pl-2 exploit-surfacewater-heading">QUẢN LÝ CẤP PHÉP / KHAI THÁC SỬ DỤNG NƯỚC MẶT</span>
-        </div>
-        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12  py-1 py-md-0">
-            <span class="text-primary font-weight-bold">THÔNG TIN KỸ THUẬT CÔNG TRÌNH ĐẦU MỐI</span>
-        </div>
-    </div> 
-</header>
-<main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-md-0" id="surfacewater-usage">
         <form id="form">
-            @csrf
             <!-- Ten cong trinh -->
             <div class="exploit-surfacewater mb-2">
                 <div class="exploit-surfacewater-content col-12 p-0 my-2">
                     <div class="col-12 d-flex flex-column flex-md-row">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 col-md-4 font-13 px-0">Tên công trình</span>
-                            <select name="construction_name" id="" class="col-7 font-13 form-control-sm cursor-pointer">
-                                <option value="" selected>Chọn trạm</option>
-                                <option value="">Trạm 1</option>
-                                <option value="">Trạm 2</option>
-                                <option value="">Trạm 3</option>
-                                <option value="">Trạm 4</option>
-                            </select>
+                            <input type="text" class="w-100" name="construction_clue_name" id="construction_clue_name" readonly>
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 col-md-4 font-13 px-0">Ký hiệu CT</span>
-                            <select name="construction_symbols" id="" class="col-7 font-13 form-control-sm cursor-pointer">
-                                <option value="" selected>Chọn trạm</option>
-                                <option value="">Trạm 1</option>
-                                <option value="">Trạm 2</option>
-                                <option value="">Trạm 3</option>
-                                <option value="">Trạm 4</option>
-                            </select>
+                            <input type="text" class="w-100" name="construction_symbols" id="construction_symbols" >
                         </div>
                     </div>
                 </div>
@@ -278,47 +251,14 @@
                         <input name="tss" type="text" required class="col-5 col-md-5 px-1 font-13">
                     </div>
                 </div>
+                <hr>
+                <div class="col-12 p-0 text-center">
+                    <input type="button" id="btn_accept" class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2" value="XÁC NHẬN"></input>
+                </div>
             </div>
             
             <!-- Ket thuc Q nguon KT -->
-            <div class="col-12 d-flex my-3">
-                <button type="button" id="btn_accept" class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">XÁC NHẬN</button>
-                <a href="{{route('quan-ly-cap-phep')}}" class="btn py-1 font-13 font-weigh-bold  px-5 btn-danger mx-2" type="reset">HỦY</a>
-            </div>
         </form>
-        <input type="hidden" name="ct_dau_moi" id="ct_dau_moi">
-    </div>
-    
-    <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
-        <div id="map" class="h-100 w-100 position-relative">
-            <img title="Về trung tâm bản đồ" class="position-absolute map-tool center-map" id="center-map" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_VEGIUABANDO.png')}}" alt="trung-tam-ban-do">
-            <img title="Vị trí hiện tại" class="position-absolute map-tool current-location" id="current-location" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_VITRIHIENTAI.png')}}" alt="vi-tri-hien-tai">
-            <img title="Phóng to" class="position-absolute map-tool zoom-in" id="zoom-in" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_PHONGTO.png')}}" alt="phong-to">
-            <img title="Thu nhỏ" class="position-absolute map-tool zoom-out" id="zoom-out" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_THUNHO.png')}}" alt="thu-nho">
-            <img title="Thêm công trình" class="position-absolute map-tool add-construction" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_THEMCONGTRINH.png')}}" alt="them-cong-trinh">
-            <img title="Sửa công trình" class="position-absolute map-tool edit-construction" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_SUACONGTRINH.png')}}" alt="sua-cong-trinh">
-            <img title="Xem thông tin" class="position-absolute map-tool view-info" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_XEMTHONGTIN.png')}}" alt="xem-thong-tin">
-            <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_DOKHOANGCACH.png')}}" alt="do-khoang-cach">
-            <div class="position-absolute map-layers d-flex align-items-center" id="map-layers" title="Chọn lớp bản đồ">
-                <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_LOPBANDO.png')}}" alt="lop-ban-do">
-                <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
-            </div>
-            <div class="position-absolute map-panel-layers align-items-center text-white" id="map-panel-layers">
-                <ul class="p-2 m-0">
-                    <li class="text-right"><i class="fa fa-window-close text-danger btn-close-layers" id="btn-close-layers" aria-hidden="true"></i></li>
-                    <li class="d-flex align-items-center"><input type="radio" onclick="setBasemap(this.value)" name="select-layer" id="select-layer" value="Topographic" checked>&nbsp; Bản đồ địa hình</li>
-                    <li class="d-flex align-items-center"><input type="radio" onclick="setBasemap(this.value)" name="select-layer" id="select-layer" value="Imagery" >&nbsp; Bản đồ vệ tinh</li>
-                    <li class="d-flex align-items-center"><input type="radio" onclick="setBasemap(this.value)" name="select-layer" id="select-layer" value="Streets">&nbsp; Bản đồ đường</li>
-                    <li class="d-flex align-items-center"><input type="radio" onclick="setBasemap(this.value)" name="select-layer" id="select-layer" value="NationalGeographic">&nbsp; Bản đồ hành chính</li>
-                </ul>
-            </div>
-            <div class="position-absolute map-note d-flex align-items-center">
-                <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_CHUGIAIBANDO.png')}}" alt="chu-giai-ban-do">
-                <span class="font-weight-bold">&nbsp; Chú giải</span>
-            </div>
-        </div>
-    </div>
-    
     <script>
         function update(data, keys, value) {
             if (keys.length === 0) {
@@ -353,7 +293,7 @@
             return data;
             }
 
-            function serializeForm(form) {
+            function serializeForm (form) {
             return Array.from((new FormData(form)).entries())
                 .reduce((data, [field, value]) => {
                 let [_, prefix, keys] = field.match(/^([^\[]+)((?:\[[^\]]*\])*)/);
@@ -368,9 +308,10 @@
             }
             document.getElementById('btn_accept').addEventListener("click",function(){
                 var data =  JSON.stringify(serializeForm(document.getElementById('form')), null, 2);
-                console.log(data);
-                localStorage.setItem("ct_dau_moi", data)
+                $("#ct_dau_moi_data").val(data);
+                $("#ct___dau___moi").hide();
             })
+
     </script>
 </main>
 @endsection
