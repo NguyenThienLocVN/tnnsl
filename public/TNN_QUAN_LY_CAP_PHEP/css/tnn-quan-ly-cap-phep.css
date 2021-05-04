@@ -59,6 +59,8 @@
 .construction-info textarea { resize: none; }
 .table thead th { vertical-align: middle !important; }
 
+#form-upload-surfacewater-license, #form-create-surfacewater-license { display: none; }
+
 @media screen and (min-width: 768px) {
 	.exploit-surfacewater-heading { font-size: unset; }
 	.surfacewater-usage-content, .discharge-water-content { height: unset; }

@@ -12,4 +12,6 @@ class SurfaceWaterConstructions extends Model
     public $table = 'surfacewater_constructions';
     protected $guarded = [];
     public $timestamps = true;
+
+    protected $fillable = ['construction_request_id', 'file_license', 'accepted_by'];
 }
