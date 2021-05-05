@@ -36,11 +36,12 @@
             </div>
         @endif
         <div class="exploit-surfacewater mb-2">
-            <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">Nộp hồ sơ bằng file Excel</p>
+            <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">Điền biểu mẫu file Excel</p>
+            <input type="hidden" id="url__xu__ly__upload__excel" value="{{route('xu-ly-upload-excel-giay-phep-nuoc-mat')}}">
             <form id="form-upload-excel-surfacewater-license" enctype="multipart/form-data">
             {{ csrf_field() }}
-                <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license" required accept="application/vnd.ms-excel" />
-                <input type="submit" class="btn btn-success btn-sm" value="Nộp Hồ Sơ">
+                <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license" required accept=".xlsx, .xls, .csv" />
+                <input type="submit" class="btn btn-success btn-sm" value="Xác Nhận">
             </form> 
         </div>
         <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data">
@@ -448,9 +449,9 @@
         $("form#form-upload-excel-surfacewater-license").submit(function(e) {
             e.preventDefault();    
             var formData = new FormData(this);
-
+            var url_xu_ly_upload_excel = $("#url__xu__ly__upload__excel").val();
             $.ajax({
-                url: window.location.origin+'/tnnsl/quan-ly-cap-phep/xu-ly-upload-excel-giay-phep-nuoc-mat',
+                url: url_xu_ly_upload_excel,
                 type: 'POST',
                 data: formData,
                 success: function (data) {
@@ -503,6 +504,7 @@
                     $("#q_cap_nuoc_kddv").val(excelData[45]);
                     $("#landmark").val(excelData[46]);
                     $("#authorization_money").val(excelData[47]);
+                    alert("Thêm thành công, hãy kiểm tra lại dữ liệu trước khi nộp hồ sơ!");
                 },
                 cache: false,
                 contentType: false,
