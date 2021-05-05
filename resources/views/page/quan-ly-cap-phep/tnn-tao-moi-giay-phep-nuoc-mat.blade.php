@@ -35,11 +35,14 @@
                 </div>
             </div>
         @endif
-        <form id="form-upload-excel-surfacewater-license" enctype="multipart/form-data">
-        {{ csrf_field() }}
-            <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license" required accept="application/vnd.ms-excel" />
-            <input type="submit" value="Gui">
-        </form>
+        <div class="exploit-surfacewater mb-2">
+            <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">Nộp hồ sơ bằng file Excel</p>
+            <form id="form-upload-excel-surfacewater-license" enctype="multipart/form-data">
+            {{ csrf_field() }}
+                <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license" required accept="application/vnd.ms-excel" />
+                <input type="submit" class="btn btn-success btn-sm" value="Nộp Hồ Sơ">
+            </form> 
+        </div>
         <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
             <div class="exploit-surfacewater mb-2">
