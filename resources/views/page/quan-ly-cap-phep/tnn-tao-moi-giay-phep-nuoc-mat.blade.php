@@ -37,7 +37,7 @@
         @endif
         <form id="form-upload-excel-surfacewater-license" enctype="multipart/form-data">
         {{ csrf_field() }}
-            <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license">
+            <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license" required accept="application/vnd.ms-excel" />
             <input type="submit" value="Gui">
         </form>
         <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data">
@@ -227,6 +227,48 @@
                             <input type="text" name="license_duration" id="license_duration" class="col-7 px-1 font-13" value="{{old('license_duration')}}" required>
                         </div>
                     </div>
+                    <!--  -->
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">DT tưới tiêu tk (ha) </span>
+                                <input type="text" name="dt_tuoi_tieu" id="dt_tuoi_tieu" class="col-7 px-1 font-13" value="{{old('dt_tuoi_tieu')}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Q tưới tiêu tl (m3/s) </span>
+                                <input type="text" name="q_tuoi_tieu" id="q_tuoi_tieu" class="col-7 px-1 font-13" value="{{old('q_tuoi_tieu')}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Q cấp nước SH, SX (m3/ngđ) </span>
+                                <input type="text" name="q_cap_nuoc_shsx" id="q_cap_nuoc_shsx" class="col-7 px-1 font-13" value="{{old('q_cap_nuoc_shsx')}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Q cấp nước CN (m3/ngđ) </span>
+                                <input type="text" name="q_cap_nuoc_cn" id="q_cap_nuoc_cn" class="col-7 px-1 font-13" value="{{old('q_cap_nuoc_cn')}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="construction_add_data">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Q cấp nước KDDV (m3/ngđ) </span>
+                                <input type="text" name="q_cap_nuoc_kddv" id="q_cap_nuoc_kddv" class="col-7 px-1 font-13" value="{{old('q_cap_nuoc_kddv')}}">
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
                 </div>
             </div>
 
@@ -239,7 +281,7 @@
                             <!-- <input type="checkbox" name="checkbox_don_xin_cp" id="checkbox_don_xin_cp" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="file" name="don_xin_cp" id="don_xin_cp" class="col-8 col-md-12 px-1 font-13">
+                            <input type="file" name="don_xin_cp" id="don_xin_cp" class="col-8 col-md-12 px-1 font-13" required accept="application/pdf" />
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
@@ -248,7 +290,7 @@
                             <!-- <input type="checkbox" name="checkbox_ket_qua_ptcln" id="checkbox_ket_qua_ptcln" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="file" name="ket_qua_ptcln" id="ket_qua_ptcln" class="col-8 col-md-12 px-1 font-13">
+                            <input type="file" name="ket_qua_ptcln" id="ket_qua_ptcln" class="col-8 col-md-12 px-1 font-13" required accept="application/pdf" />
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
@@ -258,7 +300,7 @@
                             <!-- <input type="checkbox" name="checkbox_de_an_ktsdn" id="checkbox_de_an_ktsdn" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="file" name="de_an_ktsdn" id="de_an_ktsdn" class="col-8 col-md-12 px-1 font-13">
+                            <input type="file" name="de_an_ktsdn" id="de_an_ktsdn" class="col-8 col-md-12 px-1 font-13" required accept="application/pdf" />
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
@@ -267,7 +309,7 @@
                             <!-- <input type="checkbox" name="checkbox_bao_cao_ktsdn" id="checkbox_bao_cao_ktsdn" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="file" name="bao_cao_ktsdn" id="bao_cao_ktsdn" class="col-8 col-md-12 px-1 font-13">
+                            <input type="file" name="bao_cao_ktsdn" id="bao_cao_ktsdn" class="col-8 col-md-12 px-1 font-13" required accept="application/pdf" />
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
@@ -276,7 +318,7 @@
                             <!-- <input type="checkbox" name="checkbox_so_do_vtct" id="checkbox_so_do_vtct" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="file" name="so_do_vtct" id="so_do_vtct" class="col-8 col-md-12 px-1 font-13">
+                            <input type="file" name="so_do_vtct" id="so_do_vtct" class="col-8 col-md-12 px-1 font-13" required accept="application/pdf" />
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
@@ -285,7 +327,7 @@
                             <!-- <input type="checkbox" name="checkbox_van_ban_ykcd" id="checkbox_van_ban_ykcd" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="file" name="van_ban_ykcd" id="van_ban_ykcd" class="col-8 col-md-12 px-1 font-13">
+                            <input type="file" name="van_ban_ykcd" id="van_ban_ykcd" class="col-8 col-md-12 px-1 font-13" required accept="application/pdf" />
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
@@ -294,7 +336,7 @@
                             <!-- <input type="checkbox" name="checkbox_ke_khai_ttcqkt" id="checkbox_ke_khai_ttcqkt" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="file" name="ke_khai_ttcqkt" id="ke_khai_ttcqkt" class="col-8 col-md-12 px-1 font-13">
+                            <input type="file" name="ke_khai_ttcqkt" id="ke_khai_ttcqkt" class="col-8 col-md-12 px-1 font-13" required accept="application/pdf" />
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
@@ -303,7 +345,7 @@
                             <!-- <input type="checkbox" name="checkbox_giay_to_khac" id="checkbox_giay_to_khac" class="col-4 px-1 font-13"></span> -->
                         </div>
                         <div class="col-sm-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <input type="file" name="giay_to_khac" id="giay_to_khac" class="col-8 col-md-12 px-1 font-13">
+                            <input type="file" name="giay_to_khac" id="giay_to_khac" class="col-8 col-md-12 px-1 font-13" required accept="application/pdf" />
                         </div>
                     </div>
                 </div>
@@ -314,13 +356,13 @@
                     <div class="col-12 d-flex mb-1 p-0">
                         <div class="col-md-9 col-12 d-flex align-items-center p-0">
                             <span class="col-5 font-13 px-0">Cắm mốc HLBVHC</span>
-                            <input type="text" id="landmark" class="col-7 px-1 font-13">
+                            <input type="text" name="landmark" id="landmark" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex p-0">
                         <div class="col-md-9 col-12 d-flex align-items-center p-0">
                             <span class="col-5 font-13 px-0">Tiền cấp quyền</span>
-                            <input type="text" id="authorization_money" class="col-7 px-1 font-13">
+                            <input type="text" name="authorization_money" id="authorization_money" class="col-7 px-1 font-13" required>
                         </div>
                     </div>
                 </div>
@@ -334,6 +376,7 @@
             </div>
             <div id="ct___dau___moi"></div>
             <input type="hidden" name="ct_dau_moi_data" id="ct_dau_moi_data">
+            <input type="hidden" name="status" id="status" value="0">
             <div class="col-12 d-flex my-3">
                 <button id="btn_submit" class="btn py-1 font-13 font-weigh-bold px-3 btn-success mx-2">GỬI HỒ SƠ</button>
                 <a href="{{route('quan-ly-cap-phep')}}" class="btn py-1 font-13 font-weigh-bold  px-5 btn-danger mx-2" type="reset">HỦY</a>
@@ -384,7 +427,8 @@
         // xu ly khi chon loại cong trinh
         $(".construction_add_data").hide();
         $("#construction_type").change(function(){
-            $(this).val() == "2" || $(this).val() == "3" ? $(".construction_add_data").show(): $(".construction_add_data").hide();               
+            $(this).val() == "2" || $(this).val() == "3" ? $(".construction_add_data").show(): $(".construction_add_data").hide();
+            $(this).val() == "2" || $(this).val() == "3" ? $(".construction_add_data>input").attr("required"): $(".construction_add_data").removeAttr("required");
         });
 
         // xu ly cong trinh dau moi
@@ -395,7 +439,7 @@
         $("#ct___dau___moi").hide();
         $("#view_ct_dau_moi").click(function(){
             $("#ct___dau___moi").show();
-            $("#construction_clue_name").val($("#construction_cname").val());
+            $("#construction_clue_name").val($("#construction_name").val());
         })
         // ket thuc xu ly cong trinh dau moi
         $("form#form-upload-excel-surfacewater-license").submit(function(e) {

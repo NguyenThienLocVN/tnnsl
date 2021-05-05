@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SurfaceWaterConstructions;
 use App\Models\WastewaterConstructions;
-use App\Models\SurfacewaterRequest;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Places;
 use Carbon\Carbon;
@@ -125,6 +124,7 @@ class SurfaceWaterConstructionsController extends Controller
         $request->validate([
             'don_xin_cp' => 'required|max:2048',
         ]);
+        // die(var_dump($request->all()));
 
         $generateTime = Carbon::now()->timestamp;
         $destinationPath = public_path('TNN_QUAN_LY_CAP_PHEP\file\yeu-cau\nuoc-mat');
@@ -177,9 +177,9 @@ class SurfaceWaterConstructionsController extends Controller
             $upload_giay_to_khac = $request->file('giay_to_khac')->move($destinationPath, $file_giay_to_khac);
         }
 
-        $lastId = SurfacewaterRequest::create($request->all())->id;
+        $lastId = SurfaceWaterConstructions::create($request->all())->id;
 
-        $lastItem = SurfacewaterRequest::find($lastId);
+        $lastItem = SurfaceWaterConstructions::find($lastId);
         $lastItem->don_xin_cp = $file_don_xin_cp;
         $lastItem->ket_qua_ptcln = $file_ket_qua_ptcln;
         $lastItem->de_an_ktsdn = $file_de_an_ktsdn;
@@ -188,6 +188,8 @@ class SurfaceWaterConstructionsController extends Controller
         $lastItem->van_ban_ykcd = $file_van_ban_ykcd;
         $lastItem->ke_khai_ttcqkt = $file_ke_khai_ttcqkt;
         $lastItem->giay_to_khac = $file_giay_to_khac;
+
+        
         $lastItem->save();
      
         return redirect()->route('quan-ly-cap-phep')->withSuccess('Tạo giấy phép thành công, vui lòng chờ xét duyệt ');
@@ -272,13 +274,13 @@ class SurfaceWaterConstructionsController extends Controller
 
     public function listApprovalSurfacewaterLicense()
     {
-        $requests = SurfacewaterRequest::all();
+        $requests = SurfaceWaterConstructions::all();
         return view('page.quan-ly-cap-phep.tnn-xet-duyet-giay-phep-nuoc-mat', ['requests' => $requests]);
     }
 
     public function showApprovalSurfacewaterLicense($id)
     {
-        $construction = SurfacewaterRequest::find($id);
+        $construction = SurfaceWaterConstructions::find($id);
         return view('page.quan-ly-cap-phep.tnn-xem-xet-duyet-giay-phep-nuoc-mat', ['construction' => $construction]);
     }
 

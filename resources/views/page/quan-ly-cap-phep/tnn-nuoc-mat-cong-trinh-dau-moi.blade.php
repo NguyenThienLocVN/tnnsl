@@ -20,7 +20,7 @@
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 col-md-4 font-13 px-0">Ký hiệu CT</span>
-                            <input type="text" class="w-100" name="construction_symbols" id="construction_symbols" >
+                            <input type="text" class="w-100" name="construction_code" id="construction_code" >
                         </div>
                     </div>
                 </div>
