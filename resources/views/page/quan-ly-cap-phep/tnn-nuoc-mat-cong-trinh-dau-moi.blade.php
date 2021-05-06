@@ -132,16 +132,18 @@
                         </div>
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 col-md-4 font-13 px-0 ">Công suất</span>
-                            <input name="cong_suat" type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(MW)</span>
+                            <input name="cong_suat_ct_dau_moi" id="cong_suat_ct_dau_moi" type="text" required readonly class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(MW)</span>
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
-                        <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
-                            <span class="col-5 col-md-4 font-13 px-0">Q<sub>KT max</sub></span>
-                            <input name="q_kt_max" type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                        <div class="thuy_dien_va_thuy_loi col-md-6 p-0">
+                            <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 col-md-4 font-12 px-0">Q<sub>KT max</sub></span>
+                                <input name="q_kt_max" type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
-                            <span class="col-5 font-12 px-0 ">Q<sub>xả</sub> TT</span>
+                        <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center" id="q_xa_TT">
+                            <span class="col-5 col-md-4 font-12 px-0 ">Q<sub>xả</sub> TT</span>
                             <input name="q_xa_tt" type="text" required class="col-5 col-md-5 px-1 font-13">&nbsp;<span class="font-13">(m<sup>3</sup>/s)</span>
                         </div>
                     </div>

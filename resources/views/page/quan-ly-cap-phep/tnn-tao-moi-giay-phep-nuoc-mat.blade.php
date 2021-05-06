@@ -12,17 +12,17 @@
 <header class="mb-3 mb-md-0 ">
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
-        <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
+        <div class="col-lg-6 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
             <a href="{{route('quan-ly-cap-phep')}}" title="Về trang chủ" id="btn_back_page" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
             <span class="font-weight-bold text-white d-block pl-2">ĐỀ NGHỊ CẤP PHÉP KHAI THÁC SỬ DỤNG NƯỚC MẶT</span>
         </div>
-        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
+        <div class="bg-lightgray col-lg-6 col-sm-12 col-md-12 text-center py-1 py-md-0">
             <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-md-0" id="surfacewater-usage">
+    <div class="col-12 col-lg-6 pb-3 pb-lg-0 px-md-0" id="surfacewater-usage">
         <div id="overlay"></div>
         <img src="{{asset('public/TNN_TRANG_CHU/image/loading.gif')}}" id="loading-gif-image" class="loading-gif position-absolute" alt="loading" style="display: none;">
         <!-- Khai thac su dung nuoc mat -->
@@ -129,6 +129,7 @@
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Loại CT </span>
                             <select name="construction_type" id="construction_type" class="col-7 px-1 font-13" required>
+                                <option value="0" selected>Chọn lọai công trình</option>
                                 <option value="1">Thủy điện</option>
                                 <option value="2">Thủy lợi</option>
                                 <option value="3">Công trình khác</option>
@@ -141,17 +142,35 @@
                             <input type="text" name="exploit_method" id="exploit_method" value="{{old('exploit_method')}}" class="col-md-10 col-7 px-1 font-13 ml-md-3" required>
                         </div>
                     </div>
-                    <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
-                        <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center justify-content-end justify-content-md-start">
-                            <span class="col-md-2 col-5 font-13 px-0">Vị trí CT</span>
-                            <input type="text" name="construction_location" id="construction_location" value="{{old('construction_location')}}" class="col-md-10 col-7 px-1 font-13 ml-md-3" required>
+                    <!--  -->
+                    <div id="vt_thuy_dien">
+                        <div class="col-12 row flex-column flex-md-row p-0 mx-0 mb-1 mb-1">
+                            <div class="col-md-6 col-12 d-flex pr-md-3 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Vĩ độ đập</span>
+                                <input type="text" name="lat_dams" id="lat_dams" value="{{old('lat_dams')}}" class="col-7 px-1 font-13" placeholder="(X)" required>
+                            </div>
+                            <div class="col-md-6 col-12 d-flex pl-md-3 align-items-center">
+                                <span class="col-5 font-13 px-0">Kinh độ đập </span>
+                                <input type="text" name="long_dams" id="long_dams" value="{{old('long_dams')}}" class="col-7 px-1 font-13" placeholder="(Y)" required>
+                            </div>
+                        </div>
+                        <div class="col-12 row flex-column flex-md-row p-0 mx-0 mb-1 mb-1">
+                            <div class="col-md-6 col-12 d-flex pr-md-3 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Vĩ độ NM</span>
+                                <input type="text" name="lat_dams" id="lat_dams" value="{{old('lat_dams')}}" class="col-7 px-1 font-13" placeholder="(X)" required>
+                            </div>
+                            <div class="col-md-6 col-12 d-flex pl-md-3 align-items-center">
+                                <span class="col-5 font-13 px-0">Kinh độ NM </span>
+                                <input type="text" name="long_dams" id="long_dams" value="{{old('long_dams')}}" class="col-7 px-1 font-13" placeholder="(Y)" required>
+                            </div>
                         </div>
                     </div>
+                    <!--  -->
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
                             <span class="col-5 font-13 px-0">Huyện </span>
                             <select name="district" id="district" class="col-7 px-1 font-13" required>
-                                <option id="" value="" selected></option>
+                                <option id="" value="" selected>Chọn huyện</option>
                                 @foreach($getDistrict as $district)
                                     <option value="{{$district->code}}">{{$district->name}}</option>
                                 @endforeach
@@ -160,7 +179,7 @@
                         <div class="col-md-6 col-12 d-flex pr-0 pl-0 pl-md-3 align-items-center">
                             <span class="col-5 font-13 px-0">Xã </span>
                                 <select name="commune" id="commune" class="col-7 px-1 font-13" required>
-                                    <option id="commune_begin" value="" selected></option>
+                                    <option id="commune_begin" value="" selected>Chọn xã</option>
                                     @foreach($places as $place)
                                         <option class="{{$place->parent_id}}" value="{{$place->code}}">{{$place->name}}</option>
                                     @endforeach
@@ -232,7 +251,7 @@
                         </div>
                     </div>
                     <!--  -->
-                    <div class="construction_add_data">
+                    <div class="q_tt_dt_tt">
                         <div class="col-12 d-flex flex-column flex-md-row mb-1">
                             <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
                                 <span class="col-5 font-13 px-0">DT tưới tiêu tk (ha) </span>
@@ -240,7 +259,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="construction_add_data">
+                    <div class="q_tt_dt_tt">
                         <div class="col-12 d-flex flex-column flex-md-row mb-1">
                             <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
                                 <span class="col-5 font-13 px-0">Q tưới tiêu tl (m3/s) </span>
@@ -268,6 +287,14 @@
                         <div class="col-12 d-flex flex-column flex-md-row mb-1">
                             <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
                                 <span class="col-5 font-13 px-0">Q cấp nước KDDV (m3/ngđ) </span>
+                                <input type="text" name="q_cap_nuoc_kddv" id="q_cap_nuoc_kddv" class="col-7 px-1 font-13" value="{{old('q_cap_nuoc_kddv')}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thuy_dien_va_thuy_loi">
+                        <div class="col-12 d-flex flex-column flex-md-row mb-1">
+                            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-1 mb-1 mb-md-0 align-items-center">
+                                <span class="col-5 font-13 px-0">Q<sub>KT max_mk</sub>(m3/s) </span>
                                 <input type="text" name="q_cap_nuoc_kddv" id="q_cap_nuoc_kddv" class="col-7 px-1 font-13" value="{{old('q_cap_nuoc_kddv')}}">
                             </div>
                         </div>
@@ -389,7 +416,7 @@
         
         <!-- Ket thuc khai thac su dung nuoc mat -->
     </div>
-    <div class="col-12 col-lg-7 pb-3 map-container px-md-0">
+    <div class="col-12 col-lg-6 pb-3 map-container px-md-0">
         <div id="map" class="h-100 w-100 position-relative">
             <img title="Về trung tâm bản đồ" class="position-absolute map-tool center-map" id="center-map" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_VEGIUABANDO.png')}}" alt="trung-tam-ban-do">
             <img title="Vị trí hiện tại" class="position-absolute map-tool current-location" id="current-location" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_VITRIHIENTAI.png')}}" alt="vi-tri-hien-tai">
@@ -429,10 +456,21 @@
         });
 
         // xu ly khi chon loại cong trinh
-        $(".construction_add_data").hide();
+        $(".q_tt_dt_tt").hide();
+        $("#vt_thuy_dien").hide();
+        $(".thuy_dien_va_thuy_loi").show();
         $("#construction_type").change(function(){
-            $(this).val() == "2" || $(this).val() == "3" ? $(".construction_add_data").show(): $(".construction_add_data").hide();
-            $(this).val() == "2" || $(this).val() == "3" ? $(".construction_add_data>input").attr("required"): $(".construction_add_data").removeAttr("required");
+            $(this).val() == "1" ? $("#vt_thuy_dien").show() : $("#vt_thuy_dien").hide();
+            $(this).val() == "2" ? $(".q_tt_dt_tt").show() : $(".q_tt_dt_tt").hide();
+            if($(this).val() == "3"){
+                $(".thuy_dien_va_thuy_loi").hide();
+                $("#q_xa_TT").removeClass( "pl-md-3");
+                $("#q_xa_TT").addClass( "pr-md-3");
+            }else{
+                $(".thuy_dien_va_thuy_loi").show();
+                $("#q_xa_TT").addClass( "pl-md-3");
+                $("#q_xa_TT").removeClass( "pr-md-3");
+            }
         });
 
         // xu ly cong trinh dau moi
@@ -444,6 +482,7 @@
         $("#view_ct_dau_moi").click(function(){
             $("#ct___dau___moi").show();
             $("#construction_clue_name").val($("#construction_name").val());
+            $("#cong_suat_ct_dau_moi").val($("#wattage").val());
         })
         // ket thuc xu ly cong trinh dau moi
         $("form#form-upload-excel-surfacewater-license").submit(function(e) {
