@@ -40,8 +40,13 @@
             <input type="hidden" id="url__xu__ly__upload__excel" value="{{route('xu-ly-upload-excel-giay-phep-nuoc-mat')}}">
             <form id="form-upload-excel-surfacewater-license" enctype="multipart/form-data">
             {{ csrf_field() }}
-                <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license" required accept=".xlsx, .xls, .csv" />
-                <input type="submit" class="btn btn-success btn-sm" value="Xác Nhận">
+                <div class="d-flex justify-content-center align-items-center mb-2">
+                    <label class="btn btn-default btn-sm center-block btn-file border my-0 mx-2">
+                        <i class="fa fa-upload fa-2x" aria-hidden="true"></i> Upload file
+                        <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license" required accept=".xlsx, .xls, .csv" style="display: none;">
+                    </label>
+                    <input type="submit" class="btn btn-success" value="Xác Nhận">
+                </div>
             </form> 
         </div>
         <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data">
