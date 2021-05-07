@@ -33,14 +33,16 @@
                 src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     </header>
     <main>
-        <div class="col-12 d-flex align-items-center p-2 surfacewater-usage-title">
-            <div class="col-6 px-0">
-                <span class="font-weight-bold"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp; QUẢN LÝ CẤP PHÉP
-                    NƯỚC MẶT</span>
+        <div class="col-12 d-flex align-items-center p-2 surfacewater-usage-title bg-primary">
+            <div class="col-6 d-flex p-0">
+                <div class="col-6 px-0 d-flex align-items-center">
+                    <a href="{{route('quan-ly-cap-phep')}}" title="Về trang quản lý cấp phép" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0 mr-2"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+                    <span class="font-weight-bold text-white"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp; QUẢN LÝ CẤP PHÉP NƯỚC MẶT</span>
+                </div>
             </div>
             <div class="col-6 px-0 text-right">
-                <button class="btn btn-sm btn-primary font-13"><i class="fa fa-download" aria-hidden="true"></i> XLSX</button>
-                <button class="btn btn-sm btn-primary font-13"><i class="fa fa-download" aria-hidden="true"></i> PDF</button>
+                <button class="btn btn-sm btn-warning font-13"><i class="fa fa-download" aria-hidden="true"></i> XLSX</button>
+                <button class="btn btn-sm btn-warning font-13"><i class="fa fa-download" aria-hidden="true"></i> PDF</button>
             </div>
         </div>
         <div class="container-table p-2">

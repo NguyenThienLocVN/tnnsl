@@ -68,7 +68,13 @@ Route::group(['middleware' => 'auth'], function () {
         'prefix' => 'quan-ly-cap-phep',
     ], function () {
         // Trang quan ly cap phep
-        Route::get('/', 'App\Http\Controllers\SurfaceWaterConstructionsController@index')->name('quan-ly-cap-phep');
+
+        Route::get('/', function () {
+            return view('page.quan-ly-cap-phep.dashboard');
+        })->name('quan-ly-cap-phep');
+
+
+        Route::get('chi-tiet', 'App\Http\Controllers\SurfaceWaterConstructionsController@index')->name('quan-ly-cap-phep-chi-tiet');
 
         Route::get('nuoc-mat/xem-tat-ca-cong-trinh', 'App\Http\Controllers\SurfaceWaterConstructionsController@viewAll')->name('nuoc-mat-xem-tat-ca');
         Route::get('nuoc-mat/xem-tat-ca/thuy-dien', 'App\Http\Controllers\SurfaceWaterConstructionsController@viewAllHydroConstruction')->name('nuoc-mat-xem-tat-ca-thuy-dien');
@@ -121,10 +127,12 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('de-nghi-gia-han-dieu-chinh-giay-phep-xa-nuoc-thai-vao-nguon-nuoc', function () {
             return view('page.quan-ly-cap-phep.tnn-de-nghi-gia-han-dieu-chinh-giay-phep-xa-nuoc-thai-vao-nguon-nuoc');
         })->name('de-nghi-gia-han-dieu-chinh-giay-phep-xa-nuoc-thai-vao-nguon-nuoc');
-        
-        
+
         Route::get('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@showCreateSurfacewaterLicense')->name('tao-moi-giay-phep-nuoc-mat');
         Route::post('tao-moi-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@doCreateSurfacewaterLicense')->name('xu-ly-tao-moi-giay-phep-nuoc-mat');
+
+        Route::post('xu-ly-upload-excel-giay-phep-nuoc-mat', 'App\Http\Controllers\SurfaceWaterConstructionsController@uploadExcelSurfacewaterLicense')->name('xu-ly-upload-excel-giay-phep-nuoc-mat');
+        Route::post('xu-ly-xet-duyet', 'App\Http\Controllers\SurfaceWaterConstructionsController@approvalSurfacewaterLicense')->name('xu-ly-xet-duyet');
 
         Route::get('tao-moi-giay-phep-xa-thai', 'App\Http\Controllers\SurfaceWaterConstructionsController@showCreateWastewaterLicense')->name('tao-moi-giay-phep-xa-thai');
         Route::post('tao-moi-giay-phep-xa-thai', 'App\Http\Controllers\SurfaceWaterConstructionsController@doCreateWastewaterLicense')->name('xu-ly-tao-moi-giay-phep-xa-thai');
