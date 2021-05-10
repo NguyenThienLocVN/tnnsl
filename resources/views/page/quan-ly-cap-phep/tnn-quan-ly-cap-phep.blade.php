@@ -72,7 +72,7 @@
             </div>
             <div class="surfacewater-usage-filter">
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0">
+                    <div class="col-10 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Tên công trình:</span>
                         <div class="col-7 p-0">
                             <input type="text" name="construction-name" id="construction-name" class="col-12 px-1 font-13" placeholder="Tìm tên công trình..">
@@ -84,29 +84,26 @@
                             </ul>
                         </div>
                     </div>
-                    <button title="Chọn tên công trình để xem thông tin" disabled="true" class="col-2 p-0 px-lg2 mr-2 btn-primary font-13 text-center rounded" id="view-surfacewater">Xem GP</button>
+                    
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0">
+                    <div class="col-10 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
                         <input type="text" class="col-7 px-1 font-13" id="license_num" placeholder="Nhập số giấy phép.." readonly>
                     </div>
-                    <a href="{{route('tao-moi-giay-phep-nuoc-mat')}}" title="Tạo mới giấy phép" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Cấp mới</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0">
+                    <div class="col-10 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" id="organization_authorities" placeholder="Nhập cơ quan cấp phép.." readonly>
                     </div>
-                    <a href="{{route('de-nghi-gia-han-dieu-chinh-giay-phep-khai-thac-su-dung-nuoc-mat')}}" title="Điều chỉnh GP" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Điều chỉnh</a>
                 </div>
-                <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0"></div>
+                <div class="row m-0 col-12 justify-content-between align-items-center">
+                    <button title="Chọn tên công trình để xem thông tin" disabled="true" class="col-2 p-0 px-lg2 mr-2 btn-primary btn font-13 text-center rounded" id="view-surfacewater">Xem GP</button>
+                    <a href="{{route('tao-moi-giay-phep-nuoc-mat')}}" title="Tạo mới giấy phép" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Cấp mới</a>
                     <a href="{{route('cap-lai-giay-phep')}}" title="Xin cấp lại GP" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Cấp lại GP</a>
-                </div>
-                <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0"></div>
-                    <a href="{{route('danh-sach-giay-phep-nuoc-mat')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white" >Xét duyệt</a href="">
+                    <a href="{{route('danh-sach-giay-phep-nuoc-mat')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white" >Xét duyệt</a>
+                    <a href="{{route('de-nghi-gia-han-dieu-chinh-giay-phep-khai-thac-su-dung-nuoc-mat')}}" title="Điều chỉnh GP" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white">Điều chỉnh</a>
                 </div>
             </div>
 		</div>
@@ -152,7 +149,7 @@
             </div>
             <div class="discharge-water-filter">
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0">
+                    <div class="col-10 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Tên công trình:</span>
                         <select name="construction-name" id="construction-name" class="col-7 px-1 font-13">
                             <option value="">Chọn công trình</option>
@@ -163,21 +160,21 @@
                     <a href="{{route('quan-ly-cap-phep-xa-thai-nguon-nuoc')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Xem GP</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0">
+                    <div class="col-10 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
                     <a href="{{route('tao-moi-giay-phep-xa-thai')}}"  class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded text-white" >Cấp mới</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0">
+                    <div class="col-10 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
                     <a href="{{route('de-nghi-gia-han-dieu-chinh-giay-phep-xa-nuoc-thai-vao-nguon-nuoc')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Điều chỉnh</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0"></div>
+                    <div class="col-10 d-flex pl-0"></div>
                     <a href="{{route('cap-lai-giay-phep-xa-thai-vao-nguon-nuoc')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Cấp lại GP</a>
                 </div>
             </div>
@@ -224,7 +221,7 @@
             </div>
             <div class="discharge-water-filter">
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0">
+                    <div class="col-10 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Tên công trình:</span>
                         <select name="construction-name" id="construction-name" class="col-7 px-1 font-13">
                             <option value="">Chọn công trình</option>
@@ -235,21 +232,21 @@
                     <a href="{{route('quan-ly-cap-phep-nuoc-duoi-dat')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Xem</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0">
+                    <div class="col-10 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Số giấy phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập số giấy phép..">
                     </div>
                     <a href="{{route('tao-moi-giay-phep-nuoc-duoi-dat')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Cấp mới</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0">
+                    <div class="col-10 d-flex pl-0">
                         <span class="col-6 p-0 font-weight-bold">Cơ quan cấp phép:</span>
                         <input type="text" class="col-7 px-1 font-13" placeholder="Nhập cơ quan cấp phép..">
                     </div>
                     <a href="{{route('de-nghi-gia-han-dieu-chinh-giay-phep-tham-do-nuoc-duoi-dat')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Điều chỉnh</a>
                 </div>
                 <div class="col-12 d-flex pr-0 justify-content-between align-items-center my-1">
-                    <div class="col-8 d-flex pl-0"></div>
+                    <div class="col-10 d-flex pl-0"></div>
                     <a href="{{route('cap-lai-giay-phep-khai-thac-su-dung-nuoc-duoi-dat')}}" class="col-2 p-1 px-lg2 mr-2 btn-primary font-13 text-center rounded" >Cấp lại GP</a>
                 </div>
             </div>
@@ -307,6 +304,7 @@
             $("#list-construction li").on('click', function(){
                 var text = $(this).text();
                 var id = $(this).attr('data-id'); 
+                
 
                 $("#construction-name").val(text);
                 $("#list-construction").hide();
@@ -333,7 +331,7 @@
                 $("#view-surfacewater").on('click',function(){
                     if(id == "view-all")
                     {
-                        window.location.href = window.location.href+"/nuoc-mat/xem-tat-ca-cong-trinh";
+                        window.location.href = window.location.href+"/nuoc-mat/xem-tat-ca-giay-phep";
                     }
                     else
                     {

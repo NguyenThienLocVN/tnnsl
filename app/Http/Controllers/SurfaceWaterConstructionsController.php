@@ -58,7 +58,7 @@ class SurfaceWaterConstructionsController extends Controller
     {
         $getDistrict = Places::where("parent_id",NULL)->get();
         $places = Places::all();
-        return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-mat',["getDistrict"=>$getDistrict, "places"=>$places]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.tao-moi-giay-phep',["getDistrict"=>$getDistrict, "places"=>$places]);
     }
     function loadCommuneByDistrict($district_id){
         $communes = Places::where('parent_id', $district_id)->get();
@@ -67,7 +67,8 @@ class SurfaceWaterConstructionsController extends Controller
 
     public function surfacewaterConstructionInfo($id)
     {
-        $construction = SurfaceWaterConstructions::find($id);
+        $construction = SurfaceWaterConstructions::where('id',$id)->first();
+        // die(var_dump($construction));
         $surfaceWaterArray = ['type' => 'FeatureCollection',
                             'features' =>[]
                         ];
@@ -87,7 +88,7 @@ class SurfaceWaterConstructionsController extends Controller
         
 
         $surfaceWaterJson = json_encode($surfaceWaterArray, JSON_UNESCAPED_UNICODE);
-        return view('page.quan-ly-cap-phep.tnn-quan-ly-cap-phep-nuoc-mat', ['construction' => $construction, 'surfaceWaterJson' => $surfaceWaterJson]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.quan-ly-cap-phep-nuoc-mat', ['construction' => $construction, 'surfaceWaterJson' => $surfaceWaterJson]);
     }
 
     public function surfacewaterInfoForLoading($id)
@@ -101,22 +102,22 @@ class SurfaceWaterConstructionsController extends Controller
         $hydroConstruction = SurfaceWaterConstructions::where('construction_type',1)->paginate(10);
         $irrigationConstruction = SurfaceWaterConstructions::where('construction_type',2)->paginate(10);
         $pumpConstruction = SurfaceWaterConstructions::where('construction_type',3)->paginate(10);
-        return view('page.quan-ly-cap-phep.tnn-nuoc-mat-xem-tat-ca', ['constructions' => $constructions, 'hydroConstruction' => $hydroConstruction, 'irrigationConstruction' => $irrigationConstruction, 'pumpConstruction' => $pumpConstruction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca-gp', ['constructions' => $constructions, 'hydroConstruction' => $hydroConstruction, 'irrigationConstruction' => $irrigationConstruction, 'pumpConstruction' => $pumpConstruction]);
     }
 
     public function viewAllHydroConstruction(){
         $hydroConstruction = SurfaceWaterConstructions::where('construction_type',1)->paginate(10);
-        return view('page.quan-ly-cap-phep.tnn-nuoc-mat-xem-tat-ca-thuy-dien', ['hydroConstruction' => $hydroConstruction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca-thuy-dien', ['hydroConstruction' => $hydroConstruction]);
     }
 
     public function viewAllIrrigationConstruction(){
         $irrigationConstruction = SurfaceWaterConstructions::where('construction_type',2)->paginate(10);
-        return view('page.quan-ly-cap-phep.tnn-nuoc-mat-xem-tat-ca-thuy-loi', ['irrigationConstruction' => $irrigationConstruction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca-thuy-loi', ['irrigationConstruction' => $irrigationConstruction]);
     }
 
     public function viewAllPumpConstruction(){
         $pumpConstruction = SurfaceWaterConstructions::where('construction_type',3)->paginate(10);
-        return view('page.quan-ly-cap-phep.tnn-nuoc-mat-xem-tat-ca-cong-trinh-khac', ['pumpConstruction' => $pumpConstruction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca-cong-trinh-khac', ['pumpConstruction' => $pumpConstruction]);
     }
 
     public function doCreateSurfacewaterLicense(Request $request)
@@ -198,7 +199,7 @@ class SurfaceWaterConstructionsController extends Controller
     public function showEditSurfacewaterLicense($id)
     {
         $construction = SurfaceWaterConstructions::find($id);
-        return view('page.quan-ly-cap-phep.tnn-sua-giay-phep-nuoc-mat', ['construction'=>$construction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.sua-giay-phep', ['construction'=>$construction]);
     }
 
     public function doEditSurfacewaterLicense($id, Request $request)
@@ -275,13 +276,13 @@ class SurfaceWaterConstructionsController extends Controller
     public function listApprovalSurfacewaterLicense()
     {
         $requests = SurfaceWaterConstructions::all();
-        return view('page.quan-ly-cap-phep.tnn-xet-duyet-giay-phep-nuoc-mat', ['requests' => $requests]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xet-duyet-giay-phep', ['requests' => $requests]);
     }
 
     public function showApprovalSurfacewaterLicense($id)
     {
         $construction = SurfaceWaterConstructions::find($id);
-        return view('page.quan-ly-cap-phep.tnn-xem-xet-duyet-giay-phep-nuoc-mat', ['construction' => $construction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xem-xet-duyet-giay-phep', ['construction' => $construction]);
     }
 
 
@@ -289,7 +290,7 @@ class SurfaceWaterConstructionsController extends Controller
     public function showCreateGroundwaterLicense(){
         $getDistrict = Places::where("parent_id",NULL)->get();
         $places = Places::all();
-        return view('page.quan-ly-cap-phep.tnn-tao-moi-giay-phep-nuoc-duoi-dat',["getDistrict"=>$getDistrict, "places"=>$places]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.tnn-tao-moi-giay-phep-nuoc-duoi-dat',["getDistrict"=>$getDistrict, "places"=>$places]);
     }
 
     public function uploadExcelSurfacewaterLicense(Request $request){
