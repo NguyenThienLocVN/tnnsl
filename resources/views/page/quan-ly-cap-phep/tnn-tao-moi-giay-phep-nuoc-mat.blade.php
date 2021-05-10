@@ -35,6 +35,17 @@
                 </div>
             </div>
         @endif
+<<<<<<< HEAD
+        <div class="col-12 d-flex flex-column flex-md-row mb-1 my-1">
+            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 my-md-2 align-items-center justify-content-end justify-content-md-start">
+                <span class="col-md-4 font-13 px-0">Chọn cách nhập</span>
+                <select name="entry-method" id="entry-method" class="col-5 font-13 py-1 px-2">
+                    <option value="">Chọn cách nhập dữ liệu</option>
+                    <option value="form-upload-surfacewater-license">Nhập file excel</option>
+                    <option value="form-create-surfacewater-license">Nhập theo trường dữ liệu</option>
+                </select>
+            </div>
+=======
         <div class="exploit-surfacewater mb-2">
             <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">Điền biểu mẫu file Excel</p>
             <input type="hidden" id="url__xu__ly__upload__excel" value="{{route('xu-ly-upload-excel-giay-phep-nuoc-mat')}}">
@@ -48,8 +59,30 @@
                     <input type="submit" class="btn btn-success" value="Xác Nhận">
                 </div>
             </form> 
+>>>>>>> 250cf6195f864f32358082642e7e76fec1fe627e
         </div>
-        <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data">
+        <form action="" id="form-upload-surfacewater-license" class=" col-12 mb-1 my-1 exploit-surfacewater">
+            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 my-md-2 align-items-center justify-content-end justify-content-md-start">
+                <span class="col-md-4 font-13 pl-0">Kiểu công trình</span>
+                <select name="select-construction-type" class="font-13 py-1 mr-2" id="select-construction-type">
+                    <option value="">Chọn loại công trình</option>
+                    <option value="1">Thủy điện</option>
+                    <option value="2">Thủy lợi</option>
+                    <option value="3">Công trình khác</option>
+                </select>
+                <button class="btn btn-info font-13">Tải file mẫu</button>
+            </div>
+            <span><i>Sau khi tải file mẫu, người dùng nhập dữ liệu vào file excel theo đúng định dạng và thực hiện tải lên dưới đây</i></span>
+            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 my-md-2 align-items-center justify-content-end justify-content-md-start">
+                <span class="col-md-4 font-13 pl-0">File excel (.xls, .xlsx)</span>
+                <input type="file" class="font-13" name="upload-surfacewater-license">
+            </div>
+            <div class="col-md-12 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 my-md-2 align-items-center justify-content-end justify-content-md-start">
+                <span class="col-md-4 font-13 px-0"></span>
+                <input type="submit" class="font-13 btn btn-success" value="Xác nhận">
+            </div>
+        </form>
+        <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" class="" method="POST" enctype="multipart/form-data" id="form-create-surfacewater-license">
         {{ csrf_field() }}
             <div class="exploit-surfacewater mb-2">
                 <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">Tên tổ chức cá nhân đề nghị cấp phép</p>
@@ -554,6 +587,21 @@
                 contentType: false,
                 processData: false
             });
+<<<<<<< HEAD
+            
+            $("#entry-method").on('change',function(){
+                if($(this).val() == 'form-create-surfacewater-license'){
+                    $('#form-create-surfacewater-license').show();
+                    $('#form-upload-surfacewater-license').hide();
+                }
+                else if($(this).val() == 'form-upload-surfacewater-license'){
+                    $('#form-upload-surfacewater-license').show();
+                    $('#form-create-surfacewater-license').hide();
+                }
+                
+            });
+=======
+>>>>>>> 250cf6195f864f32358082642e7e76fec1fe627e
         });
     </script>
 </main>

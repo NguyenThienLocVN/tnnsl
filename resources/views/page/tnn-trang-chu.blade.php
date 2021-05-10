@@ -76,15 +76,19 @@
                 </a>
                 <a href="{{route('dang-ky')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_DANGKY.png')}}" alt="dang-ky">
-                    <p class="grid-item-text font-weight-bold">Đăng ký / Kết nối</p>
+                    <p class="grid-item-text font-weight-bold">Đăng ký</p>
                 </a>
             </div>
         </div>
         <div class="d-flex flex-column flex-md-row flex-lg-column">
-            <div class="col-12 px-0 pt-3 pb-0 d-flex justify-content-center">
+            <div class="col-12 px-0 pt-3 pb-0 d-flex">
                 <div class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HUONGDANQUYDINH.png')}}" alt="huong-dan-quy-dinh">
                     <p class="grid-item-text font-weight-bold">Hướng dẫn quy định</p>
+                </div>
+                <div class="col-6 text-center">
+                    <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_YEUCAUKETNOI.png')}}" alt="yeu-cau-ket-noi">
+                    <p class="grid-item-text font-weight-bold">Yêu cầu kết nối</p>
                 </div>
             </div>
         </div>
