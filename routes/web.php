@@ -82,7 +82,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('chi-tiet/nuoc-mat/xem-tat-ca/cong-trinh-khac', 'App\Http\Controllers\SurfaceWaterConstructionsController@viewAllPumpConstruction')->name('nuoc-mat-xem-tat-ca-cong-trinh-khac');
 
         Route::get('nuoc-mat/cong-trinh-dau-moi', function () {
-            return view('page.quan-ly-cap-phep.nuoc-mat.cong-trinh-dau-moi');
+            return view('page.quan-ly-cap-phep.nuoc-mat.tao-moi.cong-trinh-dau-moi');
         })->name('nuoc-mat-cong-trinh-dau-moi');
 
         Route::get('chi-tiet/nuoc-mat/{id}', 'App\Http\Controllers\SurfaceWaterConstructionsController@surfacewaterConstructionInfo')->name('quan-ly-cap-phep-nuoc-mat');

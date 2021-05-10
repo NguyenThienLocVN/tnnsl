@@ -102,22 +102,22 @@ class SurfaceWaterConstructionsController extends Controller
         $hydroConstruction = SurfaceWaterConstructions::where('construction_type',1)->paginate(10);
         $irrigationConstruction = SurfaceWaterConstructions::where('construction_type',2)->paginate(10);
         $pumpConstruction = SurfaceWaterConstructions::where('construction_type',3)->paginate(10);
-        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca-gp', ['constructions' => $constructions, 'hydroConstruction' => $hydroConstruction, 'irrigationConstruction' => $irrigationConstruction, 'pumpConstruction' => $pumpConstruction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca.gp', ['constructions' => $constructions, 'hydroConstruction' => $hydroConstruction, 'irrigationConstruction' => $irrigationConstruction, 'pumpConstruction' => $pumpConstruction]);
     }
 
     public function viewAllHydroConstruction(){
         $hydroConstruction = SurfaceWaterConstructions::where('construction_type',1)->paginate(10);
-        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca-thuy-dien', ['hydroConstruction' => $hydroConstruction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca.thuy-dien', ['hydroConstruction' => $hydroConstruction]);
     }
 
     public function viewAllIrrigationConstruction(){
         $irrigationConstruction = SurfaceWaterConstructions::where('construction_type',2)->paginate(10);
-        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca-thuy-loi', ['irrigationConstruction' => $irrigationConstruction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca.thuy-loi', ['irrigationConstruction' => $irrigationConstruction]);
     }
 
     public function viewAllPumpConstruction(){
         $pumpConstruction = SurfaceWaterConstructions::where('construction_type',3)->paginate(10);
-        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca-cong-trinh-khac', ['pumpConstruction' => $pumpConstruction]);
+        return view('page.quan-ly-cap-phep.nuoc-mat.xem-tat-ca.cong-trinh-khac', ['pumpConstruction' => $pumpConstruction]);
     }
 
     public function doCreateSurfacewaterLicense(Request $request)

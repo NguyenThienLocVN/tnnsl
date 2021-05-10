@@ -1,14 +1,4 @@
-@extends('layout.base')
-@section('title', 'Thông tin kỹ thuật công trình đầu mối - Nước mặt | Quản lý cấp phép')
 
-@push('custom-style')
-    <link rel="stylesheet" href="{{asset('public/TNN_QUAN_LY_CAP_PHEP/css/tnn-quan-ly-cap-phep.css')}}">
-    <link rel="stylesheet" href="{{asset('public/css/styles.css')}}">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-@endpush
-
-@section('content')
         <form id="form">
             <!-- Ten cong trinh -->
             <div class="exploit-surfacewater mb-2">
@@ -315,5 +305,3 @@
             })
 
     </script>
-</main>
-@endsection

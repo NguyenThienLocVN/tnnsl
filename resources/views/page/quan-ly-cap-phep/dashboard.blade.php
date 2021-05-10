@@ -26,120 +26,130 @@
     <div class="col-12 col-lg-4 pb-3 pb-lg-0 px-md-0" id="surfacewater-usage">
         <div class="col-11 pb-3 mx-auto my-3 rounded text-white px-0 bg-info">
             <p class="bg-primary rounded p-2 font-weight font-weight-bold text-center">NƯỚC MẶT</p>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Giấy phép: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Sắp hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa phê duyệt: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa có giấy phép thay thế: </p>
-                <p class="col-3">100</p>
+            <div class="p-2">
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Giấy phép: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Sắp hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa phê duyệt: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa có giấy phép thay thế: </p>
+                    <p class="col-3">100</p>
+                </div>
             </div>
         </div>
         <div class="col-11 pb-3 mx-auto my-3 rounded text-white px-0 bg-success">
             <p class="exploit-surfacewater-title rounded p-2 font-weight-bold text-center">XẢ THẢI VÀO NGUỒN NƯỚC</p>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Giấy phép: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Sắp hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa phê duyệt: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa có giấy phép thay thế: </p>
-                <p class="col-3">100</p>
+            <div class="p-2">
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Giấy phép: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Sắp hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa phê duyệt: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa có giấy phép thay thế: </p>
+                    <p class="col-3">100</p>
+                </div>
             </div>
         </div>
         <div class="col-11 pb-3 mx-auto my-3 rounded text-white px-0 bg-warning">
             <p class="exploit-surfacewater-title rounded p-2 font-weight-bold text-center">KHAI THÁC NƯỚC DƯỚI ĐẤT</p>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Giấy phép: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Sắp hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa phê duyệt: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa có giấy phép thay thế: </p>
-                <p class="col-3">100</p>
+            <div class="p-2">
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Giấy phép: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Sắp hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa phê duyệt: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa có giấy phép thay thế: </p>
+                    <p class="col-3">100</p>
+                </div>
             </div>
         </div>
         <div class="col-11 pb-3 mx-auto my-3 rounded text-white px-0 bg-danger">
             <p class="exploit-surfacewater-title rounded p-2 font-weight-bold text-center">THĂM DÒ NƯỚC DƯỚI ĐẤT</p>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Giấy phép: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Sắp hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa phê duyệt: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa có giấy phép thay thế: </p>
-                <p class="col-3">100</p>
+            <div class="p-2">
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Giấy phép: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Sắp hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa phê duyệt: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa có giấy phép thay thế: </p>
+                    <p class="col-3">100</p>
+                </div>
             </div>
         </div>
         <div class="col-11 pb-3 mx-auto my-3 rounded text-white px-0 bg-secondary">
             <p class="exploit-surfacewater-title rounded p-2 font-weight-bold text-center">HÀNH NGHỀ</p>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Giấy phép: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Sắp hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Hết hiệu lực: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa phê duyệt: </p>
-                <p class="col-3">100</p>
-            </div>
-            <div class="font-weight-bold col-12 d-flex">
-                <p class="col-9">Chưa có giấy phép thay thế: </p>
-                <p class="col-3">100</p>
+            <div class="p-2">
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Giấy phép: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Sắp hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Hết hiệu lực: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa phê duyệt: </p>
+                    <p class="col-3">100</p>
+                </div>
+                <div class="font-weight-bold col-12 d-flex">
+                    <p class="col-9">Chưa có giấy phép thay thế: </p>
+                    <p class="col-3">100</p>
+                </div>
             </div>
         </div>
-        <a href="{{route('quan-ly-cap-phep-chi-tiet')}}" class="btn btn-sm btn-outline-primary mb-4">Xem chi tiết</a>
+        <div class="col-11 mx-auto"><a href="{{route('quan-ly-cap-phep-chi-tiet')}}" class="btn btn-sm btn-outline-primary mb-4">Xem chi tiết</a></div>
         
         <!-- Ket thuc khai thac su dung nuoc mat -->
     </div>
