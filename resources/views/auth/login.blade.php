@@ -60,7 +60,7 @@
             </div>
             <div class="text-center mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 font-13 font-weight-bold" href="{{ route('password.request') }}">
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900 font-13 fw-bold" href="{{ route('password.request') }}">
                         {{ __('Quên mật khẩu?') }}
                     </a>
                 @endif

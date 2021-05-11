@@ -1,5 +1,5 @@
 <div class="col-md-12 p-0 so-lieu-quan-trac-mua-content">
-    <p class="col-12 py-1 monitoring-object-title font-weight-bold mb-2">Số liệu quan trắc mưa (mm)</p>
+    <p class="col-12 py-1 monitoring-object-title fw-bold mb-2">Số liệu quan trắc mưa (mm)</p>
     <div class="d-flex justify-content-between my-2 font-13">
         <!-- chon luu vuc -->
         <div class="col-md-6">

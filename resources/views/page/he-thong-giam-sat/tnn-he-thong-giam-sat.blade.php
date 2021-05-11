@@ -14,13 +14,13 @@
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="{{url('/')}}" title="Về trang tài nguyên nước" class="font-weight-bold text-white d-block btn-home-top pl-2 pt-2 pt-md-0 px-2" id="btn_back_page"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+            <a href="{{url('/')}}" title="Về trang tài nguyên nước" class="fw-bold text-white d-block btn-home-top pl-2 pt-2 pt-md-0 px-2" id="btn_back_page"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
 			<div class="d-flex">
-				<div class="font-weight-bold text-white d-block pl-2 border-left">HỆ THỐNG GIÁM SÁT</div>
+				<div class="fw-bold text-white d-block pl-2 border-left">HỆ THỐNG GIÁM SÁT</div>
 			</div>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
-            <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
+            <span class="text-primary fw-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
@@ -28,11 +28,11 @@
     <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-md-0 monitoring-system" id="monitoring-system">
 		<!-- Doi tuong giam sat -->
         <div class="monitoring-object pb-2">
-          	<p class="col-12 py-1 monitoring-object-title font-weight-bold mb-2">Đối tượng giám sát</p>
+          	<p class="col-12 py-1 monitoring-object-title fw-bold mb-2">Đối tượng giám sát</p>
           	<div class="monitoring-object-content">
 				<div class="d-flex mb-1 align-items-center">
 					<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_NUOCMAT.png')}}" alt="ANH_NUOCMAT" class="col-1 py-0 pl-0 pr-2 h-100">
-					<span class="font-weight-bold col-3 p-0 font-13 mr-1">NƯỚC MẶT</span>
+					<span class="fw-bold col-3 p-0 font-13 mr-1">NƯỚC MẶT</span>
 					<div class="text-center w-100">
 						<span>Loại công trình</span>
 						<select name="construction" class="facewater-construction-select construction-select" id="facewater-construction-select">
@@ -52,7 +52,7 @@
 				</div>
 				<div class="d-flex align-items-center">
 					<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_NUOCDUOIDAT.png')}}" alt="ANH_NUOCDUOIDAT" class="col-1 py-0 pl-0 pr-2 h-100">
-					<span class="font-weight-bold col-3 p-0 font-13 mr-1">NƯỚC DƯỚI ĐẤT</span>
+					<span class="fw-bold col-3 p-0 font-13 mr-1">NƯỚC DƯỚI ĐẤT</span>
 					<div class="text-center w-100">
 						<span>Loại công trình</span>
 						<select name="" class="facewater-construction-select construction-select" id="facewater-construction-select">
@@ -76,15 +76,15 @@
 
 		<!-- So lieu quan trac -->
 		<div class="observed-data pb-2">
-			<p class="col-12 py-1 observed-data-title font-weight-bold mb-1">Số liệu quan trắc, vận hành</p>
+			<p class="col-12 py-1 observed-data-title fw-bold mb-1">Số liệu quan trắc, vận hành</p>
 			<div class="observed-data-content font-13">
 				<div class="d-flex col-12 pl-0 observed-data-content-row mb-1">
 					<div class="col-3 grid-item d-flex flex-column px-1" id="mua">
 						<p class="text-center mb-1">MƯA</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span class="count_rain_stations">{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Trạm</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span class="count_rain_stations">{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Trạm</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_MUA.png')}}" class="w-100" alt="ANH_MUA">
@@ -95,8 +95,8 @@
 						<p class="text-center mb-1">MỰC NƯỚC</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span class="count_rain_stations">{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span class="count_rain_stations">{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_MUCNUOC.png')}}" class="w-100" alt="ANH_MUCNUOC">
@@ -107,8 +107,8 @@
 						<p class="text-center mb-1">Q<sub>đến</sub> (m<sup>3</sup>/s)</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span class="count_rain_stations">{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span class="count_rain_stations">{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QDEN.png')}}" class="w-100" alt="ANH_QDEN">
@@ -119,8 +119,8 @@
 						<p class="text-center mb-1">Q<sub>xả</sub> (m<sup>3</sup>/s)</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span class="count_rain_stations">{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span class="count_rain_stations">{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QXA.png')}}" class="w-100" alt="ANH_QXA">
@@ -133,8 +133,8 @@
 						<p class="text-center mb-1">Q<sub>tối thiểu</sub> (m<sup>3</sup>/s)</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Trạm</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Trạm</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QTOITHIEU.png')}}" class="w-100" alt="ANH_QTOITHIEU">
@@ -145,8 +145,8 @@
 						<p class="text-center mb-1">Chất lượng nước</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_CHATLUONGNUOC.png')}}" class="w-100" alt="ANH_CHATLUONGNUOC">
@@ -157,8 +157,8 @@
 						<p class="text-center mb-1">Mực nước trong giếng quan trắc</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_MUCNUOCGIENG.png')}}" class="w-100" alt="ANH_MUCNUOCGIENG">
@@ -169,8 +169,8 @@
 						<p class="text-center mb-1">Lưu lượng khai thác NDD</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_LUULUONGKHAITHACNUOCDUOIDAT.png')}}" class="w-100" alt="ANH_LUULUONGKHAITHACNUOCDUOIDAT">
@@ -184,15 +184,15 @@
 
 		<!-- Thong tin giam sat -->
 		<div class="observed-info pb-2">
-			<p class="col-12 py-1 observed-info-title font-weight-bold mb-1">Thông tin tổng hợp tình hình giám sát</p>
+			<p class="col-12 py-1 observed-info-title fw-bold mb-1">Thông tin tổng hợp tình hình giám sát</p>
 			<div class="observed-info-content font-13">
 				<div class="d-flex col-12 pl-0 observed-info-content-row mb-1">
 					<div class="col-3 grid-item d-flex flex-column px-1">
 						<p class="text-center mb-1">Camera</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_CAMERA.png')}}" class="w-100" alt="ANH_CAMERA">
@@ -203,8 +203,8 @@
 						<p class="text-center mb-1">Trực tuyến</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_TRUCTUYEN.png')}}" class="w-100" alt="ANH_TRUCTUYEN">
@@ -215,8 +215,8 @@
 						<p class="text-center mb-1">Định kỳ</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_DINHKY.png')}}" class="w-100" alt="ANH_DINHKY">
@@ -227,8 +227,8 @@
 						<p class="text-center mb-1">Hình ảnh</p>
 						<div class="d-flex align-items-center">
 							<div class="col-6 p-0">
-								<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-								<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+								<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+								<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 							</div>
 							<div class="col-6 p-0">
 								<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_HINHANH.png')}}" class="w-100" alt="ANH_HINHANH">
@@ -244,15 +244,15 @@
 		<div class="observed-for-electric pb-2 d-flex">
 			<div class="col-6 pl-0 pr-1">
 				<!-- Giam sat ho chua de phat dien -->
-				<p class="col-12 py-1 px-1 text-center observed-for-electric-title font-weight-bold mb-1 font-14">Giám sát hồ chứa để phát điện</p>
+				<p class="col-12 py-1 px-1 text-center observed-for-electric-title fw-bold mb-1 font-14">Giám sát hồ chứa để phát điện</p>
 				<div class="observed-for-electric-content font-13">
 					<div class="d-flex col-12 pl-0 pr-1 observed-for-electric-content-row mb-1">
 						<div class="col-6 grid-item d-flex flex-column px-1">
 							<p class="text-center mb-1">Mực nước</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_MUCNUOC.png')}}" class="w-100" alt="ANH_MUCNUOC">
@@ -263,8 +263,8 @@
 							<p class="text-center mb-1">Q<sub>xả</sub> tối thiểu</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QXATOITHIEU.png')}}" class="w-100" alt="ANH_QXATOITHIEU">
@@ -277,8 +277,8 @@
 							<p class="text-center mb-1">Q<sub>xả</sub> qua nhà máy</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QXANHAMAY.png')}}" class="w-100" alt="ANH_QXANHAMAY">
@@ -289,8 +289,8 @@
 							<p class="text-center mb-1">Q<sub>xả</sub> tràn</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QXATRAN.png')}}" class="w-100" alt="ANH_QXATRAN">
@@ -303,15 +303,15 @@
 
 			<!-- Giam sat ho chua de sxnn -->
 			<div class="col-6 p-0 ">
-				<p class="col-12 py-1 px-1 text-center observed-for-electric-title font-weight-bold mb-1 font-14">Giám sát hồ chứa để SXNN</p>
+				<p class="col-12 py-1 px-1 text-center observed-for-electric-title fw-bold mb-1 font-14">Giám sát hồ chứa để SXNN</p>
 				<div class="observed-for-electric-content font-13">
 					<div class="d-flex col-12 pl-0 pr-1 observed-for-electric-content-row mb-1">
 						<div class="col-6 grid-item d-flex flex-column px-1">
 							<p class="text-center mb-1">Mực nước</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_MUCNUOC.png')}}" class="w-100" alt="ANH_MUCNUOC">
@@ -322,8 +322,8 @@
 							<p class="text-center mb-1">Q<sub>xả</sub> tối thiểu</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QXATOITHIEU.png')}}" class="w-100" alt="ANH_QXATOITHIEU">
@@ -336,8 +336,8 @@
 							<p class="text-center mb-1">Q<sub>khai thác</sub> </p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QKHAITHAC.png')}}" class="w-100" alt="ANH_QKHAITHAC">
@@ -348,8 +348,8 @@
 							<p class="text-center mb-1">CLN khai thác</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">Hồ</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">Hồ</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_CLNSXNN.png')}}" class="w-100" alt="ANH_CLNSXNN">
@@ -364,15 +364,15 @@
 		<!-- Giam sat cong trinh khac -->
 		<div class="observed-for-electric pb-2 d-flex">
 			<div class="col-5 pl-0 pr-1">
-				<p class="col-12 py-1 px-1 text-center observed-for-electric-title font-weight-bold mb-1 font-14">Giám sát công trình khác</p>
+				<p class="col-12 py-1 px-1 text-center observed-for-electric-title fw-bold mb-1 font-14">Giám sát công trình khác</p>
 				<div class="observed-for-electric-content font-13">
 					<div class="d-flex col-12 pl-0 pr-1 observed-for-electric-content-row mb-1">
 						<div class="col-6 grid-item d-flex flex-column px-1">
 							<p class="text-center mb-1">Q<sub>khai thác</sub></p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QKHAITHACKHAC.png')}}" class="w-100" alt="ANH_QKHAITHACKHAC">
@@ -383,8 +383,8 @@
 							<p class="text-center mb-1">CLN khai thác</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_CLNKHAITHAC.png')}}" class="w-100" alt="ANH_CLNKHAITHAC">
@@ -397,15 +397,15 @@
 
 			<!-- Giam sat khai thac nuoc duoi dat -->
 			<div class="col-7 p-0 ">
-				<p class="col-12 py-1 px-1 text-center observed-for-electric-title font-weight-bold mb-1 font-14">Giám sát khai thác NDD</p>
+				<p class="col-12 py-1 px-1 text-center observed-for-electric-title fw-bold mb-1 font-14">Giám sát khai thác NDD</p>
 				<div class="observed-for-electric-content font-13">
 					<div class="d-flex col-12 pl-0 pr-2 observed-for-electric-content-row mb-1">
 						<div class="col-4 grid-item d-flex flex-column px-1">
 							<p class="text-center mb-1">Q<sub>khai thác</sub></p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_QKHAITHACNDD.png')}}" class="w-100" alt="ANH_QKHAITHACNDD">
@@ -416,8 +416,8 @@
 							<p class="text-center mb-1">Mực nước</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_MUCNUOCGIENG.png')}}" class="w-100" alt="ANH_MUCNUOCGIENG">
@@ -428,8 +428,8 @@
 							<p class="text-center mb-1">CLN k/thác</p>
 							<div class="d-flex align-items-center">
 								<div class="col-6 p-0">
-									<p class="text-center font-13 font-weight-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
-									<p class="font-weight-bold text-danger text-center mb-1">CT</p>
+									<p class="text-center font-13 fw-bold m-0 text-success"><span>0</span>/<span>{{$count_all_rain_stations}}</span></p>
+									<p class="fw-bold text-danger text-center mb-1">CT</p>
 								</div>
 								<div class="col-6 p-0">
 									<img src="{{asset('public/TNN_HE_THONG_GIAM_SAT/image/ANH_CLNNDD.png')}}" class="w-100" alt="ANH_CLNNDD">
@@ -453,7 +453,7 @@
         <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{'public/TNN_TRANG_CHU/image/ANH_DOKHOANGCACH.png'}}" alt="do-khoang-cach">
         <div class="position-absolute map-layers d-flex align-items-center" id="map-layers" title="Chọn lớp bản đồ">
             <img src="{{'public/TNN_TRANG_CHU/image/ANH_LOPBANDO.png'}}" alt="lop-ban-do">
-            <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
+            <span class="fw-bold">&nbsp; Lớp bản đồ</span>
         </div>
 		<div class="position-absolute map-panel-layers align-items-center text-white" id="map-panel-layers">
                 <ul class="p-2 m-0">
@@ -466,7 +466,7 @@
             </div>
         <div class="position-absolute map-note d-flex align-items-center">
             <img src="{{'public/TNN_TRANG_CHU/image/ANH_CHUGIAIBANDO.png'}}" alt="chu-giai-ban-do">
-            <span class="font-weight-bold">&nbsp; Chú giải</span>
+            <span class="fw-bold">&nbsp; Chú giải</span>
         </div>
       </div>
     </div>

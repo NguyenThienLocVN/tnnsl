@@ -16,7 +16,7 @@
         </div>
         <div class="bg-lightgray col-lg-6 col-sm-12 col-md-6 text-center py-1 py-lg-0">
             <div class="p-0 text-center">
-                <h6 class="text-primary font-weight-bold d-block py-2">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </h6>
+                <h6 class="text-primary fw-bold d-block py-2">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </h6>
             </div>
             @if ($errors->any())
                 <div class="col-sm-12 p-0">
@@ -30,7 +30,7 @@
             <form method="POST" action="{{ route('register') }}">
             @csrf
                 <div class="d-flex align-items-center">
-                    <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Đối tượng <span class="text-danger">*</span></p>
+                    <p class="col-4 p-0 m-0 fw-bold text-left font-14">Đối tượng <span class="text-danger">*</span></p>
                     <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                         <div class="col-6">
                             <label class="m-0 font-14" for="">Tổ chức </label>
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="d-flex align-items-center">
-                    <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Tên đăng nhập <span class="text-danger">*</span></p>
+                    <p class="col-4 p-0 m-0 fw-bold text-left font-14">Tên đăng nhập <span class="text-danger">*</span></p>
                     <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user" aria-hidden="true"></i></span>
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="d-flex align-items-center">
-                    <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Mật khẩu <span class="text-danger">*</span></p>
+                    <p class="col-4 p-0 m-0 fw-bold text-left font-14">Mật khẩu <span class="text-danger">*</span></p>
                     <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-lock" aria-hidden="true"></i></span>
@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="d-flex align-items-center">
-                    <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Tên doanh nghiệp <span class="text-danger">*</span></p>
+                    <p class="col-4 p-0 m-0 fw-bold text-left font-14">Tên doanh nghiệp <span class="text-danger">*</span></p>
                     <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
@@ -74,7 +74,7 @@
                 </div>
 
                 <div class="d-flex align-items-center">
-                    <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Mã doanh nghiệp</p>
+                    <p class="col-4 p-0 m-0 fw-bold text-left font-14">Mã doanh nghiệp</p>
                     <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-university" aria-hidden="true"></i></span>
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="d-flex align-items-center">
-                    <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Địa chỉ <span class="text-danger">*</span></p>
+                    <p class="col-4 p-0 m-0 fw-bold text-left font-14">Địa chỉ <span class="text-danger">*</span></p>
                     <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-map-marker" aria-hidden="true"></i></span>
@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="d-flex align-items-center">
-                    <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Trụ sở chính</p>
+                    <p class="col-4 p-0 m-0 fw-bold text-left font-14">Trụ sở chính</p>
                     <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-building" aria-hidden="true"></i></span>
@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="d-flex align-items-center">
-                    <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Số điện thoại <span class="text-danger">*</span></p>
+                    <p class="col-4 p-0 m-0 fw-bold text-left font-14">Số điện thoại <span class="text-danger">*</span></p>
                     <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-phone" aria-hidden="true"></i></span>
@@ -114,7 +114,7 @@
                 </div>
 
                 <div class="d-flex align-items-center">
-                    <p class="col-4 p-0 m-0 font-weight-bold text-left font-14">Email <span class="text-danger">*</span></p>
+                    <p class="col-4 p-0 m-0 fw-bold text-left font-14">Email <span class="text-danger">*</span></p>
                     <div class="col-8 d-flex pr-0 form-group input-group mb-1">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-envelope" aria-hidden="true"></i></span>

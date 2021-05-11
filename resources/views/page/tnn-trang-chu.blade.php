@@ -13,11 +13,11 @@
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-4 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="http://tainguyenmoitruongsonla.vn" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-home" aria-hidden="true"></i></a>
-            <div class="font-weight-bold text-white d-block pl-2"> TÀI NGUYÊN NƯỚC</div>
+            <a href="http://tainguyenmoitruongsonla.vn" title="Về trang chủ" class="fw-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <div class="fw-bold text-white d-block pl-2"> TÀI NGUYÊN NƯỚC</div>
         </div>
         <div class="bg-lightgray col-lg-8 col-sm-12 col-md-12 text-center py-1 py-lg-0">
-            <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
+            <span class="text-primary fw-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
@@ -25,7 +25,7 @@
     <div class="col-12 col-lg-4 px-md-0 menu-home">
         @if(Auth::user())
             <div class="d-flex auth-bar pl-2 justify-content-between align-items-center">
-                <span class="font-weight-bold p-0">Xin chào, {{ Auth::user()->name }}</span>
+                <span class="fw-bold p-0">Xin chào, {{ Auth::user()->name }}</span>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <x-jet-dropdown-link href="{{ route('logout') }}"
@@ -40,21 +40,21 @@
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
                 <a href="{{url('thong-tin-chung')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGTINCHUNG.png')}}" alt="thong-tin-chung">
-                    <p class="grid-item-text font-weight-bold">Giới thiệu chung</p>
+                    <p class="grid-item-text fw-bold">Giới thiệu chung</p>
                 </a>
                 <div class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYDULIEU.png')}}" alt="quan-ly-du-lieu">
-                    <p class="grid-item-text font-weight-bold">Thông tin dữ liệu</p>
+                    <p class="grid-item-text fw-bold">Thông tin dữ liệu</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
                 <div class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HETHONGQUANTRAC.png')}}" alt="he-thong-quan-trac">
-                    <p class="grid-item-text font-weight-bold">Hệ thống quan trắc</p>
+                    <p class="grid-item-text fw-bold">Hệ thống quan trắc</p>
                 </div>
                 <div class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_THONGBAO.png')}}" alt="thong-bao">
-                    <p class="grid-item-text font-weight-bold">Thông báo</p>
+                    <p class="grid-item-text fw-bold">Thông báo</p>
                 </div>
             </div>
         </div>
@@ -62,21 +62,21 @@
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
                 <a href="{{url('he-thong-giam-sat')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HETHONGGIAMSAT.png')}}" alt="he-thong-giam-sat">
-                    <p class="grid-item-text font-weight-bold">Hệ thống giám sát</p>
+                    <p class="grid-item-text fw-bold">Hệ thống giám sát</p>
                 </a>
                 <a href="{{route('bao-cao-bieu-mau')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_BIEUMAUBAOCAO.png')}}" alt="bieu-mau">
-                    <p class="grid-item-text font-weight-bold">Báo cáo biểu mẫu</p>
+                    <p class="grid-item-text fw-bold">Báo cáo biểu mẫu</p>
                 </a>
             </div>
             <div class="col-12 col-md-6 col-lg-12 px-0 pt-3 pb-0 d-flex">
                 <a href="{{url('quan-ly-cap-phep')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_QUANLYCAPPHEP.png')}}" alt="cap-phep">
-                    <p class="grid-item-text font-weight-bold">Quản lý cấp phép</p>
+                    <p class="grid-item-text fw-bold">Quản lý cấp phép</p>
                 </a>
                 <a href="{{route('dang-ky')}}" class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_DANGKY.png')}}" alt="dang-ky">
-                    <p class="grid-item-text font-weight-bold">Đăng ký</p>
+                    <p class="grid-item-text fw-bold">Đăng ký</p>
                 </a>
             </div>
         </div>
@@ -84,11 +84,11 @@
             <div class="col-12 px-0 pt-3 pb-0 d-flex">
                 <div class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_HUONGDANQUYDINH.png')}}" alt="huong-dan-quy-dinh">
-                    <p class="grid-item-text font-weight-bold">Hướng dẫn quy định</p>
+                    <p class="grid-item-text fw-bold">Hướng dẫn quy định</p>
                 </div>
                 <div class="col-6 text-center">
                     <img class="grid-item-image" src="{{asset('public/TNN_TRANG_CHU/image/ANH_YEUCAUKETNOI.png')}}" alt="yeu-cau-ket-noi">
-                    <p class="grid-item-text font-weight-bold">Yêu cầu kết nối</p>
+                    <p class="grid-item-text fw-bold">Yêu cầu kết nối</p>
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@
             <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{'public/TNN_TRANG_CHU/image/ANH_DOKHOANGCACH.png'}}" alt="do-khoang-cach">
             <div class="position-absolute map-layers d-flex align-items-center" id="map-layers" title="Chọn lớp bản đồ">
                 <img src="{{'public/TNN_TRANG_CHU/image/ANH_LOPBANDO.png'}}" alt="lop-ban-do">
-                <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
+                <span class="fw-bold">&nbsp; Lớp bản đồ</span>
             </div>
             <div class="position-absolute map-panel-layers align-items-center text-white" id="map-panel-layers">
                 <ul class="p-2 m-0">
@@ -118,7 +118,7 @@
             </div>
             <div class="position-absolute map-note d-flex align-items-center">
                 <img src="{{'public/TNN_TRANG_CHU/image/ANH_CHUGIAIBANDO.png'}}" alt="chu-giai-ban-do">
-                <span class="font-weight-bold">&nbsp; Chú giải</span>
+                <span class="fw-bold">&nbsp; Chú giải</span>
             </div>
         </div>
     </div>

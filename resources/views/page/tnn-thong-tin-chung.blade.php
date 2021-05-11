@@ -11,11 +11,11 @@
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="{{url('/')}}" title="Về trang chủ" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <a href="{{route('thong-tin-chung')}}" class="font-weight-bold text-white d-block pl-2">&nbsp; GIỚI THIỆU CHUNG</a>
+            <a href="{{url('/')}}" title="Về trang chủ" class="fw-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+            <a href="{{route('thong-tin-chung')}}" class="fw-bold text-white d-block pl-2">&nbsp; GIỚI THIỆU CHUNG</a>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-lg-0">
-            <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
+            <span class="text-primary fw-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
@@ -66,7 +66,7 @@
             <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_DOKHOANGCACH.png'}}" alt="do-khoang-cach">
             <div class="position-absolute map-layers d-flex align-items-center" id="map-layers" title="Chọn lớp bản đồ">
                 <img src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_LOPBANDO.png'}}" alt="lop-ban-do">
-                <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
+                <span class="fw-bold">&nbsp; Lớp bản đồ</span>
             </div>
             <div class="position-absolute map-panel-layers align-items-center text-white" id="map-panel-layers">
                 <ul class="p-2 m-0">
@@ -79,7 +79,7 @@
             </div>
             <div class="position-absolute map-note d-flex align-items-center">
                 <img src="{{'public/TNN_GIOI_THIEU_CHUNG/image/ANH_CHUGIAIBANDO.png'}}" alt="chu-giai-ban-do">
-                <span class="font-weight-bold">&nbsp; Chú giải</span>
+                <span class="fw-bold">&nbsp; Chú giải</span>
             </div>
         </div>
     </div>

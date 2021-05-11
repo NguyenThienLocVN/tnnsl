@@ -35,24 +35,24 @@
     <main>
         <div class="col-12 d-flex p-0 bg-primary">
             <div class="col-6 px-0 d-flex align-items-center">
-                <a href="{{route('quan-ly-cap-phep')}}" title="Về trang quản lý cấp phép" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0 mr-2"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-                <span class="font-weight-bold text-white"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp; XEM / XÉT DUYỆT CẤP PHÉP NƯỚC MẶT</span>
+                <a href="{{route('quan-ly-cap-phep')}}" title="Về trang quản lý cấp phép" class="fw-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0 mr-2"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+                <span class="fw-bold text-white"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp; XEM / XÉT DUYỆT CẤP PHÉP NƯỚC MẶT</span>
             </div>
         </div>
         <div class="container-table p-2">
             <!-- Tab panes -->
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                <a class="nav-link font-weight-bold active" href="#">TẤT CẢ</a>
+                <a class="nav-link fw-bold active" href="#">TẤT CẢ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="#">THỦY ĐIỆN</a>
+                    <a class="nav-link fw-bold" href="#">THỦY ĐIỆN</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link font-weight-bold" href="#">THỦY LỢI</a>
+                <a class="nav-link fw-bold" href="#">THỦY LỢI</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link font-weight-bold" href="#">CÔNG TRÌNH KHÁC</a>
+                <a class="nav-link fw-bold" href="#">CÔNG TRÌNH KHÁC</a>
                 </li>
             </ul>
             <div class="tab-content">

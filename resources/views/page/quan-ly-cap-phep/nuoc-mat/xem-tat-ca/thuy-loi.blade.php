@@ -36,8 +36,8 @@
         <div class="col-12 d-flex align-items-center p-2 surfacewater-usage-title bg-primary">
             <div class="col-6 d-flex p-0">
                 <div class="col-6 px-0 d-flex align-items-center">
-                    <a href="{{route('quan-ly-cap-phep')}}" title="Về trang quản lý cấp phép" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0 mr-2"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-                    <span class="font-weight-bold text-white"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp; QUẢN LÝ CẤP PHÉP NƯỚC MẶT</span>
+                    <a href="{{route('quan-ly-cap-phep')}}" title="Về trang quản lý cấp phép" class="fw-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0 mr-2"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+                    <span class="fw-bold text-white"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp; QUẢN LÝ CẤP PHÉP NƯỚC MẶT</span>
                 </div>
             </div>
             <div class="col-6 px-0 text-right">
@@ -48,16 +48,16 @@
         <div class="container-table p-2">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="{{route('nuoc-mat-xem-tat-ca')}}">TẤT CẢ</a>
+                    <a class="nav-link fw-bold" href="{{route('nuoc-mat-xem-tat-ca')}}">TẤT CẢ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link font-weight-bold " href="{{route('nuoc-mat-xem-tat-ca-thuy-dien')}}">THỦY ĐIỆN</a>
+                    <a class="nav-link fw-bold " href="{{route('nuoc-mat-xem-tat-ca-thuy-dien')}}">THỦY ĐIỆN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link font-weight-bold active" href="{{route('nuoc-mat-xem-tat-ca-thuy-loi')}}">THỦY LỢI</a>
+                    <a class="nav-link fw-bold active" href="{{route('nuoc-mat-xem-tat-ca-thuy-loi')}}">THỦY LỢI</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="{{route('nuoc-mat-xem-tat-ca-cong-trinh-khac')}}">CÔNG TRÌNH KHÁC</a>
+                    <a class="nav-link fw-bold" href="{{route('nuoc-mat-xem-tat-ca-cong-trinh-khac')}}">CÔNG TRÌNH KHÁC</a>
                 </li>
             </ul>
             <!-- Tab panes -->

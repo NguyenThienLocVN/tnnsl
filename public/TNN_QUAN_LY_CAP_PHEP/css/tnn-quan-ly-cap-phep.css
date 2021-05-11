@@ -5,7 +5,8 @@
 #total-dams { top: 12px; left: 32px; }
 .surfacewater-usage, .discharge-water, .construction-info, .exploit-surfacewater, .information-about-license-owner-title, #wastewater-wrap { border: 1px solid #d5e6fb; }
 .exploit-surfacewater span { line-height: initial; }
-#surfacewater-usage { overflow-y: auto; height: calc(100vh - 156px); }
+#surfacewater-usage { overflow-y: auto; height: 100vh;}
+.table_overflow{overflow-y: auto;}
 .surfacewater-usage-content, .discharge-water-content { height: 75px; }
 .surfacewater-usage-item p, .discharge-water-item p { height: 40px; }
 .btn-license { background: #3883e6; box-shadow: 3px 3px 20px #ded7d7; transition: 0.5s; color: white;}

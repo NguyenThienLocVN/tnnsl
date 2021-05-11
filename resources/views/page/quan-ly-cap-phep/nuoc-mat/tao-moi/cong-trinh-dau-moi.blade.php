@@ -19,7 +19,7 @@
 
             <!-- Dac trung luu vuc -->
             <div class="construction-info mb-2">
-                <p class="col-12 py-1 construction-info-title font-weight-bold mb-2">Đặc trưng lưu vực</p>
+                <p class="col-12 py-1 construction-info-title fw-bold mb-2">Đặc trưng lưu vực</p>
                 <div class="construction-info-content col-12 p-0 mb-3">
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
@@ -46,7 +46,7 @@
             
             <!-- Dac trung luu vuc -->
             <div class="construction-info mb-2">
-                <p class="col-12 py-1 construction-info-title font-weight-bold mb-2">Hồ chứa</p>
+                <p class="col-12 py-1 construction-info-title fw-bold mb-2">Hồ chứa</p>
                 <div class="construction-info-content col-12 p-0 mb-3">
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
@@ -93,7 +93,7 @@
 
             <!-- Cong trinh dau moi -->
             <div class="construction-info mb-2">
-                <p class="col-12 py-1 construction-info-title font-weight-bold mb-2">Công trình đầu mối</p>
+                <p class="col-12 py-1 construction-info-title fw-bold mb-2">Công trình đầu mối</p>
                 <div class="construction-info-content col-12 p-0 mb-3">
                     <div class="col-12 d-flex flex-column flex-md-row mb-1">
                         <div class="col-md-6 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">

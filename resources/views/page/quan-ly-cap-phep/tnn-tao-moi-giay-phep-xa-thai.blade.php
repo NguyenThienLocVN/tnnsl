@@ -13,11 +13,11 @@
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="{{route('quan-ly-cap-phep')}}" title="Về trang chủ" id="btn_back_page" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <span class="font-weight-bold text-white d-block pl-2">ĐỀ NGHỊ CẤP PHÉP XẢ THẢI VÀO NGUỒN NƯỚC</span>
+            <a href="{{route('quan-ly-cap-phep')}}" title="Về trang chủ" id="btn_back_page" class="fw-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+            <span class="fw-bold text-white d-block pl-2">ĐỀ NGHỊ CẤP PHÉP XẢ THẢI VÀO NGUỒN NƯỚC</span>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
-            <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
+            <span class="text-primary fw-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
@@ -38,7 +38,7 @@
         <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
             <div class="exploit-surfacewater mb-2">
-                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">1. Tên tổ chức cá nhân đề nghị cấp phép</p>
+                <p class="col-12 py-1 exploit-surfacewater-title fw-bold mb-2">1. Tên tổ chức cá nhân đề nghị cấp phép</p>
                 <div class="exploit-surfacewater-content col-12 p-0 mb-3">
                     <div class="col-12 d-flex flex-column flex-md-row pr-md-0">
                         <div class="col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 align-items-center">
@@ -86,7 +86,7 @@
             </div>
 
             <div class="exploit-surfacewater mb-2">
-                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">2. Thông tin về cơ sở nước thải</p>
+                <p class="col-12 py-1 exploit-surfacewater-title fw-bold mb-2">2. Thông tin về cơ sở nước thải</p>
                 <div class="exploit-surfacewater-content col-12 p-0 mb-3">
                     <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
                         <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
@@ -132,7 +132,7 @@
             </div>
 
             <div class="exploit-surfacewater mb-2">
-                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">3. Nội dung đề nghị cấp phép</p>
+                <p class="col-12 py-1 exploit-surfacewater-title fw-bold mb-2">3. Nội dung đề nghị cấp phép</p>
                 <div class="exploit-surfacewater-content col-12 p-0 mb-3">
                     <div class="col-md-12 col-12 d-flex flex-column flex-md-row p-0 mb-1 align-items-center px-3">
                         <div class="col-md-6 col-12 d-flex p-0 mb-1 align-items-center">
@@ -185,7 +185,7 @@
                 </div>
             </div>
             <div class="exploit-surfacewater mb-2">
-                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">4. Giấy tờ tài liệu kèm theo</p>
+                <p class="col-12 py-1 exploit-surfacewater-title fw-bold mb-2">4. Giấy tờ tài liệu kèm theo</p>
                 <div class="exploit-surfacewater-content col-12 p-0 mb-3">
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
@@ -263,7 +263,7 @@
                 </div>
             </div>
             <div class="exploit-surfacewater mb-2">
-                <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">5. Cam kết của tổ chức/cá nhân đề nghị CP</p>
+                <p class="col-12 py-1 exploit-surfacewater-title fw-bold mb-2">5. Cam kết của tổ chức/cá nhân đề nghị CP</p>
                 <div class="exploit-surfacewater-content col-12 p-0 mb-3">
                     <div class="col-12 d-flex flex-column flex-md-row my-1">
                         <div class="col-sm-4 col-12 d-flex pl-0 pr-0 pr-md-3 mb-1 mb-md-0 align-items-center">
@@ -314,7 +314,7 @@
             <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_DOKHOANGCACH.png')}}" alt="do-khoang-cach">
             <div class="position-absolute map-layers d-flex align-items-center" id="map-layers" title="Chọn lớp bản đồ">
                 <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_LOPBANDO.png')}}" alt="lop-ban-do">
-                <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
+                <span class="fw-bold">&nbsp; Lớp bản đồ</span>
             </div>
             <div class="position-absolute map-panel-layers align-items-center text-white" id="map-panel-layers">
                 <ul class="p-2 m-0">
@@ -327,7 +327,7 @@
             </div>
             <div class="position-absolute map-note d-flex align-items-center">
                 <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_CHUGIAIBANDO.png')}}" alt="chu-giai-ban-do">
-                <span class="font-weight-bold">&nbsp; Chú giải</span>
+                <span class="fw-bold">&nbsp; Chú giải</span>
             </div>
         </div>
     </div>

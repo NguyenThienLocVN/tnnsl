@@ -32,8 +32,8 @@
         <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
         <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
             <div class="col-lg-6 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-                <a href="{{route('bao-cao-bieu-mau')}}" title="Về trang chủ" id="btn_back_page" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-                <span class="font-weight-bold text-white d-block pl-2">BIỂU MẪU BÁO CÁO - MẪU 4</span>
+                <a href="{{route('bao-cao-bieu-mau')}}" title="Về trang chủ" id="btn_back_page" class="fw-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+                <span class="fw-bold text-white d-block pl-2">BIỂU MẪU BÁO CÁO - MẪU 4</span>
             </div>
             <div class="col-6 p-0 text-right float-right">
                 <button class="btn btn-sm btn-primary font-13"><i class="fa fa-download" aria-hidden="true"></i> XLSX</button>

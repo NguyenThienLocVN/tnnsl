@@ -10,19 +10,18 @@
 
 @section('content')
 <header class="mb-3 mb-md-0 ">
-    <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
-        <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
+        <div class="col-lg-6 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
             <a href="{{route('quan-ly-cap-phep')}}" title="Về trang chủ" id="btn_back_page" class="fw-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
             <span class="fw-bold text-white d-block pl-2">KHAI THÁC SỬ DỤNG NƯỚC MẶT</span>
         </div>
-        <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
+        <div class="bg-lightgray col-lg-6 col-sm-12 col-md-12 text-center py-1 py-md-0">
             <span class="text-primary fw-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
 <main class="d-flex flex-column flex-lg-row">
-    <div class="col-12 col-lg-5 pb-3 pb-lg-0 px-md-0" id="surfacewater-usage">
+    <div class="col-12 col-lg-6 pb-3 pb-lg-0 px-md-0" id="surfacewater-usage">
         <div id="overlay"></div>
         <img src="{{asset('public/TNN_TRANG_CHU/image/loading.gif')}}" id="loading-gif-image" class="loading-gif position-absolute" alt="loading" style="display: none;">
         <!-- Khai thac su dung nuoc mat -->
@@ -50,13 +49,15 @@
             </form> 
         </div>
         
-        <div class="exploit-surfacewater mb-2">
+        <div class="exploit-surfacewater mb-5">
         <form action="{{route('xu-ly-tao-moi-giay-phep-nuoc-mat')}}" class="" method="POST" enctype="multipart/form-data" id="form-create-surfacewater-license">
         {{ csrf_field() }}
             <nav>
                 <div class="nav nav-tabs tabs__form" id="nav-tab" role="tablist">
-                    <button class="nav-link col-6 active" id="nav-general_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-general_infomation" type="button" role="tab" aria-controls="nav-general_infomation" aria-selected="true">1 - Thông tin chung</button>
-                    <button class="nav-link col-6" id="nav-construction_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-construction_infomation" type="button" role="tab" aria-controls="nav-construction_infomation" aria-selected="false">2 - Thông tin công trình</button>
+                    <button class="nav-link font-13 col-sm-3 active" id="nav-general_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-general_infomation" type="button" role="tab" aria-controls="nav-general_infomation" aria-selected="true">1 <br> <hr> Thông tin chung</button>
+                    <button class="nav-link font-13 col-sm-3" id="nav-construction_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-construction_infomation" type="button" role="tab" aria-controls="nav-construction_infomation" aria-selected="false">2 <br> <hr> Thông tin công trình</button>
+                    <button class="nav-link font-13 col-sm-3" id="nav-gs_kt_sd-tab" data-bs-toggle="tab" data-bs-target="#nav-gs_kt_sd" type="button" role="tab" aria-controls="nav-gs_kt_sd" aria-selected="false">3 <br> <hr> Giám sát khai thác sử dụng</button>
+                    <button class="nav-link font-13 col-sm-3" id="nav-cl_nuoc_mat-tab" data-bs-toggle="tab" data-bs-target="#nav-cl_nuoc_mat" type="button" role="tab" aria-controls="nav-cl_nuoc_mat" aria-selected="false">4 <br> <hr> chất lượng nước mặt</button>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -65,6 +66,12 @@
                 </div>
                 <div class="tab-pane fade" id="nav-construction_infomation" role="tabpanel" aria-labelledby="nav-construction_infomation-tab">
                     @include('page.quan-ly-cap-phep.nuoc-mat.tao-moi.construction_infomation')
+                </div>
+                <div class="tab-pane fade" id="nav-gs_kt_sd" role="tabpanel" aria-labelledby="nav-gs_kt_sd-tab">
+                    @include('page.quan-ly-cap-phep.nuoc-mat.tao-moi.gs_kt_sd')
+                </div>
+                <div class="tab-pane fade" id="nav-cl_nuoc_mat" role="tabpanel" aria-labelledby="nav-cl_nuoc_mat-tab">
+                    @include('page.quan-ly-cap-phep.nuoc-mat.tao-moi.cl_nuoc_mat')
                 </div>
             </div>
            <div class="row m-0 p-2 border-top">
@@ -76,7 +83,7 @@
         
         <!-- Ket thuc khai thac su dung nuoc mat -->
     </div>
-    <div class="col-12 col-lg-7-3 map-container px-md-0">
+    <div class="col-12 col-lg-6 map-container px-md-0">
         <div id="map" class="h-100 w-100 position-relative">
             <img title="Về trung tâm bản đồ" class="position-absolute map-tool center-map" id="center-map" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_VEGIUABANDO.png')}}" alt="trung-tam-ban-do">
             <img title="Vị trí hiện tại" class="position-absolute map-tool current-location" id="current-location" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_VITRIHIENTAI.png')}}" alt="vi-tri-hien-tai">
@@ -106,7 +113,7 @@
         </div>
     </div>
     <script>
-        $("#next_tab").click(function(){
+        $(".next_tab").click(function(){
             $("#nav-construction_infomation-tab").click();
         });
         $( document ).ready(function() {

@@ -13,11 +13,11 @@
     <a href="{{url('/')}}"><img class="w-100 banner-tnmt" src="{{asset('public/TNN_TRANG_CHU/image/ANHSOTNMT.png')}}" alt="banner-tnmt"></a>
     <div class="bg-primary d-flex flex-column flex-lg-row top-bar">
         <div class="col-lg-5 col-sm-12 col-md-12 px-0 pt-md-0 pb-md-0 d-flex align-items-center">
-            <a href="{{url('/')}}" title="Về trang chủ" id="btn_back_page" class="font-weight-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
-            <span class="font-weight-bold text-white d-block pl-2">QUẢN LÝ CẤP PHÉP</span>
+            <a href="{{url('/')}}" title="Về trang chủ" id="btn_back_page" class="fw-bold text-white btn-home-top d-block pl-2 pt-2 pt-md-0"><i class="fa fa-reply-all" aria-hidden="true"></i></a>
+            <span class="fw-bold text-white d-block pl-2">QUẢN LÝ CẤP PHÉP</span>
         </div>
         <div class="bg-lightgray col-lg-7 col-sm-12 col-md-12 text-center py-1 py-md-0">
-            <span class="text-primary font-weight-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
+            <span class="text-primary fw-bold">HỆ THỐNG QUẢN LÝ,  GIÁM SÁT, KHAI THÁC SỬ DỤNG TÀI NGUYÊN NƯỚC </span>
         </div>
     </div> 
 </header>
@@ -27,7 +27,7 @@
         <img src="{{asset('public/TNN_TRANG_CHU/image/loading.gif')}}" id="loading-gif-image" class="loading-gif position-absolute" alt="loading" style="display: none;">
         <!-- Khai thac su dung nuoc mat -->
         <div class="exploit-surfacewater mb-2">
-            <p class="col-12 py-1 exploit-surfacewater-title font-weight-bold mb-2">Sửa giấy phép KT nước mặt</p>
+            <p class="col-12 py-1 exploit-surfacewater-title fw-bold mb-2">Sửa giấy phép KT nước mặt</p>
             @if ($errors->any())
                 <div class="col-sm-12 p-0">
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -187,8 +187,8 @@
                         </div>
                     </div>
                     <div class="col-12 d-flex my-3">
-                        <button type="submit" class="col-3 px-2 py-2 font-weight-bold btn-success border-0 font-13 mr-2 rounded">Lưu</ type="submit">
-                        <button type="reset" class="col-3 px-2 py-2 font-weight-bold btn-danger border-0 font-13 mr-2 rounded">Nhập lại</button>
+                        <button type="submit" class="col-3 px-2 py-2 fw-bold btn-success border-0 font-13 mr-2 rounded">Lưu</ type="submit">
+                        <button type="reset" class="col-3 px-2 py-2 fw-bold btn-danger border-0 font-13 mr-2 rounded">Nhập lại</button>
                     </div>
                 </div>
             </form>
@@ -207,7 +207,7 @@
             <img title="Đo khoảng cách" class="position-absolute map-tool distance-measure" src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_DOKHOANGCACH.png')}}" alt="do-khoang-cach">
             <div class="position-absolute map-layers d-flex align-items-center" id="map-layers" title="Chọn lớp bản đồ">
                 <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_LOPBANDO.png')}}" alt="lop-ban-do">
-                <span class="font-weight-bold">&nbsp; Lớp bản đồ</span>
+                <span class="fw-bold">&nbsp; Lớp bản đồ</span>
             </div>
             <div class="position-absolute map-panel-layers align-items-center text-white" id="map-panel-layers">
                 <ul class="p-2 m-0">
@@ -220,7 +220,7 @@
             </div>
             <div class="position-absolute map-note d-flex align-items-center">
                 <img src="{{asset('public/TNN_GIOI_THIEU_CHUNG/image/ANH_CHUGIAIBANDO.png')}}" alt="chu-giai-ban-do">
-                <span class="font-weight-bold">&nbsp; Chú giải</span>
+                <span class="fw-bold">&nbsp; Chú giải</span>
             </div>
         </div>
     </div>
