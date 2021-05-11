@@ -238,55 +238,52 @@
         <div class="d-flex justify-content-start align-items-center mb-2 px-2">
             <label for="don_xin_cp" class="col-6 font-13">Đơn xin cấp phép</label>
             <label class="btn btn-default btn-sm center-block btn-file border my-0 mx-2" id="don_xin_cp">
-                <i class="fa fa-upload" aria-hidden="true"></i> Upload file
+                <i class="fa fa-upload" aria-hidden="true"></i> File tài liệu
                 <input type="file" required accept=".pdf" style="display: none;">
             </label>
         </div>
         <div class="d-flex justify-content-start align-items-center mb-2 px-2">
             <label for="don_xin_cp" class="col-6 font-13">Đơn xin cấp phép</label>
             <label class="btn btn-default btn-sm center-block btn-file border my-0 mx-2" id="don_xin_cp">
-                <i class="fa fa-upload" aria-hidden="true"></i> Upload file
+                <i class="fa fa-upload" aria-hidden="true"></i> File tài liệu
                 <input type="file" required accept=".pdf" style="display: none;">
             </label>
         </div>
         <div class="d-flex justify-content-start align-items-center mb-2 px-2">
             <label for="don_xin_cp" class="col-6 font-13">Đơn xin cấp phép</label>
             <label class="btn btn-default btn-sm center-block btn-file border my-0 mx-2" id="don_xin_cp">
-                <i class="fa fa-upload" aria-hidden="true"></i> Upload file
+                <i class="fa fa-upload" aria-hidden="true"></i> File tài liệu
                 <input type="file" required accept=".pdf" style="display: none;">
             </label>
         </div>
         <div class="d-flex justify-content-start align-items-center mb-2 px-2">
             <label for="don_xin_cp" class="col-6 font-13">Đơn xin cấp phép</label>
             <label class="btn btn-default btn-sm center-block btn-file border my-0 mx-2" id="don_xin_cp">
-                <i class="fa fa-upload" aria-hidden="true"></i> Upload file
+                <i class="fa fa-upload" aria-hidden="true"></i> File tài liệu
                 <input type="file" required accept=".pdf" style="display: none;">
             </label>
         </div>
         <div class="d-flex justify-content-start align-items-center mb-2 px-2">
             <label for="don_xin_cp" class="col-6 font-13">Đơn xin cấp phép</label>
             <label class="btn btn-default btn-sm center-block btn-file border my-0 mx-2" id="don_xin_cp">
-                <i class="fa fa-upload" aria-hidden="true"></i> Upload file
+                <i class="fa fa-upload" aria-hidden="true"></i> File tài liệu
                 <input type="file" required accept=".pdf" style="display: none;">
             </label>
         </div>
         <div class="d-flex justify-content-start align-items-center mb-2 px-2">
             <label for="don_xin_cp" class="col-6 font-13">Đơn xin cấp phép</label>
             <label class="btn btn-default btn-sm center-block btn-file border my-0 mx-2" id="don_xin_cp">
-                <i class="fa fa-upload" aria-hidden="true"></i> Upload file
+                <i class="fa fa-upload" aria-hidden="true"></i> File tài liệu
                 <input type="file" required accept=".pdf" style="display: none;">
             </label>
         </div>
         <div class="d-flex justify-content-start align-items-center mb-2 px-2">
             <label for="don_xin_cp" class="col-6 font-13">Đơn xin cấp phép</label>
             <label class="btn btn-default btn-sm center-block btn-file border my-0 mx-2" id="don_xin_cp">
-                <i class="fa fa-upload" aria-hidden="true"></i> Upload file
+                <i class="fa fa-upload" aria-hidden="true"></i> File tài liệu
                 <input type="file" required accept=".pdf" style="display: none;">
             </label>
         </div>
     </div>
 </div>
-</div>
-<div class="row m-0 p-2 justify-content-end">
-    <input type="button" value="Tiếp tục >>" class="col-md-3 btn btn-sm btn-primary mx-2 next_tab">
 </div>

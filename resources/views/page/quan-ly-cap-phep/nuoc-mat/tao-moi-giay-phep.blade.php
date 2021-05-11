@@ -41,7 +41,7 @@
             {{ csrf_field() }}
                 <div class="d-flex justify-content-center align-items-center mb-2">
                     <label class="btn btn-default btn-sm center-block btn-file border my-0 mx-2">
-                        <i class="fa fa-upload" aria-hidden="true"></i> Upload file
+                        <i class="fa fa-upload" aria-hidden="true"></i> File tài liệu
                         <input type="file" name="upload-excel-surfacewater-license" id="upload-excel-surfacewater-license" required accept=".xlsx, .xls, .csv" style="display: none;">
                     </label>
                     <input type="submit" class="btn btn-sm btn-success" value="Xác Nhận">
@@ -54,10 +54,10 @@
         {{ csrf_field() }}
             <nav>
                 <div class="nav nav-tabs tabs__form" id="nav-tab" role="tablist">
-                    <button class="nav-link font-13 col-sm-3 active" id="nav-general_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-general_infomation" type="button" role="tab" aria-controls="nav-general_infomation" aria-selected="true">1 <br> <hr> Thông tin chung</button>
-                    <button class="nav-link font-13 col-sm-3" id="nav-construction_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-construction_infomation" type="button" role="tab" aria-controls="nav-construction_infomation" aria-selected="false">2 <br> <hr> Thông tin công trình</button>
-                    <button class="nav-link font-13 col-sm-3" id="nav-gs_kt_sd-tab" data-bs-toggle="tab" data-bs-target="#nav-gs_kt_sd" type="button" role="tab" aria-controls="nav-gs_kt_sd" aria-selected="false">3 <br> <hr> Giám sát KT/SD</button>
-                    <button class="nav-link font-13 col-sm-3" id="nav-cl_nuoc_mat-tab" data-bs-toggle="tab" data-bs-target="#nav-cl_nuoc_mat" type="button" role="tab" aria-controls="nav-cl_nuoc_mat" aria-selected="false">4 <br> <hr> Chất lượng nước mặt</button>
+                    <button class="nav-link font-13 px-2 col-sm-3 active" id="nav-general_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-general_infomation" type="button" role="tab" aria-controls="nav-general_infomation" aria-selected="true">1 <br> <hr class="m-0"> Thông tin chung</button>
+                    <button class="nav-link font-13 px-2 col-sm-3" id="nav-construction_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-construction_infomation" type="button" role="tab" aria-controls="nav-construction_infomation" aria-selected="false">2 <br> <hr class="m-0"> Thông tin công trình</button>
+                    <button class="nav-link font-13 px-2 col-sm-3" id="nav-gs_kt_sd-tab" data-bs-toggle="tab" data-bs-target="#nav-gs_kt_sd" type="button" role="tab" aria-controls="nav-gs_kt_sd" aria-selected="false">3 <br> <hr class="m-0"> Giám sát KT/SD</button>
+                    <button class="nav-link font-13 px-2 col-sm-3" id="nav-cl_nuoc_mat-tab" data-bs-toggle="tab" data-bs-target="#nav-cl_nuoc_mat" type="button" role="tab" aria-controls="nav-cl_nuoc_mat" aria-selected="false">4 <br> <hr class="m-0"> Chất lượng nước mặt</button>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">

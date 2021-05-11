@@ -458,6 +458,3 @@
        </table>
     </div>
 </div>
-<div class="row m-0 p-2 justify-content-end">
-    <input type="button" value="Tiếp tục >>" class="col-md-3 btn btn-sm btn-primary mx-2 next_tab">
-</div>

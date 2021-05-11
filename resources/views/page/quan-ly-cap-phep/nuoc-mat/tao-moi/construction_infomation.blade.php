@@ -368,6 +368,4 @@
     </div>
     <!-- end modal -->
 </div>
-<div class="row m-0 p-2 justify-content-end">
-    <input type="button" value="Tiếp tục >>" id="next_tab" class="col-md-3 btn btn-sm btn-primary mx-2">
-</div>
+
