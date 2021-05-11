@@ -182,8 +182,15 @@
     <div class="pb-2 mx-0 px-2">
        <table class="table table-bordered">
            <thead class="thead-light">
-                <tr class="text-center">
-                   <td colspan="5"><div class="col-12 d-flex justify-content-end"><button class="btn btn-primary float-left">+</button></div></td>
+           <tr class="text-center">
+                   <td colspan="6">
+                       <div class="col-12 d-flex justify-content-end">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LuuLuongThepMucDichKTSD">
+                            +
+                            </button>
+                        </div>
+                    </td>
                </tr>
                <tr class="text-center">
                    <th class="font-13">#</th>
@@ -200,6 +207,36 @@
            </tbody>
        </table>
     </div>
+     <!-- Modal LuuLuongThepMucDichKTSD -->
+     <div class="modal fade" id="LuuLuongThepMucDichKTSD" tabindex="-1" aria-labelledby="LuuLuongThepMucDichKTSDLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ThanhTraKiemTraLabel">Lưu lượng theo mục đích khai thác sử dụng</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="muc_dich">Mục đích</label>
+                    <input type="text" class="form-control font-13" id="muc_dich" placeholder="Mục đích">
+                </div>
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="luu_luong">Lưu lượng</label>
+                    <input type="text" class="form-control font-13" id="luu_luong" placeholder="Lưu lượng">
+                </div>
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="dv_do">Đơn vị đo</label>
+                    <input type="text" class="form-control font-13" id="dv_do" placeholder="Đơn vị đo">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-save"></i></button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
 </div>
 <div class="exploit-surfacewater mb-2">
     <p class="col-12 py-1 px-2 exploit-surfacewater-title fw-bold mb-2">Tọa độ công trình</p>
@@ -207,7 +244,14 @@
        <table class="table table-bordered">
            <thead class="thead-light">
                 <tr class="text-center">
-                   <td colspan="5"><div class="col-12 d-flex justify-content-end"><button class="btn btn-primary float-left">+</button></div></td>
+                   <td colspan="6">
+                       <div class="col-12 d-flex justify-content-end">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ToaDoCongTrinh">
+                            +
+                            </button>
+                        </div>
+                    </td>
                </tr>
                <tr class="text-center">
                    <th class="font-13">#</th>
@@ -224,6 +268,36 @@
            </tbody>
        </table>
     </div>
+    <!-- Modal ToaDoCongTrinh -->
+    <div class="modal fade" id="ToaDoCongTrinh" tabindex="-1" aria-labelledby="ToaDoCongTrinhLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ThanhTraKiemTraLabel">Tọa độ công trình</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="ky_hieu_ct">Ký hiêu CT</label>
+                    <input type="text" class="form-control font-13" id="ky_hieu_ct" placeholder="Ký hiêu CT">
+                </div>
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="toa_do_x_ct">Tọa độ X</label>
+                    <input type="text" class="form-control font-13" id="toa_do_x_ct" placeholder="Tọa độ X">
+                </div>
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="toa_do_y_ct">Tọa Độ Y</label>
+                    <input type="text" class="form-control font-13" id="toa_do_y_ct" placeholder="Tọa Độ Y">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-save"></i></button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
 </div>
 <div class="exploit-surfacewater mb-2">
     <p class="col-12 py-1 px-2 exploit-surfacewater-title fw-bold mb-2">Hạng mục công trình</p>
@@ -231,7 +305,14 @@
        <table class="table table-bordered">
            <thead class="thead-light">
                 <tr class="text-center">
-                   <td colspan="6"><div class="col-12 d-flex justify-content-end"><button class="btn btn-primary float-left">+</button></div></td>
+                   <td colspan="6">
+                       <div class="col-12 d-flex justify-content-end">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#HangMucCongTrinh">
+                            +
+                            </button>
+                        </div>
+                    </td>
                </tr>
                <tr class="text-center">
                    <th class="font-13" rowspan="2">#</th>
@@ -252,6 +333,40 @@
            </tbody>
        </table>
     </div>
+    <!-- Modal HangMucCongTrinh -->
+    <div class="modal fade" id="HangMucCongTrinh" tabindex="-1" aria-labelledby="HangMucCongTrinhLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ThanhTraKiemTraLabel">Hạng mục công trình</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="ten_hang_muc_ct">Tên hạng mục</label>
+                    <input type="text" class="form-control font-13" id="ten_hang_muc_ct" placeholder="Ký hiêu CT">
+                </div>
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="toa_do_x_hang_muc_ct">Tọa độ X</label>
+                    <input type="text" class="form-control font-13" id="toa_do_x_hang_muc_ct" placeholder="Tọa độ X">
+                </div>
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="toa_do_y_hang_muc_ct">Tọa Độ Y</label>
+                    <input type="text" class="form-control font-13" id="toa_do_y_hang_muc_ct" placeholder="Tọa Độ Y">
+                </div>
+                <div class="form-group">
+                    <label class="font-13 fw-bold" for="muc_dich_hang_muc_vt">Mục đích</label>
+                    <input type="text" class="form-control font-13" id="muc_dich_hang_muc_vt" placeholder="Mục đích">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-save"></i></button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
 </div>
 <div class="row m-0 p-2 justify-content-end">
     <input type="button" value="Tiếp tục >>" id="next_tab" class="col-md-3 btn btn-sm btn-primary mx-2">

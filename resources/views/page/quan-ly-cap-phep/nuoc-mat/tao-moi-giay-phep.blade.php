@@ -56,8 +56,8 @@
                 <div class="nav nav-tabs tabs__form" id="nav-tab" role="tablist">
                     <button class="nav-link font-13 col-sm-3 active" id="nav-general_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-general_infomation" type="button" role="tab" aria-controls="nav-general_infomation" aria-selected="true">1 <br> <hr> Thông tin chung</button>
                     <button class="nav-link font-13 col-sm-3" id="nav-construction_infomation-tab" data-bs-toggle="tab" data-bs-target="#nav-construction_infomation" type="button" role="tab" aria-controls="nav-construction_infomation" aria-selected="false">2 <br> <hr> Thông tin công trình</button>
-                    <button class="nav-link font-13 col-sm-3" id="nav-gs_kt_sd-tab" data-bs-toggle="tab" data-bs-target="#nav-gs_kt_sd" type="button" role="tab" aria-controls="nav-gs_kt_sd" aria-selected="false">3 <br> <hr> Giám sát khai thác sử dụng</button>
-                    <button class="nav-link font-13 col-sm-3" id="nav-cl_nuoc_mat-tab" data-bs-toggle="tab" data-bs-target="#nav-cl_nuoc_mat" type="button" role="tab" aria-controls="nav-cl_nuoc_mat" aria-selected="false">4 <br> <hr> chất lượng nước mặt</button>
+                    <button class="nav-link font-13 col-sm-3" id="nav-gs_kt_sd-tab" data-bs-toggle="tab" data-bs-target="#nav-gs_kt_sd" type="button" role="tab" aria-controls="nav-gs_kt_sd" aria-selected="false">3 <br> <hr> Giám sát KT/SD</button>
+                    <button class="nav-link font-13 col-sm-3" id="nav-cl_nuoc_mat-tab" data-bs-toggle="tab" data-bs-target="#nav-cl_nuoc_mat" type="button" role="tab" aria-controls="nav-cl_nuoc_mat" aria-selected="false">4 <br> <hr> Chất lượng nước mặt</button>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
